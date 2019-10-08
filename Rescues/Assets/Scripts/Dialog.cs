@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Dialog : Interactable
 {
     public GameObject _dialogSprite;
