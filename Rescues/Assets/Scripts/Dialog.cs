@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Dialog : Interactable
 {
-    public GameObject _dialogSprite;
+    public GameObject DialogSprite;
 
     public override void Interact(Transform go)
     {
