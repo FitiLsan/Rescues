@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: b6baba7ceba26964aa8d53afab571e7b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4213217652975362833
+    second: Bookcase_0
+  - first:
+      213: 5270094436340775577
+    second: Bookcase_1
+  - first:
+      213: -1253841324454745076
+    second: Bookcase_2
+  - first:
+      213: 4364901633987851159
+    second: Bookcase_3
+  - first:
+      213: 1645550693125842441
+    second: Bookcase_4
+  - first:
+      213: 364659266190258088
+    second: Bookcase_5
+  - first:
+      213: 7351939301513977036
+    second: Bookcase_6
+  - first:
+      213: -2558714576345914953
+    second: Bookcase_7
+  - first:
+      213: -5874616121194991033
+    second: Bookcase_8
+  - first:
+      213: -8414167955166372921
+    second: Bookcase_9
+  - first:
+      213: -4296665363972264999
+    second: Bookcase_10
+  - first:
+      213: -818840088258682528
+    second: Bookcase_11
+  - first:
+      213: -1908917441894216810
+    second: Bookcase_12
+  - first:
+      213: -1479278160812006297
+    second: Bookcase_13
+  - first:
+      213: 4045156531784465317
+    second: Bookcase_14
+  - first:
+      213: -4686291600744832684
+    second: Bookcase_15
+  - first:
+      213: -7502887512406878432
+    second: Bookcase_16
+  - first:
+      213: -6049736928534562594
+    second: Bookcase_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bookcase_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 38
+        width: 939
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2e9cb6bbf9711468747d7401030246
+      internalID: 4213217652975362833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_1
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 38
+        width: 939
+        height: 1834
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9902f4fc8c8c4fb4d927adac14bdae71
+      internalID: 5270094436340775577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_2
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 1567
+        width: 633
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa8642456b3f864b912c7887bcb5dcb
+      internalID: -1253841324454745076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_3
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 1397
+        width: 31
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8d64057d40dfe40a0027fa925e5bd4
+      internalID: 4364901633987851159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_4
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 1399
+        width: 210
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e227ebbbb6702c8478500894c991751b
+      internalID: 1645550693125842441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_5
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 1225
+        width: 218
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63b7c81e05f5a840b1e9ac2ff0410a7
+      internalID: 364659266190258088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_6
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 1294
+        width: 34
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8ecff1401a277478937d76db924393
+      internalID: 7351939301513977036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_7
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 967
+        width: 46
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70979379d228458499f90ab2c9049fc7
+      internalID: -2558714576345914953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_8
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 967
+        width: 47
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f930e5a3558d05746aea40d8da645920
+      internalID: -5874616121194991033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_9
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 981
+        width: 52
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f6ec662b4234e43b62501e10b043f3
+      internalID: -8414167955166372921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_10
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 985
+        width: 41
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007c2aa48100c144a81abefda1cdcd57
+      internalID: -4296665363972264999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_11
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 981
+        width: 52
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ff4fd9418a97845a949e69f05f7c26
+      internalID: -818840088258682528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_12
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 793
+        width: 188
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080627fe8b715b84fac5c24e5f622324
+      internalID: -1908917441894216810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_13
+      rect:
+        serializedVersion: 2
+        x: 2177
+        y: 707
+        width: 200
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047b5dbe414f38e4793229a026f61a99
+      internalID: -1479278160812006297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_14
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 678
+        width: 195
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb69386d995b440429f66e3b478458e5
+      internalID: 4045156531784465317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_15
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 490
+        width: 210
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46876d17feac50e4cae604fd16943a1d
+      internalID: -4686291600744832684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_16
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 279
+        width: 793
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96696e721d26f5a45b05de98b78cc402
+      internalID: -7502887512406878432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bookcase_17
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 57
+        width: 574
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46074ea64e7a9846badf5f58c6a787e
+      internalID: -6049736928534562594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
