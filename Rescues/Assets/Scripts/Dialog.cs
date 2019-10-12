@@ -8,6 +8,7 @@ public class Dialog : Interactable
 
     public override void Interact(Transform go)
     {
+		var test = 1;
         _dialogSprite.SetActive(!_dialogSprite.activeInHierarchy);
     }
 }
