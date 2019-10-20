@@ -1,31 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ManagerUpdateComponent : MonoBehaviour
+
+namespace Rescues
 {
-    /// <summary>
-    /// запускает юнитевские апдейты и передает их на обработку
-    /// </summary>
-
-    private ManagerUpdate mng;
-
-    public void Setup(ManagerUpdate mng)
+    public class ManagerUpdateComponent : MonoBehaviour
     {
-        this.mng = mng;
-    }
 
-    private void Update()
-    {
-        mng.Tick();
-    }
+        private ManagerUpdate _mng;
 
-    private void FixedUpdate()
-    {
-        mng.TickFixed();
-    }
+        public void Setup(ManagerUpdate _mng)
+        {
+            this._mng = _mng;
+        }
 
-    private void LateUpdate()
-    {
-        mng.TickLate();
+        private void Update()
+        {
+            _mng.Tick();
+        }
+
+        private void FixedUpdate()
+        {
+            _mng.TickFixed();
+        }
+
+        private void LateUpdate()
+        {
+            _mng.TickLate();
+        }
     }
 }

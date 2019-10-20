@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class Starter : MonoBehaviour
-{
-    public List<ManagerBase> managers = new List<ManagerBase>();
 
-    private void Awake()
+namespace Rescues
+{
+    public class Starter : MonoBehaviour
     {
-        foreach(var managerBase in managers)
+        public List<ManagerBase> managers = new List<ManagerBase>();
+
+        private void Awake()
         {
-            ToolBox.Add(managerBase);
+            foreach (var managerBase in managers)
+            {
+                ToolBox.Add(managerBase);
+            }
         }
     }
 }

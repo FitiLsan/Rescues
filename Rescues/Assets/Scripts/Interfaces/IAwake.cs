@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-public interface IAwake
+
+namespace Rescues
 {
-    void OnAwake();
+    public interface IAwake
+    {
+        void OnAwake();
+    }
 }

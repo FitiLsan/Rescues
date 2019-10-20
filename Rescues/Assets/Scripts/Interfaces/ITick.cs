@@ -3,7 +3,10 @@ using UnityEditor;
 using System.Collections.Generic;
 
 
-public interface ITick
+namespace Rescues
 {
-    void Tick();
+    public interface ITick
+    {
+        void Tick();
+    }
 }

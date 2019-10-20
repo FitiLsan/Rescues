@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 namespace Rescues
-    // везде где нужно создать синголтон добовляем using Rescues//
 {
     public class Singleton<T> : MonoBehaviour where T: MonoBehaviour
     {
@@ -12,7 +12,6 @@ namespace Rescues
 
         public static T Instance
         {
-
             get
             {
                 if (isApplicationQuitting)
@@ -21,17 +20,13 @@ namespace Rescues
                 {
                     if (_instance == null)
                     {
-
                         _instance = FindObjectOfType<T>();
-
                         if (_instance == null)
                         {
-
                             var singleton = new GameObject("[SINGLETON] " + typeof(T));
 
                             _instance = singleton.AddComponent<T>();
                             DontDestroyOnLoad(singleton);
-
                         }
                     }
                 }
@@ -41,7 +36,6 @@ namespace Rescues
         public virtual void OnDestroy()
         {
             isApplicationQuitting = true;
-            //проверка на то работает обьект или нет//
         }
     }
 

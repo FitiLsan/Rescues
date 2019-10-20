@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-[CreateAssetMenu(fileName ="ManagerEvents", menuName = "Managers/ManagersEvents")]
-
-public class ManagerEvents : ManagerBase
+namespace Rescues
 {
-    public GameObject prefab;
+    [CreateAssetMenu(fileName = "ManagerEvents", menuName = "Managers/ManagersEvents")]
 
-    public void CratePrefab(Vector3 pos)
+    public class ManagerEvents : ManagerBase
     {
-        Instantiate(prefab, pos, Quaternion.identity);
+        public GameObject prefab;
+
+        public void CratePrefab(Vector3 pos)
+        {
+            Instantiate(prefab, pos, Quaternion.identity);
+        }
     }
 }

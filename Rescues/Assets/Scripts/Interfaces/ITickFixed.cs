@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-public interface ITickFixed 
+
+namespace Rescues
 {
-    void TickFixed();
+    public interface ITickFixed
+    {
+        void TickFixed();
+    }
 }

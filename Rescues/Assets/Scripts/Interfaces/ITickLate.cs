@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-interface ITickLate
+
+namespace Rescues
 {
-    void TickLate();
+    interface ITickLate
+    {
+        void TickLate();
+    }
 }
