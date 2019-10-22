@@ -2,16 +2,20 @@
 
 public class InputController : IOnUpdate
 {
-    public Vector3 Dir;
-    public float Speed = 2;
+    private Vector3 Direction;
+    public Character Character;
 
     public void OnUpdate()
     {
-        Dir.x = Input.GetAxis("Horizontal");
+        Direction.x = Input.GetAxis("Horizontal");
 
-        if(Dir.x != 0)
+        if(Direction.x != 0)
         {
-            Main.Instance.Player.transform.position += Dir * Speed * Time.deltaTime;
+            Character._characterDirection.x = Direction.x;
+            Character.Move();
         }
+
+        
+
     }
 }
