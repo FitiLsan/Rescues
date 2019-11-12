@@ -1,17 +1,23 @@
 ﻿using UnityEngine;
 
-public class Main : MonoBehaviour
+
+namespace Rescues
 {
-    private InputController InputController { get; set; }
-
-    private void Awake()
+    public class Main : MonoBehaviour
     {
-        InputController = new InputController();
-        InputController.Character = FindObjectOfType<Character>();
-    }
+        private InputController InputController { get; set; }
 
-    private void Update()
-    {
-        InputController.OnUpdate();
+        #region UnityMethods
+        private void Awake()
+        {
+            InputController = new InputController();
+            InputController.Character = FindObjectOfType<Character>();
+        }
+
+        private void Update()
+        {
+            InputController.OnUpdate();
+        }
+        #endregion
     }
 }

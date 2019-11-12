@@ -1,21 +1,37 @@
 ﻿using UnityEngine;
 
-public class InputController : IOnUpdate
+
+namespace Rescues
 {
-    private Vector3 Direction;
-    public Character Character;
-
-    public void OnUpdate()
+    public class InputController : IOnUpdate
     {
-        Direction.x = Input.GetAxis("Horizontal");
+        #region Data
+        private Vector3 Direction;
+        public Character Character;
+        #endregion
 
-        if(Direction.x != 0)
+
+        #region IOnUpdate
+        public void OnUpdate()
         {
-            Character._characterDirection.x = Direction.x;
-            Character.Move();
+            Direction.x = Input.GetAxis("Horizontal");
+
+            if (Direction.x != 0)
+            {
+                Character._characterDirection.x = Direction.x;
+                Character.Move();
+            }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                if (Character._door != null) Character._door.JumpUp(Character.transform);
+            }
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                if (Character._door != null) Character._door.JumpDown(Character.transform);
+            }
         }
-
-        
-
+        #endregion
     }
 }
