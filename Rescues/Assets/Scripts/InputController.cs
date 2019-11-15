@@ -6,7 +6,7 @@ namespace Rescues
     public class InputController : IOnUpdate
     {
         #region Data
-        private Vector3 Direction;
+        private Vector3 _direction;
         public Character Character;
         #endregion
 
@@ -14,22 +14,21 @@ namespace Rescues
         #region IOnUpdate
         public void OnUpdate()
         {
-            Direction.x = Input.GetAxis("Horizontal");
+            _direction.x = Input.GetAxis("Horizontal");
 
-            if (Direction.x != 0)
+            if (_direction.x != 0)
             {
-                Character._characterDirection.x = Direction.x;
-                Character.Move();
+                Character.Move(_direction);
             }
 
             if (Input.GetKeyDown(KeyCode.W))
             {
-                if (Character._door != null) Character._door.JumpUp(Character.transform);
+                if (Character.Door != null) Character.Door.JumpUp(Character.transform);
             }
 
             if (Input.GetKeyDown(KeyCode.S))
             {
-                if (Character._door != null) Character._door.JumpDown(Character.transform);
+                if (Character.Door != null) Character.Door.JumpDown(Character.transform);
             }
         }
         #endregion

@@ -5,36 +5,36 @@ namespace Rescues
 {
     public class Character : MonoBehaviour
     {
-        #region Data
-        public Vector3 _characterDirection;
-        [SerializeField] float _characterSpeed;
-        public DoorTeleporter _door;
+        #region Data       
+        [SerializeField] private float _characterSpeed;
+        public DoorTeleporter Door;
         #endregion
 
 
         #region UnityMethods
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == "Door")
+            if (collision.CompareTag("Door"))
             {
-                _door = collision.GetComponent<DoorTeleporter>();
+                Door = collision.GetComponent<DoorTeleporter>();
             }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (collision.tag == "Door")
+            if (collision.CompareTag("Door"))
             {
-                if (_door == collision.GetComponent<DoorTeleporter>()) _door = null;
+                if (Door == collision.GetComponent<DoorTeleporter>())
+                    Door = null;
             }
         }
         #endregion
 
 
         #region Methods
-        public void Move()
+        public void Move(Vector3 direction)
         {
-            transform.position += _characterDirection * _characterSpeed * Time.deltaTime;
+            transform.position += direction * _characterSpeed * Time.deltaTime;
         }
         #endregion
     }

@@ -6,20 +6,20 @@ namespace Rescues
     public class DoorTeleporter : MonoBehaviour
     {
         #region Data
-        [SerializeField] Transform upperDoor;
-        [SerializeField] Transform lowerDoor;
+        [SerializeField] private Transform upperDoor;
+        [SerializeField] private Transform lowerDoor;
         #endregion
 
 
         #region Methods
-        public void JumpUp(Transform go)
+        public void JumpUp(Transform objectTransfom)
         {
-            if (upperDoor != null) go.transform.position = upperDoor.position;
+            if (upperDoor != null) objectTransfom.transform.position = upperDoor.position;
         }
 
-        public void JumpDown(Transform go)
+        public void JumpDown(Transform objectTransfom)
         {
-            if (lowerDoor != null) go.transform.position = lowerDoor.position;
+            if (lowerDoor != null) objectTransfom.transform.position = lowerDoor.position;
         }
         #endregion
     }

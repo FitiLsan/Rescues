@@ -5,7 +5,7 @@ namespace Rescues
 {
     public class Main : MonoBehaviour
     {
-        private InputController InputController { get; set; }
+        private InputController InputController;
 
         #region UnityMethods
         private void Awake()
