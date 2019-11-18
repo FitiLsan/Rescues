@@ -1,19 +1,26 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class DoorTeleporter : MonoBehaviour
+
+namespace Rescues
 {
-    [SerializeField] Transform upperDoor;
-    [SerializeField] Transform lowerDoor;
-
-
-    public void JumpUp(Transform go)
+    public class DoorTeleporter : MonoBehaviour
     {
-        if(upperDoor != null) go.transform.position = upperDoor.position;
-    }
+        #region Data
+        [SerializeField] private Transform upperDoor;
+        [SerializeField] private Transform lowerDoor;
+        #endregion
 
-    public void JumpDown(Transform go)
-    {        
-        if (lowerDoor != null) go.transform.position = lowerDoor.position;
+
+        #region Methods
+        public void JumpUp(Transform objectTransfom)
+        {
+            if (upperDoor != null) objectTransfom.transform.position = upperDoor.position;
+        }
+
+        public void JumpDown(Transform objectTransfom)
+        {
+            if (lowerDoor != null) objectTransfom.transform.position = lowerDoor.position;
+        }
+        #endregion
     }
 }
