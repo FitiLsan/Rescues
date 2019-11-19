@@ -2,7 +2,6 @@
 using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
-using Rescues;
 
 
 namespace Rescues

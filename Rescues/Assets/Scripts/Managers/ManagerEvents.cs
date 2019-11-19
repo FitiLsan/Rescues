@@ -9,7 +9,7 @@ namespace Rescues
     {
         public GameObject prefab;
 
-        public void CratePrefab(Vector3 pos)
+        public void CreatePrefab(Vector3 pos)
         {
             Instantiate(prefab, pos, Quaternion.identity);
         }
