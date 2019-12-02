@@ -5,6 +5,7 @@
         public MainControllers(GameContext context)
         {
             Add(new InitializeCharacterController(context));
+            Add(new DoorTeleporterController(context));
             Add(new InputController(context));
         }
     }
