@@ -12,15 +12,14 @@ namespace Rescues
 
         private bool _isForward = true;
 
-        public Character(Transform transform)
+        public Character(Transform transform, PlayerData playerData)
         {
             _direction = Vector3.zero;
             _speed = 5.0f;
             _transform = transform;
             _rigidbody2D = _transform.GetComponent<Rigidbody2D>();
         }
-        
-        
+
         public void Move(float direction)
         {        
             _direction.x = direction * _speed;

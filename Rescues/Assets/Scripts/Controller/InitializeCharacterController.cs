@@ -5,19 +5,21 @@ namespace Rescues
 {
     public sealed class InitializeCharacterController : IInitializeController
     {
+        private readonly GameContext _context;
+
         public InitializeCharacterController(GameContext context)
         {
-            
+            _context = context;
         }
         public void Initialize()
-        { 
-            var resources = Resources.Load(AssetsPathGameObject.Object[GameObjectType.Character]);
-            // Load SO
-            //var obj = Object.Instantiate(resources, SO.position, Quaternion.identity);
+        {
+            var resources = Resources.Load<GameObject>(AssetsPathGameObject.Object[GameObjectType.Character]);
+            var playerData = Data.PlayerData;
+            var obj = Object.Instantiate(resources, playerData.Position, Quaternion.identity).transform;
             
-           // Character character = new Character(obj, SO);
+            Character character = new Character(obj, playerData);
            
-           //context.Character = character;
+            _context.Character = character;
         }
     }
 }

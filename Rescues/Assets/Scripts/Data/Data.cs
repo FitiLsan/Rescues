@@ -1,0 +1,61 @@
+﻿using System.IO;
+using UnityEngine;
+
+
+namespace Rescues
+{
+    [CreateAssetMenu(fileName = "Data", menuName = "Data/Data")]
+    public sealed class Data : ScriptableObject
+    {
+        #region Fields
+
+        private static Data _instance;
+
+        [SerializeField] private string _playerDataName;
+
+        private static PlayerData _playerData;
+
+        #endregion
+
+
+
+        #region Properties
+
+        private static Data Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = Resources.Load<Data>("Data/" + typeof(Data).Name);
+                }
+
+                return _instance;
+            }
+        }
+    
+
+        public static PlayerData PlayerData
+        {
+            get
+            {
+                if (_playerData == null)
+                {
+                    _playerData = Load<PlayerData>("Data/" + Instance._playerDataName);
+                }
+
+                return _playerData;
+            }
+        }
+
+        #endregion
+
+
+        #region Methods
+
+        static T Load<T>(string resourcesPath) where T : Object =>
+            Resources.Load<T>(Path.ChangeExtension(resourcesPath, null));
+    
+        #endregion
+    }
+}

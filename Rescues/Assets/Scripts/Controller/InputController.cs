@@ -14,10 +14,7 @@ namespace Rescues
         
         public void Execute()
         {
-            Vector3 dir = Vector3.zero;
-            dir.x = Input.GetAxis("Horizontal");
-            CustomDebug.Log(dir);
-            //context.Character.Move(dir);
+            _context.Character.Move(Input.GetAxis("Horizontal"));
         }
     }
 }
