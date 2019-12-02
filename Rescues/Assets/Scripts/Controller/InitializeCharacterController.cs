@@ -16,6 +16,8 @@ namespace Rescues
             //var obj = Object.Instantiate(resources, SO.position, Quaternion.identity);
             
            // Character character = new Character(obj, SO);
+           
+           //context.Character = character;
         }
     }
 }
