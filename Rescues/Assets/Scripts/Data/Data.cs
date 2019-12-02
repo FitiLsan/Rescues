@@ -53,7 +53,7 @@ namespace Rescues
 
         #region Methods
 
-        static T Load<T>(string resourcesPath) where T : Object =>
+        private static T Load<T>(string resourcesPath) where T : Object =>
             Resources.Load<T>(Path.ChangeExtension(resourcesPath, null));
     
         #endregion

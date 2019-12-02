@@ -13,7 +13,7 @@ namespace Rescues
         }
         public void Initialize()
         {
-            var resources = Resources.Load<GameObject>(AssetsPathGameObject.Object[GameObjectType.Character]);
+            var resources = Resources.Load<PlayerBehaviour>(AssetsPathGameObject.Object[GameObjectType.Character]);
             var playerData = Data.PlayerData;
             var obj = Object.Instantiate(resources, playerData.Position, Quaternion.identity).transform;
             
