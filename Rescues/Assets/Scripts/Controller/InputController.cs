@@ -3,8 +3,14 @@
 
 namespace Rescues
 {
-    public sealed class InputController :  IExecuteController
+    public sealed class InputController : IExecuteController
     {
+        public InputController(GameContext context)
+        {
+            
+        }
+        
+        
         Vector3 dir = Vector3.zero;
         public void Execute()
         {

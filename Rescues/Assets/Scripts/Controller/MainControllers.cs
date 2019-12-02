@@ -2,9 +2,10 @@
 {
     public sealed class MainControllers : Controllers
     {
-        public MainControllers()
+        public MainControllers(GameContext context)
         {
-            Add(new InputController());
+            Add(new InitializeCharacterController(context));
+            Add(new InputController(context));
         }
     }
 }

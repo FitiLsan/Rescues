@@ -18,7 +18,8 @@ namespace Rescues
 
         private void Start()
         {
-            _activeController = new GameSystemsController();
+            GameContext context = new GameContext();
+            _activeController = new GameSystemsController(context);
             _activeController.Initialize();
         }
 

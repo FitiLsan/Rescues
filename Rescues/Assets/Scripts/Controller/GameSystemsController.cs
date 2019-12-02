@@ -2,9 +2,9 @@
 {
     public sealed class GameSystemsController : GameStateController
     {
-        public GameSystemsController()
+        public GameSystemsController(GameContext context)
         {
-            AddUpdateFeature(new MainControllers());
+            AddUpdateFeature(new MainControllers(context));
         }
     }
 }
