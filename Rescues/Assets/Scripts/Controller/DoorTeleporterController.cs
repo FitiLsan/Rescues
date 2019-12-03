@@ -1,17 +1,29 @@
-﻿using System.Collections.Generic;
-using DG.Tweening;
+﻿using DG.Tweening;
 using UnityEngine;
+
 
 namespace Rescues
 {
     public sealed class DoorTeleporterController : IInitializeController, ITearDownController
     {
+        #region Fields
+        
         private readonly GameContext _context;
 
+        #endregion
+
+
+        #region ClassLifeCycles
+        
         public DoorTeleporterController(GameContext context, Services services)
         {
             _context = context;
         }
+
+        #endregion
+
+
+        #region IInitializeController
         
         public void Initialize()
         {
@@ -23,6 +35,11 @@ namespace Rescues
             }
         }
 
+        #endregion
+
+
+        #region ITearDownController
+        
         public void TearDown()
         {
             var doors = _context.GetTriggers<DoorTeleporterBehaviour>(TriggerObjectType.Door);
@@ -33,12 +50,17 @@ namespace Rescues
             }
         }
 
+        #endregion
+
+
+        #region Methods
+        
         private void OnTriggerEnterHandler(IOnTrigger obj)
         {
             obj.IsInteractable = true;
             var materialColor = obj.GameObject.GetComponent<SpriteRenderer>().color;
             obj.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
-            materialColor.g, materialColor.b, 0.5f), 1.0f);
+                materialColor.g, materialColor.b, 0.5f), 1.0f);
         }
 
         private void OnTriggerExitHandler(IOnTrigger obj)
@@ -48,5 +70,7 @@ namespace Rescues
             obj.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
                 materialColor.g, materialColor.b, 1.0f), 1.0f);
         }
+
+        #endregion
     }
 }

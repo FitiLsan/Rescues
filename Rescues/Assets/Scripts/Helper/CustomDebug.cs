@@ -26,8 +26,7 @@ namespace Rescues
         #endregion
 
 
-
-        #region Public methods
+        #region Methods
 
         public static void Log(object message)
         {
@@ -37,7 +36,6 @@ namespace Rescues
             }
         }
 
-
         public static void Log(object message, Object context)
         {
             if (Enable) 
@@ -45,7 +43,6 @@ namespace Rescues
                 Debug.Log(message, context);
             }
         }
-
 
         public static void LogWarning(object message)
         {
@@ -55,7 +52,6 @@ namespace Rescues
             }
         }
 
-
         public static void LogWarning(object message, Object context)
         {
             if (Enable) 
@@ -64,7 +60,6 @@ namespace Rescues
             }
         }
 
-
         public static void LogError(object message)
         {
             if (Enable) 
@@ -72,8 +67,7 @@ namespace Rescues
                 Debug.LogError(message);
             }
         }
-	
-	
+
         public static void LogError(object message, Object context)
         {
             if (Enable) 
@@ -82,7 +76,6 @@ namespace Rescues
             }
         }
 
-
         public static void LogFormat(string format, params object[] args)
         {
             if (Enable) 
@@ -90,8 +83,7 @@ namespace Rescues
                 Debug.LogFormat(format, args);
             }
         }
-
-
+        
         public static void LogWarningFormat(string format, params object[] args)
         {
             if (Enable) 
@@ -99,8 +91,7 @@ namespace Rescues
                 Debug.LogWarningFormat(format, args);
             }
         }
-
-
+        
         public static void LogErrorFormat(string format, params object[] args)
         {
             if (Enable) 

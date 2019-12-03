@@ -9,15 +9,12 @@ namespace Rescues
     {
         #region Fields
 
-        private static Data _instance;
-
         [SerializeField] private string _playerDataName;
-
+        private static Data _instance;
         private static PlayerData _playerData;
 
         #endregion
-
-
+        
 
         #region Properties
 

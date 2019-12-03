@@ -17,7 +17,8 @@ namespace Rescues
 
         #endregion
 
-        #region Class lifecycle
+        
+        #region ClassLifeCycles
 
         protected GameStateController(int capacity = 8)
         {
@@ -29,8 +30,7 @@ namespace Rescues
         #endregion
 
 
-
-        #region Public methods
+        #region Methods
 
         public void Initialize()
         {
@@ -56,8 +56,7 @@ namespace Rescues
             }
             #endif
         }
-
-
+        
         public void Execute(UpdateType updateType)
         {
             List<Controllers> features = null;
@@ -90,8 +89,7 @@ namespace Rescues
                 feature.Execute();
             }
         }
-
-
+        
         public void Cleanup(UpdateType updateType)
         {
             List<Controllers> features = null;
@@ -118,15 +116,13 @@ namespace Rescues
                 default:
                     break;
             }
-
-
+            
             foreach (var feature in features)
             {
                 feature.Cleanup();
             }
         }
-
-
+        
         public void TearDown()
         {
             foreach (var feature in _fixedUpdateFeatures)
@@ -151,26 +147,22 @@ namespace Rescues
             }
             #endif
         }
-        #endregion
 
         protected void AddFixedUpdateFeature(Controllers controller)
         {
             _fixedUpdateFeatures.Add(controller);
         }
-
-
+        
         protected void AddUpdateFeature(Controllers controller)
         {
             _updateFeatures.Add(controller);
         }
-
-
+        
         protected void AddLateUpdateFeature(Controllers controller)
         {
             _lateUpdateFeatures.Add(controller);
         }
-
-
+        
         #if UNITY_EDITOR
 
         protected void AddOnDrawGizmosFeature(Controllers controller)
@@ -179,6 +171,7 @@ namespace Rescues
         }
 
         #endif
+        
+        #endregion
     }
-
 }

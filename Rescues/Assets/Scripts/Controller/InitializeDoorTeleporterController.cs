@@ -5,12 +5,24 @@ namespace Rescues
 {
     public sealed class InitializeDoorTeleporterController : IInitializeController
     {
+        #region Fields
+        
         private readonly GameContext _context;
 
+        #endregion
+
+
+        #region ClassLifeCycles
+        
         public InitializeDoorTeleporterController(GameContext context, Services services)
         {
             _context = context;
         }
+
+        #endregion
+
+
+        #region IInitializeController
         
         public void Initialize()
         {
@@ -23,9 +35,16 @@ namespace Rescues
             }
         }
 
+        #endregion
+
+
+        #region Methods
+        
         private bool OnFilterHandler(Collider2D obj)
         {
-           return obj.CompareTag("Player");
+            return obj.CompareTag(TagManager.PLAYER);
         }
+
+        #endregion
     }
 }

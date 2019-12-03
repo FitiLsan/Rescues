@@ -1,16 +1,21 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
+
 
 namespace Rescues
 {
     public sealed class GameController : MonoBehaviour
     {
+        #region Fields
+        
         private GameStateController _activeController;
 
-        #region Unity lifecycle
+        #endregion
+        
+
+        #region UnityMethods
 
         private void Awake()
         {

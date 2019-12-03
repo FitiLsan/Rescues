@@ -5,12 +5,25 @@ namespace Rescues
 {
     public sealed class InitializeCharacterController : IInitializeController
     {
+        #region Fields
+        
         private readonly GameContext _context;
 
+        #endregion
+
+
+        #region ClassLifeCycles
+        
         public InitializeCharacterController(GameContext context, Services services)
         {
             _context = context;
         }
+
+        #endregion
+
+
+        #region IInitializeController
+        
         public void Initialize()
         {
             var resources = Resources.Load<PlayerBehaviour>(AssetsPathGameObject.Object[GameObjectType.Character]);
@@ -21,5 +34,7 @@ namespace Rescues
            
             _context.Character = character;
         }
+
+        #endregion
     }
 }

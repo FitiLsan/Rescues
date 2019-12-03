@@ -1,7 +1,4 @@
 ﻿namespace Rescues
 {
-    public abstract class Contexts
-    {
-        
-    }
+    public abstract class Contexts { }
 }
