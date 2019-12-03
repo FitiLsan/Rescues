@@ -19,7 +19,7 @@ namespace Rescues
             foreach (var trigger in triggers)
             {
                 trigger.OnFilterHandler = OnFilterHandler;
-                _context.OnTriggers.Add(trigger);
+                _context.AddTriggers(TriggerObjectType.Door, trigger);
             }
         }
 

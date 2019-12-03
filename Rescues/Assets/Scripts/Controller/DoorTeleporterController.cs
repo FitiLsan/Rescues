@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Rescues
@@ -14,25 +15,21 @@ namespace Rescues
         
         public void Initialize()
         {
-            foreach (var trigger in _context.OnTriggers)
+            var doors = _context.GetTriggers<DoorTeleporterBehaviour>(TriggerObjectType.Door);
+            foreach (var trigger in doors)
             {
-                if (trigger is DoorTeleporterBehaviour doorTeleporter)
-                {
-                    doorTeleporter.OnTriggerEnterHandler += OnTriggerEnterHandler;
-                    doorTeleporter.OnTriggerExitHandler += OnTriggerExitHandler;
-                }
+                trigger.OnTriggerEnterHandler += OnTriggerEnterHandler;
+                trigger.OnTriggerExitHandler += OnTriggerExitHandler;
             }
         }
 
         public void TearDown()
-        {     
-            foreach (var trigger in _context.OnTriggers)
+        {
+            var doors = _context.GetTriggers<DoorTeleporterBehaviour>(TriggerObjectType.Door);
+            foreach (var trigger in doors)
             {
-                if (trigger is DoorTeleporterBehaviour doorTeleporter)
-                {
-                    doorTeleporter.OnTriggerEnterHandler -= OnTriggerEnterHandler;
-                    doorTeleporter.OnTriggerExitHandler -= OnTriggerExitHandler;
-                }
+                trigger.OnTriggerEnterHandler -= OnTriggerEnterHandler;
+                trigger.OnTriggerExitHandler -= OnTriggerExitHandler;
             }
         }
 

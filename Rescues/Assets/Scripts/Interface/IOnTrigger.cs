@@ -8,6 +8,7 @@ namespace Rescues
         Predicate<Collider2D> OnFilterHandler { get; set; }
         Action<IOnTrigger> OnTriggerEnterHandler { get; set; }
         Action<IOnTrigger> OnTriggerExitHandler { get; set; }
+        bool IsInteractable { get; set; }
         GameObject GameObject { get; }
     }
 }
