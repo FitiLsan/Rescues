@@ -9,7 +9,7 @@ namespace Rescues
     {
         #region Fields
 
-        [SerializeField] private string _playerDataName;
+        [SerializeField] private string _playerDataPath;
         private static Data _instance;
         private static PlayerData _playerData;
 
@@ -38,7 +38,7 @@ namespace Rescues
             {
                 if (_playerData == null)
                 {
-                    _playerData = Load<PlayerData>("Data/" + Instance._playerDataName);
+                    _playerData = Load<PlayerData>("Data/" + Instance._playerDataPath);
                 }
 
                 return _playerData;

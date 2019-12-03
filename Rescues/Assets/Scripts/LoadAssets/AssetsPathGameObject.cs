@@ -9,7 +9,7 @@ namespace Rescues
 
         public static readonly Dictionary<GameObjectType, string> Object = new Dictionary<GameObjectType, string>()
         {
-            {GameObjectType.Character, "Prefabs/Player/Prefabs_Player_Character"},
+            { GameObjectType.Character, "Prefabs/Player/Prefabs_Player_Character" },
         };
 
         #endregion
