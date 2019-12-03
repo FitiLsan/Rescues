@@ -4,22 +4,34 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public sealed class PhysicsService: Service
+    public sealed class PhysicsService : Service
     {
-        public const int CollidedObjectSize = 20;
+        #region Fields
 
-        Collider2D[] collidedObjects;
+        private const int COLLIDEDOBJECTSIZE = 20;
+
+        private readonly Collider2D[] _collidedObjects;
+        private readonly RaycastHit2D[] _castBuffer;
+        private readonly List<IOnTrigger> _triggeredObjects;
+
+        #endregion
+
+        
+        #region ClassLifeCycles
 
         public PhysicsService(Contexts contexts) : base(contexts)
         {
-            collidedObjects = new Collider2D[CollidedObjectSize];
+            _collidedObjects = new Collider2D[COLLIDEDOBJECTSIZE];
+            _castBuffer = new RaycastHit2D[64];
+            _triggeredObjects = new List<IOnTrigger>();
         }
 
+        #endregion
 
-
+        
         #region Methods
 
-        public bool CheckGround(Vector2 position, float distanceRay, out Vector2 hitPoint, int layerMask = Physics.DefaultRaycastLayers)
+        public bool CheckGround(Vector2 position, float distanceRay, out Vector2 hitPoint, int layerMask = LayerManager.DEFAULTLAYER)
         {
             hitPoint = Vector2.zero;
 
@@ -32,30 +44,52 @@ namespace Rescues
             hitPoint = hit.point;
             return true;
         }
-
-
-        public List<IOnTrigger> GetObjectsInRadius(Vector2 position, float radius, int layerMask = Physics.DefaultRaycastLayers)
+        
+        public List<IOnTrigger> GetObjectsInRadius(Vector2 position, float radius, int layerMask = LayerManager.DEFAULTLAYER)
         {
-            List<IOnTrigger> triggeredObjects = new List<IOnTrigger>();
+            _triggeredObjects.Clear();
             IOnTrigger trigger;
 
-            int collidersCount = Physics2D.OverlapCircleNonAlloc(position, radius, collidedObjects, layerMask);
-
-
+            int collidersCount = Physics2D.OverlapCircleNonAlloc(position, radius, _collidedObjects, layerMask);
+            
             for (int i = 0; i < collidersCount; i++)
             {
-                trigger = collidedObjects[i].GetComponent<IOnTrigger>();
+                trigger = _collidedObjects[i].GetComponent<IOnTrigger>();
 
-                if (trigger != null && !triggeredObjects.Contains(trigger))
+                if (trigger != null && !_triggeredObjects.Contains(trigger))
                 {
-                    triggeredObjects.Add(trigger);
+                    _triggeredObjects.Add(trigger);
                 }
             }
 
-            return triggeredObjects;
+            return _triggeredObjects;
         }
+        
+        public HashSet<IOnTrigger> SphereCastObject(Vector2 center, float radius, HashSet<IOnTrigger> outBuffer,
+            int layerMask = LayerManager.DEFAULTLAYER)
+        {
+            outBuffer.Clear();
+
+            int hitCount = Physics2D.CircleCastNonAlloc(center,
+                radius,
+                Vector2.zero,
+                _castBuffer,
+                0.0f,
+                layerMask);
+
+            for (int i = 0; i < hitCount; i++)
+            {
+                IOnTrigger carTriggerProvider = _castBuffer[i].collider.GetComponent<IOnTrigger>();
+                if (carTriggerProvider != null)
+                {
+                    outBuffer.Add(carTriggerProvider);
+                }
+            }
 
 
+            return outBuffer;
+        }
+        
         public IOnTrigger GetNearestObject(Vector3 targetPosition, HashSet<IOnTrigger> objectBuffer)
         {
             float nearestDistance = Mathf.Infinity;

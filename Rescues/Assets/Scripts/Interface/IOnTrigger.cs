@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
+
 namespace Rescues
 {
     public interface IOnTrigger

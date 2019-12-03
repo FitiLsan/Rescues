@@ -5,12 +5,24 @@ namespace Rescues
 {
     public sealed class InputController : IExecuteController
     {
+        #region Fields
+        
         private readonly GameContext _context;
+
+        #endregion
+
+
+        #region ClassLifeCycles
         
         public InputController(GameContext context, Services services)
         {
             _context = context;
         }
+
+        #endregion
+
+
+        #region IExecuteController
         
         public void Execute()
         {
@@ -21,5 +33,7 @@ namespace Rescues
                 
             }
         }
+
+        #endregion
     }
 }

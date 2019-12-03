@@ -8,29 +8,31 @@ namespace Rescues
     {
         #region Fields
 
-        int deltaTimeResetFrame;
+        private int _deltaTimeResetFrame;
 
         #endregion
+        
 
-
-
-        #region Class lifecycle
+        #region ClassLifeCycles
 
         public UnityTimeService(Contexts contexts) : base(contexts) { }
 
         #endregion
 
 
-
-        #region ITimeService
-
-        public float DeltaTime() => deltaTimeResetFrame == Time.frameCount ? 0.0f : Time.deltaTime;
-        public float UnscaledDeltaTime() => deltaTimeResetFrame == Time.frameCount ? 0.0f : Time.unscaledDeltaTime;
-        public float FixedDeltaTime() => deltaTimeResetFrame == Time.frameCount ? 0.0f : Time.fixedDeltaTime;
+        #region Properties
+        
+        public float DeltaTime() => _deltaTimeResetFrame == Time.frameCount ? 0.0f : Time.deltaTime;
+        public float UnscaledDeltaTime() => _deltaTimeResetFrame == Time.frameCount ? 0.0f : Time.unscaledDeltaTime;
+        public float FixedDeltaTime() => _deltaTimeResetFrame == Time.frameCount ? 0.0f : Time.fixedDeltaTime;
         public float RealtimeSinceStartup() => Time.realtimeSinceStartup;
         public float GameTime() => Time.time;
 
+        #endregion
 
+        
+        #region Methods
+        
         public long Timestamp()
         {
             long timestamp = DateTime.UtcNow.ToUnixTimestamp();
@@ -38,16 +40,14 @@ namespace Rescues
             return timestamp;
         }
 
-
         public void SetTimeScale(float timeScale)
         {
             Time.timeScale = timeScale;
         }
-
-
+        
         public void ResetDeltaTime()
         {
-            deltaTimeResetFrame = Time.frameCount;
+            _deltaTimeResetFrame = Time.frameCount;
         }
 
         #endregion
