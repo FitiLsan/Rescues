@@ -25,7 +25,7 @@ namespace Rescues
         private void Start()
         {
             GameContext context = new GameContext();
-            Services services = Services.sharedInstance;
+            Services services = Services.SharedInstance;
             services.Initialize(context);
             _activeController = new GameSystemsController(context, services);
             _activeController.Initialize();

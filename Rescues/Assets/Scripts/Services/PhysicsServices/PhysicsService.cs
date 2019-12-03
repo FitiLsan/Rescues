@@ -4,23 +4,31 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public sealed class PhysicsService: Service
+    public sealed class PhysicsService : Service
     {
-        private const int CollidedObjectSize = 20;
+        #region Fields
+
+        private const int COLLIDEDOBJECTSIZE = 20;
 
         private readonly Collider2D[] _collidedObjects;
         private readonly RaycastHit2D[] _castBuffer;
         private readonly List<IOnTrigger> _triggeredObjects;
 
+        #endregion
+
+        
+        #region ClassLifeCycles
+
         public PhysicsService(Contexts contexts) : base(contexts)
         {
-            _collidedObjects = new Collider2D[CollidedObjectSize];
+            _collidedObjects = new Collider2D[COLLIDEDOBJECTSIZE];
             _castBuffer = new RaycastHit2D[64];
             _triggeredObjects = new List<IOnTrigger>();
         }
 
+        #endregion
 
-
+        
         #region Methods
 
         public bool CheckGround(Vector2 position, float distanceRay, out Vector2 hitPoint, int layerMask = LayerManager.DEFAULTLAYER)
@@ -36,16 +44,14 @@ namespace Rescues
             hitPoint = hit.point;
             return true;
         }
-
-
+        
         public List<IOnTrigger> GetObjectsInRadius(Vector2 position, float radius, int layerMask = LayerManager.DEFAULTLAYER)
         {
             _triggeredObjects.Clear();
             IOnTrigger trigger;
 
             int collidersCount = Physics2D.OverlapCircleNonAlloc(position, radius, _collidedObjects, layerMask);
-
-
+            
             for (int i = 0; i < collidersCount; i++)
             {
                 trigger = _collidedObjects[i].GetComponent<IOnTrigger>();
@@ -58,8 +64,7 @@ namespace Rescues
 
             return _triggeredObjects;
         }
-
-
+        
         public HashSet<IOnTrigger> SphereCastObject(Vector2 center, float radius, HashSet<IOnTrigger> outBuffer,
             int layerMask = LayerManager.DEFAULTLAYER)
         {
@@ -84,8 +89,7 @@ namespace Rescues
 
             return outBuffer;
         }
-
-
+        
         public IOnTrigger GetNearestObject(Vector3 targetPosition, HashSet<IOnTrigger> objectBuffer)
         {
             float nearestDistance = Mathf.Infinity;
