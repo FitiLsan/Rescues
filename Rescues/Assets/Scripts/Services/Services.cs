@@ -1,6 +1,6 @@
 ﻿namespace Rescues
 {
-    public sealed class Services : Contexts
+    public sealed class Services
     {
         #region Fields
         
