@@ -7,7 +7,7 @@ namespace Rescues
     {
         private readonly GameContext _context;
         
-        public InputController(GameContext context)
+        public InputController(GameContext context, Services services)
         {
             _context = context;
         }
@@ -15,6 +15,11 @@ namespace Rescues
         public void Execute()
         {
             _context.Character.Move(Input.GetAxis("Horizontal"));
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                
+            }
         }
     }
 }

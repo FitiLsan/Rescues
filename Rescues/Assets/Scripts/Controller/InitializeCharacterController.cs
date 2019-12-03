@@ -7,7 +7,7 @@ namespace Rescues
     {
         private readonly GameContext _context;
 
-        public InitializeCharacterController(GameContext context)
+        public InitializeCharacterController(GameContext context, Services services)
         {
             _context = context;
         }

@@ -7,7 +7,7 @@ namespace Rescues
     {
         private readonly GameContext _context;
 
-        public InitializeDoorTeleporterController(GameContext context)
+        public InitializeDoorTeleporterController(GameContext context, Services services)
         {
             _context = context;
         }

@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Rescues
 {
-    public sealed class GameContext
+    public sealed class GameContext : Contexts
     {
         public Character Character;
         private readonly SortedList<TriggerObjectType, List<IOnTrigger>> _onTriggers;

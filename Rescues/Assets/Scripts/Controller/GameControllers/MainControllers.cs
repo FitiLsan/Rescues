@@ -2,12 +2,12 @@
 {
     public sealed class MainControllers : Controllers
     {
-        public MainControllers(GameContext context)
+        public MainControllers(GameContext context, Services services)
         {
-            Add(new InitializeCharacterController(context));
-            Add(new InitializeDoorTeleporterController(context));
-            Add(new DoorTeleporterController(context));
-            Add(new InputController(context));
+            Add(new InitializeCharacterController(context, services));
+            Add(new InitializeDoorTeleporterController(context, services));
+            Add(new DoorTeleporterController(context, services));
+            Add(new InputController(context, services));
         }
     }
 }

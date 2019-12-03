@@ -8,7 +8,7 @@ namespace Rescues
     {
         private readonly GameContext _context;
 
-        public DoorTeleporterController(GameContext context)
+        public DoorTeleporterController(GameContext context, Services services)
         {
             _context = context;
         }
@@ -35,6 +35,7 @@ namespace Rescues
 
         private void OnTriggerEnterHandler(IOnTrigger obj)
         {
+            obj.IsInteractable = true;
             var materialColor = obj.GameObject.GetComponent<SpriteRenderer>().color;
             obj.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
             materialColor.g, materialColor.b, 0.5f), 1.0f);
@@ -42,6 +43,7 @@ namespace Rescues
 
         private void OnTriggerExitHandler(IOnTrigger obj)
         {
+            obj.IsInteractable = false;
             var materialColor = obj.GameObject.GetComponent<SpriteRenderer>().color;
             obj.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
                 materialColor.g, materialColor.b, 1.0f), 1.0f);
