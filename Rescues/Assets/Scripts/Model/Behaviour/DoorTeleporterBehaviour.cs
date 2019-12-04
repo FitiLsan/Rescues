@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public sealed class DoorTeleporterBehaviour : MonoBehaviour, IOnTrigger
+    public sealed class DoorTeleporterBehaviour : MonoBehaviour, ITrigger
     {
         #region Properties
         
         public Predicate<Collider2D> OnFilterHandler { get; set; }
-        public Action<IOnTrigger> OnTriggerEnterHandler { get; set; }
-        public Action<IOnTrigger> OnTriggerExitHandler { get; set; }
+        public Action<ITrigger> OnTriggerEnterHandler { get; set; }
+        public Action<ITrigger> OnTriggerExitHandler { get; set; }
         public bool IsInteractable { get; set; }
         public GameObject GameObject => gameObject;
 

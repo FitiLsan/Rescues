@@ -9,7 +9,8 @@ namespace Rescues
         #region Fields
 
         public Character Character;
-        private readonly SortedList<TriggerObjectType, List<IOnTrigger>> _onTriggers;
+        private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
+        private readonly List<IInteractable> _interactables;
         
         #endregion
 
@@ -18,33 +19,43 @@ namespace Rescues
 
         public GameContext()
         {
-            _onTriggers = new SortedList<TriggerObjectType, List<IOnTrigger>>();
+            _onTriggers = new SortedList<InteractableObjectType, List<IInteractable>>();
+            _interactables = new List<IInteractable>();
         }
-
+        
         #endregion
 
 
         #region Methods
 
-        public void AddTriggers(TriggerObjectType type, IOnTrigger trigger)
+        public void AddTriggers(InteractableObjectType type, ITrigger trigger)
         {
+            if (!_interactables.Contains(trigger))
+            {
+                _interactables.Add(trigger); 
+            }
+            
             if (_onTriggers.ContainsKey(type))
             {
                 _onTriggers[type].Add(trigger);
             }
             else
             {
-                _onTriggers.Add(type, new List<IOnTrigger>
+                _onTriggers.Add(type, new List<IInteractable>
                 {
                     trigger
                 });
             }
         }
         
-        public List<T> GetTriggers<T>(TriggerObjectType type) where T : class, IOnTrigger
+        public List<T> GetTriggers<T>(InteractableObjectType type) where T : class, IInteractable
         {
-            return _onTriggers[type].Select(trigger => trigger as T)
-                .ToList();
+            return _onTriggers.ContainsKey(type) ? _onTriggers[type].Select(trigger => trigger as T).ToList() : null;
+        }
+
+        public List<IInteractable> GetListInteractable()
+        {
+            return _interactables;
         }
 
         #endregion

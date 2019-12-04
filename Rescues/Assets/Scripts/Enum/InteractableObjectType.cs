@@ -1,6 +1,6 @@
 ﻿namespace Rescues
 {
-    public enum TriggerObjectType
+    public enum InteractableObjectType
     {
         None = 0,
         Door = 1,

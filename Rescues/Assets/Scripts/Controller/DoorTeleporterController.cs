@@ -27,7 +27,7 @@ namespace Rescues
         
         public void Initialize()
         {
-            var doors = _context.GetTriggers<DoorTeleporterBehaviour>(TriggerObjectType.Door);
+            var doors = _context.GetTriggers<DoorTeleporterBehaviour>(InteractableObjectType.Door);
             foreach (var trigger in doors)
             {
                 trigger.OnTriggerEnterHandler += OnTriggerEnterHandler;
@@ -42,7 +42,7 @@ namespace Rescues
         
         public void TearDown()
         {
-            var doors = _context.GetTriggers<DoorTeleporterBehaviour>(TriggerObjectType.Door);
+            var doors = _context.GetTriggers<DoorTeleporterBehaviour>(InteractableObjectType.Door);
             foreach (var trigger in doors)
             {
                 trigger.OnTriggerEnterHandler -= OnTriggerEnterHandler;
@@ -55,7 +55,7 @@ namespace Rescues
 
         #region Methods
         
-        private void OnTriggerEnterHandler(IOnTrigger obj)
+        private void OnTriggerEnterHandler(ITrigger obj)
         {
             obj.IsInteractable = true;
             var materialColor = obj.GameObject.GetComponent<SpriteRenderer>().color;
@@ -63,7 +63,7 @@ namespace Rescues
                 materialColor.g, materialColor.b, 0.5f), 1.0f);
         }
 
-        private void OnTriggerExitHandler(IOnTrigger obj)
+        private void OnTriggerExitHandler(ITrigger obj)
         {
             obj.IsInteractable = false;
             var materialColor = obj.GameObject.GetComponent<SpriteRenderer>().color;

@@ -147,7 +147,7 @@ namespace Rescues
             }
             #endif
         }
-
+        
         protected void AddFixedUpdateFeature(Controllers controller)
         {
             _fixedUpdateFeatures.Add(controller);

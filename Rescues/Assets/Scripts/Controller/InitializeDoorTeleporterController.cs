@@ -31,7 +31,7 @@ namespace Rescues
             foreach (var trigger in triggers)
             {
                 trigger.OnFilterHandler = OnFilterHandler;
-                _context.AddTriggers(TriggerObjectType.Door, trigger);
+                _context.AddTriggers(InteractableObjectType.Door, trigger);
             }
         }
 
