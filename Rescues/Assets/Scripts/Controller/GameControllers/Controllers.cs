@@ -32,20 +32,24 @@ namespace Rescues
 
         protected virtual Controllers Add(IController controller)
         {
-            switch (controller)
+            if (controller is ICleanupController cleanupController)
             {
-                case ICleanupController cleanupController:
-                    _cleanupControllers.Add(cleanupController);
-                    break;
-                case IExecuteController executeController:
-                    _executeControllers.Add(executeController);
-                    break;
-                case IInitializeController initializeController:
-                    _initializeControllers.Add(initializeController);
-                    break;
-                case ITearDownController tearDownController:
-                    _tearDownControllers.Add(tearDownController);
-                    break;
+                _cleanupControllers.Add(cleanupController);
+            }
+
+            if (controller is IExecuteController executeController)
+            {
+                _executeControllers.Add(executeController);
+            }
+
+            if (controller is IInitializeController initializeController)
+            {
+                _initializeControllers.Add(initializeController);
+            }
+
+            if (controller is ITearDownController tearDownController)
+            {
+                _tearDownControllers.Add(tearDownController);
             }
 
             return this;
