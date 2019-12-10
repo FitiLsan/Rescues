@@ -5,13 +5,25 @@ namespace Rescues
 {
     public sealed class Character
     {
+        #region Fields
+
         private Vector3 _direction;
         private readonly float _speed;
+        private bool _isForward = true;
+
+        #endregion
+
+
+        #region Properties
+
         private Rigidbody2D Rigidbody2D { get; }
         private Transform Transform { get; }
         private PlayerBehaviour PlayerBehaviour { get; }
 
-        private bool _isForward = true;
+        #endregion
+
+
+        #region ClassLifeCycle
 
         public Character(Transform transform, PlayerData playerData)
         {
@@ -20,6 +32,16 @@ namespace Rescues
             Transform = transform;
             Rigidbody2D = Transform.GetComponent<Rigidbody2D>();
             PlayerBehaviour = Transform.GetComponent<PlayerBehaviour>();
+        }
+
+        #endregion
+
+
+        #region Methods
+
+        public void Teleport(Transform transform)
+        {
+           
         }
 
         public void Move(float direction)
@@ -46,5 +68,7 @@ namespace Rescues
             dir.x *= -1;
             Transform.localScale = dir;
         }
+
+        #endregion
     }
 }
