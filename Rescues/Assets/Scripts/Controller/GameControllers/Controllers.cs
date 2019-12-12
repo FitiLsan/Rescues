@@ -7,10 +7,10 @@ namespace Rescues
     {
         #region Fields
         
-        protected readonly List<IInitializeController> _initializeSystems;
-        protected readonly List<IExecuteController> _executeSystems;
-        protected readonly List<ICleanupController> _cleanupSystems;
-        protected readonly List<ITearDownController> _tearDownSystems;
+        protected readonly List<IInitializeController> _initializeControllers;
+        protected readonly List<IExecuteController> _executeControllers;
+        protected readonly List<ICleanupController> _cleanupControllers;
+        protected readonly List<ITearDownController> _tearDownControllers;
 
         #endregion 
 
@@ -19,10 +19,10 @@ namespace Rescues
         
         protected Controllers()
         {
-            _initializeSystems = new List<IInitializeController>();
-            _executeSystems = new List<IExecuteController>();
-            _cleanupSystems = new List<ICleanupController>();
-            _tearDownSystems = new List<ITearDownController>();
+            _initializeControllers = new List<IInitializeController>();
+            _executeControllers = new List<IExecuteController>();
+            _cleanupControllers = new List<ICleanupController>();
+            _tearDownControllers = new List<ITearDownController>();
         }
 
         #endregion
@@ -32,20 +32,24 @@ namespace Rescues
 
         protected virtual Controllers Add(IController controller)
         {
-            switch (controller)
+            if (controller is ICleanupController cleanupController)
             {
-                case ICleanupController cleanupController:
-                    _cleanupSystems.Add(cleanupController);
-                    break;
-                case IExecuteController executeController:
-                    _executeSystems.Add(executeController);
-                    break;
-                case IInitializeController initializeController:
-                    _initializeSystems.Add(initializeController);
-                    break;
-                case ITearDownController tearDownController:
-                    _tearDownSystems.Add(tearDownController);
-                    break;
+                _cleanupControllers.Add(cleanupController);
+            }
+
+            if (controller is IExecuteController executeController)
+            {
+                _executeControllers.Add(executeController);
+            }
+
+            if (controller is IInitializeController initializeController)
+            {
+                _initializeControllers.Add(initializeController);
+            }
+
+            if (controller is ITearDownController tearDownController)
+            {
+                _tearDownControllers.Add(tearDownController);
             }
 
             return this;
@@ -58,9 +62,9 @@ namespace Rescues
         
         public virtual void Initialize()
         {
-            for (var index = 0; index < _initializeSystems.Count; ++index)
+            for (var index = 0; index < _initializeControllers.Count; ++index)
             {
-                _initializeSystems[index].Initialize();
+                _initializeControllers[index].Initialize();
             }
         }
 
@@ -71,9 +75,9 @@ namespace Rescues
         
         public virtual void Execute()
         {
-            for (var index = 0; index < _executeSystems.Count; ++index)
+            for (var index = 0; index < _executeControllers.Count; ++index)
             {
-                _executeSystems[index].Execute();
+                _executeControllers[index].Execute();
             }
         }
 
@@ -84,21 +88,22 @@ namespace Rescues
 
         public virtual void Cleanup()
         {
-            for (var index = 0; index < _cleanupSystems.Count; ++index)
+            for (var index = 0; index < _cleanupControllers.Count; ++index)
             {
-                _cleanupSystems[index].Cleanup();
+                _cleanupControllers[index].Cleanup();
             }
         }
 
         #endregion
+        
 
         #region ITearDownController
 
         public virtual void TearDown()
         {
-            for (var index = 0; index < _tearDownSystems.Count; ++index)
+            for (var index = 0; index < _tearDownControllers.Count; ++index)
             {
-                _tearDownSystems[index].TearDown();
+                _tearDownControllers[index].TearDown();
             }
         }
 

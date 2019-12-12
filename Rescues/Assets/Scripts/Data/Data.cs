@@ -10,8 +10,10 @@ namespace Rescues
         #region Fields
 
         [SerializeField] private string _playerDataPath;
+        [SerializeField] private string _itemDataPath;
         private static Data _instance;
         private static PlayerData _playerData;
+        private static ItemData _itemData;
 
         #endregion
         
@@ -42,6 +44,20 @@ namespace Rescues
                 }
 
                 return _playerData;
+            }
+        }
+    
+
+        public static ItemData ItemData
+        {
+            get
+            {
+                if (_itemData == null)
+                {
+                    _itemData = Load<ItemData>("Data/" + Instance._itemDataPath);
+                }
+
+                return _itemData;
             }
         }
 

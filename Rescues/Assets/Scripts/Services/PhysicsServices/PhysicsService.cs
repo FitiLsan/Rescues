@@ -12,7 +12,7 @@ namespace Rescues
 
         private readonly Collider2D[] _collidedObjects;
         private readonly RaycastHit2D[] _castBuffer;
-        private readonly List<IOnTrigger> _triggeredObjects;
+        private readonly List<ITrigger> _triggeredObjects;
 
         #endregion
 
@@ -23,7 +23,7 @@ namespace Rescues
         {
             _collidedObjects = new Collider2D[COLLIDEDOBJECTSIZE];
             _castBuffer = new RaycastHit2D[64];
-            _triggeredObjects = new List<IOnTrigger>();
+            _triggeredObjects = new List<ITrigger>();
         }
 
         #endregion
@@ -45,16 +45,16 @@ namespace Rescues
             return true;
         }
         
-        public List<IOnTrigger> GetObjectsInRadius(Vector2 position, float radius, int layerMask = LayerManager.DEFAULTLAYER)
+        public List<ITrigger> GetObjectsInRadius(Vector2 position, float radius, int layerMask = LayerManager.DEFAULTLAYER)
         {
             _triggeredObjects.Clear();
-            IOnTrigger trigger;
+            ITrigger trigger;
 
             int collidersCount = Physics2D.OverlapCircleNonAlloc(position, radius, _collidedObjects, layerMask);
             
             for (int i = 0; i < collidersCount; i++)
             {
-                trigger = _collidedObjects[i].GetComponent<IOnTrigger>();
+                trigger = _collidedObjects[i].GetComponent<ITrigger>();
 
                 if (trigger != null && !_triggeredObjects.Contains(trigger))
                 {
@@ -65,7 +65,7 @@ namespace Rescues
             return _triggeredObjects;
         }
         
-        public HashSet<IOnTrigger> SphereCastObject(Vector2 center, float radius, HashSet<IOnTrigger> outBuffer,
+        public HashSet<ITrigger> SphereCastObject(Vector2 center, float radius, HashSet<ITrigger> outBuffer,
             int layerMask = LayerManager.DEFAULTLAYER)
         {
             outBuffer.Clear();
@@ -79,7 +79,7 @@ namespace Rescues
 
             for (int i = 0; i < hitCount; i++)
             {
-                IOnTrigger carTriggerProvider = _castBuffer[i].collider.GetComponent<IOnTrigger>();
+                ITrigger carTriggerProvider = _castBuffer[i].collider.GetComponent<ITrigger>();
                 if (carTriggerProvider != null)
                 {
                     outBuffer.Add(carTriggerProvider);
@@ -90,12 +90,12 @@ namespace Rescues
             return outBuffer;
         }
         
-        public IOnTrigger GetNearestObject(Vector3 targetPosition, HashSet<IOnTrigger> objectBuffer)
+        public ITrigger GetNearestObject(Vector3 targetPosition, HashSet<ITrigger> objectBuffer)
         {
             float nearestDistance = Mathf.Infinity;
-            IOnTrigger result = null;
+            ITrigger result = null;
 
-            foreach (IOnTrigger trigger in objectBuffer)
+            foreach (ITrigger trigger in objectBuffer)
             {
                 float objectDistance = (targetPosition - trigger.GameObject.transform.position).sqrMagnitude;
                 if (objectDistance >= nearestDistance)
