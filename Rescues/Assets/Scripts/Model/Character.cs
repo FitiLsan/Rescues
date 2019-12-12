@@ -15,6 +15,8 @@ namespace Rescues
 
         private bool _isForward = true;
         #endregion
+
+
         #region UnityMethods
         void Update()
         {
