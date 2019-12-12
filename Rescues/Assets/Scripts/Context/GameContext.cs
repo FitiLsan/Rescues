@@ -52,6 +52,11 @@ namespace Rescues
         {
             return _onTriggers.ContainsKey(type) ? _onTriggers[type].Select(trigger => trigger as T).ToList() : null;
         }
+        
+        public List<IInteractable> GetTriggers(InteractableObjectType type)
+        {
+            return _onTriggers.ContainsKey(type) ? _onTriggers[type] : null;
+        }
 
         public List<IInteractable> GetListInteractable()
         {
