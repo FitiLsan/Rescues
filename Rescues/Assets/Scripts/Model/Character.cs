@@ -5,29 +5,28 @@ namespace Rescues
 {
     public sealed class Character
     {
-        #region PrivateData
+        #region Fields
+
         private Vector3 _direction;
         private readonly float _speed;
-        private float _horizontal;
+        private float _raycastLength;
+        private float _gravity;
+        private SpriteRenderer _mySprite;
+
+        #endregion
+
+
+        #region Properties
+
         private Rigidbody2D Rigidbody2D { get; }
         private Transform Transform { get; }
         private PlayerBehaviour PlayerBehaviour { get; }
 
-        private bool _isForward = true;
         #endregion
 
 
-        #region UnityMethods
-        void Update()
-        {
-            _horizontal = Input.GetAxis("Horizontal");
-            if(_horizontal != 0)
-            {
-                Move(1);
-            }
-        }
-        #endregion
-        #region Methods
+        #region ClassLifeCycles
+
         public Character(Transform transform, PlayerData playerData)
         {
             _direction = Vector3.zero;
@@ -37,34 +36,46 @@ namespace Rescues
             PlayerBehaviour = Transform.GetComponent<PlayerBehaviour>();
         }
 
-        public void Move(float direction)
+        #endregion
+
+
+        #region UnityMethods
+        void Update()
         {
-            RaycastHit2D hit = Physics2D.Raycast(Transform.position, Vector2.down, 9);
-            if (hit != true) Transform.Translate(new Vector3(0.0f, -0.1f, 0.0f));
-            Transform.Translate(new Vector3(_horizontal, 0.0f, 0.0f));
-            _direction.x = direction * _speed;
-            _direction.y = Rigidbody2D.velocity.y;
-
-            Rigidbody2D.velocity = _direction;
-
-            if (Rigidbody2D.velocity.x > 0 && !_isForward)
+            _direction.x = Input.GetAxis("Horizontal");
+            if (_direction != 0)
             {
-                Flip();
+                Move();
             }
-            else if (Rigidbody2D.velocity.x < 0 && _isForward)
-            {
-                Flip();
-            
-  
         }
+        #endregion
+
+
+        #region Methods
+
+
+        public void Move()
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Transform.position, Vector2.down, _raycastLength);
+            if (hit != true) Transform.Translate(Vector3.down * _gravity);
+            Transform.Translate(new Vector3(_horizontal, 0.0f, 0.0f));
+            if(_direction.x != 0)
+            {
+                if (_direction.x > 0 && !_isForward)
+                {
+                    Flip();
+                }
+                else if (_direction.x < 0 && _isForward)
+                {
+                    Flip();
+                }
+            }
     }
 
         private void Flip()
         {
             _isForward = !_isForward;
-            Vector3 dir = Transform.localScale;
-            dir.x *= -1;
-            Transform.localScale = dir;
+            _mySprite.flipX = !_mySprite.flipX;
         }
         #endregion
     }
