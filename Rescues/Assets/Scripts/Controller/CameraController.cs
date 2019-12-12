@@ -25,6 +25,7 @@
         {
 //            _cameraServices.CameraMain
 //            _context.Character.Transform.position
+// кек
         }
     }
 }
