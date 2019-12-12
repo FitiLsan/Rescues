@@ -40,6 +40,7 @@ namespace Rescues
 
 
         #region UnityMethods
+
         void Update()
         {
             _direction.x = Input.GetAxis("Horizontal");
@@ -48,11 +49,11 @@ namespace Rescues
                 Move();
             }
         }
+
         #endregion
 
 
         #region Methods
-
 
         public void Move()
         {
@@ -77,6 +78,7 @@ namespace Rescues
             _isForward = !_isForward;
             _mySprite.flipX = !_mySprite.flipX;
         }
+
         #endregion
     }
 }
