@@ -10,5 +10,6 @@ namespace Rescues
         Action<ITrigger> OnTriggerEnterHandler { get; set; }
         Action<ITrigger> OnTriggerExitHandler { get; set; }
         GameObject GameObject { get; }
+        InteractableObjectType Type { get; }
     }
 }

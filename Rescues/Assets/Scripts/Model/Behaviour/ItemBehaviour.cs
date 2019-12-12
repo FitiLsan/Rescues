@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public sealed class DoorTeleporterBehaviour : MonoBehaviour, ITrigger
+    public sealed class ItemBehaviour: MonoBehaviour, ITrigger
     {
         #region Fields
 
@@ -20,6 +20,7 @@ namespace Rescues
         public Action<ITrigger> OnTriggerExitHandler { get; set; }
         public bool IsInteractable { get; set; }
         public GameObject GameObject => gameObject;
+        
         public InteractableObjectType Type { get => _type; }
 
         #endregion
