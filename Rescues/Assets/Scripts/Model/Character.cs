@@ -8,7 +8,7 @@ namespace Rescues
         private Vector3 _direction;
         private readonly float _speed;
         private Rigidbody2D Rigidbody2D { get; }
-        private Transform Transform { get; }
+        public Transform Transform { get; }
         private PlayerBehaviour PlayerBehaviour { get; }
 
         private bool _isForward = true;
