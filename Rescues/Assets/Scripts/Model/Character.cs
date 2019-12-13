@@ -41,7 +41,7 @@ namespace Rescues
 
         public void Teleport(Transform transform)
         {
-           
+            Transform.position = transform.position;
         }
 
         public void Move(float direction)

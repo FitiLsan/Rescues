@@ -30,14 +30,14 @@ namespace Rescues
             
             if(Input.GetAxis("Vertical") != 0)
             {
-                var doors = _context.GetTriggers<DoorTeleporterBehaviour>(TriggerObjectType.Door);
+                var doors = _context.GetTriggers<DoorTeleporterBehaviour>(InteractableObjectType.Door);
                 foreach (var trigger in doors)
                 {
                     trigger.IsInteractable.CompareTo(true);
 
                     if(trigger.IsInteractable == true)
                     {
-                        _context.Character.Teleport();
+                        _context.Character.Teleport(trigger.ExitPoint);
                     }
                 }
             }
