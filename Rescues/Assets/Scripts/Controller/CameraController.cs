@@ -1,4 +1,8 @@
-﻿namespace Rescues
+﻿using UnityEngine;
+
+
+
+namespace Rescues
 {
     public sealed class CameraController : IExecuteController
     {
@@ -23,9 +27,16 @@
         
         public void Execute()
         {
-//            _cameraServices.CameraMain
-//            _context.Character.Transform.position
-// кек
+            _cameraServices.CameraMain.transform.position = _context.Character.Transform.position;
+            if(Input.GetMouseButtonDown(1)== true)
+            {
+
+            }
+            else
+            {
+                _cameraServices.CameraMain.transform.position = _context.Character.Transform.position;
+            }
+
         }
     }
 }

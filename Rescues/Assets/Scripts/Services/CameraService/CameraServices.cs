@@ -25,6 +25,7 @@ namespace Rescues
         #region Properties
 
         public Camera CameraMain;
+        
 
         #endregion
     }
