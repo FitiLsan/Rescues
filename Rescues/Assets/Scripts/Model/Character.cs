@@ -39,9 +39,9 @@ namespace Rescues
 
         #region Methods
 
-        public void Teleport(Transform transform)
+        public void Teleport(Vector3 position)
         {
-            Transform.position = transform.position;
+            Transform.position = position;
         }
 
         public void Move(float direction)

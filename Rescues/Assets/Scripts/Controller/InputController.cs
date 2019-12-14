@@ -28,7 +28,7 @@ namespace Rescues
         {
             _context.Character.Move(Input.GetAxis("Horizontal"));
             
-            if(Input.GetAxis("Vertical") != 0)
+            if(Input.GetButtonUp("Vertical"))
             {
                 var doors = _context.GetTriggers<DoorTeleporterBehaviour>(InteractableObjectType.Door);
                 foreach (var trigger in doors)
@@ -37,7 +37,7 @@ namespace Rescues
 
                     if(trigger.IsInteractable == true)
                     {
-                        _context.Character.Teleport(trigger.ExitPoint);
+                        _context.Character.Teleport(trigger.ExitPoint.position);
                     }
                 }
             }
