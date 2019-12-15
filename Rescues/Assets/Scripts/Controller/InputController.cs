@@ -33,9 +33,7 @@ namespace Rescues
                 var doors = _context.GetTriggers<DoorTeleporterBehaviour>(InteractableObjectType.Door);
                 foreach (var trigger in doors)
                 {
-                    trigger.IsInteractable.CompareTo(true);
-
-                    if(trigger.IsInteractable == true)
+                    if(trigger.IsInteractable)
                     {
                         _context.Character.Teleport(trigger.ExitPoint.position);
                     }
