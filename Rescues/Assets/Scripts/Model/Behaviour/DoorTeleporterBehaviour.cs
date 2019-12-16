@@ -25,6 +25,13 @@ namespace Rescues
         #endregion
 
 
+        #region Fields
+
+        [SerializeField] public Transform ExitPoint;
+
+        #endregion
+
+
         #region UnityMethods
 
         private void OnTriggerEnter2D(Collider2D other)

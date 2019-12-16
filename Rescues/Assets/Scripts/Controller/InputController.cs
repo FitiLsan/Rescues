@@ -27,6 +27,18 @@ namespace Rescues
         public void Execute()
         {
             _context.Character.Move(Input.GetAxis("Horizontal"));
+            
+            if(Input.GetButtonUp("Vertical"))
+            {
+                var doors = _context.GetTriggers<DoorTeleporterBehaviour>(InteractableObjectType.Door);
+                foreach (var trigger in doors)
+                {
+                    if(trigger.IsInteractable)
+                    {
+                        _context.Character.Teleport(trigger.ExitPoint.position);
+                    }
+                }
+            }
 
             if (Input.GetKeyDown(KeyCode.R))
             {
