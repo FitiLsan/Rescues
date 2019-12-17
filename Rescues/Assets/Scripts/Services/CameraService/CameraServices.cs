@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 
 namespace Rescues
@@ -25,7 +26,6 @@ namespace Rescues
         #region Properties
 
         public Camera CameraMain;
-        
 
         #endregion
     }

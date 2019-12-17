@@ -15,7 +15,7 @@ namespace Rescues
 
 
         #region ClassLifeCycles
-        
+
         public CameraController(GameContext context, Services services)
         {
             _context = context;
@@ -23,20 +23,17 @@ namespace Rescues
         }
 
         #endregion
-        
-        
+
+
+        #region IExecuteController
+
         public void Execute()
         {
-            _cameraServices.CameraMain.transform.position = _context.Character.Transform.position;
-            if(Input.GetMouseButtonDown(1)== true)
-            {
-
-            }
-            else
-            {
-                _cameraServices.CameraMain.transform.position = _context.Character.Transform.position;
-            }
-
+            _cameraServices.CameraMain.transform.position = _context.Character.Transform.position; 
         }
+
+        #endregion
+
+
     }
 }
