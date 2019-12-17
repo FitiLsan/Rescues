@@ -9,8 +9,6 @@ namespace Rescues
 
         private Vector3 _direction;
         private readonly float _speed;
-        private float _raycastLength;
-        private float _gravity;
         private SpriteRenderer _mySprite;
 
         #endregion
@@ -39,28 +37,12 @@ namespace Rescues
         #endregion
 
 
-        #region UnityMethods
-
-        void Update()
-        {
-            _direction.x = Input.GetAxis("Horizontal");
-            if (_direction != 0)
-            {
-                Move();
-            }
-        }
-
-        #endregion
-
-
         #region Methods
 
         public void Move()
         {
-            RaycastHit2D hit = Physics2D.Raycast(Transform.position, Vector2.down, _raycastLength);
-            if (hit != true) Transform.Translate(Vector3.down * _gravity);
-            Transform.Translate(new Vector3(_horizontal, 0.0f, 0.0f));
-            if(_direction.x != 0)
+            Transform.Translate(_direction, 0.0f, 0.0f);
+            if (_direction.x != 0)
             {
                 if (_direction.x > 0 && !_isForward)
                 {
@@ -71,7 +53,7 @@ namespace Rescues
                     Flip();
                 }
             }
-    }
+        }
 
         private void Flip()
         {

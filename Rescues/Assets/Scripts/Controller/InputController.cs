@@ -6,7 +6,8 @@ namespace Rescues
     public sealed class InputController : IExecuteController
     {
         #region Fields
-        
+
+        private Vector3 _direction;
         private readonly GameContext _context;
 
         #endregion
@@ -28,9 +29,9 @@ namespace Rescues
         {
             _context.Character.Move(Input.GetAxis("Horizontal"));
 
-            if (Input.GetKeyDown(KeyCode.R))
+            if (_direction != 0)
             {
-                
+                _context.Character.Move();
             }
         }
 
