@@ -7,16 +7,14 @@ namespace Rescues
     {
         #region Fields
 
-        private Vector3 _direction;
         private readonly float _speed;
-        private bool _isForward = true;
+        private SpriteRenderer _characterSprite;
 
         #endregion
 
 
         #region Properties
 
-        private Rigidbody2D Rigidbody2D { get; }
         public Transform Transform { get; }
         private PlayerBehaviour PlayerBehaviour { get; }
 
@@ -27,10 +25,9 @@ namespace Rescues
 
         public Character(Transform transform, PlayerData playerData)
         {
-            _direction = Vector3.zero;
             _speed = playerData.Speed;
+            _characterSprite = transform.GetComponent<SpriteRenderer>();           
             Transform = transform;
-            Rigidbody2D = Transform.GetComponent<Rigidbody2D>();
             PlayerBehaviour = Transform.GetComponent<PlayerBehaviour>();
         }
 
@@ -44,18 +41,17 @@ namespace Rescues
             Transform.position = position;
         }
 
-        public void Move(float direction)
+        public void Move(Vector2 direction)
         {        
-            _direction.x = direction * _speed;
-            _direction.y = Rigidbody2D.velocity.y;
+            direction *= _speed * Time.deltaTime;
 
-            Rigidbody2D.velocity = _direction;
+            Transform.Translate(direction);
 
-            if (Rigidbody2D.velocity.x > 0 && !_isForward)
+            if (direction.x > 0 && _characterSprite.flipX)
             {
                 Flip();
             }
-            else if(Rigidbody2D.velocity.x < 0 && _isForward)
+            else if(direction.x < 0 && !_characterSprite.flipX)
             {
                 Flip();
             }
@@ -63,10 +59,7 @@ namespace Rescues
 
         private void Flip()
         {
-            _isForward = !_isForward;
-            Vector3 dir = Transform.localScale;
-            dir.x *= -1;
-            Transform.localScale = dir;
+            _characterSprite.flipX = !_characterSprite.flipX;
         }
 
         #endregion

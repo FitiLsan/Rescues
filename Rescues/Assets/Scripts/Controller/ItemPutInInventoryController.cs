@@ -1,21 +1,22 @@
-﻿using DG.Tweening;
-using UnityEngine;
+﻿using UnityEngine;
+using DG.Tweening;
 
 
 namespace Rescues
 {
-    public sealed class DoorTeleporterController : IInitializeController, ITearDownController
+    public sealed class ItemPutInInventoryController : IInitializeController, ITearDownController
     {
+
         #region Fields
-        
+
         private readonly GameContext _context;
 
         #endregion
 
 
         #region ClassLifeCycles
-        
-        public DoorTeleporterController(GameContext context, Services services)
+
+        public ItemPutInInventoryController(GameContext context, Services services)
         {
             _context = context;
         }
@@ -24,15 +25,15 @@ namespace Rescues
 
 
         #region IInitializeController
-        
+
         public void Initialize()
         {
-            var doors = _context.GetTriggers(InteractableObjectType.Door);
-            foreach (var trigger in doors)
+            var items = _context.GetTriggers(InteractableObjectType.Item);
+            foreach (var trigger in items)
             {
-                var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
-                doorTeleporterBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
-                doorTeleporterBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
+                var itemBehaviour = trigger as ItemBehaviour;
+                itemBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
+                itemBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
             }
         }
 
@@ -40,15 +41,15 @@ namespace Rescues
 
 
         #region ITearDownController
-        
+
         public void TearDown()
         {
-            var doors = _context.GetTriggers(InteractableObjectType.Door);
-            foreach (var trigger in doors)
+            var items = _context.GetTriggers(InteractableObjectType.Item);
+            foreach (var trigger in items)
             {
-                var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
-                doorTeleporterBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
-                doorTeleporterBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
+                var itemBehaviour = trigger as ItemBehaviour;
+                itemBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
+                itemBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
             }
         }
 
@@ -56,7 +57,7 @@ namespace Rescues
 
 
         #region Methods
-        
+
         private void OnTriggerEnterHandler(ITrigger enteredObject)
         {
             enteredObject.IsInteractable = true;

@@ -9,6 +9,7 @@ namespace Rescues
         #region Fields
 
         public Character Character;
+        public Inventory Inventory;
         private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
         private readonly List<IInteractable> _interactables;
         
@@ -55,7 +56,7 @@ namespace Rescues
         
         public List<IInteractable> GetTriggers(InteractableObjectType type)
         {
-            return _onTriggers.ContainsKey(type) ? _onTriggers[type] : null;
+            return _onTriggers.ContainsKey(type) ? _onTriggers[type] : new List<IInteractable>();
         }
 
         public List<IInteractable> GetListInteractable()

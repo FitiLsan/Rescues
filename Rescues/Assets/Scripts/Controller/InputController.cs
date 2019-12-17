@@ -26,16 +26,24 @@ namespace Rescues
         
         public void Execute()
         {
-            _context.Character.Move(Input.GetAxis("Horizontal"));
-            
+            Vector2 inputAxis;
+            inputAxis.x = Input.GetAxis("Horizontal");
+            inputAxis.y = Input.GetAxis("Vertical");
+
+            if (inputAxis.x != 0 || inputAxis.y != 0)
+            {
+                _context.Character.Move(inputAxis);
+            }
+
             if(Input.GetButtonUp("Vertical"))
             {
-                var doors = _context.GetTriggers<DoorTeleporterBehaviour>(InteractableObjectType.Door);
+                var doors = _context.GetTriggers(InteractableObjectType.Door);
                 foreach (var trigger in doors)
                 {
-                    if(trigger.IsInteractable)
+                    if (trigger.IsInteractable)
                     {
-                        _context.Character.Teleport(trigger.ExitPoint.position);
+                    var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
+                        _context.Character.Teleport(doorTeleporterBehaviour.ExitPoint.position);
                     }
                 }
             }

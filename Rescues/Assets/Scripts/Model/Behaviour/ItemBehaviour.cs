@@ -9,6 +9,7 @@ namespace Rescues
         #region Fields
 
         [SerializeField] private InteractableObjectType _type;
+        [SerializeField] private ItemData _itemData;
 
         #endregion
         

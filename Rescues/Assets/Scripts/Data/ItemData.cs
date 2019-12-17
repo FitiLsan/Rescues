@@ -8,8 +8,8 @@ namespace Rescues
     {
         #region Fields
         
-        [TextArea(5,5)]
-        public string di;
+        public string Name;
+        [TextArea(5,5)] public string Discription;
 
         #endregion
     }
