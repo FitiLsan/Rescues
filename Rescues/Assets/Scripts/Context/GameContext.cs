@@ -56,7 +56,7 @@ namespace Rescues
         
         public List<IInteractable> GetTriggers(InteractableObjectType type)
         {
-            return _onTriggers.ContainsKey(type) ? _onTriggers[type] : new List<IInteractable>();
+            return _onTriggers.ContainsKey(type) ? _onTriggers[type] : _onTriggers[type] = new List<IInteractable>();
         }
 
         public List<IInteractable> GetListInteractable()
