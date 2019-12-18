@@ -30,19 +30,8 @@ namespace Rescues
 
             foreach (var trigger in triggers)
             {
-                trigger.OnFilterHandler = OnFilterHandler;
                 _context.AddTriggers(InteractableObjectType.Door, trigger);
             }
-        }
-
-        #endregion
-
-
-        #region Methods
-        
-        private bool OnFilterHandler(Collider2D obj)
-        {
-            return obj.CompareTag(TagManager.PLAYER);
         }
 
         #endregion

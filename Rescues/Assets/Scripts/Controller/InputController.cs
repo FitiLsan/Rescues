@@ -40,10 +40,11 @@ namespace Rescues
                 var doors = _context.GetTriggers(InteractableObjectType.Door);
                 foreach (var trigger in doors)
                 {
-                    if (trigger.IsInteractable)
+//                    if (trigger.IsInteractable)
                     {
-                    var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
-                        _context.Character.Teleport(doorTeleporterBehaviour.ExitPoint.position);
+                        var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
+                        Debug.Log(doorTeleporterBehaviour.GameObject.name);
+//                        _context.Character.Teleport(doorTeleporterBehaviour.ExitPoint.position);
                     }
                 }
             }

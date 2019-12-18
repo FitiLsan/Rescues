@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 
@@ -10,6 +11,7 @@ namespace Rescues
 
         public Character Character;
         public Inventory Inventory;
+        public event Action<IInteractable> AddObjectHandler = delegate(IInteractable interactable) {  };
         private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
         private readonly List<IInteractable> _interactables;
         
@@ -47,8 +49,17 @@ namespace Rescues
                     trigger
                 });
             }
+
+            trigger.DestroyHandler = DestroyHandler;
+            AddObjectHandler.Invoke(trigger);
         }
-        
+
+        private void DestroyHandler(ITrigger obj, InteractableObjectType type)
+        {
+            _onTriggers[type].Remove(obj);
+            _interactables.Remove(obj);
+        }
+
         public List<T> GetTriggers<T>(InteractableObjectType type) where T : class, IInteractable
         {
             return _onTriggers.ContainsKey(type) ? _onTriggers[type].Select(trigger => trigger as T).ToList() : null;

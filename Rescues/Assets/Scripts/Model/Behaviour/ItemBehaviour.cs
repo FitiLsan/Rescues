@@ -19,6 +19,7 @@ namespace Rescues
         public Predicate<Collider2D> OnFilterHandler { get; set; }
         public Action<ITrigger> OnTriggerEnterHandler { get; set; }
         public Action<ITrigger> OnTriggerExitHandler { get; set; }
+        public Action<ITrigger, InteractableObjectType> DestroyHandler { get; set; }
         public bool IsInteractable { get; set; }
         public GameObject GameObject => gameObject;
         
@@ -43,6 +44,11 @@ namespace Rescues
             {
                 OnTriggerExitHandler.Invoke(this);
             }
+        }
+
+        private void OnDisable()
+        {
+            DestroyHandler.Invoke(this, _type);
         }
 
         #endregion

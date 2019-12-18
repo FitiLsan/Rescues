@@ -31,6 +31,7 @@ namespace Rescues
             foreach (var trigger in doors)
             {
                 var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
+                doorTeleporterBehaviour.OnFilterHandler += OnFilterHandler;
                 doorTeleporterBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
                 doorTeleporterBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
             }
@@ -47,6 +48,7 @@ namespace Rescues
             foreach (var trigger in doors)
             {
                 var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
+                doorTeleporterBehaviour.OnFilterHandler -= OnFilterHandler;
                 doorTeleporterBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
                 doorTeleporterBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
             }
@@ -56,6 +58,11 @@ namespace Rescues
 
 
         #region Methods
+        
+        private bool OnFilterHandler(Collider2D obj)
+        {
+            return obj.CompareTag(TagManager.PLAYER);
+        }
         
         private void OnTriggerEnterHandler(ITrigger enteredObject)
         {
