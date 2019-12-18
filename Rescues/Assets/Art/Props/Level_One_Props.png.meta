@@ -1,0 +1,703 @@
+fileFormatVersion: 2
+guid: 3550fa31db6ef2348b2377595b6d805b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6803380271153758922
+    second: Level_One_Props_0
+  - first:
+      213: 1401388048285742056
+    second: Level_One_Props_1
+  - first:
+      213: -8685050745672794785
+    second: Level_One_Props_2
+  - first:
+      213: 3067160772533249325
+    second: Level_One_Props_3
+  - first:
+      213: 399299514999936770
+    second: Level_One_Props_4
+  - first:
+      213: 8885993122668772452
+    second: Level_One_Props_5
+  - first:
+      213: 3160537030752885272
+    second: Level_One_Props_6
+  - first:
+      213: 3444025568005803399
+    second: Level_One_Props_Key_Red
+  - first:
+      213: -2529410205585600842
+    second: Level_One_Props_Key_Blue
+  - first:
+      213: -2839046463093134021
+    second: Level_One_Props_9
+  - first:
+      213: 8114829114644517967
+    second: Level_One_Props_10
+  - first:
+      213: -5680976294515711485
+    second: Level_One_Props_11
+  - first:
+      213: 4383382324052267400
+    second: Level_One_Props_12
+  - first:
+      213: -68351091724978304
+    second: Level_One_Props_13
+  - first:
+      213: 3612597320894672238
+    second: Level_One_Props_Body
+  - first:
+      213: 8124249227415645692
+    second: Level_One_Props_Door_0
+  - first:
+      213: -1569724486914423434
+    second: Level_One_Props_Door_1
+  - first:
+      213: 6614636954353185855
+    second: Level_One_Props_Door_2
+  - first:
+      213: 2822802008931311866
+    second: Level_One_Props_Door_3
+  - first:
+      213: -6559309711621001592
+    second: Level_One_Props_19
+  - first:
+      213: -5102946331441240442
+    second: Level_One_Props_20
+  - first:
+      213: -4516056516319228135
+    second: Level_One_Props_21
+  - first:
+      213: 6899579723730079258
+    second: Level_One_Props_22
+  - first:
+      213: -2132614897589282742
+    second: Level_One_Props_23
+  - first:
+      213: 6309168772312866127
+    second: Level_One_Props_24
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Level_One_Props_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 2574
+        width: 134
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394b79cfed3b6f5418ac9d153cbe1cbb
+      internalID: 6803380271153758922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 2301
+        width: 720
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff069d299dfa024080647cb8ce916f6
+      internalID: 1401388048285742056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_2
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 2274
+        width: 223
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54eacdf90b1fe04799e8639e48a465c
+      internalID: -8685050745672794785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_3
+      rect:
+        serializedVersion: 2
+        x: 2403
+        y: 2314
+        width: 259
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab75eb48cfa013a49b50ff0f6220ef01
+      internalID: 3067160772533249325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_4
+      rect:
+        serializedVersion: 2
+        x: 2684
+        y: 2324
+        width: 283
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2f4ba105cbaa940a0960e9cdcabd79
+      internalID: 399299514999936770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_5
+      rect:
+        serializedVersion: 2
+        x: 3064
+        y: 2239
+        width: 576
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebf1cf2a640cc5439c6fe9d3e52ab28
+      internalID: 8885993122668772452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2437
+        width: 100
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db1bacb2a065e843b1231d10a680424
+      internalID: 3160537030752885272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_Key_Red
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 2360
+        width: 93
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0aa673f9d7c564b8acab8c24a875c7
+      internalID: 3444025568005803399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_Key_Blue
+      rect:
+        serializedVersion: 2
+        x: 2186
+        y: 2360
+        width: 93
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806a7d3410665f643b6703663c7505fc
+      internalID: -2529410205585600842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_9
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 2249
+        width: 39
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0305649a676f4fa49aac06f3914ac01c
+      internalID: -2839046463093134021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_10
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1436
+        width: 512
+        height: 790
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ae75eded884af4a91f5a10bd9a7e2b
+      internalID: 8114829114644517967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_11
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 2106
+        width: 122
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa11c7d12c3c5b2428c266043f66bd97
+      internalID: -5680976294515711485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_12
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 2047
+        width: 1104
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2ac38ee4218e74dbfbb132a821a9f7
+      internalID: 4383382324052267400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_13
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1484
+        width: 251
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406a9c2b982746946a88b9960cb177b6
+      internalID: -68351091724978304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_Body
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 1594
+        width: 1525
+        height: 427
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de2f22fdf12e4c448d5f6a3eae16f72
+      internalID: 3612597320894672238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_Door_0
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 17
+        width: 616
+        height: 1575
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089e69697191796408ba1f88357241d7
+      internalID: 8124249227415645692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_Door_1
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 17
+        width: 199
+        height: 1573
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0b9cc194cfcd3489c84a2e2ca247ea
+      internalID: -1569724486914423434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_Door_2
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 17
+        width: 197
+        height: 1573
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6782baac222d004499771ca1e9f92a74
+      internalID: 6614636954353185855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_Door_3
+      rect:
+        serializedVersion: 2
+        x: 2917
+        y: 17
+        width: 197
+        height: 1573
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16069690397a0414390eaf0b27da8e35
+      internalID: 2822802008931311866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_19
+      rect:
+        serializedVersion: 2
+        x: 3374
+        y: 1483
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7cda7a96d21563479186460d8d8fc77
+      internalID: -6559309711621001592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_20
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 836
+        width: 166
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a7b89495a013b4cad766519fb27848
+      internalID: -5102946331441240442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_21
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 42
+        width: 218
+        height: 1098
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6237c9cecd83047be0578157c034e0
+      internalID: -4516056516319228135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_22
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 848
+        width: 107
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8eeec44fe150040a6e1b4f767fa505
+      internalID: 6899579723730079258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_23
+      rect:
+        serializedVersion: 2
+        x: 3142
+        y: 42
+        width: 498
+        height: 1423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0c46b4f90fa684f9790949c1aa055d
+      internalID: -2132614897589282742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_One_Props_24
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 771
+        width: 164
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88997aa7720fe64a9eb537bb65a7203
+      internalID: 6309168772312866127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
