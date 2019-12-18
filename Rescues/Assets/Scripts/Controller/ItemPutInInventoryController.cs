@@ -32,6 +32,7 @@ namespace Rescues
             foreach (var trigger in items)
             {
                 var itemBehaviour = trigger as ItemBehaviour;
+                itemBehaviour.OnFilterHandler += OnFilterHandler;
                 itemBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
                 itemBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
             }
@@ -48,6 +49,7 @@ namespace Rescues
             foreach (var trigger in items)
             {
                 var itemBehaviour = trigger as ItemBehaviour;
+                itemBehaviour.OnFilterHandler -= OnFilterHandler;
                 itemBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
                 itemBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
             }
@@ -57,6 +59,11 @@ namespace Rescues
 
 
         #region Methods
+        
+        private bool OnFilterHandler(Collider2D obj)
+        {
+            return obj.CompareTag(TagManager.PLAYER);
+        }
 
         private void OnTriggerEnterHandler(ITrigger enteredObject)
         {

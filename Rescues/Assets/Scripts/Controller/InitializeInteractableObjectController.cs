@@ -3,7 +3,7 @@
 
 namespace Rescues
 {
-    public sealed class InitializeDoorTeleporterController : IInitializeController
+    public sealed class InitializeInteractableObjectController : IInitializeController
     {
         #region Fields
         
@@ -14,7 +14,7 @@ namespace Rescues
 
         #region ClassLifeCycles
         
-        public InitializeDoorTeleporterController(GameContext context, Services services)
+        public InitializeInteractableObjectController(GameContext context, Services services)
         {
             _context = context;
         }
@@ -26,11 +26,11 @@ namespace Rescues
         
         public void Initialize()
         {
-            var triggers = Object.FindObjectsOfType<DoorTeleporterBehaviour>();
+            var triggers = Object.FindObjectsOfType<InteractableObjectBehavior>();
 
             foreach (var trigger in triggers)
             {
-                _context.AddTriggers(InteractableObjectType.Door, trigger);
+                _context.AddTriggers(trigger.Type, trigger);
             }
         }
 
