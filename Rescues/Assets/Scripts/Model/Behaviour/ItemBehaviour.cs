@@ -7,7 +7,7 @@ namespace Rescues
     {
         #region Fields
         
-        [SerializeField] private ItemData _itemData;
+        public ItemData _itemData;
 
         #endregion
     }

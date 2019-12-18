@@ -13,13 +13,13 @@ TextureImporter:
     second: Level_One_Props_2
   - first:
       213: 3067160772533249325
-    second: Level_One_Props_3
+    second: Level_One_Props_Stand_Door_Open
   - first:
       213: 399299514999936770
-    second: Level_One_Props_4
+    second: Level_One_Props_Stand_Door_Close
   - first:
       213: 8885993122668772452
-    second: Level_One_Props_5
+    second: Level_One_Props_Stand
   - first:
       213: 3160537030752885272
     second: Level_One_Props_6
@@ -224,7 +224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level_One_Props_3
+      name: Level_One_Props_Stand_Door_Open
       rect:
         serializedVersion: 2
         x: 2403
@@ -245,7 +245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level_One_Props_4
+      name: Level_One_Props_Stand_Door_Close
       rect:
         serializedVersion: 2
         x: 2684
@@ -266,7 +266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level_One_Props_5
+      name: Level_One_Props_Stand
       rect:
         serializedVersion: 2
         x: 3064

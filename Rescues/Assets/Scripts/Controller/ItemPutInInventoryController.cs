@@ -60,9 +60,9 @@ namespace Rescues
 
         #region Methods
         
-        private bool OnFilterHandler(Collider2D obj)
+        private bool OnFilterHandler(Collider2D playerObject)
         {
-            return obj.CompareTag(TagManager.PLAYER);
+            return playerObject.CompareTag(TagManager.PLAYER);
         }
 
         private void OnTriggerEnterHandler(ITrigger enteredObject)

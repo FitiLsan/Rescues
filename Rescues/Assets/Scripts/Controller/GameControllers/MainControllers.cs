@@ -8,6 +8,8 @@
         {
             Add(new InitializeCharacterController(context, services));
             Add(new InitializeInteractableObjectController(context, services));
+            Add(new InitializeInventoryController(context, services));
+            Add(new ItemPutInInventoryController(context, services));
             Add(new DoorTeleporterController(context, services));
             Add(new InputController(context, services));
         }
