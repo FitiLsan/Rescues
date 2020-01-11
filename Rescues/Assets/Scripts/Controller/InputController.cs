@@ -44,8 +44,13 @@ namespace Rescues
             if (Input.GetButtonUp("PickUp"))
             {
                 var interactableObject = GetInteractableObject<ItemBehaviour>(InteractableObjectType.Item);
-                _context.Inventory.AddItem(interactableObject._itemData);
-                Object.Destroy(interactableObject.GameObject);
+                if (interactableObject != null)
+                {
+                    if (_context.Inventory.AddItem(interactableObject._itemData))
+                    {
+                        Object.Destroy(interactableObject.GameObject);
+                    }
+                }
             }
         }
 
@@ -64,6 +69,7 @@ namespace Rescues
                 if (trigger.IsInteractable)
                 {
                     behaviour = trigger as T;
+                    break;
                 }
             }
 

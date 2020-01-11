@@ -55,7 +55,7 @@ TextureImporter:
     second: Level_One_Props_Door_1
   - first:
       213: 6614636954353185855
-    second: Level_One_Props_Door_2
+    second: Level_One_Props_Door_Blue
   - first:
       213: 2822802008931311866
     second: Level_One_Props_Door_3
@@ -518,7 +518,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level_One_Props_Door_2
+      name: Level_One_Props_Door_Blue
       rect:
         serializedVersion: 2
         x: 2713

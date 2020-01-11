@@ -3,7 +3,7 @@
 
 namespace Rescues
 {
-    public sealed class Character
+    public sealed class CharacterModel
     {
         #region Fields
 
@@ -23,7 +23,7 @@ namespace Rescues
 
         #region ClassLifeCycle
 
-        public Character(Transform transform, PlayerData playerData)
+        public CharacterModel(Transform transform, PlayerData playerData)
         {
             _speed = playerData.Speed;
             _characterSprite = transform.GetComponent<SpriteRenderer>();           

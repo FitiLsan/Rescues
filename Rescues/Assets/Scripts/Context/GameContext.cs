@@ -1,4 +1,5 @@
-﻿using System;
+﻿using UnityEngine;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,8 +10,11 @@ namespace Rescues
     {
         #region Fields
 
-        public Character Character;
+        public CharacterModel Character;
         public Inventory Inventory;
+        public Vector3[] WayPoints;
+        public EnemyBehaviour Enemy;
+
         public event Action<IInteractable> AddObjectHandler = delegate(IInteractable interactable) {  };
         private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
         private readonly List<IInteractable> _interactables;
