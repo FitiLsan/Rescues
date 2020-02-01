@@ -6,7 +6,7 @@ using UnityEditor;
 
 namespace Rescues
 {
-    public sealed class GameController : MonoBehaviour
+    public sealed class GameController : UpdateListCreator
     {
         #region Fields
         
@@ -14,7 +14,7 @@ namespace Rescues
 
         #endregion
         
-
+ 
         #region UnityMethods
 
         private void Awake()
@@ -38,7 +38,13 @@ namespace Rescues
             _activeController.Cleanup(UpdateType.Fixed);
         }
           
-        private void Update()
+        //private void Update()
+        //{
+        //    _activeController.Execute(UpdateType.Update);
+        //    _activeController.Cleanup(UpdateType.Update);
+        //}
+
+        public override void GameControllerScriptFunctions()
         {
             _activeController.Execute(UpdateType.Update);
             _activeController.Cleanup(UpdateType.Update);
