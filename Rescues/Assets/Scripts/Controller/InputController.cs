@@ -52,6 +52,12 @@ namespace Rescues
                     }
                 }
             }
+
+            if (Input.GetButtonUp("Action"))
+            {
+                var interactableObject = GetInteractableObject<DoorInteractiveBehaviour>(InteractableObjectType.Door);
+                
+            }
         }
 
         #endregion
