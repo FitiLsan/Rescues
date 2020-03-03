@@ -27,7 +27,7 @@ namespace Rescues
         
         public void Initialize()
         {
-            var doors = _context.GetTriggers(InteractableObjectType.Door);
+            var doors = _context.GetTriggers(InteractableObjectType.Teleport);
             foreach (var trigger in doors)
             {
                 var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
@@ -44,7 +44,7 @@ namespace Rescues
         
         public void TearDown()
         {
-            var doors = _context.GetTriggers(InteractableObjectType.Door);
+            var doors = _context.GetTriggers(InteractableObjectType.Teleport);
             foreach (var trigger in doors)
             {
                 var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;

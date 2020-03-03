@@ -9,7 +9,6 @@ namespace Rescues
         #region Fields
         
         private readonly GameContext _context;
-        private ItemData _key;
 
         #endregion
 
@@ -59,19 +58,6 @@ namespace Rescues
 
 
         #region Methods
-
-        public void ItemCheck()
-        {
-            if (_context.Inventory.GetItem(_key))
-            {
-                OpenDoor();
-            }
-        }
-
-        public void OpenDoor()
-        {
-
-        }
 
         private bool OnFilterHandler(Collider2D obj)
         {

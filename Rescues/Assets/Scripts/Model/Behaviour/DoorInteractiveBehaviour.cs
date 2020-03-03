@@ -7,9 +7,19 @@ namespace Rescues
     {
         #region Fields
 
-        [SerializeField] public Sprite Sprite;
+        [SerializeField] private Sprite _sprite;
+        public ItemData _key;
         private ITrigger _triggerImplementation;
 
+        #endregion
+
+        #region Methods
+
+        public void Open()
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = _sprite;
+        }
+        
         #endregion
     }
 }

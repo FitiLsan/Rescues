@@ -36,3 +36,10 @@ sysinfo.txt
 *.unitypackage
 
 
+*.meta
+Rescues/Assets/Resources/DOTweenSettings.asset
+Rescues/Packages/manifest.json
+Rescues/ProjectSettings/ProjectVersion.txt
+Rescues/Packages/manifest.json
+Rescues/ProjectSettings/ProjectVersion.txt
+Rescues/Packages/manifest.json

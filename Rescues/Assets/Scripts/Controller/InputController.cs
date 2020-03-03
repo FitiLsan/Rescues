@@ -37,7 +37,7 @@ namespace Rescues
 
             if (Input.GetButtonUp("Vertical"))
             {
-                var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
+                var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Teleport);
                 _context.Character.Teleport(interactableObject.ExitPoint.position);
             }
 
@@ -56,7 +56,10 @@ namespace Rescues
             if (Input.GetButtonUp("Action"))
             {
                 var interactableObject = GetInteractableObject<DoorInteractiveBehaviour>(InteractableObjectType.Door);
-                
+                if (_context.Inventory.GetItem(interactableObject._key))
+                {
+                    interactableObject.Open();
+                }
             }
         }
 
