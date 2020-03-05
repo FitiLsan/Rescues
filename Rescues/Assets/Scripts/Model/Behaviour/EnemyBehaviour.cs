@@ -7,9 +7,10 @@ public sealed class EnemyBehaviour : MonoBehaviour
 
 
     public EnemyData EnemyData;
-    public int PatrolState;
-    public int Modificator { get => _modificator; }
     private int _modificator = 1;
+    public Vector3 Direction;
+    public SpriteRenderer MySprite;
+    public bool IsDead;
 
 
     #endregion
@@ -17,7 +18,8 @@ public sealed class EnemyBehaviour : MonoBehaviour
 
     #region Properties
 
-    public bool IsDead;
+    public int PatrolState;
+    public int Modificator { get => _modificator; }
 
     #endregion
 
