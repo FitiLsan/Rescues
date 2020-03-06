@@ -83,17 +83,6 @@ namespace Rescues
             }
         }
 
-
-        public void Detection()
-        {
-            RaycastHit2D hit = Physics2D.Raycast(Transform.position, Direction,_detectionDistance);
-            if(hit != false)
-            {
-                CustomDebug.Log(Defeat);
-            }
-        }
-
-
         #endregion
     }
 }

@@ -45,6 +45,15 @@ namespace Rescues
             return true;
         }
         
+        public bool Detection()
+        {
+        RaycastHit2D hit = Physics2D.Raycast(Transform.position, Direction,_detectionDistance);
+            if(hit != false)
+            {
+                CustomDebug.Log(Defeat);
+            }
+        }
+
         public List<IOnTrigger> GetObjectsInRadius(Vector2 position, float radius, int layerMask = LayerManager.DEFAULTLAYER)
         {
             _triggeredObjects.Clear();
