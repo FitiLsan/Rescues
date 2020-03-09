@@ -8,7 +8,7 @@ namespace Rescues
     {
         #region Fields
 
-        private const int COLLIDEDOBJECTSIZE = 20;
+        private const int COLLIDED_OBJECT_SIZE = 20;
 
         private readonly Collider2D[] _collidedObjects;
         private readonly RaycastHit2D[] _castBuffer;
@@ -21,7 +21,7 @@ namespace Rescues
 
         public PhysicsService(Contexts contexts) : base(contexts)
         {
-            _collidedObjects = new Collider2D[COLLIDEDOBJECTSIZE];
+            _collidedObjects = new Collider2D[COLLIDED_OBJECT_SIZE];
             _castBuffer = new RaycastHit2D[64];
             _triggeredObjects = new List<IOnTrigger>();
         }

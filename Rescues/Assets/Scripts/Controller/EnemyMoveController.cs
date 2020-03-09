@@ -7,9 +7,11 @@ namespace Rescues
     {
         #region Fields
 
-        public float WaitingTime = 5.0f;
+        public float waitTime = 5.0f;
+        public float currenTime;
         public float MaxDistance;
         public int detectionDistance;
+        public bool endOfWait = false;
         private readonly GameContext _context;
 
         #endregion
@@ -30,9 +32,9 @@ namespace Rescues
         public void Execute()
         {
             var enemy = _context.Enemy;
-            if ((enemy.transform.position - _context.WayPoints[enemy.PatrolState]).sqrMagnitude < MaxDistance)
+            if ((enemy.transform.position - _context.WayPoints[enemy.PatrolState]).sqrMagnitude < MaxDistance * MaxDistance && !endOfWait)
             {
-                StartCoroutine(Wait());
+                Wait();
                 Vector3 movementDirection = Vector3.zero;
                 movementDirection.x = enemy.transform.position.x - _context.WayPoints[enemy.PatrolState].x;
 
@@ -40,7 +42,7 @@ namespace Rescues
             }
             else
             {
-                StartCoroutine(Wait());
+                endOfWait = false;
                 if (enemy.PatrolState +1 > _context.WayPoints.Length - 1 || enemy.PatrolState -1 < 0)
                 {
 
@@ -72,15 +74,18 @@ namespace Rescues
         }
 
 
-
-        IEnumerator Wait()
+        public void Wait()
         {
             MaxDistance = 0;
-            yield return new WaitForSeconds(WaitingTime);
-            if(WaitingTime <= 5)
+            endOfWait = false;
+            if(currenTime <= 0)
             {
-                MaxDistance = 10;//примерное значение
+                MaxDistance = 10;//возможное значение
+                currenTime = waitTime;
+                endOfWait = true;
             }
+
+            currenTime -= Time.deltaTime;
         }
 
         #endregion
