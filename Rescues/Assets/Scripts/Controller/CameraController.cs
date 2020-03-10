@@ -8,7 +8,7 @@ namespace Rescues
 
         private readonly GameContext _context;
         private readonly CameraServices _cameraServices;
-        private float _distance = 30f; //надо как-то сделать, чтобы гейм дизы могли редактировать. Можеть быть через Data?               
+        private float _distance;              
         
         #endregion
 
@@ -19,6 +19,7 @@ namespace Rescues
         {
             _context = context;
             _cameraServices = services.CameraServices;
+            _distance = Data.CameraData.Distance;
                       
         }
 

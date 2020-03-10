@@ -8,8 +8,8 @@ namespace Rescues
         #region Fields
                
         private Vector3 _origin;
-        private float _cameraFreeMoveLimit = 50f;
-        private int _cameraDragSpeed = 50;
+        private float _cameraFreeMoveLimit;
+        private int _cameraDragSpeed;
 
         #endregion
 
@@ -19,6 +19,8 @@ namespace Rescues
         public CameraServices(Contexts contexts) : base(contexts)
         {
             CameraMain = Camera.main;
+            _cameraDragSpeed = Data.CameraData.CameraDragSpeed;
+            _cameraFreeMoveLimit = Data.CameraData.CameraFreeMoveLimit;
         }
 
         #endregion
