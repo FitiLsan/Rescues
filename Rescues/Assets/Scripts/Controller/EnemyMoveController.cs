@@ -7,11 +7,11 @@ namespace Rescues
     {
         #region Fields
 
-        public float waitTime = 5.0f;
-        public float currenTime;
+        public float WaitTime = 5.0f;
+        public float CurrenTime;
         public float MaxDistance;
         public int detectionDistance;
-        public bool endOfWait = false;
+        public bool EndOfWait = false;
         private readonly GameContext _context;
 
         #endregion
@@ -78,14 +78,14 @@ namespace Rescues
         {
             MaxDistance = 0;
             endOfWait = false;
-            if(currenTime <= 0)
+            if(CurrenTime <= 0)
             {
                 MaxDistance = 10;//возможное значение
-                currenTime = waitTime;
+                CurrenTime = WaitTime;
                 endOfWait = true;
             }
 
-            currenTime -= Time.deltaTime;
+            CurrenTime -= Time.deltaTime;
         }
 
         #endregion
