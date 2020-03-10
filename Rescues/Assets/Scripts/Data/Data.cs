@@ -11,9 +11,11 @@ namespace Rescues
 
         [SerializeField] private string _playerDataPath;
         [SerializeField] private string _itemDataPath;
+        [SerializeField] private string _cameraDataPath;
         private static Data _instance;
         private static PlayerData _playerData;
         private static ItemData _itemData;
+        private static CameraData _cameraData;
 
         #endregion
         
@@ -58,6 +60,19 @@ namespace Rescues
                 }
 
                 return _itemData;
+            }
+        }
+
+        public static CameraData CameraData
+        {
+            get
+            {
+                if(_cameraData == null)
+                {
+                    _cameraData = Load<CameraData>("Data/" + Instance._cameraDataPath);
+                }
+
+                return _cameraData;
             }
         }
 
