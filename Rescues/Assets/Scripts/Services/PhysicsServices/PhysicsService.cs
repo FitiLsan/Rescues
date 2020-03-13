@@ -13,10 +13,11 @@ namespace Rescues
         private readonly Collider2D[] _collidedObjects;
         private readonly RaycastHit2D[] _castBuffer;
         private readonly List<IOnTrigger> _triggeredObjects;
+        private readonly GameContext _context;
 
         #endregion
 
-        
+
         #region ClassLifeCycles
 
         public PhysicsService(Contexts contexts) : base(contexts)
@@ -47,11 +48,13 @@ namespace Rescues
         
         public bool Detection()
         {
-        RaycastHit2D hit = Physics2D.Raycast(Transform.position, Direction,_detectionDistance);
+            var enemy = _context.Enemy;
+            RaycastHit2D hit = Physics2D.Raycast(enemy.Transform.position, enemy.Direction,enemy.detectionDistance);
             if(hit != false)
             {
-                CustomDebug.Log(Defeat);
+                CustomDebug.Log("Defeat");
             }
+            return true;
         }
 
         public List<IOnTrigger> GetObjectsInRadius(Vector2 position, float radius, int layerMask = LayerManager.DEFAULTLAYER)

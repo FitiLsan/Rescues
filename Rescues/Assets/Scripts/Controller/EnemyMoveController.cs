@@ -8,9 +8,6 @@ namespace Rescues
         #region Fields
 
         public float WaitTime = 5.0f;
-        public float CurrenTime;
-        public float MaxDistance;
-        public int detectionDistance;
         public bool EndOfWait = false;
         private readonly GameContext _context;
 
@@ -32,7 +29,7 @@ namespace Rescues
         public void Execute()
         {
             var enemy = _context.Enemy;
-            if ((enemy.transform.position - _context.WayPoints[enemy.PatrolState]).sqrMagnitude < MaxDistance * MaxDistance && !endOfWait)
+            if ((enemy.transform.position - _context.WayPoints[enemy.PatrolState]).sqrMagnitude < enemy.MaxDistance * enemy.MaxDistance && !EndOfWait)
             {
                 Wait();
                 Vector3 movementDirection = Vector3.zero;
@@ -42,7 +39,7 @@ namespace Rescues
             }
             else
             {
-                endOfWait = false;
+                EndOfWait = false;
                 if (enemy.PatrolState +1 > _context.WayPoints.Length - 1 || enemy.PatrolState -1 < 0)
                 {
 
@@ -59,16 +56,17 @@ namespace Rescues
 
         public void Flip()
         {
-            _context.Enemy.transform.Translate(Direction.x, 0, 0);   
-            if (Direction.x != 0)
+            var enemy = _context.Enemy;
+            _context.Enemy.transform.Translate(enemy.Direction.x, 0, 0);   
+            if (enemy.Direction.x != 0)
             {
-                if (Direction.x > 0)
+                if (enemy.Direction.x > 0)
                 {
-                    MySprite.flipX = !MySprite.flipX;
+                    enemy.MySprite.flipX = !enemy.MySprite.flipX;
                 }
-                else if (Direction.x < 0)
+                else if (enemy.Direction.x < 0)
                 {
-                    MySprite.flipX = !MySprite.flipX;
+                    enemy.MySprite.flipX = !enemy.MySprite.flipX;
                 }
             }
         }
@@ -76,16 +74,17 @@ namespace Rescues
 
         public void Wait()
         {
-            MaxDistance = 0;
-            endOfWait = false;
-            if(CurrenTime <= 0)
+            var enemy = _context.Enemy;
+            enemy.MaxDistance = 0;
+            EndOfWait = false;
+            if(enemy.CurrenTime <= 0)
             {
-                MaxDistance = 10;//возможное значение
-                CurrenTime = WaitTime;
-                endOfWait = true;
+                enemy.MaxDistance = 10.0f;
+                enemy.CurrenTime = WaitTime;
+                EndOfWait = true;
             }
 
-            CurrenTime -= Time.deltaTime;
+            enemy.CurrenTime -= Time.deltaTime;
         }
 
         #endregion

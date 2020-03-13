@@ -7,9 +7,13 @@ public sealed class EnemyBehaviour : MonoBehaviour
 
     public EnemyData EnemyData;
     private int _modificator = 1;
+    public int detectionDistance;
+    public float CurrenTime;
+    public float MaxDistance;
     public Vector3 Direction;
     public SpriteRenderer MySprite;
     public bool IsDead;
+    public Transform Transform; 
 
     #endregion
 

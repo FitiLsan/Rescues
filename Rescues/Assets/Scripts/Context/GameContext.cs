@@ -7,10 +7,11 @@ namespace Rescues
     public sealed class GameContext : Contexts
     {
         #region Fields
-
+        
+        public EnemyBehaviour Enemy;
         public Character Character;
         private readonly SortedList<TriggerObjectType, List<IOnTrigger>> _onTriggers;
-        
+
         #endregion
 
 
