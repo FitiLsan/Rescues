@@ -8,7 +8,7 @@ namespace Rescues
         #region Fields
 
         private readonly GameContext _context;
-        //private readonly CameraServices _cameraServices;
+        private readonly CameraServices _cameraServices;
 
         #endregion
 
@@ -18,7 +18,7 @@ namespace Rescues
         public InputController(GameContext context, Services services)
         {
             _context = context;
-            //_cameraServices = services.CameraServices;
+            _cameraServices = services.CameraServices;
         }
 
         #endregion
@@ -55,15 +55,20 @@ namespace Rescues
                 }
             }
 
-            //if (Input.GetButtonDown("Mouse ScrollPressed"))
-            //{
-            //    _cameraServices.CalculateOrigin();
-            //}
+            if (Input.GetButtonDown("Mouse ScrollPressed"))
+            {
+                _cameraServices.FreeCamera();              
+            }
 
-            //if (Input.GetButton("Mouse ScrollPressed"))
-            //{
-            //    _cameraServices.FreeCamera();
-            //}
+            if (Input.GetButton("Mouse ScrollPressed"))
+            {
+                _cameraServices.FreeCameraMovement();
+            }
+
+            if (Input.GetButtonUp("Mouse ScrollPressed"))
+            {
+                _cameraServices.LockCamera();               
+            }
         }
 
         #endregion

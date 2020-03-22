@@ -31,15 +31,7 @@ namespace Rescues
         public void Execute()
         {
             AttachedCamera();
-            if (Input.GetButtonDown("Mouse ScrollPressed"))
-            {
-                _cameraServices.CalculateOrigin();
-            }
-
-            if (Input.GetButton("Mouse ScrollPressed"))
-            {
-                _cameraServices.FreeCamera();
-            }
+            if(_cameraServices.IsCameraFree) _cameraServices.MoveCameraWithMouse();
         }
 
         #endregion IExecuteController
@@ -48,11 +40,9 @@ namespace Rescues
         #region Methods
 
         public void AttachedCamera()
-        {
-
+        {           
             _cameraServices.CameraMain.transform.position = new Vector3(_context.Character.Transform.position.x,
-               _context.Character.Transform.position.y, _context.Character.Transform.position.z - _distance);
-            
+               _context.Character.Transform.position.y, _context.Character.Transform.position.z - _distance);         
         }
       
         #endregion Methods
