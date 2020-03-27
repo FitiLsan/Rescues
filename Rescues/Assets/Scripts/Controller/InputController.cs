@@ -8,7 +8,7 @@ namespace Rescues
         #region Fields
 
         private readonly GameContext _context;
-        private readonly CameraServices _cameraServices;
+        private readonly CameraServices _cameraServices;       
 
         #endregion
 

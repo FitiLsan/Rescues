@@ -7,7 +7,7 @@ namespace Rescues
     {
         #region Fields
         
-        private Vector3 _origin;
+        private Vector3 _mouseOriginalClickPosition;
         private Vector3 _moveLimit;
         private float _cameraFreeMoveLimit;
         private int _cameraDragSpeed;         
@@ -40,13 +40,13 @@ namespace Rescues
         public void FreeCamera()
         {
             IsCameraFree = true;
-            _origin = Input.mousePosition;           
+            _mouseOriginalClickPosition = Input.mousePosition;           
             return;
         }
 
         public void FreeCameraMovement()
         {          
-            Vector3 direction = CameraMain.ScreenToViewportPoint(Input.mousePosition - _origin);
+            Vector3 direction = CameraMain.ScreenToViewportPoint(Input.mousePosition - _mouseOriginalClickPosition);
             Vector3 move = new Vector3(direction.x * _cameraDragSpeed, direction.y * _cameraDragSpeed);
             _moveLimit = new Vector3(Mathf.Clamp(move.x, -_cameraFreeMoveLimit, _cameraFreeMoveLimit), Mathf.Clamp(move.y, -_cameraFreeMoveLimit, _cameraFreeMoveLimit));          
         }
