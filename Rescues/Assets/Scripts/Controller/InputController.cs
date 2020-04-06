@@ -52,6 +52,22 @@ namespace Rescues
                     }
                 }
             }
+
+            if (Input.GetButtonUp("Use"))
+            {
+                if(_context.Character.IsHided == true)
+                {
+                    _context.Character.UnHide();
+                }
+                var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);              
+                if (interactableObject != null)
+                {
+                    var audio = interactableObject.gameObject.GetComponent<AudioSource>();
+                    audio.clip = interactableObject.HidingPlaceData.HidingSound;
+                    audio.Play();
+                    _context.Character.Hide();
+                }
+            }
         }
 
         #endregion
