@@ -5,6 +5,7 @@ public sealed class EnemyBehaviour : MonoBehaviour
 {
     #region Fields
 
+    public Vector3[] WayPoints;
     public EnemyData EnemyData;
     private int _modificator = 1;
     public int detectionDistance;

@@ -29,18 +29,18 @@ namespace Rescues
         public void Execute()
         {
             var enemy = _context.Enemy;
-            if ((enemy.transform.position - _context.WayPoints[enemy.PatrolState]).sqrMagnitude < enemy.MaxDistance * enemy.MaxDistance && !EndOfWait)
+            if ((enemy.transform.position - enemy.WayPoints[enemy.PatrolState]).sqrMagnitude < enemy.MaxDistance * enemy.MaxDistance && !EndOfWait)
             {
                 Wait();
                 Vector3 movementDirection = Vector3.zero;
-                movementDirection.x = enemy.transform.position.x - _context.WayPoints[enemy.PatrolState].x;
+                movementDirection.x = enemy.transform.position.x - enemy.WayPoints[enemy.PatrolState].x;
 
                 _context.Enemy.transform.position += movementDirection * enemy.EnemyData.Speed * Time.deltaTime;
             }
             else
             {
                 EndOfWait = false;
-                if (enemy.PatrolState +1 > _context.WayPoints.Length - 1 || enemy.PatrolState -1 < 0)
+                if (enemy.PatrolState +1 > enemy.WayPoints.Length - 1 || enemy.PatrolState -1 < 0)
                 {
 
                     enemy.InvertModificator();
