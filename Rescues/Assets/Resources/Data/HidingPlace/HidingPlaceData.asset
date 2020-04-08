@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: HidingPlaceData
   m_EditorClassIdentifier: 
   HidingSound: {fileID: 8300000, guid: 0531c4e86d8b3fe42bade48b339ff5c7, type: 3}
+  AnimationDuration: 3

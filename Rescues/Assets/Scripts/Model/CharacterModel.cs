@@ -10,7 +10,8 @@ namespace Rescues
         private readonly float _speed;
         private SpriteRenderer _characterSprite;
         private CapsuleCollider2D _playerCollider;
-        private Rigidbody2D _playerRigidbody2D;
+        private Rigidbody2D _playerRigidbody2D;       
+        public Timer AnimationPlay;        
 
         #endregion
 
@@ -19,7 +20,11 @@ namespace Rescues
 
         public Transform Transform { get; }
         private PlayerBehaviour PlayerBehaviour { get; }
-        public bool IsHided { get; set; }
+        public AudioSource PlayerSound { get; }        
+        public bool IsColliderOn { get; set; }
+        public bool IsHiding { get; set; }
+        public bool IsPlayingAnimation { get; set; }
+        public float AnimationTimer { get; set; }
 
         #endregion
 
@@ -32,9 +37,13 @@ namespace Rescues
             _characterSprite = transform.GetComponent<SpriteRenderer>();
             _playerCollider = transform.GetComponent<CapsuleCollider2D>();
             _playerRigidbody2D = transform.GetComponent<Rigidbody2D>();
+            AnimationPlay = new Timer();          
             Transform = transform;
+            PlayerSound = Transform.GetComponent<AudioSource>();
             PlayerBehaviour = Transform.GetComponent<PlayerBehaviour>();
-            IsHided = false;
+            IsColliderOn = true;
+            IsHiding = false;
+            IsPlayingAnimation = false;
         }
 
         #endregion
@@ -47,23 +56,39 @@ namespace Rescues
             Transform.position = position;
         }
 
-        public void Hide()
+        public void StartHiding(HidingPlaceBehaviour hidingPlaceBehaviour)
         {
-            IsHided = true;
-            _playerCollider.enabled = false;
-            _playerRigidbody2D.bodyType = RigidbodyType2D.Static;           
+            PlayerSound.clip = hidingPlaceBehaviour.HidingPlaceData.HidingSound;
+            AnimationTimer = hidingPlaceBehaviour.HidingPlaceData.AnimationDuration;
+            PlayAnimationWithTimer();
+            IsHiding = true;            
         }
 
-        public void UnHide()
+        public void Hiding()
         {
-            IsHided = false;
-            _playerCollider.enabled = true;
-            _playerRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+            CustomDebug.Log("Спрятался/Вылез");
+            IsColliderOn = !IsColliderOn;
+            _playerCollider.enabled = !_playerCollider.enabled;
+            if (_playerRigidbody2D.bodyType == RigidbodyType2D.Dynamic)
+            {
+                _playerRigidbody2D.bodyType = RigidbodyType2D.Static;
+            }
+            else _playerRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+        }
+
+        public void PlayAnimationWithTimer()
+        {
+            if (PlayerSound.clip != null)
+            {
+                PlayerSound.Play();
+            }
+            AnimationPlay.StartTimer(AnimationTimer);
+            IsPlayingAnimation = true;
         }
 
         public void Move(Vector2 direction)
         {
-            if (IsHided == false)
+            if (IsColliderOn == true && IsPlayingAnimation == false)
             {
                 direction *= _speed * Time.deltaTime;
 

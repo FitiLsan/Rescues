@@ -38,7 +38,10 @@ namespace Rescues
             if (Input.GetButtonUp("Vertical"))
             {
                 var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
-                _context.Character.Teleport(interactableObject.ExitPoint.position);
+                if (interactableObject != null)
+                {
+                    _context.Character.Teleport(interactableObject.ExitPoint.position);
+                }
             }
 
             if (Input.GetButtonUp("PickUp"))
@@ -55,18 +58,23 @@ namespace Rescues
 
             if (Input.GetButtonUp("Use"))
             {
-                if(_context.Character.IsHided == true)
+                var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
+                if (_context.Character.IsColliderOn == false)
                 {
-                    _context.Character.UnHide();
-                }
-                var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);              
+                    _context.Character.PlayAnimationWithTimer();
+                    _context.Character.IsHiding = true;
+                }                             
                 if (interactableObject != null)
                 {
-                    var audio = interactableObject.gameObject.GetComponent<AudioSource>();
-                    audio.clip = interactableObject.HidingPlaceData.HidingSound;
-                    audio.Play();
-                    _context.Character.Hide();
+                    _context.Character.StartHiding(interactableObject);
                 }
+            }
+            _context.Character.AnimationPlay.UpdateTimer();  
+            if(_context.Character.AnimationPlay.IsEvent() && _context.Character.IsHiding == true)
+            {
+                _context.Character.IsPlayingAnimation = false;
+                _context.Character.Hiding();
+                _context.Character.IsHiding = false;
             }
         }
 

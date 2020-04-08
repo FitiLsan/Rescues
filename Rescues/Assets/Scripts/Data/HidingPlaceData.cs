@@ -9,6 +9,7 @@ namespace Rescues
         #region Fields
 
         public AudioClip HidingSound;
+        public float AnimationDuration;
 
         #endregion
     }
