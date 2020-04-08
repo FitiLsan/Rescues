@@ -32,7 +32,7 @@ namespace Rescues
 
             if (inputAxis.x != 0 || inputAxis.y != 0)
             {
-                _context.Character.Move(inputAxis);
+                _context.Character.StateMoving(inputAxis);
             }
 
             if (Input.GetButtonUp("Vertical"))
@@ -40,7 +40,7 @@ namespace Rescues
                 var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
                 if (interactableObject != null)
                 {
-                    _context.Character.Teleport(interactableObject.ExitPoint.position);
+                    _context.Character.StateTeleporting(interactableObject.ExitPoint.position);
                 }
             }
 
@@ -56,26 +56,28 @@ namespace Rescues
                 }
             }
 
+            _context.Character.StateHandler();
+
             if (Input.GetButtonUp("Use"))
             {
                 var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
-                if (_context.Character.IsColliderOn == false)
+                if (_context.Character.PlayerState == State.Hiding)
                 {
-                    _context.Character.PlayAnimationWithTimer();
-                    _context.Character.IsHiding = true;
-                }                             
+                    _context.Character.StateHideAnimation(interactableObject);                   
+                }
                 if (interactableObject != null)
                 {
-                    _context.Character.StartHiding(interactableObject);
+                    _context.Character.StateHideAnimation(interactableObject);
                 }
             }
-            _context.Character.AnimationPlay.UpdateTimer();  
-            if(_context.Character.AnimationPlay.IsEvent() && _context.Character.IsHiding == true)
+            _context.Character.AnimationPlay.UpdateTimer();
+
+            if (_context.Character.AnimationPlay.IsEvent())
             {
-                _context.Character.IsPlayingAnimation = false;
-                _context.Character.Hiding();
-                _context.Character.IsHiding = false;
+                _context.Character.StateHiding();
             }
+
+            
         }
 
         #endregion

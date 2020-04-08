@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 
 namespace Rescues
@@ -10,8 +11,12 @@ namespace Rescues
         private readonly float _speed;
         private SpriteRenderer _characterSprite;
         private CapsuleCollider2D _playerCollider;
-        private Rigidbody2D _playerRigidbody2D;       
-        public Timer AnimationPlay;        
+        private Rigidbody2D _playerRigidbody2D;
+        private State _state;
+        public Timer AnimationPlay;
+        private Vector2 _direction;
+        private Vector3 _teleportPosition;
+        private HidingPlaceBehaviour _hidingPlaceBehaviour;
 
         #endregion
 
@@ -20,11 +25,9 @@ namespace Rescues
 
         public Transform Transform { get; }
         private PlayerBehaviour PlayerBehaviour { get; }
-        public AudioSource PlayerSound { get; }        
-        public bool IsColliderOn { get; set; }
-        public bool IsHiding { get; set; }
-        public bool IsPlayingAnimation { get; set; }
+        public AudioSource PlayerSound { get; }
         public float AnimationTimer { get; set; }
+        public State PlayerState { get { return _state; } }
 
         #endregion
 
@@ -37,37 +40,102 @@ namespace Rescues
             _characterSprite = transform.GetComponent<SpriteRenderer>();
             _playerCollider = transform.GetComponent<CapsuleCollider2D>();
             _playerRigidbody2D = transform.GetComponent<Rigidbody2D>();
-            AnimationPlay = new Timer();          
+            AnimationPlay = new Timer();
             Transform = transform;
             PlayerSound = Transform.GetComponent<AudioSource>();
             PlayerBehaviour = Transform.GetComponent<PlayerBehaviour>();
-            IsColliderOn = true;
-            IsHiding = false;
-            IsPlayingAnimation = false;
+
         }
 
         #endregion
 
 
-        #region Methods
+        #region Methods      
 
-        public void Teleport(Vector3 position)
+        public void StateHideAnimation(HidingPlaceBehaviour hidingPlaceBehaviour)
         {
-            Transform.position = position;
+            setState(State.HideAnimation);
+            if (hidingPlaceBehaviour != null)
+            {
+                _hidingPlaceBehaviour = hidingPlaceBehaviour;
+            }
+            StartHiding();
         }
 
-        public void StartHiding(HidingPlaceBehaviour hidingPlaceBehaviour)
+        public void StateHiding()
         {
-            PlayerSound.clip = hidingPlaceBehaviour.HidingPlaceData.HidingSound;
-            AnimationTimer = hidingPlaceBehaviour.HidingPlaceData.AnimationDuration;
+            switch (_state)
+            {
+                case State.HideAnimation:
+                    {
+                        Hide();
+                    }
+                    break;
+            }
+            setState(State.Hiding);
+        }
+
+        public void StateTeleporting(Vector3 position)
+        {
+            setState(State.Teleporting);
+            _teleportPosition = position;
+        }
+
+        public void StateMoving(Vector2 direction)
+        {
+            switch (_state)
+            {
+                case State.Hiding:
+                    {
+                        return;
+                    }
+                case State.HideAnimation:
+                    {
+                        return;
+                    }
+            }
+            setState(State.Moving);
+            _direction = direction;
+        }
+
+        private void setState(State value)
+        {           
+            _state = value;
+        }
+
+        public void StateHandler()
+        {
+            switch (_state)
+            {               
+                case State.Teleporting:
+                    {
+                        Teleport();
+                    }
+                    break;
+                case State.Moving:
+                    {
+                        Move();
+                    }
+                    break;
+            }
+        }
+      
+        private void Teleport()
+        {
+            Transform.position = _teleportPosition;
+        }
+
+        private void StartHiding()
+        {
+            CustomDebug.Log("Start Hiding");
+            PlayerSound.clip = _hidingPlaceBehaviour.HidingPlaceData.HidingSound;
+            AnimationTimer = _hidingPlaceBehaviour.HidingPlaceData.AnimationDuration;
             PlayAnimationWithTimer();
-            IsHiding = true;            
         }
 
-        public void Hiding()
+        private void Hide()
         {
             CustomDebug.Log("Спрятался/Вылез");
-            IsColliderOn = !IsColliderOn;
             _playerCollider.enabled = !_playerCollider.enabled;
             if (_playerRigidbody2D.bodyType == RigidbodyType2D.Dynamic)
             {
@@ -76,32 +144,29 @@ namespace Rescues
             else _playerRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
         }
 
-        public void PlayAnimationWithTimer()
+        private void PlayAnimationWithTimer()
         {
             if (PlayerSound.clip != null)
             {
                 PlayerSound.Play();
             }
+            Debug.Log(AnimationTimer);
             AnimationPlay.StartTimer(AnimationTimer);
-            IsPlayingAnimation = true;
         }
 
-        public void Move(Vector2 direction)
+        private void Move()
         {
-            if (IsColliderOn == true && IsPlayingAnimation == false)
+            _direction *= _speed * Time.deltaTime;
+
+            Transform.Translate(_direction);
+
+            if (_direction.x > 0 && _characterSprite.flipX)
             {
-                direction *= _speed * Time.deltaTime;
-
-                Transform.Translate(direction);
-
-                if (direction.x > 0 && _characterSprite.flipX)
-                {
-                    Flip();
-                }
-                else if (direction.x < 0 && !_characterSprite.flipX)
-                {
-                    Flip();
-                }
+                Flip();
+            }
+            else if (_direction.x < 0 && !_characterSprite.flipX)
+            {
+                Flip();
             }
         }
 
