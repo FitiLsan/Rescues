@@ -50,11 +50,24 @@ namespace Rescues
         #endregion
 
 
-        #region Methods      
+        #region StateMachine     
+
+        public void StateIdle()
+        {
+            SetState(State.Idle);
+        }
 
         public void StateHideAnimation(HidingPlaceBehaviour hidingPlaceBehaviour)
         {
-            setState(State.HideAnimation);
+            switch (_state)
+            {
+                case State.Hiding:
+                    {
+                        StartHiding();
+                        return;
+                    }                   
+            }
+            SetState(State.HideAnimation);
             if (hidingPlaceBehaviour != null)
             {
                 _hidingPlaceBehaviour = hidingPlaceBehaviour;
@@ -71,13 +84,19 @@ namespace Rescues
                         Hide();
                     }
                     break;
+                case State.Hiding:
+                    {
+                        StateIdle();
+                        Hide();
+                        return;
+                    }                   
             }
-            setState(State.Hiding);
+            SetState(State.Hiding);
         }
 
         public void StateTeleporting(Vector3 position)
         {
-            setState(State.Teleporting);
+            SetState(State.Teleporting);
             _teleportPosition = position;
         }
 
@@ -94,11 +113,11 @@ namespace Rescues
                         return;
                     }
             }
-            setState(State.Moving);
+            SetState(State.Moving);
             _direction = direction;
         }
 
-        private void setState(State value)
+        private void SetState(State value)
         {           
             _state = value;
         }
@@ -119,7 +138,12 @@ namespace Rescues
                     break;
             }
         }
-      
+
+        #endregion
+
+
+        #region Methods 
+
         private void Teleport()
         {
             Transform.position = _teleportPosition;
