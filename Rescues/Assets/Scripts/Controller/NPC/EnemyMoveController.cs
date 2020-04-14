@@ -26,6 +26,7 @@ namespace Rescues
 
         public void Execute()
         {
+            //TODO bring all it method to EnemyBehavoiur into method Move()
             var enemy = _context.Enemy;
             var enemyPositions = enemy.RouteData.GetWayPoints();
 
