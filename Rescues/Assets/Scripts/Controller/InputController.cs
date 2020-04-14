@@ -34,13 +34,16 @@ namespace Rescues
 
             if (inputAxis.x != 0 || inputAxis.y != 0)
             {
-                _context.Character.Move(inputAxis);
+                _context.Character.StateMoving(inputAxis);
             }
 
             if (Input.GetButtonUp("Vertical"))
             {
                 var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
-                _context.Character.Teleport(interactableObject.ExitPoint.position);
+                if (interactableObject != null)
+                {
+                    _context.Character.StateTeleporting(interactableObject.ExitPoint.position);
+                }
             }
 
             if (Input.GetButtonUp("PickUp"))
@@ -55,6 +58,27 @@ namespace Rescues
                 }
             }
 
+            _context.Character.StateHandler();
+
+            if (Input.GetButtonUp("Use"))
+            {                
+                var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
+                if (_context.Character.PlayerState == State.Hiding)
+                {
+                    _context.Character.StateHideAnimation(interactableObject);                   
+                }
+                if (interactableObject != null)
+                {
+                    _context.Character.StateHideAnimation(interactableObject);
+                }
+            }
+            _context.Character.AnimationPlay.UpdateTimer();
+
+            if (_context.Character.AnimationPlay.IsEvent())
+            {
+                _context.Character.StateHiding();
+            }
+          
             if (Input.GetButtonDown("Mouse ScrollPressed"))
             {
                 _cameraServices.FreeCamera();              
