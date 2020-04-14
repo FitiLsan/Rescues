@@ -28,10 +28,12 @@ namespace Rescues
         {
             var resources = Resources.Load<EnemyBehaviour>(AssetsPathGameObject.Object[GameObjectType.Enemy]);
             var enemyData = resources.EnemyData;
-            var wayPoint = _context.WayPoints[0];
 
-            var enemyObject = Object.Instantiate(resources, wayPoint, Quaternion.identity);
+            var enemyObject = Object.Instantiate(resources, Vector3.zero, Quaternion.identity);
             _context.Enemy = enemyObject;
+
+            var wayPoint = _context.Enemy.RouteData.GetWayPoints()[0];
+            enemyObject.transform.position = wayPoint;
         }
 
         #endregion

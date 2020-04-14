@@ -27,20 +27,27 @@ namespace Rescues
         public void Execute()
         {
             var enemy = _context.Enemy;
-            if (Vector3.Distance(enemy.transform.position, _context.WayPoints[enemy.PatrolState]) > 0.5)
+            var enemyPositions = enemy.RouteData.GetWayPoints();
+
+            if (Vector3.Distance(enemy.transform.position, enemyPositions[enemy.PatrolPointState]) > 0.5)
             {
                 Vector3 movementDirection = Vector3.zero;
-                movementDirection.x = enemy.transform.position.x - _context.WayPoints[enemy.PatrolState].x;
+                movementDirection.x = enemyPositions[enemy.PatrolPointState].x - enemy.transform.position.x;
 
-                _context.Enemy.transform.position += movementDirection * enemy.EnemyData.Speed * Time.deltaTime;
+                _context.Enemy.transform.position += movementDirection.normalized * enemy.EnemyData.Speed * Time.deltaTime;
+                _context.Enemy.SetVisionDirection(movementDirection);
             }
             else
             {
-                if(enemy.PatrolState +1 > _context.WayPoints.Length - 1 || enemy.PatrolState -1 < 0)
+                if(enemy.PatrolPointState +1 > enemyPositions.Length - 1 || enemy.PatrolPointState -1 < 0)
                 {
                     enemy.InvertModificator();
                 }
-                enemy.PatrolState += enemy.Modificator;
+                if(enemy.PatrolPointState + enemy.Modificator < 0)
+                {
+                    enemy.InvertModificator();
+                }
+                enemy.PatrolPointState += enemy.Modificator;
             }
         }
 
