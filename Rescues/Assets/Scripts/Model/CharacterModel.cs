@@ -150,16 +150,14 @@ namespace Rescues
         }
 
         private void StartHiding()
-        {
-            CustomDebug.Log("Start Hiding");
+        {           
             PlayerSound.clip = _hidingPlaceBehaviour.HidingPlaceData.HidingSound;
             AnimationTimer = _hidingPlaceBehaviour.HidingPlaceData.AnimationDuration;
             PlayAnimationWithTimer();
         }
 
         private void Hide()
-        {
-            CustomDebug.Log("Спрятался/Вылез");
+        {            
             _playerCollider.enabled = !_playerCollider.enabled;
             if (_playerRigidbody2D.bodyType == RigidbodyType2D.Dynamic)
             {

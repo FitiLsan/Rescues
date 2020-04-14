@@ -59,8 +59,7 @@ namespace Rescues
             _context.Character.StateHandler();
 
             if (Input.GetButtonUp("Use"))
-            {
-                CustomDebug.Log(_context.Character.PlayerState);
+            {                
                 var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
                 if (_context.Character.PlayerState == State.Hiding)
                 {
