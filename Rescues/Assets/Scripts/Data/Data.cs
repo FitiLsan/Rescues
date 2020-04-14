@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using UnityEngine;
 
 
@@ -11,11 +11,14 @@ namespace Rescues
 
         [SerializeField] private string _playerDataPath;
         [SerializeField] private string _itemDataPath;
+		[SerializeField] private string _cameraDataPath;
         [SerializeField] private string _hidingPlaceDataPath;
+        
         private static Data _instance;
         private static PlayerData _playerData;
         private static ItemData _itemData;
-        private static HidingPlaceData _hidingPlaceData;
+        private static HidingPlaceData _hidingPlaceData;            
+        private static CameraData _cameraData;
 
         #endregion
         
@@ -74,6 +77,19 @@ namespace Rescues
 
                 return _hidingPlaceData;
             }          
+
+        public static CameraData CameraData
+        {
+            get
+            {
+                if(_cameraData == null)
+                {
+                    _cameraData = Load<CameraData>("Data/" + Instance._cameraDataPath);
+                }
+
+                return _cameraData;
+            }
+
         }
 
         #endregion

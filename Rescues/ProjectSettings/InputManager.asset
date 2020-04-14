@@ -317,6 +317,13 @@ InputManager:
     positiveButton: e
     altNegativeButton: 
     altPositiveButton: 
+    m_Name: Mouse ScrollPressed
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: mouse 2
+    altNegativeButton: 
+    altPositiveButton: joystick button 1
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
