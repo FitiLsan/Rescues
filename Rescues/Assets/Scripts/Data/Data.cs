@@ -70,13 +70,14 @@ namespace Rescues
         {
             get
             {
-                if(_hidingPlaceData == null)
+                if (_hidingPlaceData == null)
                 {
                     _hidingPlaceData = Load<HidingPlaceData>("Data/" + Instance._hidingPlaceDataPath);
                 }
 
                 return _hidingPlaceData;
-            }          
+            }
+        }
 
         public static CameraData CameraData
         {
