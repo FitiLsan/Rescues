@@ -309,6 +309,7 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 0
+<<<<<<< Updated upstream
   - serializedVersion: 3
     m_Name: Use
     descriptiveName: 
@@ -341,3 +342,5 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 0
+=======
+>>>>>>> Stashed changes

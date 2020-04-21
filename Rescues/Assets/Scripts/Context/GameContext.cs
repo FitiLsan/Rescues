@@ -9,12 +9,21 @@ namespace Rescues
     public sealed class GameContext : Contexts
     {
         #region Fields
+<<<<<<< Updated upstream
 
         public CharacterModel Character;
         public Inventory Inventory;
         public Vector3[] WayPoints;
         public EnemyBehaviour Enemy;       
 
+=======
+
+        public CharacterModel Character;
+        public Inventory Inventory;
+        //public Vector3[] WayPoints;
+        public EnemyBehaviour Enemy;
+
+>>>>>>> Stashed changes
         public event Action<IInteractable> AddObjectHandler = delegate(IInteractable interactable) {  };
         private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
         private readonly List<IInteractable> _interactables;

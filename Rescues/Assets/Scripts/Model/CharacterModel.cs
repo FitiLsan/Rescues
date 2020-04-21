@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 ﻿using System;
 using UnityEngine;
+=======
+﻿using UnityEngine;
+>>>>>>> Stashed changes
 
 
 namespace Rescues
@@ -10,6 +14,7 @@ namespace Rescues
 
         private readonly float _speed;
         private SpriteRenderer _characterSprite;
+<<<<<<< Updated upstream
         private CapsuleCollider2D _playerCollider;
         private Rigidbody2D _playerRigidbody2D;
         private State _state;
@@ -17,6 +22,8 @@ namespace Rescues
         private Vector2 _direction;
         private Vector3 _teleportPosition;
         private HidingPlaceBehaviour _hidingPlaceBehaviour;
+=======
+>>>>>>> Stashed changes
 
         #endregion
 
@@ -25,9 +32,12 @@ namespace Rescues
 
         public Transform Transform { get; }
         private PlayerBehaviour PlayerBehaviour { get; }
+<<<<<<< Updated upstream
         public AudioSource PlayerSound { get; }
         public float AnimationTimer { get; set; }
         public State PlayerState { get { return _state; } }
+=======
+>>>>>>> Stashed changes
 
         #endregion
 
@@ -37,6 +47,7 @@ namespace Rescues
         public CharacterModel(Transform transform, PlayerData playerData)
         {
             _speed = playerData.Speed;
+<<<<<<< Updated upstream
             _characterSprite = transform.GetComponent<SpriteRenderer>();
             _playerCollider = transform.GetComponent<CapsuleCollider2D>();
             _playerRigidbody2D = transform.GetComponent<Rigidbody2D>();
@@ -137,11 +148,17 @@ namespace Rescues
                     }
                     break;
             }
+=======
+            _characterSprite = transform.GetComponent<SpriteRenderer>();           
+            Transform = transform;
+            PlayerBehaviour = Transform.GetComponent<PlayerBehaviour>();
+>>>>>>> Stashed changes
         }
 
         #endregion
 
 
+<<<<<<< Updated upstream
         #region Methods 
 
         private void Teleport()
@@ -187,6 +204,26 @@ namespace Rescues
                 Flip();
             }
             else if (_direction.x < 0 && !_characterSprite.flipX)
+=======
+        #region Methods
+
+        public void Teleport(Vector3 position)
+        {
+            Transform.position = position;
+        }
+
+        public void Move(Vector2 direction)
+        {        
+            direction *= _speed * Time.deltaTime;
+
+            Transform.Translate(direction);
+
+            if (direction.x > 0 && _characterSprite.flipX)
+            {
+                Flip();
+            }
+            else if(direction.x < 0 && !_characterSprite.flipX)
+>>>>>>> Stashed changes
             {
                 Flip();
             }

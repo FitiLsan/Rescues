@@ -13,7 +13,10 @@ GameObject:
   - component: {fileID: 1376766639749837249}
   - component: {fileID: 2443518258007677068}
   - component: {fileID: 2457984153792682916}
+<<<<<<< Updated upstream
   - component: {fileID: 669171817899928776}
+=======
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Prefabs_Player_Character
   m_TagString: Player
@@ -134,6 +137,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.26264668, y: 0.05529578}
   m_Size: {x: 2.1741183, y: 5.9905887}
   m_Direction: 0
+<<<<<<< Updated upstream
 --- !u!82 &669171817899928776
 AudioSource:
   m_ObjectHideFlags: 0
@@ -230,3 +234,5 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> Stashed changes

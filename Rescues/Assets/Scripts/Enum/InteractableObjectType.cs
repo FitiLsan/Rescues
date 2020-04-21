@@ -4,7 +4,6 @@
     {
         None = 0,
         Door = 1,
-        Item = 2,
-        HidingPlace = 3
+        Item = 2
     }
 }

@@ -6,11 +6,16 @@ namespace Rescues
     public sealed class CameraServices : Service
     {
         #region Fields
+<<<<<<< Updated upstream
         
         private Vector3 _mouseOriginalClickPosition;
         private Vector3 _moveLimit;
         private float _cameraFreeMoveLimit;
         private int _cameraDragSpeed;         
+=======
+
+        private int _deltaTimeResetFrame;
+>>>>>>> Stashed changes
 
         #endregion
 
@@ -19,6 +24,7 @@ namespace Rescues
 
         public CameraServices(Contexts contexts) : base(contexts)
         {
+<<<<<<< Updated upstream
             CameraMain = Camera.main;           
             _cameraDragSpeed = Data.CameraData.CameraDragSpeed;
             _cameraFreeMoveLimit = Data.CameraData.CameraFreeMoveLimit;
@@ -61,6 +67,17 @@ namespace Rescues
             IsCameraFree = false;
             return;
         }    
+=======
+            CameraMain = Camera.main;
+        }
+
+        #endregion
+        
+        
+        #region Properties
+
+        public Camera CameraMain;
+>>>>>>> Stashed changes
 
         #endregion
     }

@@ -11,6 +11,7 @@ namespace Rescues
 
         [SerializeField] private string _playerDataPath;
         [SerializeField] private string _itemDataPath;
+<<<<<<< Updated upstream
 		[SerializeField] private string _cameraDataPath;
         [SerializeField] private string _hidingPlaceDataPath;
         
@@ -19,6 +20,11 @@ namespace Rescues
         private static ItemData _itemData;
         private static HidingPlaceData _hidingPlaceData;            
         private static CameraData _cameraData;
+=======
+        private static Data _instance;
+        private static PlayerData _playerData;
+        private static ItemData _itemData;
+>>>>>>> Stashed changes
 
         #endregion
         
@@ -65,6 +71,7 @@ namespace Rescues
                 return _itemData;
             }
         }
+<<<<<<< Updated upstream
 
         public static HidingPlaceData HidingPlaceData
         {
@@ -92,6 +99,8 @@ namespace Rescues
             }
 
         }
+=======
+>>>>>>> Stashed changes
 
         #endregion
 

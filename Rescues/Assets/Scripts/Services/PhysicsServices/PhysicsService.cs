@@ -31,7 +31,7 @@ namespace Rescues
         
         #region Methods
 
-        public bool CheckGround(Vector2 position, float distanceRay, out Vector2 hitPoint, int layerMask = LayerManager.DEFAULTLAYER)
+        public bool CheckGround(Vector2 position, float distanceRay, out Vector2 hitPoint, int layerMask = LayerManager.DEFAULT_LAYER)
         {
             hitPoint = Vector2.zero;
 
@@ -44,8 +44,21 @@ namespace Rescues
             hitPoint = hit.point;
             return true;
         }
+<<<<<<< Updated upstream
         
         public List<ITrigger> GetObjectsInRadius(Vector2 position, float radius, int layerMask = LayerManager.DEFAULTLAYER)
+=======
+
+        public bool VisionDetectionPlayer(Vector3 rayOriginPosition, Vector3 rayTargetDirection, float detectionDistance)
+        {
+            int layerMask = LayerManager.DEFAULT_LAYER;
+            RaycastHit2D hit = Physics2D.Raycast(rayOriginPosition, rayTargetDirection, detectionDistance, layerMask);
+            Debug.DrawRay(rayOriginPosition, rayTargetDirection * detectionDistance, Color.red);
+            return hit;
+        }
+
+        public List<ITrigger> GetObjectsInRadius(Vector2 position, float radius, int layerMask = LayerManager.DEFAULT_LAYER)
+>>>>>>> Stashed changes
         {
             _triggeredObjects.Clear();
             ITrigger trigger;
@@ -66,7 +79,11 @@ namespace Rescues
         }
         
         public HashSet<ITrigger> SphereCastObject(Vector2 center, float radius, HashSet<ITrigger> outBuffer,
+<<<<<<< Updated upstream
             int layerMask = LayerManager.DEFAULTLAYER)
+=======
+            int layerMask = LayerManager.DEFAULT_LAYER)
+>>>>>>> Stashed changes
         {
             outBuffer.Clear();
 

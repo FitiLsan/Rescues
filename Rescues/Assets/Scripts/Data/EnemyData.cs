@@ -2,7 +2,8 @@
 
 
 [CreateAssetMenu(fileName = "EnemyData", menuName = "Data/Enemies/EnemyData")]
-public class EnemyData : ScriptableObject
+public sealed class EnemyData : ScriptableObject
 {
     public float Speed;
+    public float VisionDistance = 5.0f;
 }
