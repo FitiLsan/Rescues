@@ -12,8 +12,8 @@ namespace Rescues
 
         public CharacterModel Character;
         public Inventory Inventory;
-        public Vector3[] WayPoints;
-        public EnemyBehaviour Enemy;       
+        //public Vector3[] WayPoints;
+        public EnemyBehaviour Enemy;
 
         public event Action<IInteractable> AddObjectHandler = delegate(IInteractable interactable) {  };
         private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
