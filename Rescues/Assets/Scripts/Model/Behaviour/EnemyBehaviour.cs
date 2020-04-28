@@ -31,7 +31,7 @@ namespace Rescues
 
             if (hit != false)
             {
-                CustomDebug.Log("Defeat");
+                ScreenInterface.GetInstance().Execute(ScreenType.GameOver);
             }
         }
 
