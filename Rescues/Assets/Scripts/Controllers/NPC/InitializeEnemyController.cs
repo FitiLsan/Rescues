@@ -33,7 +33,7 @@ namespace Rescues
             _context.Enemy = enemyObject;
 
             var wayPoint = _context.Enemy.RouteData.GetWayPoints()[0];
-            enemyObject.transform.position = wayPoint;
+            enemyObject.transform.position = wayPoint.PointPosition;
         }
 
         #endregion

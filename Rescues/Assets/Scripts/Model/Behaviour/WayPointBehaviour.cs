@@ -9,12 +9,11 @@ namespace Rescues
         #region Fields
 
         [SerializeField] private RouteData _routeData;
+        [SerializeField] private float _waitTime;
         [SerializeField] private bool _isScanScene;
 
         #endregion
-
-
-
+        
 
         private void Update()
         {
@@ -35,5 +34,10 @@ namespace Rescues
         }
 
         //public RouteData GetRouteData()
+
+        public float GetWaitTime()
+        {
+            return _waitTime;
+        }
     }
 }
