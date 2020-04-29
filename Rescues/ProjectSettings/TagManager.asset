@@ -41,6 +41,9 @@ TagManager:
   - name: BackgroundRooms
     uniqueID: 3800726013
     locked: 0
+  - name: RoomProps
+    uniqueID: 4223909953
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
