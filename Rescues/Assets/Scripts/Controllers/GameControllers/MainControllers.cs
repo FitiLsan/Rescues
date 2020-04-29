@@ -10,6 +10,7 @@
             Add(new InitializeInteractableObjectController(context, services));
             Add(new InitializeInventoryController(context, services));
             Add(new InitializeEnemyController(context, services));
+            Add(new TimeRemainingController());
             Add(new ItemPutInInventoryController(context, services));
             Add(new DoorTeleporterController(context, services));
             Add(new HidingPlaceController(context, services));

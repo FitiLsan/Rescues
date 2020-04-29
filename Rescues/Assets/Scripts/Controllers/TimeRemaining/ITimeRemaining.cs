@@ -7,7 +7,7 @@ namespace Rescues
     {
         Action Method { get; }
         bool IsRepeating { get; }
-        float Time { get; }
+        float Time { get; set; }
         float CurrentTime { get; set; }
     }
 }

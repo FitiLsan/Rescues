@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Любовь\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Любовь\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Rescues.-405025290.00" t="ExcludeRecursive" />
+    <e p="E:\Проекты\LightGame\Rescues\Rescues" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Demigiant" t="Include">
+          <e p="DOTween" t="Include">
+            <e p="Modules" t="Include">
+              <e p="DOTweenModuleAudio.cs" t="Include" />
+              <e p="DOTweenModulePhysics.cs" t="Include" />
+              <e p="DOTweenModulePhysics2D.cs" t="Include" />
+              <e p="DOTweenModuleSprite.cs" t="Include" />
+              <e p="DOTweenModuleUI.cs" t="Include" />
+              <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+              <e p="DOTweenModuleUtils.cs" t="Include" />
+            </e>
+            <e p="readme.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Context" t="Include">
+            <e p="Contexts.cs" t="Include" />
+            <e p="GameContext.cs" t="Include" />
+          </e>
+          <e p="Controllers" t="Include">
+            <e p="GameControllers" t="Include">
+              <e p="Behaviours" t="Include">
+                <e p="GameController.cs" t="Include" />
+              </e>
+              <e p="Controllers.cs" t="Include" />
+              <e p="GameStateController.cs" t="Include" />
+              <e p="GameSystemsController.cs" t="Include" />
+              <e p="MainControllers.cs" t="Include" />
+              <e p="MainLateControllers.cs" t="Include" />
+              <e p="ReactiveController.cs" t="Include" />
+            </e>
+            <e p="HidingPlaceController.cs" t="Include" />
+            <e p="InteractableObject" t="Include">
+              <e p="DoorTeleporterController.cs" t="Include" />
+              <e p="InitializeInteractableObjectController.cs" t="Include" />
+            </e>
+            <e p="NPC" t="Include">
+              <e p="EnemyMoveController.cs" t="Include" />
+              <e p="EnemyVisionController.cs" t="Include" />
+              <e p="InitializeEnemyController.cs" t="Include" />
+              <e p="InitializeWayPointsController.cs" t="Include" />
+              <e p="StateEnemy.cs" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="CameraController.cs" t="Include" />
+              <e p="InitializeCharacterController.cs" t="Include" />
+              <e p="InitializeInventoryController.cs" t="Include" />
+              <e p="InputController.cs" t="Include" />
+              <e p="ItemPutInInventoryController.cs" t="Include" />
+            </e>
+            <e p="TimeRemaining" t="Include">
+              <e p="ITimeRemaining.cs" t="Include" />
+              <e p="TimeRemaining.cs" t="Include" />
+              <e p="TimeRemainingCleanUp.cs" t="Include" />
+              <e p="TimeRemainingController.cs" t="Include" />
+              <e p="TimeRemainingExtensions.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Data" t="Include">
+            <e p="CameraData.cs" t="Include" />
+            <e p="Data.cs" t="Include" />
+            <e p="EnemyData.cs" t="Include" />
+            <e p="HidingPlaceData.cs" t="Include" />
+            <e p="ItemData.cs" t="Include" />
+            <e p="PlayerData.cs" t="Include" />
+            <e p="RouteData.cs" t="Include" />
+            <e p="TrapData.cs" t="Include" />
+            <e p="WayPointInfo.cs" t="Include" />
+          </e>
+          <e p="Enum" t="Include">
+            <e p="InteractableObjectType.cs" t="Include" />
+            <e p="ReactiveType.cs" t="Include" />
+            <e p="State.cs" t="Include" />
+            <e p="UpdateType.cs" t="Include" />
+          </e>
+          <e p="Helper" t="Include">
+            <e p="CustomDebug.cs" t="Include" />
+            <e p="Extensions" t="Include">
+              <e p="DateTimeExtension.cs" t="Include" />
+            </e>
+            <e p="Manageres" t="Include">
+              <e p="LayerManager.cs" t="Include" />
+              <e p="TagManager.cs" t="Include" />
+            </e>
+            <e p="Timer.cs" t="Include" />
+          </e>
+          <e p="Interface" t="Include">
+            <e p="ICleanupController.cs" t="Include" />
+            <e p="IController.cs" t="Include" />
+            <e p="IExecuteController.cs" t="Include" />
+            <e p="IInitializeController.cs" t="Include" />
+            <e p="IInteractable.cs" t="Include" />
+            <e p="IReactiveController.cs" t="Include" />
+            <e p="ITearDownController.cs" t="Include" />
+            <e p="ITrigger.cs" t="Include" />
+          </e>
+          <e p="LoadAssets" t="Include">
+            <e p="AssetsPathGameObject.cs" t="Include" />
+            <e p="Type" t="Include">
+              <e p="GameObjectType.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Model" t="Include">
+            <e p="Behaviour" t="Include">
+              <e p="DoorTeleporterBehaviour.cs" t="Include" />
+              <e p="EnemyBehaviour.cs" t="Include" />
+              <e p="HidingPlaceBehaviour.cs" t="Include" />
+              <e p="InteractableObjectBehavior.cs" t="Include" />
+              <e p="ItemBehaviour.cs" t="Include" />
+              <e p="PlayerBehaviour.cs" t="Include" />
+              <e p="RaycastTestBehaviour.cs" t="Include" />
+              <e p="TrapBehaviour.cs" t="Include" />
+              <e p="WayPointBehaviour.cs" t="Include" />
+            </e>
+            <e p="CharacterModel.cs" t="Include" />
+            <e p="Inventory" t="Include">
+              <e p="Inventory.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Services" t="Include">
+            <e p="CameraService" t="Include">
+              <e p="CameraServices.cs" t="Include" />
+            </e>
+            <e p="PhysicsServices" t="Include">
+              <e p="PhysicsService.cs" t="Include" />
+            </e>
+            <e p="Service.cs" t="Include" />
+            <e p="Services.cs" t="Include" />
+            <e p="TimeService" t="Include">
+              <e p="ITimeService.cs" t="Include" />
+              <e p="UnityTimeService.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UI" t="Include">
+            <e p="BaseUi.cs" t="Include" />
+            <e p="Interfaces" t="Include">
+              <e p="IListenerScreen.cs" t="Include" />
+              <e p="IPartUI.cs" t="Include" />
+            </e>
+            <e p="Screen" t="Include">
+              <e p="GameMenu" t="Include">
+                <e p="GameMenuBehaviour.cs" t="Include" />
+              </e>
+              <e p="GameOverMenu" t="Include">
+                <e p="GameOverBehaviour.cs" t="Include" />
+              </e>
+              <e p="MainMenu" t="Include">
+                <e p="MainMenuBehaviour.cs" t="Include" />
+              </e>
+              <e p="ScreenFactory.cs" t="Include" />
+              <e p="ScreenInterface.cs" t="Include" />
+            </e>
+            <e p="Type" t="Include">
+              <e p="ScreenElementType.cs" t="Include" />
+              <e p="ScreenType.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="NormalMappedTile.shader" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Rescues.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
