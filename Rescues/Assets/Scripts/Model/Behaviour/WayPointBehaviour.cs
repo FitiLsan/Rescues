@@ -10,6 +10,7 @@ namespace Rescues
 
         [SerializeField] private RouteData _routeData;
         [SerializeField] private float _waitTime;
+        [SerializeField] private TrapBehaviour _activatingTrap;
         [SerializeField] private bool _isScanScene;
 
         #endregion
