@@ -60,6 +60,7 @@ namespace Rescues
                 if (waitTime > 0)
                 {
                     TimeRemaining timeRemaining = new TimeRemaining (ResetWaitState, waitTime);
+                    timeRemaining.AddTimeRemaining();
                     _isWaiting = true;
                 }
             }
