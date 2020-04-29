@@ -29,7 +29,6 @@ namespace Rescues
             //TODO bring all it method to EnemyBehavoiur into method Move()
             var enemy = _context.Enemy;
             var wayPointInfo = enemy.RouteData.GetWayPoints();
-
             if (Vector3.Distance(enemy.transform.position, wayPointInfo[enemy.PatrolPointState].PointPosition) > 0.5)
             {
                 Vector3 movementDirection = Vector3.zero;
@@ -40,15 +39,12 @@ namespace Rescues
             }
             else
             {
-                if(enemy.PatrolPointState +1 > wayPointInfo.Length - 1 || enemy.PatrolPointState -1 < 0)
+                var modificator = enemy.Modificator;
+                if(enemy.PatrolPointState + modificator > wayPointInfo.Length - 1 || 
+                   enemy.PatrolPointState + modificator < 0)
                 {
                     enemy.InvertModificator();
                 }
-                if(enemy.PatrolPointState + enemy.Modificator < 0)
-                {
-                    enemy.InvertModificator();
-                }
-
                 CheckWaitTime(enemy, wayPointInfo[enemy.PatrolPointState]);
             }
         }
@@ -60,13 +56,8 @@ namespace Rescues
 
         private void CheckWaitTime(EnemyBehaviour enemy, WayPointInfo wayPointInfo)
         {
-            if (enemy.CheckWaitTime(wayPointInfo.WaitTime)) return;
-            else GetNewWayPoint(enemy);
-        }
-
-        private void GetNewWayPoint(EnemyBehaviour enemy)
-        {
-            enemy.PatrolPointState += enemy.Modificator;
+            if (enemy.GetWaitState() == StateEnemy.Inspection) return;
+            enemy.WaitTime(wayPointInfo.WaitTime);
         }
 
         #endregion

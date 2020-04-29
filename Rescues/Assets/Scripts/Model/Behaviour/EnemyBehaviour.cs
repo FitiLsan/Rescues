@@ -12,16 +12,18 @@ namespace Rescues
 
         private PhysicsService _physicsService;
         private Vector3 _visionDirection;
-        [SerializeField] private bool _isWaiting;
+        [SerializeField] private StateEnemy _stateEnemy;
 
         private void Awake()
         {
             _physicsService = Services.SharedInstance.PhysicsService;
+            _timeRemaining = new TimeRemaining (ResetWaitState, 0.0f);
         }
 
         public int Modificator { get => _modificator; }
 
         private int _modificator = 1;
+        private TimeRemaining _timeRemaining;
 
         public void InvertModificator()
         {
@@ -43,34 +45,29 @@ namespace Rescues
             _visionDirection = visionDirection.normalized;
         }
 
-        public bool GetWaitState()
+        public StateEnemy GetWaitState()
         {
-            return _isWaiting;
+            return _stateEnemy;
         }
 
-        public void SetWaitState(bool isWaiting)
+        private void SetInspectionState()
         {
-            _isWaiting = isWaiting;
-        }
-
-        internal bool CheckWaitTime(float waitTime)
-        {
-            if (!_isWaiting)
+            if (_stateEnemy == StateEnemy.Patrol)
             {
-                if (waitTime > 0)
-                {
-                    TimeRemaining timeRemaining = new TimeRemaining (ResetWaitState, waitTime);
-                    timeRemaining.AddTimeRemaining();
-                    _isWaiting = true;
-                }
+                _stateEnemy = StateEnemy.Inspection;
             }
+        }
 
-            return _isWaiting;
+        public void WaitTime(float waitTime)
+        {
+            SetInspectionState();
+            _timeRemaining.AddTimeRemaining(waitTime);
         }
 
         private void ResetWaitState()
         {
-            _isWaiting = false;
+            _stateEnemy = StateEnemy.Patrol;
+            PatrolPointState += Modificator;
         }
     }
 }

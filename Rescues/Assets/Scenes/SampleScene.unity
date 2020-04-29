@@ -1272,6 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _routeData: {fileID: 11400000, guid: fde2b68cf561dd445bd3f20957c267d3, type: 2}
+  _waitTime: 0
   _isScanScene: 0
 --- !u!4 &647787582
 Transform:
@@ -2809,6 +2810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _routeData: {fileID: 11400000, guid: fde2b68cf561dd445bd3f20957c267d3, type: 2}
+  _waitTime: 5
   _isScanScene: 0
 --- !u!4 &1587186787
 Transform:

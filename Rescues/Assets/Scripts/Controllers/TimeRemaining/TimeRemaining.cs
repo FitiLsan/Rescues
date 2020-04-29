@@ -9,7 +9,7 @@ namespace Rescues
         
         public Action Method { get; }
         public bool IsRepeating { get; }
-        public float Time { get; }
+        public float Time { get; set; }
         public float CurrentTime { get; set; }
         
         #endregion

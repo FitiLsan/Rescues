@@ -21,13 +21,17 @@ namespace Rescues
         
         #region Methods
 
-        public static void AddTimeRemaining(this ITimeRemaining value)
+        public static void AddTimeRemaining(this ITimeRemaining value, float newTime = -1.0f)
         {
             if (_timeRemainings.Contains(value))
             {
                 return;
             }
 
+            if (newTime >= 0)
+            {
+                value.Time = newTime;
+            }
             value.CurrentTime = value.Time;
             _timeRemainings.Add(value);
         }
