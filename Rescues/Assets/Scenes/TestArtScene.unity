@@ -5039,8 +5039,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _routeData: {fileID: 11400000, guid: de1b2b09a93a9784c860eca665a1f313, type: 2}
   _waitTime: 0
-  _activatingTrap: {fileID: 0}
+  _activatingTrap:
+    BaseTrapData: {fileID: 0}
+    RequiredTrapItem: {fileID: 0}
   _isScanScene: 0
+  _baseTrapData: {fileID: 0}
 --- !u!4 &961408373
 Transform:
   m_ObjectHideFlags: 0
@@ -5086,8 +5089,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _routeData: {fileID: 11400000, guid: de1b2b09a93a9784c860eca665a1f313, type: 2}
   _waitTime: 4
-  _activatingTrap: {fileID: 0}
+  _activatingTrap:
+    BaseTrapData: {fileID: 0}
+    RequiredTrapItem: {fileID: 0}
   _isScanScene: 0
+  _baseTrapData: {fileID: 0}
 --- !u!4 &973326811
 Transform:
   m_ObjectHideFlags: 0
@@ -7866,8 +7872,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _routeData: {fileID: 11400000, guid: de1b2b09a93a9784c860eca665a1f313, type: 2}
   _waitTime: 2
-  _activatingTrap: {fileID: 0}
+  _activatingTrap:
+    BaseTrapData: {fileID: 11400000, guid: 70c0692b0d45ae84eaf66c530d8e5ff6, type: 2}
+    RequiredTrapItem: {fileID: 0}
   _isScanScene: 0
+  _baseTrapData: {fileID: 0}
 --- !u!4 &1616789870
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 namespace Rescues
@@ -12,7 +11,6 @@ namespace Rescues
 
         private PhysicsService _physicsService;
         private Vector3 _visionDirection;
-        [SerializeField] private StateEnemy _stateEnemy;
 
         private void Awake()
         {
@@ -47,14 +45,14 @@ namespace Rescues
 
         public StateEnemy GetWaitState()
         {
-            return _stateEnemy;
+            return EnemyData.StateEnemy;
         }
 
         private void SetInspectionState()
         {
-            if (_stateEnemy == StateEnemy.Patrol)
+            if (EnemyData.StateEnemy == StateEnemy.Patrol)
             {
-                _stateEnemy = StateEnemy.Inspection;
+                EnemyData.StateEnemy = StateEnemy.Inspection;
             }
         }
 
@@ -66,7 +64,14 @@ namespace Rescues
 
         private void ResetWaitState()
         {
-            _stateEnemy = StateEnemy.Patrol;
+            var trapInfoBaseTrapData = RouteData.GetWayPoints()[PatrolPointState].TrapInfo.BaseTrapData;
+            if (trapInfoBaseTrapData != null)
+            {
+                trapInfoBaseTrapData.ActivateTrap(EnemyData);
+                return;
+            }
+
+            EnemyData.StateEnemy = StateEnemy.Patrol;
             PatrolPointState += Modificator;
         }
     }

@@ -10,8 +10,15 @@ namespace Rescues
 
         [SerializeField] private RouteData _routeData;
         [SerializeField] private float _waitTime;
-        [SerializeField] private TrapBehaviour _activatingTrap;
+        [SerializeField] private TrapInfo _activatingTrap;
         [SerializeField] private bool _isScanScene;
+        [SerializeField] private BaseTrapData _baseTrapData;
+
+        #endregion
+
+        #region Properte
+
+        public TrapInfo ActivatingTrap => _activatingTrap;
 
         #endregion
         
@@ -33,8 +40,6 @@ namespace Rescues
                 _isScanScene = false;
             }
         }
-
-        //public RouteData GetRouteData()
 
         public float GetWaitTime()
         {

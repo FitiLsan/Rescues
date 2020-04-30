@@ -27,6 +27,11 @@ namespace Rescues
         public void Execute()
         {
             //TODO bring all it method to EnemyBehavoiur into method Move()
+            if (_context.Enemy.EnemyData.StateEnemy == StateEnemy.Dead)
+            {
+                // todo Unsubscribe enemy from executing
+                return;
+            }
             var enemy = _context.Enemy;
             var wayPointInfo = enemy.RouteData.GetWayPoints();
             if (Vector3.Distance(enemy.transform.position, wayPointInfo[enemy.PatrolPointState].PointPosition) > 0.5)

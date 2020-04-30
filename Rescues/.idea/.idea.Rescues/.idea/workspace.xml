@@ -75,15 +75,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48bd36b2-45ba-4ddc-be59-218c2703d472" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/RouteDataTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/RouteDataTest.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyMoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyMoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/ITimeRemaining.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/ITimeRemaining.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemaining.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemaining.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/StateEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/StateEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/RouteData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/RouteData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/TrapData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/TrapData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/EnemyBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/EnemyBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WayPointBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WayPointBehaviour.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,32 +103,40 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/CharacterModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IExecuteController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IReactiveController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/UpdateType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ICleanupController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ITrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ITearDownController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/ReactiveType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAssets/Type/GameObjectType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/ITimeRemaining.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IInitializeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAssets/AssetsPathGameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CameraService/CameraServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemaining.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/PhysicsServices/PhysicsService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/RouteData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/Controllers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/TimeService/UnityTimeService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Data.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Art/Textures/Rooms/7_MaIVM15vc.jpg.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Art/Textures/Props/пропс 1.psd.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IExecuteController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IReactiveController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/KillingTrapData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ICleanupController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ITearDownController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IInitializeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CameraService/CameraServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/PhysicsServices/PhysicsService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/TimeService/UnityTimeService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Services.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/Contexts.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/Extensions/DateTimeExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/Manageres/LayerManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -130,15 +146,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/CustomDebug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/InteractableObjectBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/GameContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WayPointBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/EnemyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PlayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/ItemBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/StateEnemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Art/Textures/Rooms/7_MaIVM15vc.jpg.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/DoorTeleporterBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyMoveController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Art/Textures/Props/пропс 1.psd.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/InitializeEnemyController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -161,10 +176,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemaining.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/ITimeRemaining.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/EnemyBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/TrapData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyMoveController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/RouteData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WayPointBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/KillingTrapData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/EnemyBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -212,7 +237,8 @@
       <workItem from="1579430321667" duration="1273000" />
       <workItem from="1586808975368" duration="1747000" />
       <workItem from="1588172390983" duration="3170000" />
-      <workItem from="1588189444537" duration="658000" />
+      <workItem from="1588189444537" duration="1387000" />
+      <workItem from="1588253629045" duration="5441000" />
     </task>
     <servers />
   </component>
@@ -237,10 +263,14 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="663" y="193" width="670" height="676" key="search.everywhere.popup" timestamp="1588189621112">
+    <state x="185" y="92" width="1643" height="896" key="VCS.FileHistoryDialog" timestamp="1588260551153">
       <screen x="93" y="0" width="1827" height="1080" />
     </state>
-    <state x="663" y="193" width="670" height="676" key="search.everywhere.popup/93.0.1827.1080@93.0.1827.1080" timestamp="1588189621112" />
+    <state x="185" y="92" width="1643" height="896" key="VCS.FileHistoryDialog/93.0.1827.1080@93.0.1827.1080" timestamp="1588260551153" />
+    <state x="663" y="193" width="672" height="676" key="search.everywhere.popup" timestamp="1588260816369">
+      <screen x="93" y="0" width="1827" height="1080" />
+    </state>
+    <state x="663" y="193" width="672" height="676" key="search.everywhere.popup/93.0.1827.1080@93.0.1827.1080" timestamp="1588260816369" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

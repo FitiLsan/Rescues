@@ -65,14 +65,15 @@
             </e>
           </e>
           <e p="Data" t="Include">
+            <e p="BaseTrapData.cs" t="Include" />
             <e p="CameraData.cs" t="Include" />
             <e p="Data.cs" t="Include" />
             <e p="EnemyData.cs" t="Include" />
             <e p="HidingPlaceData.cs" t="Include" />
             <e p="ItemData.cs" t="Include" />
+            <e p="KillingTrapData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
             <e p="RouteData.cs" t="Include" />
-            <e p="TrapData.cs" t="Include" />
             <e p="WayPointInfo.cs" t="Include" />
           </e>
           <e p="Enum" t="Include">
@@ -117,7 +118,7 @@
               <e p="ItemBehaviour.cs" t="Include" />
               <e p="PlayerBehaviour.cs" t="Include" />
               <e p="RaycastTestBehaviour.cs" t="Include" />
-              <e p="TrapBehaviour.cs" t="Include" />
+              <e p="TrapInfo.cs" t="Include" />
               <e p="WayPointBehaviour.cs" t="Include" />
             </e>
             <e p="CharacterModel.cs" t="Include" />

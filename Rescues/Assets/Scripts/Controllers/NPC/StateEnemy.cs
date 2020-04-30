@@ -6,6 +6,6 @@
         Patrol     = 1,
         Inspection = 2,
         Detected   = 3,
-        Died       = 4
+        Dead       = 4
     }
 }
