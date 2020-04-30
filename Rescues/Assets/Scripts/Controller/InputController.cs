@@ -58,7 +58,7 @@ namespace Rescues
                 var interactableObject = GetInteractableObject<DoorInteractiveBehaviour>(InteractableObjectType.Door);
                 if (_context.Inventory.GetItem(interactableObject._key))
                 {
-                    interactableObject.Open();
+                        interactableObject.OpenClose();
                 }
             }
         }

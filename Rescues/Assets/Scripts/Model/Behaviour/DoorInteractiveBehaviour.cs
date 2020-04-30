@@ -7,19 +7,34 @@ namespace Rescues
     {
         #region Fields
 
-        [SerializeField] private Sprite _sprite;
+        [SerializeField] private Sprite _openSprite;
+        [SerializeField] private Sprite _closedSprite;
+        [SerializeField] private Collider2D _closedCollider;
         public ItemData _key;
         private ITrigger _triggerImplementation;
+        private bool _isClosed = true;
 
         #endregion
 
+
         #region Methods
 
-        public void Open()
+        public void OpenClose()
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = _sprite;
+            if (_isClosed)
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = _openSprite;
+                _closedCollider.enabled = false;
+                _isClosed = false;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = _closedSprite;
+                _closedCollider.enabled = true;
+                _isClosed = true;
+            }
         }
-        
+
         #endregion
     }
 }
