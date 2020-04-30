@@ -12,7 +12,8 @@ namespace Rescues
         [SerializeField] private Collider2D _closedCollider;
         public ItemData _key;
         private ITrigger _triggerImplementation;
-        private bool _isClosed = true;
+        public bool _isClosed = true;
+        public bool _isLocked = true;
 
         #endregion
 
