@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using DG.Tweening;
 
 
 namespace Rescues
 {
-    public sealed class ItemPutInInventoryController : IInitializeController, ITearDownController
+    public sealed class ItemActiveController : IInitializeController, ITearDownController
     {
 
         #region Fields
@@ -16,7 +17,7 @@ namespace Rescues
 
         #region ClassLifeCycles
 
-        public ItemPutInInventoryController(GameContext context, Services services)
+        public ItemActiveController(GameContext context, Services services)
         {
             _context = context;
         }
@@ -28,10 +29,11 @@ namespace Rescues
 
         public void Initialize()
         {
-            var items = _context.GetTriggers(InteractableObjectType.Item);
+            var items = _context.GetTriggers(InteractableObjectType.Item).ToList();
+            items.AddRange(_context.GetTriggers(InteractableObjectType.Trap));
             foreach (var trigger in items)
             {
-                var itemBehaviour = trigger as ItemBehaviour;
+                var itemBehaviour = trigger as InteractableObjectBehavior;
                 itemBehaviour.OnFilterHandler += OnFilterHandler;
                 itemBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
                 itemBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
@@ -45,10 +47,11 @@ namespace Rescues
 
         public void TearDown()
         {
-            var items = _context.GetTriggers(InteractableObjectType.Item);
+            var items = _context.GetTriggers(InteractableObjectType.Item).ToList();
+            items.AddRange(_context.GetTriggers(InteractableObjectType.Trap));
             foreach (var trigger in items)
             {
-                var itemBehaviour = trigger as ItemBehaviour;
+                var itemBehaviour = trigger as InteractableObjectBehavior;
                 itemBehaviour.OnFilterHandler -= OnFilterHandler;
                 itemBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
                 itemBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
@@ -68,17 +71,23 @@ namespace Rescues
         private void OnTriggerEnterHandler(ITrigger enteredObject)
         {
             enteredObject.IsInteractable = true;
-            var materialColor = enteredObject.GameObject.GetComponent<SpriteRenderer>().color;
-            enteredObject.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
-                materialColor.g, materialColor.b, 0.5f), 1.0f);
+            if (enteredObject.GameObject.TryGetComponent<SpriteRenderer>(out var renderer))
+            {
+                var materialColor = renderer.color;
+                enteredObject.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
+                    materialColor.g, materialColor.b, 0.5f), 1.0f);
+            }
         }
 
         private void OnTriggerExitHandler(ITrigger enteredObject)
         {
             enteredObject.IsInteractable = false;
-            var materialColor = enteredObject.GameObject.GetComponent<SpriteRenderer>().color;
-            enteredObject.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
-                materialColor.g, materialColor.b, 1.0f), 1.0f);
+            if (enteredObject.GameObject.TryGetComponent<SpriteRenderer>(out var renderer))
+            {
+                var materialColor = renderer.color;
+                enteredObject.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
+                    materialColor.g, materialColor.b, 1.0f), 1.0f);
+            }
         }
 
         #endregion

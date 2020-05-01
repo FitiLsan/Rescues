@@ -48,6 +48,19 @@ namespace Rescues
             return null;
         }
 
+        public void RemoveItem(ItemData value)
+        {
+            if(Items.Contains(value))
+            {
+                Items.Remove(value);
+            }
+        }
+
+        public bool Contains(ItemData value)
+        {
+            return Items.Contains(value);
+        }
+
         #endregion
     }
 }

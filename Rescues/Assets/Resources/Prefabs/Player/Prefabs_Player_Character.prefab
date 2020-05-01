@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2443518258007677068}
   - component: {fileID: 2457984153792682916}
   - component: {fileID: 669171817899928776}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Prefabs_Player_Character
   m_TagString: Player
   m_Icon: {fileID: 0}

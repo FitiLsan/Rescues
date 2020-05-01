@@ -15,7 +15,7 @@ namespace Rescues
             {
                 _wayPoints[i].PointPosition = wayPointBehaviours[i].transform.position;
                 _wayPoints[i].WaitTime = wayPointBehaviours[i].GetWaitTime();
-                _wayPoints[i].TrapInfo = wayPointBehaviours[i].ActivatingTrap;
+                _wayPoints[i].TrapInfo = wayPointBehaviours[i].ActivatingTrap.TrapInfo;
             }
         }
 

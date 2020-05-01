@@ -56,6 +56,16 @@ namespace Rescues
                         Object.Destroy(interactableObject.GameObject);
                     }
                 }
+
+                var trapBehaviour = GetInteractableObject<TrapBehaviour>(InteractableObjectType.Trap);
+                if (trapBehaviour != null)
+                {
+                    if (_context.Inventory.Contains(trapBehaviour.TrapInfo.RequiredTrapItem))
+                    {
+                        trapBehaviour.CreateTrap();
+                        _context.Inventory.RemoveItem(trapBehaviour.TrapInfo.RequiredTrapItem);
+                    }
+                }
             }
 
             _context.Character.StateHandler();

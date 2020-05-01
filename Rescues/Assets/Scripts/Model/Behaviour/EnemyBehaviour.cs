@@ -16,6 +16,7 @@ namespace Rescues
         {
             _physicsService = Services.SharedInstance.PhysicsService;
             _timeRemaining = new TimeRemaining (ResetWaitState, 0.0f);
+            EnemyData.StateEnemy = StateEnemy.None;
         }
 
         public int Modificator { get => _modificator; }
@@ -32,7 +33,7 @@ namespace Rescues
         {
             var hit = _physicsService.VisionDetectionPlayer(transform.position, _visionDirection, EnemyData.VisionDistance);
 
-            if (hit != false)
+            if (hit)
             {
                 ScreenInterface.GetInstance().Execute(ScreenType.GameOver);
             }
@@ -64,11 +65,15 @@ namespace Rescues
 
         private void ResetWaitState()
         {
+            CustomDebug.Log(PatrolPointState);
             var trapInfoBaseTrapData = RouteData.GetWayPoints()[PatrolPointState].TrapInfo.BaseTrapData;
             if (trapInfoBaseTrapData != null)
             {
                 trapInfoBaseTrapData.ActivateTrap(EnemyData);
-                return;
+                if (trapInfoBaseTrapData.IsActive)
+                {
+                    return;
+                }
             }
 
             EnemyData.StateEnemy = StateEnemy.Patrol;

@@ -50,19 +50,8 @@ namespace Rescues
                 {
                     enemy.InvertModificator();
                 }
-                CheckWaitTime(enemy, wayPointInfo[enemy.PatrolPointState]);
+                enemy.WaitTime(wayPointInfo[enemy.PatrolPointState].WaitTime);
             }
-        }
-
-        #endregion
-
-
-        #region Methods
-
-        private void CheckWaitTime(EnemyBehaviour enemy, WayPointInfo wayPointInfo)
-        {
-            if (enemy.GetWaitState() == StateEnemy.Inspection) return;
-            enemy.WaitTime(wayPointInfo.WaitTime);
         }
 
         #endregion

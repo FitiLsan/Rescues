@@ -8,7 +8,7 @@ namespace Rescues
     {
         public override void ActivateTrap(EnemyData activatorData)
         {
-            if (_isActive)
+            if (IsActive)
             {
                 activatorData.StateEnemy = StateEnemy.Dead;
             }

@@ -78,20 +78,23 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/RouteDataTest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/RouteDataTest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/KillingTrapData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/KillingTrapData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Prefabs_Player_Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Prefabs_Player_Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestArtScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestArtScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyMoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyMoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/StateEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/StateEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/ItemPutInInventoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/ItemActiveController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/ItemPutInInventoryController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/ItemActiveController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/KillingTrapData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/KillingTrapData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/RouteData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/RouteData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/TrapData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/TrapData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helper/Manageres/LayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helper/Manageres/LayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/EnemyBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/EnemyBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WayPointBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WayPointBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Inventory/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Inventory/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/PhysicsServices/PhysicsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/PhysicsServices/PhysicsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +106,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/CharacterModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/UpdateType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Player/ItemActiveController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ITrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -121,6 +126,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Data.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/InitializeInteractableObjectController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Art/Textures/Rooms/7_MaIVM15vc.jpg.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Art/Textures/Props/пропс 1.psd.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -141,10 +148,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/Extensions/DateTimeExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/Manageres/LayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8FEE2FC0-89A3-4DB8-92F9-1E5FE3ABE5AD/61/88da6ef6/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/HidingPlaceBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EF28F193-EAB6-4E49-B44B-3FB27EAB4F75/c6/b578fffd/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/Manageres/TagManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/CustomDebug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/InteractableObjectBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/GameContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WayPointBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs" root0="FORCE_HIGHLIGHTING" />
@@ -181,15 +190,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/TrapData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyMoveController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/RouteData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyMoveController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Services/PhysicsServices/PhysicsService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Helper/Manageres/LayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/ItemPutInInventoryController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/ItemActiveController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WayPointBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/RouteData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/KillingTrapData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Inventory/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/EnemyBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/KillingTrapData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -238,7 +253,8 @@
       <workItem from="1586808975368" duration="1747000" />
       <workItem from="1588172390983" duration="3170000" />
       <workItem from="1588189444537" duration="1387000" />
-      <workItem from="1588253629045" duration="5441000" />
+      <workItem from="1588253629045" duration="5641000" />
+      <workItem from="1588332401672" duration="6126000" />
     </task>
     <servers />
   </component>

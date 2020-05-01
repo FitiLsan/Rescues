@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: EnemyDataTest
   m_EditorClassIdentifier: 
   Speed: 10
+  VisionDistance: 5
+  StateEnemy: 2
