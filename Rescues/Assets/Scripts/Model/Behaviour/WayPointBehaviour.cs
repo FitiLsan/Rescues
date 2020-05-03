@@ -1,5 +1,4 @@
-﻿using NaughtyAttributes;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 namespace Rescues
@@ -8,8 +7,8 @@ namespace Rescues
     {
         #region Fields
 
-        [Required()][SerializeField] private RouteData _routeData;
-        [MinValue(0.0f)][SerializeField] private float _waitTime;
+        [SerializeField] private RouteData _routeData; 
+        [SerializeField] private float _waitTime;
         [SerializeField] private TrapBehaviour _activatingTrap;
         [SerializeField] private BaseTrapData _baseTrapData;
 
@@ -20,10 +19,12 @@ namespace Rescues
         public TrapBehaviour ActivatingTrap => _activatingTrap;
 
         #endregion
-        
 
+        private void Awake()
+        {
+            FindObjects();
+        }
 
-        [Button()]
         private void FindObjects()
         {
             var wayPointBehaviours = FindObjectsOfType<WayPointBehaviour>();
