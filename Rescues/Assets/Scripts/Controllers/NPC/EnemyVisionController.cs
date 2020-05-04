@@ -25,7 +25,10 @@ namespace Rescues
 
         public void Execute()
         {
-            _context.Enemy.Vision();
+            if (_context.Enemy.EnemyData.StateEnemy != StateEnemy.Dead)
+            {
+                _context.Enemy.Vision();
+            }
         }
 
 
