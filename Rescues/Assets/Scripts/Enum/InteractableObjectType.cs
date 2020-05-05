@@ -2,8 +2,11 @@
 {
     public enum InteractableObjectType
     {
-        None = 0,
-        Door = 1,
-        Item = 2
+        None        = 0,
+        Door        = 1,
+        Teleport    = 2,
+        Item        = 3,
+        HidingPlace = 4,
+        Trap        = 5,
     }
 }
