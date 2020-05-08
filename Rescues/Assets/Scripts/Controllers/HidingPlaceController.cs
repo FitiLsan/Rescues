@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public sealed class DoorInteractiveController : IInitializeController, ITearDownController
+    public sealed class HidingPlaceController : IInitializeController, ITearDownController
     {
         #region Fields
         
@@ -14,8 +14,8 @@ namespace Rescues
 
 
         #region ClassLifeCycles
-
-        public DoorInteractiveController(GameContext context, Services services)
+        
+        public HidingPlaceController(GameContext context, Services services)
         {
             _context = context;
         }
@@ -27,13 +27,13 @@ namespace Rescues
         
         public void Initialize()
         {
-            var doors = _context.GetTriggers(InteractableObjectType.Door);
-            foreach (var trigger in doors)
+            var hidingPlaces = _context.GetTriggers(InteractableObjectType.HidingPlace);
+            foreach (var trigger in hidingPlaces)
             {
-                var doorInteractiveBehaviour = trigger as DoorInteractiveBehaviour;
-                doorInteractiveBehaviour.OnFilterHandler += OnFilterHandler;
-                doorInteractiveBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
-                doorInteractiveBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
+                var doorTeleporterBehaviour = trigger as HidingPlaceBehaviour;
+                doorTeleporterBehaviour.OnFilterHandler += OnFilterHandler;
+                doorTeleporterBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
+                doorTeleporterBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
             }
         }
 
@@ -44,13 +44,13 @@ namespace Rescues
         
         public void TearDown()
         {
-            var doors = _context.GetTriggers(InteractableObjectType.Door);
-            foreach (var trigger in doors)
+            var hidingPlaces = _context.GetTriggers(InteractableObjectType.HidingPlace);
+            foreach (var trigger in hidingPlaces)
             {
-                var doorInteractiveBehaviour = trigger as DoorInteractiveBehaviour;
-                doorInteractiveBehaviour.OnFilterHandler -= OnFilterHandler;
-                doorInteractiveBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
-                doorInteractiveBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
+                var doorTeleporterBehaviour = trigger as HidingPlaceBehaviour;
+                doorTeleporterBehaviour.OnFilterHandler -= OnFilterHandler;
+                doorTeleporterBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
+                doorTeleporterBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
             }
         }
 
@@ -58,7 +58,7 @@ namespace Rescues
 
 
         #region Methods
-
+        
         private bool OnFilterHandler(Collider2D obj)
         {
             return obj.CompareTag(TagManager.PLAYER);

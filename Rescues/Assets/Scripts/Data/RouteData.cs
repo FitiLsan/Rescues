@@ -5,21 +5,27 @@ namespace Rescues
     [CreateAssetMenu(fileName = "RouteData", menuName = "Data/NPC/RouteData")]
     public sealed class RouteData : ScriptableObject
     {
-        [SerializeField] private Vector3[] WayPoints;
+        [SerializeField] private WayPointInfo[] _wayPoints;
 
         public void SetWayPoints(WayPointBehaviour[] wayPointBehaviours)
         {
-            WayPoints = new Vector3[wayPointBehaviours.Length];
+            _wayPoints = new WayPointInfo[wayPointBehaviours.Length];
 
             for (int i = 0; i < wayPointBehaviours.Length; i++)
             {
-                WayPoints[i] = wayPointBehaviours[i].transform.position;
+                _wayPoints[i].PointPosition = wayPointBehaviours[i].transform.position;
+                _wayPoints[i].WaitTime = wayPointBehaviours[i].GetWaitTime();
+                var activatingTrap = wayPointBehaviours[i].ActivatingTrap;
+                if (activatingTrap != null)
+                {
+                    _wayPoints[i].TrapInfo = activatingTrap.TrapInfo;
+                }
             }
         }
 
-        public Vector3[] GetWayPoints()
+        public WayPointInfo[] GetWayPoints()
         {
-            return WayPoints;
+            return _wayPoints;
         }
     }
 }

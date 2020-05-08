@@ -11,9 +11,8 @@
             Add(new InitializeInventoryController(context, services));
             Add(new InitializeEnemyController(context, services));
             Add(new TimeRemainingController());
-            Add(new ItemPutInInventoryController(context, services));
+            Add(new ItemActiveController(context, services));
             Add(new DoorTeleporterController(context, services));
-            Add(new DoorInteractiveController(context, services));
             Add(new HidingPlaceController(context, services));
             Add(new EnemyVisionController(context, services));
             Add(new EnemyMoveController(context, services));

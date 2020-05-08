@@ -47,7 +47,7 @@ namespace Rescues
 
         public bool VisionDetectionPlayer(Vector3 rayOriginPosition, Vector3 rayTargetDirection, float detectionDistance)
         {
-            int layerMask = LayerManager.DEFAULT_LAYER;
+            int layerMask = LayerManager.PlayerLayer;
             RaycastHit2D hit = Physics2D.Raycast(rayOriginPosition, rayTargetDirection, detectionDistance, layerMask);
             Debug.DrawRay(rayOriginPosition, rayTargetDirection * detectionDistance, Color.red);
             return hit;
