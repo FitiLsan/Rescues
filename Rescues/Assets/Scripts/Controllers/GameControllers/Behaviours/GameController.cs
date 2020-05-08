@@ -30,6 +30,9 @@ namespace Rescues
 
             _activeController = new GameSystemsController(context, services);
             _activeController.Initialize();
+
+            context.Inventory = FindObjectOfType<Inventory>();
+            context.Inventory.gameObject.SetActive(false);
         }
 
         private void FixedUpdate()

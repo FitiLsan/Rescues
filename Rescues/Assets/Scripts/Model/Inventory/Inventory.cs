@@ -1,24 +1,40 @@
-﻿using System.Collections.Generic;
-
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Rescues
 {
-    public readonly struct Inventory
+    public class Inventory : MonoBehaviour
     {
         #region Fields
 
-        public readonly List<ItemData> Items;
-        private readonly int _size;
+        [SerializeField] List<ItemSlot> ItemSlots;
+        [SerializeField] Image _draggableItem;
+        private ItemSlot _draggedSlot;
 
         #endregion
 
 
         #region ClassLifeCycle
 
-        public Inventory(int size)
+        public void Awake()
         {
-            Items = new List<ItemData>(size);
-            _size = size;
+            if (ItemSlots != null)
+            {
+                for (int i = 0; i < ItemSlots.Count; i++)
+                {
+                    //ItemSlots[i].OnPointerEnterEvent += OnPointerEnterEvent;
+                    //ItemSlots[i].OnPointerExitEvent += OnPointerExitEvent;
+                    //ItemSlots[i].OnRightClickEvent += OnRightClickEvent;
+                    ItemSlots[i].OnBeginDragEvent += BeginDrag;
+                    ItemSlots[i].OnEndDragEvent += EndDrag;
+                    ItemSlots[i].OnDragEvent += Drag;
+                    ItemSlots[i].OnDropEvent += Drop;
+                }
+                CustomDebug.Log(ItemSlots.Count);
+            }
+
         }
 
         #endregion
@@ -26,41 +42,103 @@ namespace Rescues
 
         #region Methods
 
-        public bool AddItem(ItemData value)
+        public bool AddItem(ItemData item)
         {
-            if (Items.Count < _size)
+            for (int i = 0; i < ItemSlots.Count; i++)
             {
-                Items.Add(value);
-                return true;
+                if (ItemSlots[i].Item == null)
+                {
+                    ItemSlots[i].Item = item;
+                    return true;
+                }
             }
-
             return false;
         }
 
-        public ItemData GetItem(ItemData value)
+        public bool RemoveItem(ItemData item)
         {
-            if(Items.Contains(value))
+            for (int i = 0; i < ItemSlots.Count; i++)
             {
-                Items.Remove(value);
-                return value;
+                if (ItemSlots[i].Item == item)
+                {
+                    ItemSlots[i].Item = null;
+                    return true;
+                }
             }
-
-            return null;
+            return false;
         }
 
-        public void RemoveItem(ItemData value)
+        public bool Contains(ItemData item)
         {
-            if(Items.Contains(value))
+            for (int i = 0; i < ItemSlots.Count; i++)
             {
-                Items.Remove(value);
+                if (ItemSlots[i].Item == item)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IsFull()
+        {
+            for (int i = 0; i < ItemSlots.Count; i++)
+            {
+                if (ItemSlots[i].Item == null)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void BeginDrag(ItemSlot itemSlot)
+        {
+            CustomDebug.Log("BeginDrag!");
+            if (itemSlot.Item != null)
+            {
+                _draggedSlot = itemSlot;
+                _draggableItem.sprite = itemSlot.Item.Icon;
+                _draggableItem.transform.position = Input.mousePosition;
+                _draggableItem.enabled = true;
             }
         }
 
-        public bool Contains(ItemData value)
+        private void EndDrag(ItemSlot itemSlot)
         {
-            return Items.Contains(value);
+            CustomDebug.Log("EndDrag!");
+            _draggedSlot = null;
+            _draggableItem.enabled = false;
         }
+
+        private void Drag(ItemSlot itemSlot)
+        {           
+            if (_draggableItem.enabled)
+            {
+                _draggableItem.transform.position = Input.mousePosition;
+            }
+        }
+
+        private void Drop(ItemSlot dropItemSlot)
+        {
+            CustomDebug.Log("DropEvent!");
+            ItemData draggedItem = _draggedSlot.Item;
+            _draggedSlot.Item = dropItemSlot.Item;
+            dropItemSlot.Item = draggedItem;
+        }
+
+        //public ItemData GetItem(ItemData value)
+        //{
+        //    if (Items.Contains(value))
+        //    {
+        //        Items.Remove(value);
+        //        return value;
+        //    }
+
+        //    return null;
+        //}
 
         #endregion
     }
 }
+
