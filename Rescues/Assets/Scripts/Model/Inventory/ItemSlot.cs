@@ -22,7 +22,7 @@ namespace Rescues
         private Color _disabledColor = new Color(1, 1, 1, 0);
         private Color _dragColor = new Color(1, 1, 1, 0.5f);
 
-        [SerializeField] ItemData _item;
+        private ItemData _item;
         public ItemData Item
         {
             get { return _item; }
