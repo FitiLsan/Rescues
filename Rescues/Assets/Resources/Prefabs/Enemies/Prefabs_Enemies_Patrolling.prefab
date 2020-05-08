@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4426639306793738693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 51.79461, y: -48.022766, z: 0}
-  m_LocalScale: {x: 1.3765, y: 1.3765, z: 1.3765}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 293946615
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2926887839613767034, guid: 60a8a7f13b986a448990bde24ffc62e2,
+  m_Sprite: {fileID: -2132614897589282742, guid: 3550fa31db6ef2348b2377595b6d805b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fa0e8974bd351488b6dcd453f9e0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyData: {fileID: 11400000, guid: 2aa8840412f9c9943aea7dfe3f6feaa8, type: 2}
+  EnemyData: {fileID: 11400000, guid: 36c7328e054692646947285c464078d0, type: 2}
   PatrolPointState: 0
-  RouteData: {fileID: 11400000, guid: de1b2b09a93a9784c860eca665a1f313, type: 2}
-  _stateEnemy: 0
+  RouteData: {fileID: 11400000, guid: e71e395c5bda1c84daa51d0ec4b9f35e, type: 2}

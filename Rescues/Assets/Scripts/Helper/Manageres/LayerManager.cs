@@ -14,7 +14,6 @@ namespace Rescues
         private const string NON_COLLIDABLE = "Non-Collidable";
         private const string GROUND = "Ground";
         private const string UI = "UI";
-        private const string PLAYER = "Player";
 
         public const int DEFAULT_LAYER = 1;
 
@@ -30,7 +29,6 @@ namespace Rescues
         public static int GroundLayer { get; }
         public static int UiLayer { get; }
         public static int NonCollidableLayer { get; }
-        public static int PlayerLayer { get; }
 
         #endregion
 
@@ -46,7 +44,6 @@ namespace Rescues
             GroundLayer = LayerMask.GetMask(GROUND);
             UiLayer = LayerMask.GetMask(UI);
             NonCollidableLayer = LayerMask.NameToLayer(NON_COLLIDABLE);
-            PlayerLayer = LayerMask.GetMask(PLAYER);
         }
 
         #endregion

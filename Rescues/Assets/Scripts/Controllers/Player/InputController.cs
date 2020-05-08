@@ -8,7 +8,6 @@ namespace Rescues
         #region Fields
 
         private readonly GameContext _context;
-        private readonly CameraServices _cameraServices;       
 
         #endregion
 
@@ -18,7 +17,6 @@ namespace Rescues
         public InputController(GameContext context, Services services)
         {
             _context = context;
-            _cameraServices = services.CameraServices;
         }
 
         #endregion
@@ -34,16 +32,13 @@ namespace Rescues
 
             if (inputAxis.x != 0 || inputAxis.y != 0)
             {
-                _context.Character.StateMoving(inputAxis);
+                _context.Character.Move(inputAxis);
             }
 
             if (Input.GetButtonUp("Vertical"))
             {
-                var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
-                if (interactableObject != null)
-                {
-                    _context.Character.StateTeleporting(interactableObject.ExitPoint.position);
-                }
+                var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Teleport);
+                _context.Character.Teleport(interactableObject.ExitPoint.position);
             }
 
             if (Input.GetButtonUp("PickUp"))
@@ -56,52 +51,24 @@ namespace Rescues
                         Object.Destroy(interactableObject.GameObject);
                     }
                 }
+            }
 
-                var trapBehaviour = GetInteractableObject<TrapBehaviour>(InteractableObjectType.Trap);
-                if (trapBehaviour != null)
+            if (Input.GetButtonUp("Action"))
+            {
+                var interactableObject = GetInteractableObject<DoorInteractiveBehaviour>(InteractableObjectType.Door);
+                if (interactableObject._isLocked)
                 {
-                    if (_context.Inventory.Contains(trapBehaviour.TrapInfo.RequiredTrapItem))
+                    if (_context.Inventory.GetItem(interactableObject._key))
                     {
-                        trapBehaviour.CreateTrap();
-                        _context.Inventory.RemoveItem(trapBehaviour.TrapInfo.RequiredTrapItem);
+                        interactableObject.OpenClose();
+                        interactableObject._isLocked = false;
                     }
+
                 }
-            }
-
-            _context.Character.StateHandler();
-
-            if (Input.GetButtonUp("Use"))
-            {                
-                var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
-                if (_context.Character.PlayerState == State.Hiding)
+                else //if(interactableObject._isClosed != true)
                 {
-                    _context.Character.StateHideAnimation(interactableObject);                   
+                    interactableObject.OpenClose();
                 }
-                if (interactableObject != null)
-                {
-                    _context.Character.StateHideAnimation(interactableObject);
-                }
-            }
-            _context.Character.AnimationPlay.UpdateTimer();
-
-            if (_context.Character.AnimationPlay.IsEvent())
-            {
-                _context.Character.StateHiding();
-            }
-          
-            if (Input.GetButtonDown("Mouse ScrollPressed"))
-            {
-                _cameraServices.FreeCamera();              
-            }
-
-            if (Input.GetButton("Mouse ScrollPressed"))
-            {
-                _cameraServices.FreeCameraMovement();
-            }
-
-            if (Input.GetButtonUp("Mouse ScrollPressed"))
-            {
-                _cameraServices.LockCamera();               
             }
         }
 

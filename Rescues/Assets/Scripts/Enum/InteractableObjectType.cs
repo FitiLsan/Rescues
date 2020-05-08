@@ -4,8 +4,9 @@
     {
         None        = 0,
         Door        = 1,
-        Item        = 2,
-        HidingPlace = 3,
-        Trap        = 4,
+        Teleport    = 2,
+        Item        = 3,
+        HidingPlace = 4,
+        Trap        = 5,
     }
 }

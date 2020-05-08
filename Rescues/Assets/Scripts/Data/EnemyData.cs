@@ -1,12 +1,9 @@
 ﻿using UnityEngine;
 
-namespace Rescues
+
+[CreateAssetMenu(fileName = "EnemyData", menuName = "Data/Enemies/EnemyData")]
+public sealed class EnemyData : ScriptableObject
 {
-    [CreateAssetMenu(fileName = "EnemyData", menuName = "Data/Enemies/EnemyData")]
-    public sealed class EnemyData : ScriptableObject
-    {
-        public float Speed;
-        public float VisionDistance = 5.0f;
-        public StateEnemy StateEnemy;
-    }
+    public float Speed;
+    public float VisionDistance = 5.0f;
 }

@@ -1,47 +1,50 @@
 ﻿using UnityEngine;
-
+using System;
+using System.Collections.Generic;
 
 namespace Rescues
 {
-    public class WayPointBehaviour : MonoBehaviour
+    [ExecuteInEditMode]
+    public class WayPointBehaviour : MonoBehaviour, IComparable <WayPointBehaviour>
     {
         #region Fields
 
-        [SerializeField] private RouteData _routeData; 
-        [SerializeField] private float _waitTime;
-        [SerializeField] private TrapBehaviour _activatingTrap;
-        [SerializeField] private BaseTrapData _baseTrapData;
+        [SerializeField] private RouteData _routeData;
+        [SerializeField] private bool _isScanScene;
+        [SerializeField] private int queueOfWaipoint;
 
-        #endregion
-
-        #region Properte
-
-        public TrapBehaviour ActivatingTrap => _activatingTrap;
-
-        #endregion
-
-        private void Awake()
+        public int CompareTo(WayPointBehaviour other)
         {
-            FindObjects();
+            return other.queueOfWaipoint.CompareTo(queueOfWaipoint);
         }
 
-        private void FindObjects()
-        {
-            var wayPointBehaviours = FindObjectsOfType<WayPointBehaviour>();
 
-            for (int i = 0; i < wayPointBehaviours.Length; i++)
+        #endregion
+
+
+
+
+        private void Update()
+        {
+            if (_isScanScene)
             {
-                // if wayPointBehaviours[i].GetRouteData() != _routeData} delete
+                var wayPointBehaviours = FindObjectsOfType<WayPointBehaviour>();
+                List<WayPointBehaviour> listWayPointBehaviours = new List<WayPointBehaviour>();
+                CustomDebug.Log(wayPointBehaviours.Length);
+                for (int i = 0; i < wayPointBehaviours.Length; i++)
+                {
+                    if (wayPointBehaviours[i]._routeData == _routeData)
+                    {
+                        listWayPointBehaviours.Add(wayPointBehaviours[i]);
+                    }
+                }
+                CustomDebug.Log(listWayPointBehaviours.Count);
+                listWayPointBehaviours.Sort();
+                _routeData.SetWayPoints(listWayPointBehaviours.ToArray());
+                CustomDebug.Log("Scanned for: " + wayPointBehaviours.Length + " objects");
+                _isScanScene = false;
             }
-            // sort wayPointBehaviours[i].numOfWayPoint
-
-            _routeData.SetWayPoints(wayPointBehaviours);
-            CustomDebug.Log("Scanned for: " + wayPointBehaviours.Length + " objects");
         }
 
-        public float GetWaitTime()
-        {
-            return _waitTime;
-        }
     }
 }

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbb949b6aeb724b4ba2bd85018534dad, type: 3}
-  m_Name: EnemyDataTest
+  m_Script: {fileID: 11500000, guid: 0220fae6cd4f9d447abc43f7b985cddb, type: 3}
+  m_Name: RouteData
   m_EditorClassIdentifier: 
-  Speed: 10
+  WayPoints: []
