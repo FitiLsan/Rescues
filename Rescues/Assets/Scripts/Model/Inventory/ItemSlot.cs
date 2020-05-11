@@ -6,23 +6,25 @@ using System;
 
 namespace Rescues
 {
-    public class ItemSlot : MonoBehaviour, /*IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler,*/ IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
+    public class ItemSlot : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
     {
-        [SerializeField] Image image;
+        #region Fields
 
-        //public event Action<ItemSlot> OnPointerEnterEvent;
-        //public event Action<ItemSlot> OnPointerExitEvent;
-        //public event Action<ItemSlot> OnRightClickEvent;
+        [SerializeField] Image image;       
         public event Action<ItemSlot> OnBeginDragEvent;
         public event Action<ItemSlot> OnEndDragEvent;
         public event Action<ItemSlot> OnDragEvent;
         public event Action<ItemSlot> OnDropEvent;
-
         private Color _normalColor = Color.white;
         private Color _disabledColor = new Color(1, 1, 1, 0);
         private Color _dragColor = new Color(1, 1, 1, 0.5f);
-
         private ItemData _item;
+
+        #endregion
+
+
+        #region Properties
+
         public ItemData Item
         {
             get { return _item; }
@@ -41,6 +43,11 @@ namespace Rescues
             }
         }
 
+        #endregion
+
+
+        #region UnityMethods
+
         protected virtual void OnValidate()
         {
             if (image == null)
@@ -49,6 +56,10 @@ namespace Rescues
             }
         }
 
+        #endregion
+
+
+        #region Methods
         public virtual bool CanReceiveItem(ItemData item)
         {
             return true;
@@ -95,6 +106,6 @@ namespace Rescues
         //    OnPointerExitEvent?.Invoke(this);
         //}
 
-
+        #endregion
     }
 }

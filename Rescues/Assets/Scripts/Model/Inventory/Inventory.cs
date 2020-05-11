@@ -16,17 +16,14 @@ namespace Rescues
         #endregion
 
 
-        #region ClassLifeCycle
+        #region UnityMethods
 
         public void Awake()
         {
             if (ItemSlots != null)
             {
                 for (int i = 0; i < ItemSlots.Count; i++)
-                {
-                    //ItemSlots[i].OnPointerEnterEvent += OnPointerEnterEvent;
-                    //ItemSlots[i].OnPointerExitEvent += OnPointerExitEvent;
-                    //ItemSlots[i].OnRightClickEvent += OnRightClickEvent;
+                {                    
                     ItemSlots[i].OnBeginDragEvent += BeginDrag;
                     ItemSlots[i].OnEndDragEvent += EndDrag;
                     ItemSlots[i].OnDragEvent += Drag;
@@ -121,6 +118,7 @@ namespace Rescues
 
         private void Drop(ItemSlot dropItemSlot)
         {
+            if (_draggedSlot == null) return;
             CustomDebug.Log("DropEvent!");
             ItemData draggedItem = _draggedSlot.Item;
             _draggedSlot.Item = dropItemSlot.Item;
