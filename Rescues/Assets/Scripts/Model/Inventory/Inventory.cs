@@ -10,6 +10,7 @@ namespace Rescues
         #region Fields
 
         [SerializeField] List<ItemSlot> ItemSlots;
+        [SerializeField] List<ItemRecipe> CraftableItemsList;
         [SerializeField] Image _draggableItem;
         private ItemSlot _draggedSlot;
 
@@ -23,7 +24,7 @@ namespace Rescues
             if (ItemSlots != null)
             {
                 for (int i = 0; i < ItemSlots.Count; i++)
-                {                    
+                {
                     ItemSlots[i].OnBeginDragEvent += BeginDrag;
                     ItemSlots[i].OnEndDragEvent += EndDrag;
                     ItemSlots[i].OnDragEvent += Drag;
@@ -91,8 +92,7 @@ namespace Rescues
 
         private void BeginDrag(ItemSlot itemSlot)
         {
-            CustomDebug.Log("BeginDrag!");
-            if (itemSlot.Item != null)
+           if (itemSlot.Item != null)
             {
                 _draggedSlot = itemSlot;
                 _draggableItem.sprite = itemSlot.Item.Icon;
@@ -103,13 +103,12 @@ namespace Rescues
 
         private void EndDrag(ItemSlot itemSlot)
         {
-            CustomDebug.Log("EndDrag!");
-            _draggedSlot = null;
+           _draggedSlot = null;
             _draggableItem.enabled = false;
         }
 
         private void Drag(ItemSlot itemSlot)
-        {           
+        {
             if (_draggableItem.enabled)
             {
                 _draggableItem.transform.position = Input.mousePosition;
@@ -118,11 +117,34 @@ namespace Rescues
 
         private void Drop(ItemSlot dropItemSlot)
         {
-            if (_draggedSlot == null) return;
-            CustomDebug.Log("DropEvent!");
+           if (_draggedSlot == null) return;
+
             ItemData draggedItem = _draggedSlot.Item;
-            _draggedSlot.Item = dropItemSlot.Item;
-            dropItemSlot.Item = draggedItem;
+            bool isSomethingCrafted = false;
+
+            foreach (ItemRecipe itemRecipe in CraftableItemsList)
+            {
+                if (itemRecipe.CanCraft(_draggedSlot.Item, dropItemSlot.Item))
+                {
+                    if(dropItemSlot.Item.IsDestructuble == false)
+                    {
+                        _draggedSlot.Item = itemRecipe.Craft(this);
+                        isSomethingCrafted = true;
+                    }
+                    else
+                    {
+                        dropItemSlot.Item = itemRecipe.Craft(this);
+                        isSomethingCrafted = true;
+                    }                  
+                    break;
+                }
+            }
+
+            if(isSomethingCrafted == false)
+            {
+                _draggedSlot.Item = dropItemSlot.Item;
+                dropItemSlot.Item = draggedItem;    
+            }
         }
 
         //public ItemData GetItem(ItemData value)

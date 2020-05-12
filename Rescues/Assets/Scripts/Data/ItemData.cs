@@ -11,6 +11,7 @@ namespace Rescues
         public string Name;
         [TextArea(5,5)] public string Discription;
         public Sprite Icon;
+        public bool IsDestructuble = true;
 
         #endregion
     }
