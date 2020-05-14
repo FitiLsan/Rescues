@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Rescues
@@ -12,6 +13,7 @@ namespace Rescues
         [SerializeField] List<ItemSlot> ItemSlots;
         [SerializeField] List<ItemRecipe> CraftableItemsList;
         [SerializeField] Image _draggableItem;
+        [SerializeField] InventoryTooltip _inventoryTooltip;
         private ItemSlot _draggedSlot;
 
         #endregion
@@ -29,12 +31,14 @@ namespace Rescues
                     ItemSlots[i].OnEndDragEvent += EndDrag;
                     ItemSlots[i].OnDragEvent += Drag;
                     ItemSlots[i].OnDropEvent += Drop;
+                    ItemSlots[i].OnPointerEnterEvent += ShowTooltip;
+                    ItemSlots[i].OnPointerExitEvent += HideTooltip;
                 }
                 CustomDebug.Log(ItemSlots.Count);
             }
 
         }
-
+        
         #endregion
 
 
@@ -147,6 +151,20 @@ namespace Rescues
             }
         }
 
+        private void ShowTooltip(ItemSlot itemSlot)
+        {
+            ItemData item = itemSlot.Item as ItemData;
+            if (item != null)
+            {
+                _inventoryTooltip.ShowTooltip(item);
+            }
+        }
+
+        private void HideTooltip(ItemSlot itemSlot)
+        {
+            _inventoryTooltip.HideTooltip();
+        }
+       
         //public ItemData GetItem(ItemData value)
         //{
         //    if (Items.Contains(value))

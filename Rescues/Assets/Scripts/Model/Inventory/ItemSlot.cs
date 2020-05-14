@@ -6,7 +6,7 @@ using System;
 
 namespace Rescues
 {
-    public class ItemSlot : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
+    public class ItemSlot : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
     {
         #region Fields
 
@@ -15,6 +15,8 @@ namespace Rescues
         public event Action<ItemSlot> OnEndDragEvent;
         public event Action<ItemSlot> OnDragEvent;
         public event Action<ItemSlot> OnDropEvent;
+        public event Action<ItemSlot> OnPointerEnterEvent;
+        public event Action<ItemSlot> OnPointerExitEvent;
         private Color _normalColor = Color.white;
         private Color _disabledColor = new Color(1, 1, 1, 0);
         private Color _dragColor = new Color(1, 1, 1, 0.5f);
@@ -87,7 +89,17 @@ namespace Rescues
             OnDropEvent?.Invoke(this);
         }
 
-        //Если нужны будут тултипы при наведении, например, или что-то по клику, то можно реализовать эти интерфейсы:
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            OnPointerEnterEvent?.Invoke(this);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            OnPointerExitEvent?.Invoke(this);
+        }
+
+
 
         //public void OnPointerClick(PointerEventData eventData)
         //{
@@ -96,15 +108,7 @@ namespace Rescues
         //    
         //}
 
-        //public void OnPointerEnter(PointerEventData eventData)
-        //{
-        //    OnPointerEnterEvent?.Invoke(this);
-        //}
 
-        //public void OnPointerExit(PointerEventData eventData)
-        //{
-        //    OnPointerExitEvent?.Invoke(this);
-        //}
 
         #endregion
     }
