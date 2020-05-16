@@ -1,66 +1,182 @@
-﻿using System.Collections.Generic;
-
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Rescues
 {
-    public readonly struct Inventory
+    public class Inventory : MonoBehaviour
     {
         #region Fields
 
-        public readonly List<ItemData> Items;
-        private readonly int _size;
+        [SerializeField] List<ItemSlot> ItemSlots;
+        [SerializeField] List<ItemRecipe> CraftableItemsList;
+        [SerializeField] Image _draggableItem;
+        [SerializeField] InventoryTooltip _inventoryTooltip;
+        private ItemSlot _draggedSlot;
 
         #endregion
 
 
-        #region ClassLifeCycle
+        #region UnityMethods
 
-        public Inventory(int size)
+        public void Awake()
         {
-            Items = new List<ItemData>(size);
-            _size = size;
-        }
+            if (ItemSlots != null)
+            {
+                for (int i = 0; i < ItemSlots.Count; i++)
+                {
+                    ItemSlots[i].OnBeginDragEvent += BeginDrag;
+                    ItemSlots[i].OnEndDragEvent += EndDrag;
+                    ItemSlots[i].OnDragEvent += Drag;
+                    ItemSlots[i].OnDropEvent += Drop;
+                    ItemSlots[i].OnPointerEnterEvent += ShowTooltip;
+                    ItemSlots[i].OnPointerExitEvent += HideTooltip;
+                }
+                CustomDebug.Log(ItemSlots.Count);
+            }
 
+        }
+        
         #endregion
 
 
         #region Methods
 
-        public bool AddItem(ItemData value)
+        public bool AddItem(ItemData item)
         {
-            if (Items.Count < _size)
+            for (int i = 0; i < ItemSlots.Count; i++)
             {
-                Items.Add(value);
-                return true;
+                if (ItemSlots[i].Item == null)
+                {
+                    ItemSlots[i].Item = item;
+                    return true;
+                }
             }
-
             return false;
         }
 
-        public ItemData GetItem(ItemData value)
+        public bool RemoveItem(ItemData item)
         {
-            if(Items.Contains(value))
+            for (int i = 0; i < ItemSlots.Count; i++)
             {
-                Items.Remove(value);
-                return value;
+                if (ItemSlots[i].Item == item)
+                {
+                    ItemSlots[i].Item = null;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool Contains(ItemData item)
+        {
+            for (int i = 0; i < ItemSlots.Count; i++)
+            {
+                if (ItemSlots[i].Item == item)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IsFull()
+        {
+            for (int i = 0; i < ItemSlots.Count; i++)
+            {
+                if (ItemSlots[i].Item == null)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void BeginDrag(ItemSlot itemSlot)
+        {
+           if (itemSlot.Item != null)
+            {
+                _draggedSlot = itemSlot;
+                _draggableItem.sprite = itemSlot.Item.Icon;
+                _draggableItem.transform.position = Input.mousePosition;
+                _draggableItem.enabled = true;
+            }
+        }
+
+        private void EndDrag(ItemSlot itemSlot)
+        {
+           _draggedSlot = null;
+            _draggableItem.enabled = false;
+        }
+
+        private void Drag(ItemSlot itemSlot)
+        {
+            if (_draggableItem.enabled)
+            {
+                _draggableItem.transform.position = Input.mousePosition;
+            }
+        }
+
+        private void Drop(ItemSlot dropItemSlot)
+        {
+           if (_draggedSlot == null) return;
+
+            ItemData draggedItem = _draggedSlot.Item;
+            bool isSomethingCrafted = false;
+
+            foreach (ItemRecipe itemRecipe in CraftableItemsList)
+            {
+                if (itemRecipe.CanCraft(_draggedSlot.Item, dropItemSlot.Item))
+                {
+                    if(dropItemSlot.Item.IsDestructuble == false)
+                    {
+                        _draggedSlot.Item = itemRecipe.Craft(this);
+                        isSomethingCrafted = true;
+                    }
+                    else
+                    {
+                        dropItemSlot.Item = itemRecipe.Craft(this);
+                        isSomethingCrafted = true;
+                    }                  
+                    break;
+                }
             }
 
-            return null;
-        }
-
-        public void RemoveItem(ItemData value)
-        {
-            if(Items.Contains(value))
+            if(isSomethingCrafted == false)
             {
-                Items.Remove(value);
+                _draggedSlot.Item = dropItemSlot.Item;
+                dropItemSlot.Item = draggedItem;    
             }
         }
 
-        public bool Contains(ItemData value)
+        private void ShowTooltip(ItemSlot itemSlot)
         {
-            return Items.Contains(value);
+            ItemData item = itemSlot.Item as ItemData;
+            if (item != null)
+            {
+                _inventoryTooltip.ShowTooltip(item);
+            }
         }
+
+        private void HideTooltip(ItemSlot itemSlot)
+        {
+            _inventoryTooltip.HideTooltip();
+        }
+       
+        //public ItemData GetItem(ItemData value)
+        //{
+        //    if (Items.Contains(value))
+        //    {
+        //        Items.Remove(value);
+        //        return value;
+        //    }
+
+        //    return null;
+        //}
 
         #endregion
     }
 }
+

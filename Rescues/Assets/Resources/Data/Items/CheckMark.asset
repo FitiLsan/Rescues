@@ -10,6 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 909c073486854737afecf0d2b2c734a6, type: 3}
-  m_Name: ItemData
+  m_Name: CheckMark
   m_EditorClassIdentifier: 
-  di: 
+  Name: CheckMark
+  Discription: test
+  Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  IsDestructuble: 1

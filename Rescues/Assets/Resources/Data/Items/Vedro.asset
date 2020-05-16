@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 909c073486854737afecf0d2b2c734a6, type: 3}
-  m_Name: BlueKey
+  m_Name: Vedro
   m_EditorClassIdentifier: 
-  Name: "\u0421\u0438\u043D\u0438\u0439 \u043A\u043B\u044E\u0447"
-  Description: 11111
-  Icon: {fileID: -2529410205585600842, guid: 3550fa31db6ef2348b2377595b6d805b, type: 3}
+  Name: Vedro
+  Discription: test
+  Icon: {fileID: -68351091724978304, guid: 3550fa31db6ef2348b2377595b6d805b, type: 3}
   IsDestructuble: 1
