@@ -39,7 +39,7 @@ namespace Rescues
 
             if (Input.GetButtonUp("Vertical"))
             {
-                var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
+                var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Teleport);
                 if (interactableObject != null)
                 {
                     _context.Character.StateTeleporting(interactableObject.ExitPoint.position);
@@ -72,14 +72,29 @@ namespace Rescues
 
             if (Input.GetButtonUp("Use"))
             {                
-                var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
+                var interactableObject1 = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
                 if (_context.Character.PlayerState == State.Hiding)
                 {
-                    _context.Character.StateHideAnimation(interactableObject);                   
+                    _context.Character.StateHideAnimation(interactableObject1);                   
                 }
-                if (interactableObject != null)
+                if (interactableObject1 != null)
                 {
-                    _context.Character.StateHideAnimation(interactableObject);
+                    _context.Character.StateHideAnimation(interactableObject1);
+                }
+
+                var interactableObject2 = GetInteractableObject<DoorInteractiveBehaviour>(InteractableObjectType.Door);
+                if (interactableObject2._isLocked)
+                {
+                    if (_context.Inventory.GetItem(interactableObject2._key))
+                    {
+                        interactableObject2.OpenClose();
+                        interactableObject2._isLocked = false;
+                    }
+
+                }
+                else
+                {
+                    interactableObject2.OpenClose();
                 }
             }
             _context.Character.AnimationPlay.UpdateTimer();
