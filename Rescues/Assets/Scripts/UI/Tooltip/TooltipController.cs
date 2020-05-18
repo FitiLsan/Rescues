@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
+
 namespace Rescues
 {
-    public sealed class TooltipController : IExecuteController
+    public sealed class TooltipController : IController
     {
-
         #region Fields
 
         private readonly GameContext _context;
@@ -21,14 +21,6 @@ namespace Rescues
 
         #endregion
 
-        #region IExecuteController
-
-        public void Execute()
-        {
-        }
-
-
-        #endregion
 
         #region Methods
 
@@ -41,13 +33,13 @@ namespace Rescues
             {
                 if (trigger.IsInteractable)
                 {
-                    CustomDebug.Log(trigger.Description) ;
+                    CustomDebug.Log(trigger.Description);
                 }
             }
 
             return behaviour;
+        }
 
         #endregion
-        }
     }
 }
