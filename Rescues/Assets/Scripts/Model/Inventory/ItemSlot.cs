@@ -62,6 +62,7 @@ namespace Rescues
 
 
         #region Methods
+
         public virtual bool CanReceiveItem(ItemData item)
         {
             return true;
@@ -99,16 +100,12 @@ namespace Rescues
             OnPointerExitEvent?.Invoke(this);
         }
 
-
-
         //public void OnPointerClick(PointerEventData eventData)
         //{
         //    
         //   OnRightClickEvent?.Invoke(this);
         //    
         //}
-
-
 
         #endregion
     }

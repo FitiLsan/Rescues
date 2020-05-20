@@ -47,12 +47,12 @@ namespace Rescues
                 }
             }
 
-            if (Input.GetButtonDown("PickUp"))
+            if (Input.GetButtonUp("PickUp"))
             {
                 var interactableObject = GetInteractableObject<ItemBehaviour>(InteractableObjectType.Item);
                 if (interactableObject != null)
                 {                  
-                    if (_context.Inventory.AddItem(interactableObject._itemData))
+                    if (_context.Inventory.AddItem(interactableObject.ItemData))
                     {
                         Object.Destroy(interactableObject.GameObject);
                     }
@@ -69,7 +69,7 @@ namespace Rescues
                 }
             }
 
-            if(Input.GetButtonDown("Inventory"))
+            if(Input.GetButtonUp("Inventory"))
             {
                 _context.Inventory.gameObject.SetActive(!_context.Inventory.gameObject.activeSelf);
             }

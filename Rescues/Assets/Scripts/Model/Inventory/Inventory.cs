@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
 
 namespace Rescues
 {
-    public class Inventory : MonoBehaviour
+    public sealed class Inventory : MonoBehaviour
     {
         #region Fields
 
@@ -14,7 +13,7 @@ namespace Rescues
         [SerializeField] List<ItemRecipe> CraftableItemsList;
         [SerializeField] Image _draggableItem;
         [SerializeField] InventoryTooltip _inventoryTooltip;
-        private ItemSlot _draggedSlot;
+        private ItemSlot _draggedSlot;       
 
         #endregion
 
@@ -46,52 +45,60 @@ namespace Rescues
 
         public bool AddItem(ItemData item)
         {
+            bool canAddItem = false; 
             for (int i = 0; i < ItemSlots.Count; i++)
             {
                 if (ItemSlots[i].Item == null)
                 {
                     ItemSlots[i].Item = item;
-                    return true;
+                    canAddItem = true;
+                    break;
                 }
             }
-            return false;
+            return canAddItem;
         }
 
         public bool RemoveItem(ItemData item)
         {
+            bool canRemoveItem = false;
             for (int i = 0; i < ItemSlots.Count; i++)
             {
                 if (ItemSlots[i].Item == item)
                 {
                     ItemSlots[i].Item = null;
-                    return true;
+                    canRemoveItem = true;
+                    break;
                 }
             }
-            return false;
+            return canRemoveItem;
         }
 
         public bool Contains(ItemData item)
         {
+            bool isContain = false;
             for (int i = 0; i < ItemSlots.Count; i++)
             {
                 if (ItemSlots[i].Item == item)
                 {
-                    return true;
+                    isContain = true;
+                    break;
                 }
             }
-            return false;
+            return isContain;
         }
 
         public bool IsFull()
         {
+            bool isFull = true;
             for (int i = 0; i < ItemSlots.Count; i++)
             {
                 if (ItemSlots[i].Item == null)
                 {
-                    return false;
+                    isFull = false;
+                    break;
                 }
             }
-            return true;
+            return isFull;
         }
 
         private void BeginDrag(ItemSlot itemSlot)

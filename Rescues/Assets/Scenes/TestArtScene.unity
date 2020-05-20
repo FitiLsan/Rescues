@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
-  _itemData: {fileID: 11400000, guid: 045f9b23b74fb564c954f147ce8d646d, type: 2}
+  ItemData: {fileID: 11400000, guid: 045f9b23b74fb564c954f147ce8d646d, type: 2}
 --- !u!61 &215140232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2646,7 +2646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
-  _itemData: {fileID: 11400000, guid: 7594ee8e8ce903d4da98934f61cfe538, type: 2}
+  ItemData: {fileID: 11400000, guid: 5d382dc9bc786b948bd7b2275bb3887e, type: 2}
 --- !u!61 &513006099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6439,7 +6439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
-  _itemData: {fileID: 11400000, guid: 9fc9fd6f781a2c3428426d91cd3d6833, type: 2}
+  ItemData: {fileID: 11400000, guid: 9fc9fd6f781a2c3428426d91cd3d6833, type: 2}
 --- !u!61 &1167453099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7068,7 +7068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
-  _itemData: {fileID: 11400000, guid: 5d382dc9bc786b948bd7b2275bb3887e, type: 2}
+  ItemData: {fileID: 11400000, guid: 7594ee8e8ce903d4da98934f61cfe538, type: 2}
 --- !u!61 &1264542994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13986,7 +13986,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 800}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &5661948396441563002

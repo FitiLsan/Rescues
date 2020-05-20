@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 namespace Rescues
 {
     [CreateAssetMenu(fileName = "ItemRecipe", menuName = "Data/ItemRecipe")]
@@ -11,21 +12,24 @@ namespace Rescues
         public ItemData ItemB;
         public ItemData ItemResult;
 
-        #endregion       
+        #endregion
+
+
+        #region Methods
 
         public bool CanCraft(ItemData itemA, ItemData itemB)
         {
+            bool canCraft = false;
             if (ItemA == itemA && ItemB == itemB)
             {
-                return true;
+                canCraft = true;                
             }
             else if(ItemA == itemB && ItemB == itemA)
             {
-                return true;
+                canCraft = true;
             }
-            return false;
+            return canCraft;
         }
-
 
         public ItemData Craft(Inventory inventory)
         {
@@ -33,5 +37,7 @@ namespace Rescues
             if(ItemB.IsDestructuble) inventory.RemoveItem(ItemB);                      
             return ItemResult;
         }
+
+        #endregion
     }
 }
