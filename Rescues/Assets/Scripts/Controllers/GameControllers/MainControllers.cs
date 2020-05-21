@@ -7,8 +7,7 @@
         public MainControllers(GameContext context, Services services)
         {
             Add(new InitializeCharacterController(context, services));
-            Add(new InitializeInteractableObjectController(context, services));
-            Add(new InitializeInventoryController(context, services));
+            Add(new InitializeInteractableObjectController(context, services));          
             Add(new InitializeEnemyController(context, services));
             Add(new TimeRemainingController());
             Add(new ItemActiveController(context, services));

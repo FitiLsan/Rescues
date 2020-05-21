@@ -7,7 +7,7 @@ namespace Rescues
     {
         #region Fields
         
-        public ItemData _itemData;
+        public ItemData ItemData;
 
         #endregion
     }

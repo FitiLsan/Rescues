@@ -18,7 +18,8 @@ namespace Rescues
         public InputController(GameContext context, Services services)
         {
             _context = context;
-            _cameraServices = services.CameraServices;
+            _cameraServices = services.CameraServices;           
+            
         }
 
         #endregion
@@ -50,8 +51,8 @@ namespace Rescues
             {
                 var interactableObject = GetInteractableObject<ItemBehaviour>(InteractableObjectType.Item);
                 if (interactableObject != null)
-                {
-                    if (_context.Inventory.AddItem(interactableObject._itemData))
+                {                  
+                    if (_context.Inventory.AddItem(interactableObject.ItemData))
                     {
                         Object.Destroy(interactableObject.GameObject);
                     }
@@ -68,9 +69,14 @@ namespace Rescues
                 }
             }
 
+            if(Input.GetButtonUp("Inventory"))
+            {
+                _context.Inventory.gameObject.SetActive(!_context.Inventory.gameObject.activeSelf);
+            }
+
             _context.Character.StateHandler();
 
-            if (Input.GetButtonUp("Use"))
+            if (Input.GetButtonDown("Use"))
             {                
                 var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
                 if (_context.Character.PlayerState == State.Hiding)
