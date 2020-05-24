@@ -11,7 +11,7 @@ namespace Rescues
 
         [SerializeField] private bool _isFacingRight;
         private BoxCollider2D _box;
-        private float _rayLength = 37f;
+        [SerializeField]private float _rayLength = 37f;
 
         #endregion
 
