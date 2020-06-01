@@ -5,13 +5,20 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public class FieldOfViewController : MonoBehaviour
+    public sealed class FieldOfViewController : MonoBehaviour
     {
         #region PrivateData
 
         [SerializeField] private bool _isFacingRight;
         private BoxCollider2D _box;
-        [SerializeField]private float _rayLength = 37f;
+        private float _rayLength;
+        private PhysicsService _physicsService;
+        private readonly GameContext _context;
+
+        public FieldOfViewController(GameContext context, Services services)
+        {
+            _context = context;
+        }
 
         #endregion
 
@@ -20,13 +27,15 @@ namespace Rescues
         private void Awake()
         {
             _box = GetComponent<BoxCollider2D>();
+            _physicsService = new PhysicsService(_context);
+            _rayLength = Data.FieldOfViewData.RayLength;
         }
 
 
         private void Update()
         {
-            if (_isFacingRight) Vision(Vector2.right);
-            else Vision(Vector2.left);
+            if (_isFacingRight) _physicsService.PlayerVision(transform.position, Vector2.right, _rayLength, _box);
+            else _physicsService.PlayerVision(transform.position, Vector2.left, _rayLength, _box);
         }
 
 
@@ -50,26 +59,5 @@ namespace Rescues
         }
 
         #endregion
-
-
-        #region Methods
-
-        private void Vision(Vector2 direction)
-        {
-            RaycastHit2D hit;
-            Debug.DrawRay(transform.position, direction * _rayLength);
-            hit = Physics2D.Raycast(transform.position, direction, _rayLength, LayerManager.ViewObstacle);
-            if (hit.collider != null)
-            {
-                if (hit.collider.CompareTag(TagManager.VIEWOBSTACLE))
-                {
-                    _box.enabled = false;
-                }
-            }
-            else _box.enabled = true;
-        }
-
-        #endregion
-
     }
 }
