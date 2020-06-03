@@ -15,3 +15,5 @@ MonoBehaviour:
   _playerDataPath: PlayerData
   _itemDataPath: 
   _cameraDataPath: CameraData
+  _hidingPlaceDataPath: 
+  _fieldOfViewDataPath: FieldOfViewData

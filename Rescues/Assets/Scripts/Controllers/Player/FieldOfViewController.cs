@@ -15,10 +15,15 @@ namespace Rescues
         private PhysicsService _physicsService;
         private readonly GameContext _context;
 
+        #endregion
+
+        #region ClassLifeCycles
+
         public FieldOfViewController(GameContext context, Services services)
         {
             _context = context;
         }
+
 
         #endregion
 
