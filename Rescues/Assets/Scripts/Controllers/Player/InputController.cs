@@ -81,11 +81,11 @@ namespace Rescues
                 var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
                 if (_context.Character.PlayerState == State.Hiding)
                 {
-                    _context.Character.StateHideAnimation(interactableObject);
+                    _context.Character.StateHideAnimation(interactableObject);                   
                 }
                 if (interactableObject != null)
                 {
-                    _context.Character.StateHideAnimation(interactableObject);
+                    _context.Character.StateHideAnimation(interactableObject);                    
                 }
             }
 
