@@ -32,7 +32,7 @@ namespace Rescues
         private void Awake()
         {
             _box = GetComponent<BoxCollider2D>();
-            _physicsService = new PhysicsService(_context);
+            _physicsService = Services.SharedInstance.PhysicsService;
             _rayLength = Data.FieldOfViewData.RayLength;
         }
 

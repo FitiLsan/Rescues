@@ -48,7 +48,6 @@ namespace Rescues
         public void PlayerVision(Vector3 position, Vector2 direction, float rayLength, BoxCollider2D box)
         {
             RaycastHit2D hit;
-            Debug.DrawRay(position, direction * rayLength);
             hit = Physics2D.Raycast(position, direction, rayLength, LayerManager.ViewObstacle);
             if (hit.collider != null)
             {
