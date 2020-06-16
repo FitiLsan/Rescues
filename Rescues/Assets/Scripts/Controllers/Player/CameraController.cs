@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 namespace Rescues
 {
     public sealed class CameraController : IExecuteController

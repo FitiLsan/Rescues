@@ -8,7 +8,7 @@ namespace Rescues
         #region Fields
 
         private readonly GameContext _context;
-        private readonly CameraServices _cameraServices;       
+        private readonly CameraServices _cameraServices;
 
         #endregion
 
@@ -19,6 +19,7 @@ namespace Rescues
         {
             _context = context;
             _cameraServices = services.CameraServices;
+
         }
 
         #endregion
@@ -32,6 +33,10 @@ namespace Rescues
             inputAxis.x = Input.GetAxis("Horizontal");
             inputAxis.y = Input.GetAxis("Vertical");
 
+            _context.Character.StateHandler();
+
+            _context.Character.AnimationPlayTimer.UpdateTimer();
+
             if (inputAxis.x != 0 || inputAxis.y != 0)
             {
                 _context.Character.StateMoving(inputAxis);
@@ -42,7 +47,7 @@ namespace Rescues
                 var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
                 if (interactableObject != null)
                 {
-                    _context.Character.StateTeleporting(interactableObject.ExitPoint.position);
+                    _context.Character.StateTeleporting(interactableObject);
                 }
             }
 
@@ -51,10 +56,8 @@ namespace Rescues
                 var interactableObject = GetInteractableObject<ItemBehaviour>(InteractableObjectType.Item);
                 if (interactableObject != null)
                 {
-                    if (_context.Inventory.AddItem(interactableObject._itemData))
-                    {
-                        Object.Destroy(interactableObject.GameObject);
-                    }
+                    _context.Character.StatePickUpAnimation(interactableObject);
+                    Object.Destroy(interactableObject.GameObject);
                 }
 
                 var trapBehaviour = GetInteractableObject<TrapBehaviour>(InteractableObjectType.Trap);
@@ -62,36 +65,69 @@ namespace Rescues
                 {
                     if (_context.Inventory.Contains(trapBehaviour.TrapInfo.RequiredTrapItem))
                     {
-                        trapBehaviour.CreateTrap();
-                        _context.Inventory.RemoveItem(trapBehaviour.TrapInfo.RequiredTrapItem);
+                        _context.Character.StateCraftTrapAnimation(trapBehaviour);
+
                     }
                 }
             }
 
-            _context.Character.StateHandler();
+            if (Input.GetButtonUp("Inventory"))
+            {
+                _context.Inventory.gameObject.SetActive(!_context.Inventory.gameObject.activeSelf);
+            }
 
-            if (Input.GetButtonUp("Use"))
-            {                
+            if (Input.GetButtonDown("Use"))
+            {
                 var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
                 if (_context.Character.PlayerState == State.Hiding)
                 {
-                    _context.Character.StateHideAnimation(interactableObject);                   
+                    _context.Character.StateHideAnimation(interactableObject);
                 }
                 if (interactableObject != null)
                 {
                     _context.Character.StateHideAnimation(interactableObject);
                 }
             }
-            _context.Character.AnimationPlay.UpdateTimer();
 
-            if (_context.Character.AnimationPlay.IsEvent())
+            if (_context.Character.AnimationPlayTimer.IsEvent())
             {
-                _context.Character.StateHiding();
+                switch (_context.Character.PlayerState)
+                {
+                    case State.HideAnimation:
+                        {
+                            _context.Character.StateHiding();
+                            break;
+                        }
+
+                    case State.PickUpAnimation:
+                        {
+                            var item = _context.Character.InteractableItem as ItemBehaviour;
+                            _context.Inventory.AddItem(item.ItemData);
+                            _context.Character.StateIdle();
+                            break;
+                        }
+
+                    case State.CraftTrapAnimation:
+                        {
+                            var trap = _context.Character.InteractableItem as TrapBehaviour;
+                            trap.CreateTrap();
+                            _context.Inventory.RemoveItem(trap.TrapInfo.RequiredTrapItem);
+                            _context.Character.StateIdle();
+                            break;
+                        }
+                    case State.Teleporting:
+                        {
+                            _context.Character.Teleport();
+                            _context.Character.StateIdle();
+                            break;
+                        }
+
+                }
             }
-          
+
             if (Input.GetButtonDown("Mouse ScrollPressed"))
             {
-                _cameraServices.FreeCamera();              
+                _cameraServices.FreeCamera();
             }
 
             if (Input.GetButton("Mouse ScrollPressed"))
@@ -101,7 +137,7 @@ namespace Rescues
 
             if (Input.GetButtonUp("Mouse ScrollPressed"))
             {
-                _cameraServices.LockCamera();               
+                _cameraServices.LockCamera();
             }
         }
 

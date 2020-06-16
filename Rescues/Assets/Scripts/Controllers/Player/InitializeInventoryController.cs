@@ -22,8 +22,8 @@
         #region IInitializeController
 
         public void Initialize()
-        {
-            var inventory = new Inventory(8);
+        {           
+            var inventory = new Inventory();
             _context.Inventory = inventory;
         }
 
