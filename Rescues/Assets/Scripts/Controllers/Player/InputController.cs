@@ -66,9 +66,15 @@ namespace Rescues
                     if (_context.Inventory.Contains(trapBehaviour.TrapInfo.RequiredTrapItem))
                     {
                         _context.Character.StateCraftTrapAnimation(trapBehaviour);
-
                     }
                 }
+                
+                var puzzleObject = GetInteractableObject<PuzzleBehaivour>(InteractableObjectType.Puzzle);
+                if (puzzleObject != null)
+                {
+                    puzzleObject.Puzzle.Activate();
+                }
+                
             }
 
             if (Input.GetButtonUp("Inventory"))
