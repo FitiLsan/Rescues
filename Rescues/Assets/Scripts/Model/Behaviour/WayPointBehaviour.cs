@@ -22,6 +22,7 @@ namespace Rescues
 
 
         #endregion
+        
 
         #region Properte
 
@@ -29,6 +30,8 @@ namespace Rescues
 
         #endregion
 
+
+        #region UnityMethods
         private void Update()
         {
             if (_isScanScene)
@@ -49,6 +52,9 @@ namespace Rescues
                 _isScanScene = false;
             }
         }
+
+        #endregion
+
 
         public float GetWaitTime()
         {
