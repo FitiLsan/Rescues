@@ -33,24 +33,26 @@ namespace Rescues
                 return;
             }
             var enemy = _context.Enemy;
-            var wayPointInfo = enemy.RouteData.GetWayPoints();
-            if (Vector3.Distance(enemy.transform.position, wayPointInfo[enemy.PatrolPointState].PointPosition) > 0.5)
+            var enemyPositions = enemy.RouteData.GetWayPoints();
+            if (Vector3.Distance(enemy.transform.position, enemyPositions[enemy.PatrolPointState].PointPosition) > 0.5)
             {
                 Vector3 movementDirection = Vector3.zero;
-                movementDirection.x = wayPointInfo[enemy.PatrolPointState].PointPosition.x - enemy.transform.position.x;
+                movementDirection.x = enemyPositions[enemy.PatrolPointState].PointPosition.x - enemy.transform.position.x;
 
                 _context.Enemy.transform.position += movementDirection.normalized * enemy.EnemyData.Speed * Time.deltaTime;
                 _context.Enemy.SetVisionDirection(movementDirection);
             }
             else
             {
-                var modificator = enemy.Modificator;
-                if(enemy.PatrolPointState + modificator > wayPointInfo.Length - 1 || 
-                   enemy.PatrolPointState + modificator < 0)
+                if (enemy.PatrolPointState + 1 > enemyPositions.Length - 1 || enemy.PatrolPointState - 1 < 0)
                 {
                     enemy.InvertModificator();
                 }
-                enemy.WaitTime(wayPointInfo[enemy.PatrolPointState].WaitTime);
+                if (enemy.PatrolPointState + enemy.Modificator < 0)
+                {
+                    enemy.InvertModificator();
+                }
+                enemy.PatrolPointState += enemy.Modificator;
             }
         }
 

@@ -1225,6 +1225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   ItemData: {fileID: 11400000, guid: 045f9b23b74fb564c954f147ce8d646d, type: 2}
+  PickUpTime: 0.5
 --- !u!61 &215140232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2647,6 +2648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   ItemData: {fileID: 11400000, guid: 5d382dc9bc786b948bd7b2275bb3887e, type: 2}
+  PickUpTime: 0.5
 --- !u!61 &513006099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5381,6 +5383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _routeData: {fileID: 11400000, guid: fde2b68cf561dd445bd3f20957c267d3, type: 2}
+  _isScanScene: 0
+  queueOfWaipoint: 0
   _waitTime: 0
   _activatingTrap: {fileID: 0}
   _baseTrapData: {fileID: 0}
@@ -5430,6 +5434,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _routeData: {fileID: 11400000, guid: de1b2b09a93a9784c860eca665a1f313, type: 2}
+  _isScanScene: 0
+  queueOfWaipoint: 0
   _waitTime: 4
   _activatingTrap: {fileID: 973326813}
   _baseTrapData: {fileID: 0}
@@ -6440,6 +6446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   ItemData: {fileID: 11400000, guid: 9fc9fd6f781a2c3428426d91cd3d6833, type: 2}
+  PickUpTime: 0.5
 --- !u!61 &1167453099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7069,6 +7076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   ItemData: {fileID: 11400000, guid: 7594ee8e8ce903d4da98934f61cfe538, type: 2}
+  PickUpTime: 0.5
 --- !u!61 &1264542994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8701,6 +8709,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _routeData: {fileID: 11400000, guid: de1b2b09a93a9784c860eca665a1f313, type: 2}
+  _isScanScene: 0
+  queueOfWaipoint: 0
   _waitTime: 2
   _activatingTrap: {fileID: 0}
   _baseTrapData: {fileID: 0}
