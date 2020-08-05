@@ -70,31 +70,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48bd36b2-45ba-4ddc-be59-218c2703d472" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/PuzzleController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/PuzzleController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzle.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaivour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaivour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/PuzzlesControllers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/PuzzlesControllers.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/Wires.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/Wires/MamaConnector.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/Wires/MamaConnector.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/Wires/Wire.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/Wires/Wire.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/InteractableObjectBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/InteractableObjectBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/PuzzleController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/PuzzleController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadAssets/AssetsPathGameObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadAssets/AssetsPathGameObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadAssets/Type/GameObjectType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadAssets/Type/GameObjectType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,12 +112,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyMoveController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/EnemyVisionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/BaseTrapData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/Data.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/HidingPlaceData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAssets/Type/GameObjectType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screen/MainMenu/MainMenuBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAssets/AssetsPathGameObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,12 +130,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ITearDownController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IInitializeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ITrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaivour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/PhysicsServices/PhysicsService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/CameraService/CameraServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/TimeService/UnityTimeService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Services.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAssets.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/PuzzlesControllers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/GameContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Context/Contexts.cs" root0="FORCE_HIGHLIGHTING" />
@@ -153,29 +156,35 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/Behaviours/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PlayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/590B07A0-8EBF-4FFE-9290-BF1366C3C513/77/592db011/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/HidingPlaceBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WayPointBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Art/Textures/Props/пропс 1.psd.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/GameSystemsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/ReactiveController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/InteractableObjectBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainLateControllers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/EnemyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaivour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/GameStateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/DoorTeleporterBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/ItemBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/8f/23ef9955/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/Controllers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/PuzzleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/CharacterModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemaining.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/State.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/UpdateType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/ITimeRemaining.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.11/UnityEngine.TestRunner/Utils/AssemblyProvider/AssemblyLoadProxy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/InteractableObjectType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enum/ReactiveType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InitializeCharacterController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Player/ItemActiveController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/590B07A0-8EBF-4FFE-9290-BF1366C3C513/45/ec624a0a/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Player/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -188,15 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/InitializeDoorTeleporterController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/DoorTeleporterController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/ItemBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/InitializeInteractableObjectController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/ItemPutInInventoryController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/CharacterModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NewDirectory1/Test.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NewDirectory1/rtr.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/NPC/StateEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemaining.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/ITimeRemaining.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingController.cs" />
@@ -224,21 +224,30 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/InteractableObjectBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/Behaviours/PuzzleBehaivour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/Puzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/WiresPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Inventory/ItemSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Connector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/PuzzleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Context/GameContext.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaivour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/Wires/WiresController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/PuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/MainPuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/PuzzlesControllers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LoadAssets/AssetsPathGameObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LoadAssets/Type/GameObjectType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/PuzzlesControllers.cs" />
       </list>
     </option>
   </component>
@@ -292,6 +301,7 @@
       <workItem from="1588332401672" duration="6724000" />
       <workItem from="1588493254220" duration="375000" />
       <workItem from="1596266290778" duration="36574000" />
+      <workItem from="1596576584545" duration="9643000" />
     </task>
     <servers />
   </component>
@@ -316,23 +326,23 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="798" y="209" key="RiderGenerateDialog" timestamp="1596362905822">
+    <state x="798" y="209" key="RiderGenerateDialog" timestamp="1596614551509">
       <screen x="0" y="23" width="2560" height="974" />
     </state>
-    <state x="798" y="209" key="RiderGenerateDialog/0.23.2560.974@0.23.2560.974" timestamp="1596362905822" />
+    <state x="798" y="209" key="RiderGenerateDialog/0.23.2560.974@0.23.2560.974" timestamp="1596614551509" />
     <state x="479" y="140" key="SettingsEditor" timestamp="1596464025864">
       <screen x="0" y="23" width="2560" height="974" />
     </state>
     <state x="479" y="140" key="SettingsEditor/0.23.2560.974@0.23.2560.974" timestamp="1596464025864" />
-    <state x="129" y="106" width="2303" height="809" key="VCS.FileHistoryDialog" timestamp="1596364548881">
+    <state x="129" y="106" width="2303" height="809" key="VCS.FileHistoryDialog" timestamp="1596557217676">
       <screen x="0" y="23" width="2560" height="974" />
     </state>
-    <state x="129" y="106" width="2303" height="809" key="VCS.FileHistoryDialog/0.23.2560.974@0.23.2560.974" timestamp="1596364548881" />
+    <state x="129" y="106" width="2303" height="809" key="VCS.FileHistoryDialog/0.23.2560.974@0.23.2560.974" timestamp="1596557217676" />
     <state x="185" y="92" width="1643" height="896" key="VCS.FileHistoryDialog/93.0.1827.1080@93.0.1827.1080" timestamp="1588260551153" />
-    <state x="799" y="197" width="942" height="610" key="search.everywhere.popup" timestamp="1596395389170">
+    <state x="799" y="197" width="942" height="610" key="search.everywhere.popup" timestamp="1596607379302">
       <screen x="0" y="23" width="2560" height="974" />
     </state>
-    <state x="799" y="197" width="942" height="610" key="search.everywhere.popup/0.23.2560.974@0.23.2560.974" timestamp="1596395389170" />
+    <state x="799" y="197" width="942" height="610" key="search.everywhere.popup/0.23.2560.974@0.23.2560.974" timestamp="1596607379302" />
     <state x="663" y="193" width="672" height="676" key="search.everywhere.popup/93.0.1827.1080@93.0.1827.1080" timestamp="1588260816369" />
   </component>
   <component name="XDebuggerManager">

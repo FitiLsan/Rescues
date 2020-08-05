@@ -31,7 +31,6 @@ namespace Rescues
         public int ApplyNumber
         {
             get => _applyNumber;
-            private set => value = _applyNumber;
         }
 
         #endregion

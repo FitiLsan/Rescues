@@ -33,13 +33,13 @@
               <e p="GameSystemsController.cs" t="Include" />
               <e p="MainControllers.cs" t="Include" />
               <e p="MainLateControllers.cs" t="Include" />
+              <e p="MainPuzzleController.cs" t="Include" />
               <e p="ReactiveController.cs" t="Include" />
             </e>
             <e p="HidingPlaceController.cs" t="Include" />
             <e p="InteractableObject" t="Include">
               <e p="DoorTeleporterController.cs" t="Include" />
               <e p="InitializeInteractableObjectController.cs" t="Include" />
-              <e p="PuzzleController.cs" t="Include" />
             </e>
             <e p="NPC" t="Include">
               <e p="EnemyMoveController.cs" t="Include" />
@@ -54,6 +54,10 @@
               <e p="InitializeInventoryController.cs" t="Include" />
               <e p="InputController.cs" t="Include" />
               <e p="ItemActiveController.cs" t="Include" />
+            </e>
+            <e p="PuzzlesControllers" t="Include">
+              <e p="PuzzlesControllers.cs" t="Include" />
+              <e p="WiresController.cs" t="Include" />
             </e>
             <e p="TimeRemaining" t="Include">
               <e p="ITimeRemaining.cs" t="Include" />
@@ -99,7 +103,7 @@
             <e p="IExecuteController.cs" t="Include" />
             <e p="IInitializeController.cs" t="Include" />
             <e p="IInteractable.cs" t="Include" />
-            <e p="IPuzzle.cs" t="Include" />
+            <e p="IPuzzleController.cs" t="Include" />
             <e p="IReactiveController.cs" t="Include" />
             <e p="ITearDownController.cs" t="Include" />
             <e p="ITrigger.cs" t="Include" />

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 
 namespace Rescues
@@ -7,8 +6,18 @@ namespace Rescues
     public class WiresPuzzle : Puzzle
     {
         #region Fileds
+        
+        private List<MamaConnector> _connectors = new List<MamaConnector>();
+        
+        #endregion
+        
+        
+        #region  Propeties
 
-        [SerializeField] private List<MamaConnector> _connectors;
+        public List<MamaConnector> Connectors
+        {
+            get => _connectors;
+        }
 
         #endregion
 
@@ -23,31 +32,6 @@ namespace Rescues
                 _connectors.Add(connector);
                 connector.Connected += CheckComplete;
             }
-
-            gameObject.SetActive(false);
-        }
-
-        #endregion
-
-
-        #region Methods
-
-        private void CheckComplete()
-        {
-            var checkCounter = 0;
-            for (int i = 0; i < _connectors.Count; i++)
-            {
-                if (_connectors[i].IsCorrectWire)
-                    checkCounter++;
-            }
-            
-            if (checkCounter == _connectors.Count - 1)
-                Finish();
-        }
-
-        public override void ResetValues()
-        {
-            //TODO возвращать концы проводов на стартовые позиции
         }
 
         #endregion

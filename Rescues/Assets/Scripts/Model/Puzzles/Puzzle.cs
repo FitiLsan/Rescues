@@ -4,18 +4,17 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public abstract class Puzzle : MonoBehaviour, IPuzzle
+    public abstract class Puzzle : MonoBehaviour
     {
         #region Fileds
+        
+        public event Action<Puzzle> Activated = puzzle => { };
+        public event Action<Puzzle> Closed = puzzle => { };
+        public event Action<Puzzle> Finished = puzzle => { };
+        public event Action<Puzzle> ResetValuesToDefault = puzzle => { };
+        public event Action<Puzzle> CheckCompleted = puzzle => { };
 
-        public event Action PuzzleHasBeenFinished = () => { };
-
-        #endregion
-
-
-        #region Prperties
-
-        public bool IsFinished { get; private set; } = false;
+        public bool IsFinished = false;
 
         #endregion
 
@@ -25,26 +24,29 @@ namespace Rescues
         [ContextMenu("Activate puzzle")]
         public void Activate()
         {
-            if (!IsFinished)
-                gameObject.SetActive(true);
-            //TODO Надо как-то останавливать игру, делать паузу? Или перехватывать управление?
+            Activated.Invoke(this);
         }
 
         public void Close()
         {
-            ResetValues();
-            gameObject.SetActive(false);
+            Closed.Invoke(this);
         }
 
         public void Finish()
         {
-            IsFinished = true;
-            PuzzleHasBeenFinished.Invoke();
-            Close();
+            Finished.Invoke(this);
         }
 
-        public abstract void ResetValues();
+        public void ResetValues()
+        {
+            ResetValuesToDefault.Invoke(this);
+        }
 
+        public void CheckComplete()
+        {
+            CheckCompleted.Invoke(this);
+        }
+        
         #endregion
     }
 }

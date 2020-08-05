@@ -3,18 +3,18 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public sealed class PuzzleController: IInitializeController, ITearDownController
+    public sealed class MainPuzzleController : IInitializeController, ITearDownController
     {
         #region Fields
-        
+
         private readonly GameContext _context;
 
         #endregion
 
 
         #region ClassLifeCycles
-        
-        public PuzzleController(GameContext context, Services services)
+
+        public MainPuzzleController(GameContext context, Services services)
         {
             _context = context;
         }
@@ -23,16 +23,29 @@ namespace Rescues
 
 
         #region IInitializeController
-        
+
         public void Initialize()
         {
-            var puzlles = _context.GetTriggers(InteractableObjectType.Puzzle);
-            foreach (var trigger in puzlles)
+            var puzzleInteracts = _context.GetTriggers(InteractableObjectType.Puzzle);
+            var canvas = Object.FindObjectOfType<Canvas>();
+            var puzzleControllers = new PuzzlesControllers();
+
+            foreach (var trigger in puzzleInteracts)
             {
                 var puzlleBehaviour = trigger as PuzzleBehaivour;
                 puzlleBehaviour.OnFilterHandler += OnFilterHandler;
                 puzlleBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
                 puzlleBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
+
+                foreach (var somePuzzleController in puzzleControllers.ControllersList)
+                {
+                    if (somePuzzleController.Value == puzlleBehaviour.Puzzle.GetType())
+                    {
+                        var puzzleInstance = GameObject.Instantiate(puzlleBehaviour.Puzzle, canvas.transform);
+                        puzlleBehaviour.Puzzle = puzzleInstance;
+                        somePuzzleController.Key.Initialize(puzzleInstance);
+                    }
+                }
             }
         }
 
@@ -40,7 +53,7 @@ namespace Rescues
 
 
         #region ITearDownController
-        
+
         public void TearDown()
         {
             var puzlles = _context.GetTriggers(InteractableObjectType.Puzzle);
@@ -57,12 +70,12 @@ namespace Rescues
 
 
         #region Methods
-        
+
         private bool OnFilterHandler(Collider2D obj)
         {
             return obj.CompareTag(TagManager.PLAYER);
         }
-        
+
         private void OnTriggerEnterHandler(ITrigger enteredObject)
         {
             enteredObject.IsInteractable = true;
