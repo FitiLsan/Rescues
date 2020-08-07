@@ -7,5 +7,6 @@
         Item        = 2,
         HidingPlace = 3,
         Trap        = 4,
+        Puzzle      = 5,
     }
 }
