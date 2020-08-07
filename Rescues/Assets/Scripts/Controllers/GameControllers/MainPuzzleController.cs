@@ -32,7 +32,7 @@ namespace Rescues
 
             foreach (var trigger in puzzleInteracts)
             {
-                var puzlleBehaviour = trigger as PuzzleBehaivour;
+                var puzlleBehaviour = trigger as PuzzleBehaviour;
                 puzlleBehaviour.OnFilterHandler += OnFilterHandler;
                 puzlleBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
                 puzlleBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
@@ -59,7 +59,7 @@ namespace Rescues
             var puzlles = _context.GetTriggers(InteractableObjectType.Puzzle);
             foreach (var trigger in puzlles)
             {
-                var puzlleBehaviour = trigger as PuzzleBehaivour;
+                var puzlleBehaviour = trigger as PuzzleBehaviour;
                 puzlleBehaviour.OnFilterHandler -= OnFilterHandler;
                 puzlleBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
                 puzlleBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;

@@ -122,7 +122,7 @@
               <e p="InteractableObjectBehavior.cs" t="Include" />
               <e p="ItemBehaviour.cs" t="Include" />
               <e p="PlayerBehaviour.cs" t="Include" />
-              <e p="PuzzleBehaivour.cs" t="Include" />
+              <e p="PuzzleBehaviour.cs" t="Include" />
               <e p="RaycastTestBehaviour.cs" t="Include" />
               <e p="TrapBehaviour.cs" t="Include" />
               <e p="TrapInfo.cs" t="Include" />

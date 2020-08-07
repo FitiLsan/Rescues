@@ -2,7 +2,7 @@
 
 namespace Rescues
 {
-    public sealed class  PuzzleBehaivour: InteractableObjectBehavior
+    public sealed class  PuzzleBehaviour: InteractableObjectBehavior
     {
         #region Fields
 

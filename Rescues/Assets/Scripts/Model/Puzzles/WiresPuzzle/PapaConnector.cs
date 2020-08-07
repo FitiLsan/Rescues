@@ -9,7 +9,6 @@ namespace Rescues
         private Wire _wire;
 
         public int Number => _wire.Number;
-        public bool IsConected => _wire.IsConected;
         public bool IsMoving => _wire.IsMoving;
 
         private void Awake()

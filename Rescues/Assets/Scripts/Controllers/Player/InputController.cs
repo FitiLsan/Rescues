@@ -68,13 +68,6 @@ namespace Rescues
                         _context.Character.StateCraftTrapAnimation(trapBehaviour);
                     }
                 }
-                
-                var puzzleObject = GetInteractableObject<PuzzleBehaivour>(InteractableObjectType.Puzzle);
-                if (puzzleObject != null)
-                {
-                    puzzleObject.Puzzle.Activate();
-                }
-                
             }
 
             if (Input.GetButtonUp("Inventory"))
@@ -84,11 +77,18 @@ namespace Rescues
 
             if (Input.GetButtonDown("Use"))
             {
+                var puzzleObject = GetInteractableObject<PuzzleBehaviour>(InteractableObjectType.Puzzle);
+                if (puzzleObject != null)
+                {
+                    puzzleObject.Puzzle.Activate();
+                }
+                
                 var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
                 if (_context.Character.PlayerState == State.Hiding)
                 {
                     _context.Character.StateHideAnimation(interactableObject);
                 }
+                
                 if (interactableObject != null)
                 {
                     _context.Character.StateHideAnimation(interactableObject);
