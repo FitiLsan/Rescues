@@ -8,10 +8,13 @@ namespace Rescues
     {
         #region Fileds
 
+        private const float BUTTON_OFFSET = 30;
+        private const string LEFT_IN_NAME = "Left";
         private List<RotatingCircle> _circles = new List<RotatingCircle>();
         private RotatingCircle _selectedCircle;
         private Button[] _buttons;
         private Dictionary<RotatingCircle, Rules[]> _rules = new Dictionary<RotatingCircle, Rules[]>();
+
         #endregion
 
 
@@ -78,17 +81,21 @@ namespace Rescues
         private void OnCircleSelected(RotatingCircle selectedCircle)
         {
             _selectedCircle = selectedCircle;
+            MoveButtons();
+        }
+
+        private void MoveButtons()
+        {
             foreach (var button in _buttons)
             {
-                button.gameObject.SetActive(true);
                 RectTransform buttonRt = button.GetComponent<RectTransform>();
-
-                RectTransform circleRt = selectedCircle.GetComponent<RectTransform>();
-
+                RectTransform circleRt = _selectedCircle.GetComponent<RectTransform>();
                 Vector3 newPosition = buttonRt.anchoredPosition;
-                print(-circleRt.rect.y);
-                newPosition.y = -circleRt.rect.y - 30;
+
+                newPosition.y = -circleRt.rect.y - BUTTON_OFFSET;
                 buttonRt.anchoredPosition = newPosition;
+
+                button.gameObject.SetActive(true);
             }
         }
 
@@ -96,18 +103,23 @@ namespace Rescues
         {
             if (_rules.ContainsKey(circle))
             {
-                var circleRules = _rules[circle];
-                foreach (var rule in circleRules)
-                {
-                    _circles[(int)rule.Rule.x].ManualRotate(isRight, (int)rule.Rule.y);
-                }
+                MoveRuledCircles(_rules[circle], isRight);
+                
             }
             CheckComplete();
         }
 
+        private void MoveRuledCircles(Rules[] circleRules, bool isRight)
+        {
+            foreach (var rule in circleRules)
+            {
+                _circles[(int)rule.Rule.x].ManualRotate(isRight, (int)rule.Rule.y);
+            }
+        }
+
         private void OnButtonClicked(Button button)
         {
-            if (button.gameObject.name.Contains("Left"))
+            if (button.gameObject.name.Contains(LEFT_IN_NAME))
             {
                 _selectedCircle.RotateLeft();
             }

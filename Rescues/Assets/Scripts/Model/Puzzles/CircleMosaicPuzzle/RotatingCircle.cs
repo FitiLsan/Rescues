@@ -7,6 +7,11 @@ namespace Rescues
 {
     public class RotatingCircle : MonoBehaviour, IPointerClickHandler
     {
+
+        #region Fields
+
+        private const float FULL_CIRCLE = 360.0f;
+
         public event Action<RotatingCircle, bool> Rotated = (circle, isRight) => { };
         public event Action<RotatingCircle> Selected = (circle) => { };
 
@@ -17,6 +22,11 @@ namespace Rescues
 
         public Button[] Buttons { get => _buttons; set => _buttons = value; }
         public int Angle => _currentAngle;
+
+        #endregion
+
+
+        #region Methods
 
         public void Initialize(int angle, int initialAngle)
         {
@@ -56,5 +66,13 @@ namespace Rescues
         {
             Selected.Invoke(this);
         }
+
+        public bool IsComplete()
+        {
+            return Mathf.Abs(Angle % FULL_CIRCLE) == 0;
+        }
+
+        #endregion
+
     }
 }

@@ -22,7 +22,6 @@ namespace Rescues
 
         public void Activate(Puzzle puzzle)
         {
-            CustomDebug.Log(123);
             if (!puzzle.IsFinished)
                 puzzle.gameObject.SetActive(true);
             //TODO Надо как-то останавливать игру, делать паузу? Или перехватывать управление?
@@ -35,7 +34,6 @@ namespace Rescues
 
         public void Finish(Puzzle puzzle)
         {
-            Debug.Log("Finished");
             puzzle.IsFinished = true;
             Close(puzzle);
         }
@@ -45,7 +43,7 @@ namespace Rescues
             var specificPuzzle = puzzle as CircleMosaicPuzzle;
             if (specificPuzzle != null)
             {
-                var uncompleteCircles = specificPuzzle.Circles.FindAll(e => Mathf.Abs(e.Angle % 360) != 0);
+                var uncompleteCircles = specificPuzzle.Circles.FindAll(e => !e.IsComplete());
                 if (uncompleteCircles.Count == 0)
                     Finish(specificPuzzle);
             }
