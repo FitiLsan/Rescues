@@ -14,6 +14,8 @@ namespace Rescues
     [Serializable]
     public struct CircleMoveScheme
     {
+        [Range(0, 360)]
+        public int InitialAngle;
         [ArrayElementTitleAttribute("Rule")]
         public Rules[] Rules;
     }

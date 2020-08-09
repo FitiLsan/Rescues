@@ -16,15 +16,21 @@ MonoBehaviour:
   Icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   Angle: 45
   Circles:
-  - Rules: []
-  - Rules:
+  - InitialAngle: 45
+    Rules: []
+  - InitialAngle: 90
+    Rules:
     - Rule: {x: 5, y: -1}
-  - Rules:
+  - InitialAngle: 0
+    Rules:
     - Rule: {x: 2, y: 1}
-  - Rules:
+  - InitialAngle: 45
+    Rules:
     - Rule: {x: 1, y: -2}
-  - Rules:
+  - InitialAngle: 180
+    Rules:
     - Rule: {x: 5, y: 1}
-  - Rules:
+  - InitialAngle: 90
+    Rules:
     - Rule: {x: 4, y: 1}
     - Rule: {x: 2, y: -2}

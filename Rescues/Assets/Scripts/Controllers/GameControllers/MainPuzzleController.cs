@@ -43,7 +43,7 @@ namespace Rescues
                     {
                         var puzzleInstance = GameObject.Instantiate(puzlleBehaviour.Puzzle, canvas.transform);
                         puzlleBehaviour.Puzzle = puzzleInstance;
-                        somePuzzleController.Key.Initialize(puzzleInstance);
+                        somePuzzleController.Key.Initialize(puzzleInstance, puzlleBehaviour);
                     }
                 }
             }

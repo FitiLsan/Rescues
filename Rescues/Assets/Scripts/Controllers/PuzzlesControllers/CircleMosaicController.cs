@@ -1,4 +1,6 @@
-﻿namespace Rescues
+﻿using UnityEngine;
+
+namespace Rescues
 {
     public class CircleMosaicController : IPuzzleController
     {
@@ -13,6 +15,8 @@
             puzzle.CheckCompleted += CheckComplete;
             puzzle.ResetValuesToDefault += ResetValues;
 
+            var circlePuzzle = puzzle as CircleMosaicPuzzle;
+            circlePuzzle.Initialize(puzzleBehaviour.PuzzleData as CircleMosaicData);
             Close(puzzle);
         }
 
@@ -31,6 +35,7 @@
 
         public void Finish(Puzzle puzzle)
         {
+            Debug.Log("Finished");
             puzzle.IsFinished = true;
             Close(puzzle);
         }
@@ -40,15 +45,9 @@
             var specificPuzzle = puzzle as CircleMosaicPuzzle;
             if (specificPuzzle != null)
             {
-                //var checkCounter = 0;
-                //for (int i = 0; i < specificPuzzle.Connectors.Count; i++)
-                //{
-                //    if (specificPuzzle.Connectors[i].IsCorrectWire)
-                //        checkCounter++;
-                //}
-
-                //if (checkCounter == specificPuzzle.Connectors.Count - 1)
-                //    Finish(specificPuzzle);
+                var uncompleteCircles = specificPuzzle.Circles.FindAll(e => Mathf.Abs(e.Angle % 360) != 0);
+                if (uncompleteCircles.Count == 0)
+                    Finish(specificPuzzle);
             }
         }
 

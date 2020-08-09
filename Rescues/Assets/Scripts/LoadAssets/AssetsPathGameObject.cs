@@ -19,6 +19,12 @@ namespace Rescues
             { ScreenType.GameOver, "Prefabs/UI/Screen/Prefabs_UI_Screen_GameOver" },
         };
 
+        public static readonly Dictionary<MosaicPuzzleAssets, string> MosaicPuzzleParts = new Dictionary<MosaicPuzzleAssets, string>()
+        {
+            { MosaicPuzzleAssets.RotatingCircle, "Prefabs/Puzzles/CircleMosaicPuzzle/RotatingCircle" },
+            { MosaicPuzzleAssets.Buttons, "Prefabs/Puzzles/CircleMosaicPuzzle/RotationButtons" },
+        };
+
         #endregion
     }
 }

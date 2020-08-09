@@ -146,7 +146,7 @@ namespace Rescues
 
         public void StateHandler()
         {
-            CustomDebug.Log(PlayerState);
+            //CustomDebug.Log(PlayerState);
             switch (_state)
             {                              
                 case State.Moving:
