@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c0cc75405f2044c8a9284b9411ec91, type: 3}
   m_Name: TestMosaic
   m_EditorClassIdentifier: 
-  Name: 
+  Name: test
   Icon: {fileID: 0}
   Angle: 45
-  Circles: []
+  Circles:
+  - InitialAngle: 45
+    Rules: []
+  - InitialAngle: 90
+    Rules: []
+  - InitialAngle: 180
+    Rules: []

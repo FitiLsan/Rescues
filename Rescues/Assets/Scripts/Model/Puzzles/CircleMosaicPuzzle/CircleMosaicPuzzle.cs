@@ -27,6 +27,7 @@ namespace Rescues
 
         #endregion
 
+
         #region Methods
 
         public void Initialize(CircleMosaicData data)
@@ -34,6 +35,7 @@ namespace Rescues
             var circlesData = data.Circles;
 
             CreateRotatingCircles(circlesData.Length);
+            CreateButtons();
 
             for (int i = 0; i < circlesData.Length; i++)
             {
@@ -65,7 +67,10 @@ namespace Rescues
 
                 _circles.Add(circleObject);
             }
+        }
 
+        private void CreateButtons()
+        {
             var buttonsAsset = Resources.Load<GameObject>(AssetsPathGameObject.MosaicPuzzleParts[MosaicPuzzleAssets.Buttons]);
             var buttonsObject = Instantiate(buttonsAsset, transform);
 
