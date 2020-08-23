@@ -27,22 +27,23 @@ namespace Rescues
         public void Initialize()
         {
             var puzzleInteracts = _context.GetTriggers(InteractableObjectType.Puzzle);
-            var canvas = Object.FindObjectOfType<Canvas>();
+            var mainPuzzleParent = Object.Instantiate(new GameObject("Puzzles"));
             var puzzleControllers = new PuzzlesControllers();
 
             foreach (var trigger in puzzleInteracts)
             {
-                var puzlleBehaviour = trigger as PuzzleBehaviour;
-                puzlleBehaviour.OnFilterHandler += OnFilterHandler;
-                puzlleBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
-                puzlleBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
+                var puzzleBehaviour = trigger as PuzzleBehaviour;
+                puzzleBehaviour.OnFilterHandler += OnFilterHandler;
+                puzzleBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
+                puzzleBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
 
                 foreach (var somePuzzleController in puzzleControllers.ControllersList)
                 {
-                    if (somePuzzleController.Value == puzlleBehaviour.Puzzle.GetType())
+                    if (somePuzzleController.Value == puzzleBehaviour.Puzzle.GetType())
                     {
-                        var puzzleInstance = GameObject.Instantiate(puzlleBehaviour.Puzzle, canvas.transform);
-                        puzlleBehaviour.Puzzle = puzzleInstance;
+                        var puzzleInstance = GameObject.Instantiate(puzzleBehaviour.Puzzle, mainPuzzleParent.transform);
+                        
+                        puzzleBehaviour.Puzzle = puzzleInstance;
                         somePuzzleController.Key.Initialize(puzzleInstance);
                     }
                 }
@@ -56,13 +57,13 @@ namespace Rescues
 
         public void TearDown()
         {
-            var puzlles = _context.GetTriggers(InteractableObjectType.Puzzle);
-            foreach (var trigger in puzlles)
+            var puzzles = _context.GetTriggers(InteractableObjectType.Puzzle);
+            foreach (var trigger in puzzles)
             {
-                var puzlleBehaviour = trigger as PuzzleBehaviour;
-                puzlleBehaviour.OnFilterHandler -= OnFilterHandler;
-                puzlleBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
-                puzlleBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
+                var puzzleBehaviour = trigger as PuzzleBehaviour;
+                puzzleBehaviour.OnFilterHandler -= OnFilterHandler;
+                puzzleBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
+                puzzleBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
             }
         }
 

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 namespace Rescues
@@ -11,9 +10,14 @@ namespace Rescues
         #region Fileds
 
         public event Action Connected = () => { };
-        
+
         [SerializeField] private int _applyNumber;
         private int _connectedPapaConnectorHash;
+
+#if UNITY_EDITOR
+        private SpriteRenderer _image;
+        private Color _baseColor;
+#endif
 
         #endregion
 
@@ -22,35 +26,28 @@ namespace Rescues
 
         public bool IsBusy { get; private set; } = false;
         public bool IsCorrectWire { get; private set; } = false;
-        
-        public Vector2 Position
-        {
-            get => transform.position;
-        }
 
-        public int ApplyNumber
-        {
-            get => _applyNumber;
-        }
+        public Vector2 Position => transform.position;
+
+        public int ApplyNumber => _applyNumber;
 
         #endregion
 
 
         #region UnityMethods
-
-        private void OnGUI()
+        
+#if UNITY_EDITOR
+        private void Awake()
         {
-            var image = GetComponent<Image>();
-            image.color = IsCorrectWire == false ? Color.gray : Color.green;
-        }
-
-        private void OnValidate()
-        {
+            _image = GetComponent<SpriteRenderer>();
+            _baseColor = _image.color;
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
-
+#endif
+        
         private void OnTriggerStay2D(Collider2D other)
         {
+            Debug.Log("Trigger on enter");
             var papaConnector = other.GetComponent<PapaConnector>();
             if (papaConnector == null) return;
 
@@ -70,6 +67,13 @@ namespace Rescues
                     }
                 }
             }
+            
+#if UNITY_EDITOR
+            if (IsBusy)
+                _image.color = IsCorrectWire == false ? Color.red : Color.green;
+            else
+                _image.color = _baseColor;
+#endif
         }
 
         #endregion

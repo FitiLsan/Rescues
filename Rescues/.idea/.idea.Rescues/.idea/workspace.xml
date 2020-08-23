@@ -70,13 +70,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48bd36b2-45ba-4ddc-be59-218c2703d472" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/MamaConnector.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/MamaConnector.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/Wire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/Wire.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/WiresPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/WiresPuzzle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaivour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaivour.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaviour.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +107,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/HidingPlaceData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/677C6EA6-6F79-45A4-B466-8781ED07AF7B/b3/d1eee22c/IBeginDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAssets/Type/GameObjectType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screen/MainMenu/MainMenuBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAssets/AssetsPathGameObject.cs" root0="FORCE_HIGHLIGHTING" />
@@ -135,6 +143,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/InitializeInteractableObjectController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/DoorTeleporterController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Art/Textures/Rooms/7_MaIVM15vc.jpg.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CustomButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/Behaviours/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PlayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
@@ -179,8 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemaining.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/ITimeRemaining.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/TrapData.cs" />
@@ -211,7 +218,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Connector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainControllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Context/GameContext.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/Wires/WiresController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/PuzzleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/InteractableObject/MainPuzzleController.cs" />
@@ -219,17 +225,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadAssets/AssetsPathGameObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadAssets/Type/GameObjectType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/PuzzlesControllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaivour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/CustomButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs" />
       </list>
     </option>
   </component>
@@ -285,6 +294,7 @@
       <workItem from="1596266290778" duration="36574000" />
       <workItem from="1596576584545" duration="9643000" />
       <workItem from="1596710808505" duration="1133000" />
+      <workItem from="1598129691287" duration="16438000" />
     </task>
     <servers />
   </component>

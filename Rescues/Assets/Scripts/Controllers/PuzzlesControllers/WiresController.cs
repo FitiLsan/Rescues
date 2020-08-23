@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Rescues
 {
     public class WiresController : IPuzzleController
@@ -18,8 +20,14 @@ namespace Rescues
 
         public void Activate(Puzzle puzzle)
         {
-            if (!puzzle.IsFinished)
-                puzzle.gameObject.SetActive(true);
+            if (puzzle.IsFinished) return;
+            
+            var puzzlePosition = Camera.main.transform.position;
+            //изощерения с Z из-за непонятности с камерой и расположением объектов на сцене
+            puzzlePosition.z += 2;
+            puzzle.transform.position = puzzlePosition;
+            puzzle.gameObject.SetActive(true);
+            
             //TODO Надо как-то останавливать игру, делать паузу? Или перехватывать управление?
         }
 

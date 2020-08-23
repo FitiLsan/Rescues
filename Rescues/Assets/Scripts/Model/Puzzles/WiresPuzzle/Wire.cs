@@ -1,79 +1,78 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 
 namespace Rescues
 {
-    public class Wire : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class Wire : MonoBehaviour
     {
-
         #region Fileds
-        
-        public Transform StartPoint;
-        public Transform EndPoint;
-        
-        [SerializeField] private int _number;
-        private bool _isMoving = false;
 
+        private const float MIDDLE_X_DIVIDDER = 6;
+        private const float MIDDLE_Y_DIVIDDER = 2;
+        private const int COUNT_WIRE_PARTS = 3;
+        
+        [SerializeField] private Transform _startPoint;
+        [SerializeField] private Transform _middlePoint;
+        [SerializeField] private Transform _endPoint;
+        [SerializeField] private int _number;
+
+        private LineRenderer _lineRenderer;
+        private Vector3 _endPointRemeber = Vector3.zero;
+        
         #endregion
 
 
         #region Properties
 
-        public int Number
-        {
-            get => _number;
-            private set => value = _number;
-        }
+        public int Number => _number;
 
-        public bool IsConected { get; private set; }
 
-        public bool IsMoving
-        {
-            get => _isMoving;
-            private set => _isMoving = value;
-        }
-
-        #endregion
+#endregion
 
         #region UnityMethods
 
         private void OnValidate()
         {
-            var collider = EndPoint.GetComponent<BoxCollider2D>();
+            var collider = _endPoint.GetComponent<BoxCollider2D>();
             if (collider == null)
-                EndPoint.gameObject.AddComponent<BoxCollider2D>();
-        }
-        
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawLine(StartPoint.position, EndPoint.position);
+                _endPoint.gameObject.AddComponent<BoxCollider2D>();
         }
 
+        private void Awake()
+        {
+            _lineRenderer = GetComponent<LineRenderer>();
+            _lineRenderer.positionCount = COUNT_WIRE_PARTS;
+        }
+
+        private void FixedUpdate()
+        {
+            _lineRenderer.SetPosition(0, _startPoint.position);
+            _lineRenderer.SetPosition(1, _middlePoint.position);
+            _lineRenderer.SetPosition(2, _endPoint.position);
+        }
 
         #endregion
 
         //TODO Сделать так, чтобы провода нельзя было вытащить за игровую поверхность пазла
+
         #region Methods
 
-        public void OnBeginDrag(PointerEventData eventData)
+        public void SetEndPointRemeber()
         {
-            _isMoving = true;
+            _endPointRemeber = _endPoint.position;
         }
         
-        public void OnDrag(PointerEventData eventData)
+        public void MoveWire(Vector3 cursorPosition)
         {
-            EndPoint.position = Input.mousePosition;
-            
-        }
-        
-        public void OnEndDrag(PointerEventData eventData)
-        {
-            _isMoving = false;
+            _endPoint.position = cursorPosition;
+            var positionDelta = _endPoint.position - _endPointRemeber;
+            var newMiddlePosition = _middlePoint.localPosition;
+            newMiddlePosition.x += positionDelta.x / MIDDLE_X_DIVIDDER;
+            newMiddlePosition.y += positionDelta.y / MIDDLE_Y_DIVIDDER;
+            _middlePoint.localPosition = newMiddlePosition;
+            _endPointRemeber = _endPoint.position;
         }
 
         #endregion
-      
     }
 }

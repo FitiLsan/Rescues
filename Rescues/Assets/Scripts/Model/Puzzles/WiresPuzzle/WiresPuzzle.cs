@@ -14,10 +14,7 @@ namespace Rescues
         
         #region  Propeties
 
-        public List<MamaConnector> Connectors
-        {
-            get => _connectors;
-        }
+        public List<MamaConnector> Connectors => _connectors;
 
         #endregion
 

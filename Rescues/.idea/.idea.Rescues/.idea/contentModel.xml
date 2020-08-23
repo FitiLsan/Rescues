@@ -4,6 +4,7 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="CustomButton.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
             <e p="Modules" t="Include">
@@ -138,6 +139,7 @@
               <e p="Puzzle.cs" t="Include" />
               <e p="WiresPuzzle" t="Include">
                 <e p="MamaConnector.cs" t="Include" />
+                <e p="MiddleWirePoint.cs" t="Include" />
                 <e p="PapaConnector.cs" t="Include" />
                 <e p="Wire.cs" t="Include" />
                 <e p="WiresPuzzle.cs" t="Include" />
