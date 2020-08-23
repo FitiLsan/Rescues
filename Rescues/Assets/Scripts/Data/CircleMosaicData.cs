@@ -16,6 +16,7 @@ namespace Rescues
     {
         [Range(0, 360)]
         public int InitialAngle;
+        public Sprite Image;
         [ArrayElementTitleAttribute("Rule")]
         public Rules[] Rules;
     }

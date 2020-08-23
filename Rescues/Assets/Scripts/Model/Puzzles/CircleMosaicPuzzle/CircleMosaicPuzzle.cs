@@ -49,17 +49,19 @@ namespace Rescues
             circle.Selected += OnCircleSelected;
             circle.Rotated += OnCircleRotated;
 
+            var image = circle.gameObject.GetComponent<Image>();
+            image.sprite = scheme.Image;
             _rules.Add(circle, scheme.Rules);
         }
 
         private void CreateRotatingCircles(int count)
         {
-            for (int i = 0; i < count; i++)
+            for (int i = count - 1; i >= 0; i--)
             {
                 var circleAsset = Resources.Load<GameObject>(AssetsPathGameObject.MosaicPuzzleParts[MosaicPuzzleAssets.RotatingCircle]);
 
                 var circleParentObject = Instantiate(circleAsset, transform);
-
+                circleParentObject.transform.SetAsFirstSibling();
                 var circleObject = circleParentObject.GetComponentInChildren<RotatingCircle>();
                 RectTransform rt = circleObject.GetComponent<RectTransform>();
                 var size = rt.sizeDelta;
@@ -67,6 +69,8 @@ namespace Rescues
 
                 _circles.Add(circleObject);
             }
+            var closeButton = GetComponentInChildren<Button>();
+            closeButton.gameObject.transform.SetAsFirstSibling();
         }
 
         private void CreateButtons()
@@ -118,7 +122,7 @@ namespace Rescues
         {
             foreach (var rule in circleRules)
             {
-                _circles[(int)rule.Rule.x].ManualRotate(isRight, (int)rule.Rule.y);
+                _circles[(int)rule.Rule.x - 1].ManualRotate(isRight, (int)rule.Rule.y);
             }
         }
 
