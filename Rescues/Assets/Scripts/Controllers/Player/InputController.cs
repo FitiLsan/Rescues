@@ -69,6 +69,12 @@ namespace Rescues
 
                     }
                 }
+
+                var puzzleObject = GetInteractableObject<PuzzleBehaviour>(InteractableObjectType.Puzzle);
+                if (puzzleObject != null)
+                {
+                    puzzleObject.Puzzle.Activate();
+                }
             }
 
             if (Input.GetButtonUp("Inventory"))

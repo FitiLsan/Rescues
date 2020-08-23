@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c0cc75405f2044c8a9284b9411ec91, type: 3}
+  m_Name: TestMosaic
+  m_EditorClassIdentifier: 
+  Name: test
+  Icon: {fileID: 0}
+  Angle: 45
+  Circles:
+  - InitialAngle: 45
+    Rules: []
+  - InitialAngle: 90
+    Rules: []
+  - InitialAngle: 180
+    Rules: []
