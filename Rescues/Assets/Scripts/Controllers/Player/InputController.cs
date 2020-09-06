@@ -139,6 +139,16 @@ namespace Rescues
             {
                 _cameraServices.LockCamera();
             }
+
+            if (Input.GetButtonUp("Dialog"))
+            {
+                var dialogObject = GetInteractableObject<DialogNPCBehaviour>(InteractableObjectType.DialogBox);
+                if (dialogObject != null)
+                {
+                    _context.DialogBoxes.gameObject.SetActive(!_context.DialogBoxes.gameObject.activeSelf);
+                }
+            }
+
         }
 
         #endregion
