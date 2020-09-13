@@ -27,7 +27,7 @@ namespace Rescues
         public void Initialize()
         {
             var puzzleInteracts = _context.GetTriggers(InteractableObjectType.Puzzle);
-            var mainPuzzleParent = Object.Instantiate(new GameObject("Puzzles"));
+            var mainPuzzleParent = new GameObject("Puzzles");
             var puzzleControllers = new PuzzlesControllers();
 
             foreach (var trigger in puzzleInteracts)

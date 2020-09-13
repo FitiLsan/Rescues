@@ -1,3 +1,5 @@
+using System.Collections;
+
 namespace Rescues
 {
     public interface IPuzzleController : IController

@@ -12,12 +12,11 @@ namespace Rescues
         public event Action Connected = () => { };
 
         [SerializeField] private int _applyNumber;
+        [SerializeField] private Sprite _connected;
+        [SerializeField] private Sprite _disconnected;
         private int _connectedPapaConnectorHash;
-
-#if UNITY_EDITOR
-        private SpriteRenderer _image;
-        private Color _baseColor;
-#endif
+        private SpriteRenderer _spriteRenderer;
+        private PapaConnector _papaConnector;
 
         #endregion
 
@@ -35,45 +34,36 @@ namespace Rescues
 
 
         #region UnityMethods
-        
-#if UNITY_EDITOR
+
         private void Awake()
         {
-            _image = GetComponent<SpriteRenderer>();
-            _baseColor = _image.color;
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer.sprite = _disconnected;
             GetComponent<BoxCollider2D>().isTrigger = true;
         }
-#endif
-        
+
         private void OnTriggerStay2D(Collider2D other)
         {
-            Debug.Log("Trigger on enter");
-            var papaConnector = other.GetComponent<PapaConnector>();
-            if (papaConnector == null) return;
+            var newPapaConnector = other.GetComponent<PapaConnector>();
+            if (newPapaConnector == null) return;
 
-            if (!IsBusy && !papaConnector.IsMoving)
+            if (!IsBusy && !newPapaConnector.IsMoving)
             {
-                _connectedPapaConnectorHash = papaConnector.GetHashCode();
-                papaConnector.transform.position = transform.position;
-                Connect(papaConnector.Number);
+                _papaConnector = newPapaConnector;
+                _connectedPapaConnectorHash = _papaConnector.GetHashCode();
+                _spriteRenderer.sprite = _connected;
+                Connect(_papaConnector.Number);
             }
             else
             {
-                if (papaConnector.GetHashCode() == _connectedPapaConnectorHash)
+                if (newPapaConnector.GetHashCode() == _connectedPapaConnectorHash)
                 {
-                    if (IsBusy && papaConnector.IsMoving)
+                    if (IsBusy && _papaConnector.IsMoving)
                     {
                         Disconnect();
                     }
                 }
             }
-            
-#if UNITY_EDITOR
-            if (IsBusy)
-                _image.color = IsCorrectWire == false ? Color.red : Color.green;
-            else
-                _image.color = _baseColor;
-#endif
         }
 
         #endregion
@@ -84,14 +74,19 @@ namespace Rescues
         private void Connect(int wireNumber)
         {
             if (IsBusy) return;
-            Connected.Invoke();
+            _papaConnector.MoveWire(transform.position);
+            _papaConnector.SetSpriteConnector(false);
             IsCorrectWire = _applyNumber == wireNumber ? true : false;
             IsBusy = true;
+            Connected.Invoke();
         }
 
-        private void Disconnect()
+        public void Disconnect()
         {
             if (!IsBusy) return;
+            _papaConnector.SetSpriteConnector(true);
+            _papaConnector = null;
+            _spriteRenderer.sprite = _disconnected;
             _connectedPapaConnectorHash = 0;
             IsCorrectWire = false;
             IsBusy = false;

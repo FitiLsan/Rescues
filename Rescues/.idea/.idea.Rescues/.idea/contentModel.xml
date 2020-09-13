@@ -139,9 +139,9 @@
               <e p="Puzzle.cs" t="Include" />
               <e p="WiresPuzzle" t="Include">
                 <e p="MamaConnector.cs" t="Include" />
-                <e p="MiddleWirePoint.cs" t="Include" />
                 <e p="PapaConnector.cs" t="Include" />
                 <e p="Wire.cs" t="Include" />
+                <e p="WirePoint.cs" t="Include" />
                 <e p="WiresPuzzle.cs" t="Include" />
               </e>
             </e>

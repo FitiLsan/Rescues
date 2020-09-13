@@ -70,16 +70,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48bd36b2-45ba-4ddc-be59-218c2703d472" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WirePoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WirePoint.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rescues/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/WiresPuzzle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/WiresPuzzle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Prefabs_Player_Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Player/Prefabs_Player_Character.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/MamaConnector.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/MamaConnector.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/Wire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/Wire.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/WiresPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Puzzles/WiresPuzzle/WiresPuzzle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" afterDir="false" />
@@ -108,13 +116,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data/WayPointInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/677C6EA6-6F79-45A4-B466-8781ED07AF7B/b3/d1eee22c/IBeginDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAssets/Type/GameObjectType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Screen/MainMenu/MainMenuBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAssets/AssetsPathGameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IExecuteController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IReactiveController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WirePoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ICleanupController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/ITearDownController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -188,8 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TimeRemaining/TimeRemainingExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/TrapData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/TrapInfo.cs" />
@@ -225,20 +231,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadAssets/AssetsPathGameObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadAssets/Type/GameObjectType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/PuzzlesControllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaivour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Behaviour/PuzzleBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Player/InputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/CustomButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MiddleWirePoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WirePoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Materials/Wire.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/Wire.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameControllers/MainPuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/PapaConnector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/MamaConnector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/WiresPuzzle/WiresPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IPuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Puzzles/Puzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" />
       </list>
     </option>
   </component>
@@ -254,6 +262,8 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -266,10 +276,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="92482">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="92482" />
       <method v="2" />
     </configuration>
   </component>
@@ -294,7 +304,9 @@
       <workItem from="1596266290778" duration="36574000" />
       <workItem from="1596576584545" duration="9643000" />
       <workItem from="1596710808505" duration="1133000" />
-      <workItem from="1598129691287" duration="16438000" />
+      <workItem from="1598129691287" duration="35160000" />
+      <workItem from="1599939802850" duration="883000" />
+      <workItem from="1599941626641" duration="10704000" />
     </task>
     <servers />
   </component>
@@ -327,16 +339,15 @@
       <screen x="0" y="23" width="2560" height="974" />
     </state>
     <state x="479" y="140" key="SettingsEditor/0.23.2560.974@0.23.2560.974" timestamp="1596464025864" />
-    <state x="129" y="106" width="2303" height="809" key="VCS.FileHistoryDialog" timestamp="1596557217676">
-      <screen x="0" y="23" width="2560" height="974" />
+    <state x="-369" y="-967" width="2303" height="878" key="VCS.FileHistoryDialog" timestamp="1599953039597">
+      <screen x="-498" y="-1057" width="2560" height="1057" />
     </state>
-    <state x="129" y="106" width="2303" height="809" key="VCS.FileHistoryDialog/0.23.2560.974@0.23.2560.974" timestamp="1596557217676" />
-    <state x="185" y="92" width="1643" height="896" key="VCS.FileHistoryDialog/93.0.1827.1080@93.0.1827.1080" timestamp="1588260551153" />
+    <state x="-369" y="-967" width="2303" height="878" key="VCS.FileHistoryDialog/0.23.1680.944/-498.-1057.2560.1057@-498.-1057.2560.1057" timestamp="1599953039597" />
+    <state x="129" y="106" width="2303" height="809" key="VCS.FileHistoryDialog/0.23.2560.974@0.23.2560.974" timestamp="1598387859988" />
     <state x="799" y="197" width="942" height="610" key="search.everywhere.popup" timestamp="1596607379302">
       <screen x="0" y="23" width="2560" height="974" />
     </state>
     <state x="799" y="197" width="942" height="610" key="search.everywhere.popup/0.23.2560.974@0.23.2560.974" timestamp="1596607379302" />
-    <state x="663" y="193" width="672" height="676" key="search.everywhere.popup/93.0.1827.1080@93.0.1827.1080" timestamp="1588260816369" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -345,6 +356,19 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs</url>
+          <line>64</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Controllers/PuzzlesControllers/WiresController.cs" initialLine="64">
+            <startOffsets>
+              <option value="1807" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1863" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

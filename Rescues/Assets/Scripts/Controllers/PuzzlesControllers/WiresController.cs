@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Dynamic;
+using System.Linq;
 using UnityEngine;
 
 namespace Rescues
@@ -15,7 +18,7 @@ namespace Rescues
             puzzle.CheckCompleted += CheckComplete;
             puzzle.ResetValuesToDefault += ResetValues;
             
-            Close(puzzle);
+            puzzle.ForceClose();
         }
 
         public void Activate(Puzzle puzzle)
@@ -23,45 +26,47 @@ namespace Rescues
             if (puzzle.IsFinished) return;
             
             var puzzlePosition = Camera.main.transform.position;
-            //изощерения с Z из-за непонятности с камерой и расположением объектов на сцене
-            puzzlePosition.z += 2;
+            puzzlePosition.z = 0;
             puzzle.transform.position = puzzlePosition;
             puzzle.gameObject.SetActive(true);
-            
-            //TODO Надо как-то останавливать игру, делать паузу? Или перехватывать управление?
         }
 
         public void Close(Puzzle puzzle)
         {
-            puzzle.gameObject.SetActive(false);
+            puzzle.Close();
         }
 
         public void Finish(Puzzle puzzle)
         {
             puzzle.IsFinished = true;
+            puzzle.Finish();
             Close(puzzle);
         }
 
         public void CheckComplete(Puzzle puzzle)
         {
             var specificPuzzle = puzzle as WiresPuzzle;
-            if (specificPuzzle != null)
-            {
-                var checkCounter = 0;
-                for (int i = 0; i < specificPuzzle.Connectors.Count; i++)
-                {
-                    if (specificPuzzle.Connectors[i].IsCorrectWire)
-                        checkCounter++;
-                }
-
-                if (checkCounter == specificPuzzle.Connectors.Count - 1)
-                    Finish(specificPuzzle);
-            }
+            if (specificPuzzle != null && specificPuzzle.Connectors.All(s => s.IsCorrectWire))
+                Finish(specificPuzzle);
         }
         
         public void ResetValues(Puzzle puzzle)
         {
-           //TODO
+            var specificPuzzle = puzzle as WiresPuzzle;
+            if (specificPuzzle != null)
+            {
+                var startPositions = specificPuzzle.StartPositions;
+                foreach (var  wirePoint in  specificPuzzle.WirePoints)
+                {
+                    var hash = startPositions.Keys.First(w => w == wirePoint.GetHashCode());
+                    wirePoint.transform.localPosition = startPositions[hash];
+                }
+
+                foreach (var connector in specificPuzzle.Connectors)
+                {
+                    connector.Disconnect();
+                }
+            }
         }
         
         #endregion

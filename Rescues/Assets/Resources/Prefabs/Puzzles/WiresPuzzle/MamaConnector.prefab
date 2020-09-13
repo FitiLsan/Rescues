@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _applyNumber: 1
+  _connected: {fileID: -4686291600744832684, guid: b6baba7ceba26964aa8d53afab571e7b,
+    type: 3}
+  _disconnected: {fileID: -1908917441894216810, guid: b6baba7ceba26964aa8d53afab571e7b,
+    type: 3}
 --- !u!212 &2638400243277953540
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -86,7 +90,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 5de33fd9fa6ca2243871496e8d4723dd, type: 3}
-  m_Color: {r: 0, g: 0.5200343, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

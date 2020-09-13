@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 
 namespace Rescues
@@ -8,6 +10,8 @@ namespace Rescues
         #region Fileds
         
         private List<MamaConnector> _connectors = new List<MamaConnector>();
+        private Dictionary<int, Vector2> _startPositions = new Dictionary<int, Vector2>();
+        private List<WirePoint> _wirePoints = new List<WirePoint>();
         
         #endregion
         
@@ -15,7 +19,9 @@ namespace Rescues
         #region  Propeties
 
         public List<MamaConnector> Connectors => _connectors;
-
+        public Dictionary<int, Vector2> StartPositions => _startPositions;
+        public List<WirePoint> WirePoints => _wirePoints;
+        
         #endregion
 
 
@@ -27,7 +33,19 @@ namespace Rescues
             foreach (var connector in connectors)
             {
                 _connectors.Add(connector);
-                connector.Connected += CheckComplete;
+                //connector.Connected += CheckComplete;
+            }
+        }
+
+        private void OnEnable()
+        {
+            if (_startPositions.Count == 0)
+            {
+                _wirePoints = GetComponentsInChildren<WirePoint>().ToList();
+                foreach (var wirePoint in _wirePoints)
+                {
+                    _startPositions.Add(wirePoint.GetHashCode(), wirePoint.transform.localPosition);
+                }
             }
         }
 

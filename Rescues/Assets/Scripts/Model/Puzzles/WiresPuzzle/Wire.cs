@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -7,17 +9,19 @@ namespace Rescues
     {
         #region Fileds
 
-        private const float MIDDLE_X_DIVIDDER = 6;
-        private const float MIDDLE_Y_DIVIDDER = 2;
-        private const int COUNT_WIRE_PARTS = 3;
-        
-        [SerializeField] private Transform _startPoint;
-        [SerializeField] private Transform _middlePoint;
-        [SerializeField] private Transform _endPoint;
         [SerializeField] private int _number;
+        [SerializeField] private PapaConnector _papaConnector;
+        [SerializeField] private List<WirePoint> _points;
+        [Space] [Header("Wire visual")] 
+        [SerializeField, Range(0.01f, 0.5f)] private float _resolution = 0.0166f;
+        [Space] [Header("Wire drag settings")] 
+        [SerializeField] private float _middleXDividder = 2;
+        [SerializeField] private float _middleYDividder = 2;
+        [SerializeField] private float _deltaDividder = 2;
 
         private LineRenderer _lineRenderer;
-        private Vector3 _endPointRemeber = Vector3.zero;
+        private Vector2 _endPointRemeber;
+        private bool _canDraw;
         
         #endregion
 
@@ -26,53 +30,105 @@ namespace Rescues
 
         public int Number => _number;
 
+        #endregion
 
-#endregion
 
         #region UnityMethods
 
-        private void OnValidate()
+        private void OnDrawGizmos()
         {
-            var collider = _endPoint.GetComponent<BoxCollider2D>();
-            if (collider == null)
-                _endPoint.gameObject.AddComponent<BoxCollider2D>();
+            if (_points.Count > 0)
+            {
+                var drawPoints = GetDrawingPoints();
+                for (int i = 0; i < drawPoints.Count; i++)
+                {
+                    if (i == drawPoints.Count - 1) continue;
+                    Gizmos.color = Color.red;
+                    Gizmos.DrawLine(drawPoints[i], drawPoints[i + 1]);
+                }
+            }
         }
 
         private void Awake()
         {
             _lineRenderer = GetComponent<LineRenderer>();
-            _lineRenderer.positionCount = COUNT_WIRE_PARTS;
+            var arrayPoints = GetDrawingPoints().ToArray();
+            _lineRenderer.positionCount = arrayPoints.Length;
+            DrawWire();
+        }
+
+        private void Update()
+        {
+            _canDraw = _papaConnector.IsMoving ||
+                       _points.Last(a => a.transform.position != _papaConnector.transform.position);
         }
 
         private void FixedUpdate()
         {
-            _lineRenderer.SetPosition(0, _startPoint.position);
-            _lineRenderer.SetPosition(1, _middlePoint.position);
-            _lineRenderer.SetPosition(2, _endPoint.position);
+            if (_canDraw)
+                DrawWire();
         }
 
         #endregion
 
-        //TODO Сделать так, чтобы провода нельзя было вытащить за игровую поверхность пазла
-
+        
         #region Methods
-
-        public void SetEndPointRemeber()
+        
+        private List<Vector3> GetDrawingPoints()
         {
-            _endPointRemeber = _endPoint.position;
+            List<Vector3> drawingPoints = new List<Vector3>();
+            for (int i = 0; i < _points.Count; i++)
+            {
+                if (i == _points.Count - 1) continue;
+
+                for (float resolutionParts = 0; resolutionParts < 1; resolutionParts += _resolution)
+                {
+                    var p1 = Vector2.Lerp(_points[i].Position, _points[i].ExitPos, resolutionParts);
+                    var p2 = Vector2.Lerp(_points[i].ExitPos, _points[i + 1].EnterPos, resolutionParts);
+                    var p3 = Vector2.Lerp(_points[i + 1].EnterPos, _points[i + 1].Position, resolutionParts);
+
+                    var p12 = Vector2.Lerp(p1, p2, resolutionParts);
+                    var p23 = Vector2.Lerp(p2, p3, resolutionParts);
+
+                    var p4 = Vector2.Lerp(p12, p23, resolutionParts);
+                    drawingPoints.Add(p4);
+                }
+            }
+
+            return drawingPoints;
         }
         
-        public void MoveWire(Vector3 cursorPosition)
+        public void SetEndPointRemeber()
         {
-            _endPoint.position = cursorPosition;
-            var positionDelta = _endPoint.position - _endPointRemeber;
-            var newMiddlePosition = _middlePoint.localPosition;
-            newMiddlePosition.x += positionDelta.x / MIDDLE_X_DIVIDDER;
-            newMiddlePosition.y += positionDelta.y / MIDDLE_Y_DIVIDDER;
-            _middlePoint.localPosition = newMiddlePosition;
-            _endPointRemeber = _endPoint.position;
+            _endPointRemeber = _points[_points.Count - 1].Position;
         }
 
+        public void MoveWire(Vector2 newPosition)
+        {
+            _points[_points.Count - 1].Position = newPosition;
+            var positionDelta = newPosition - _endPointRemeber;
+
+            for (int i = _points.Count - 2; i >= 0; i--)
+            {
+                if (i == 0)
+                    continue;
+
+                var pointPosition = _points[i].Position;
+                pointPosition.x += positionDelta.x / _middleXDividder;
+                pointPosition.y += positionDelta.y / _middleYDividder;
+                _points[i].Position = pointPosition;
+                positionDelta /= _deltaDividder;
+            }
+
+            _endPointRemeber = newPosition;
+        }
+
+        private void DrawWire()
+        {
+            Vector3[] arrayPoints = GetDrawingPoints().ToArray();
+            _lineRenderer.SetPositions(arrayPoints);
+        }
+        
         #endregion
     }
 }
