@@ -58,10 +58,10 @@ namespace Rescues
 
         private void OnMouseDrag()
         {
-            var cursorPostion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if (_dragbleBounds.OverlapPoint(cursorPostion))
-                _wire.MoveWire(cursorPostion);
+            if (_dragbleBounds.OverlapPoint(cursorPosition))
+                MoveWire(cursorPosition);
         }
 
         private void OnMouseUp()

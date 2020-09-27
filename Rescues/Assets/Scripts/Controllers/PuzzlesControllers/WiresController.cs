@@ -39,7 +39,6 @@ namespace Rescues
         public void Finish(Puzzle puzzle)
         {
             puzzle.IsFinished = true;
-            puzzle.Finish();
             Close(puzzle);
         }
 

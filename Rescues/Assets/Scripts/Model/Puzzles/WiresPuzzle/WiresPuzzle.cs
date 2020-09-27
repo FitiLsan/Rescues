@@ -33,6 +33,7 @@ namespace Rescues
             foreach (var connector in connectors)
             {
                 _connectors.Add(connector);
+                // Убери коммент, чтобы првоерять завршен ли пазл каждое присоедениее провода
                 //connector.Connected += CheckComplete;
             }
         }

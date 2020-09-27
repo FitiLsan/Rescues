@@ -61,10 +61,7 @@ namespace Rescues
         {
             _canDraw = _papaConnector.IsMoving ||
                        _points.Last(a => a.transform.position != _papaConnector.transform.position);
-        }
-
-        private void FixedUpdate()
-        {
+            
             if (_canDraw)
                 DrawWire();
         }

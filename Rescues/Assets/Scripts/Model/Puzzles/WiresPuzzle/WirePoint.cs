@@ -89,7 +89,7 @@ namespace Rescues
                     _enterPointPositionRemeber = EnterLocalPos;
                 }
 
-                Gizmos.color = Color.green;
+                Gizmos.color = Color.yellow;
                 Gizmos.DrawLine(_enterPoint.transform.position, _exitPoint.transform.position);
             }
         }
