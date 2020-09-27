@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace Rescues
 {
+    /// <summary>
+    /// От этого класса наследуются модели пазлов
+    /// </summary>
     public abstract class Puzzle : MonoBehaviour
     {
         #region Fileds
