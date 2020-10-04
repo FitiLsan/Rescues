@@ -27,7 +27,6 @@ namespace Rescues
         public void Initialize()
         {
             var resources = Resources.Load<EnemyBehaviour>(AssetsPathGameObject.Object[GameObjectType.Enemy]);
-            var enemyData = resources.EnemyData;
 
             var enemyObject = Object.Instantiate(resources, Vector3.zero, Quaternion.identity);
             _context.Enemy = enemyObject;

@@ -36,8 +36,6 @@ namespace Rescues
             {
                 throw new Exception("На сцене не установлены объекты wayPoints для ИИ, долбо...");
             }
-
-            //_context.Enemy.WayPoints = wayPoints;
         }
 
         #endregion
