@@ -13,6 +13,7 @@
             Add(new ItemActiveController(context, services));
             Add(new DoorTeleporterController(context, services));
             Add(new HidingPlaceController(context, services));
+            Add(new StandController(context, services));
             Add(new EnemyVisionController(context, services));
             Add(new EnemyMoveController(context, services));
             Add(new InputController(context, services));
