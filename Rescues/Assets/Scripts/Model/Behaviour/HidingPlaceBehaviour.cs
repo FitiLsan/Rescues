@@ -8,7 +8,6 @@ namespace Rescues
         #region Fields
         
         public HidingPlaceData HidingPlaceData;
-        public SpriteRenderer HidedSprite;
 
         #endregion
     }

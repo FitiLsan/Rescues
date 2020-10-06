@@ -1,5 +1,4 @@
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 
 
 namespace Rescues
@@ -8,12 +7,9 @@ namespace Rescues
     {
         #region Fields
 
-        public EventSystem eventSystem;
-
         private readonly GameContext _context;
         private readonly CameraServices _cameraServices;
-        private GameObject _interfaceWindow;
-       
+
         #endregion
 
 
@@ -79,66 +75,23 @@ namespace Rescues
                 _context.Inventory.gameObject.SetActive(!_context.Inventory.gameObject.activeSelf);
             }
 
-            if (Input.GetButtonUp("Use"))
+            if (Input.GetButtonDown("Use"))
             {
                 var puzzleObject = GetInteractableObject<PuzzleBehaviour>(InteractableObjectType.Puzzle);
                 if (puzzleObject != null)
                 {
                     puzzleObject.Puzzle.Activate();
                 }
-                              
-                var hidingPlace = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
-
+                
+                var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
                 if (_context.Character.PlayerState == State.Hiding)
                 {
-                    _context.Character.StateHideAnimation(hidingPlace);
+                    _context.Character.StateHideAnimation(interactableObject);
                 }
-
-                if (hidingPlace != null)
+                
+                if (interactableObject != null)
                 {
-                    _context.Character.StateHideAnimation(hidingPlace);
-                }
-
-                var stand = GetInteractableObject<StandBehaviour>(InteractableObjectType.Stand);
-                if (stand != null)
-                {
-                    _interfaceWindow = stand.StandWindow.gameObject;
-                    _interfaceWindow.SetActive(true);
-                    EventSystem.current.SetSelectedGameObject(_interfaceWindow.GetComponent<StandUI>().StandItemSlots[0].gameObject);
-                    Time.timeScale = 0f;
-                }
-            }
-
-           
-            if (Input.GetMouseButtonUp(0))
-            {
-                if (_interfaceWindow != null)
-                {
-                    var item = _interfaceWindow.GetComponent<StandUI>();
-                    if (item != null && !item.IsMouseIn && item.IsItemOpened)
-                    {
-                        item.CloseStandItemWindow();
-                    }
-                    else if (item != null && !item.IsMouseIn)
-                    {
-                        CloseInterfaceWindow();
-                    }
-                }
-            }
-
-            if (Input.GetButtonUp("Cancel"))
-            {
-                if (_interfaceWindow != null)
-                {
-                    var item = _interfaceWindow.GetComponent<StandUI>();
-                    if (item != null && item.IsItemOpened)
-                    {
-                        item.CloseStandItemWindow();
-                    }
-                    else if (item != null)
-                    {
-                        CloseInterfaceWindow();
-                    }
+                    _context.Character.StateHideAnimation(interactableObject);
                 }
             }
 
@@ -214,14 +167,6 @@ namespace Rescues
             }
 
             return behaviour;
-        }
-
-        private void CloseInterfaceWindow()
-        {
-            _interfaceWindow.SetActive(false);
-            Time.timeScale = 1f;
-            _interfaceWindow = null;
-            EventSystem.current.SetSelectedGameObject(null);
         }
 
         #endregion

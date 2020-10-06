@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public sealed class StandController : IInitializeController, ITearDownController
+    public sealed class HidingPlaceController : IInitializeController, ITearDownController
     {
         #region Fields
         
@@ -15,7 +15,7 @@ namespace Rescues
 
         #region ClassLifeCycles
         
-        public StandController(GameContext context, Services services)
+        public HidingPlaceController(GameContext context, Services services)
         {
             _context = context;
         }
@@ -27,13 +27,13 @@ namespace Rescues
         
         public void Initialize()
         {
-            var stands = _context.GetTriggers(InteractableObjectType.Stand);
-            foreach (var trigger in stands)
+            var hidingPlaces = _context.GetTriggers(InteractableObjectType.HidingPlace);
+            foreach (var trigger in hidingPlaces)
             {
-                var standsBehaviour = trigger as StandBehaviour;
-                standsBehaviour.OnFilterHandler += OnFilterHandler;
-                standsBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
-                standsBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
+                var doorTeleporterBehaviour = trigger as HidingPlaceBehaviour;
+                doorTeleporterBehaviour.OnFilterHandler += OnFilterHandler;
+                doorTeleporterBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
+                doorTeleporterBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
             }
         }
 
@@ -44,13 +44,13 @@ namespace Rescues
         
         public void TearDown()
         {
-            var stands = _context.GetTriggers(InteractableObjectType.Stand);
-            foreach (var trigger in stands)
+            var hidingPlaces = _context.GetTriggers(InteractableObjectType.HidingPlace);
+            foreach (var trigger in hidingPlaces)
             {
-                var standsBehaviour = trigger as StandBehaviour;
-                standsBehaviour.OnFilterHandler -= OnFilterHandler;
-                standsBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
-                standsBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
+                var doorTeleporterBehaviour = trigger as HidingPlaceBehaviour;
+                doorTeleporterBehaviour.OnFilterHandler -= OnFilterHandler;
+                doorTeleporterBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
+                doorTeleporterBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
             }
         }
 
