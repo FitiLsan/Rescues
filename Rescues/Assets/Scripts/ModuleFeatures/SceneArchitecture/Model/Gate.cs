@@ -37,8 +37,16 @@ namespace Rescues
         public string GoToLocationName => _goToLocationName;
         public int GoToGateId => _goToGateId;
 
-        [ContextMenu("Go")]
-        public void Go()
+        public Gate(string levelName, string locationName, int id)
+        {
+            _thisLevelName = levelName;
+            _thisLocationName = locationName;
+            _thisGateId = id;
+        }
+        
+        
+        [ContextMenu("Go by gate way")]
+        public void GoByGateWay()
         {
             GoAction?.Invoke(this);
         }

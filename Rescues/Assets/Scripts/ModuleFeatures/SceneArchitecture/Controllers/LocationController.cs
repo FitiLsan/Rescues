@@ -9,12 +9,15 @@ namespace Rescues
 {
     public class LocationController
     {
-        private List<LocationData> _locations = new List<LocationData>();
-        
-        public List<LocationData> Locations => _locations;
+        private LevelController LevelController { get; }
+        public List<LocationData> Locations { get; }
+        public string LevelName { get; }
+       
 
-        public LocationController(string levelName)
+        public LocationController(LevelController levelController, string levelName)
         {
+            LevelName = levelName;
+            LevelController = levelController;
             var levelParent = new GameObject(levelName);
             var path = AssetsPathGameObject.Object[GameObjectType.Levels] + "/" + levelName;
             var locationsData = Resources.LoadAll<LocationData>(path);
@@ -34,45 +37,15 @@ namespace Rescues
                     gate.ThisLevelName = levelName;
                 }
                 location.LocationInstance.SetActive(false);
-                _locations.Add(location);
+                Locations.Add(location);
             }
 
-            LoadLocationOnBoot();
         }
-
+        
         public void LoadLocation(Gate gate)
         {
             DeactiveCurrentLocation();
-            var bootLocation = Locations.Find(l =>
-                l.LevelName == gate.GoToLevelName && l.LocationName == gate.GoToLocationName);
-            if (!bootLocation)
-                throw new Exception("Нет ни одной локации с совпадением locationName и levelName");
-
-            bootLocation.LocationInstance.SetActive(true);
-            var enterGate = bootLocation.Gates.Find(g => g.ThisGateId == gate.GoToGateId);
-            if (!enterGate)
-                throw new Exception("В " + gate.GoToLevelName + " - " + gate.GoToLocationName + " нет Gate c ID = " +
-                                    gate.GoToGateId);
-
-            
-            gate.Activated = false;
-            enterGate.Activated = true;
-            // помещать ГГ на enterGate.transform
-        }
-
-        private void LoadLocationOnBoot()
-        {
-            DeactiveCurrentLocation();
-            var bootLocation = Locations.Find(l => l.LoadOnBoot);
-            if (bootLocation)
-            {
-               var gate = bootLocation.Gates.First(g => g.BootOnLoad);
-               gate.Activated = true;
-                bootLocation.LocationInstance.SetActive(true);
-                
-                // помещать ГГ на gate.transform
-            }
-                
+            LevelController.LoadLocation(gate);
         }
         
         private void DeactiveCurrentLocation()
@@ -81,6 +54,5 @@ namespace Rescues
             if (activeLocation)
                 activeLocation.LocationInstance.SetActive(false);
         }
-        
     }
 }
