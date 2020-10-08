@@ -28,19 +28,21 @@ namespace Rescues
         #region Properties
         
         public List<string> LevelsNames => _levelsNames;
-        private Gate DefualtLoadGate => new Gate(_defaultLevelName, _defaultLocationName, _defaultGateId);
-        public Gate GetGate => _loadFromLastLevel ? LastLoadGate : DefualtLoadGate;
-        private Gate LastLoadGate
+
+        private IGate DefualtLoadGate => new GateData(_defaultLevelName, _defaultLocationName, _defaultGateId);
+        
+        public IGate GetGate => _loadFromLastLevel ? LastLoadGate : DefualtLoadGate;
+        private IGate LastLoadGate
         {
             get
             {
                 if (_lastLevelName == String.Empty || _lastLocationName == String.Empty || _lastGateId == 0)
                     return DefualtLoadGate;
-                return new Gate(_lastLevelName, _lastLocationName, _lastGateId);
+                return new GateData(_lastLevelName, _lastLocationName, _lastGateId);
             }
         }
 
-        public Gate SetLasLevelGate
+        public IGate SetLastLevelGate
         {
             set
             {

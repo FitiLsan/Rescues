@@ -4,18 +4,17 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public class Gate : MonoBehaviour
+    public class Gate : MonoBehaviour, IGate
     {
-        public bool Activated;
+        [SerializeField]  private bool _activated;
         [NonSerialized] public Action<Gate> GoAction;
-        public bool BootOnLoad;
-        
-        [Header("Этот Gate")]
+
+        [Header("This Gate")]
          private string _thisLevelName;
         private string _thisLocationName;
         [SerializeField] private int _thisGateId;
         
-        [Header("Куда ведет")]
+        [Header("Gate way")]
         [SerializeField] private string _goToLevelName = "Hotel";
         [SerializeField] private string _goToLocationName;
         [SerializeField] private int _goToGateId;
@@ -36,6 +35,7 @@ namespace Rescues
         public string GoToLevelName => _goToLevelName;
         public string GoToLocationName => _goToLocationName;
         public int GoToGateId => _goToGateId;
+        public bool Activated { get => _activated; set => _activated = value; }
 
         public Gate(string levelName, string locationName, int id)
         {

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,7 +9,7 @@ namespace Rescues
     public class LocationController
     {
         private LevelController LevelController { get; }
-        public List<LocationData> Locations { get; }
+        public List<LocationData> Locations { get; } = new List<LocationData>();
         public string LevelName { get; }
        
 
@@ -44,15 +43,13 @@ namespace Rescues
         
         public void LoadLocation(Gate gate)
         {
-            DeactiveCurrentLocation();
-            LevelController.LoadLocation(gate);
-        }
-        
-        private void DeactiveCurrentLocation()
-        {
             var activeLocation = Locations.Find(l => l.LocationInstance.activeSelf);
             if (activeLocation)
                 activeLocation.LocationInstance.SetActive(false);
+        
+            LevelController.LoadLocation(gate);
         }
+        
+            
     }
 }

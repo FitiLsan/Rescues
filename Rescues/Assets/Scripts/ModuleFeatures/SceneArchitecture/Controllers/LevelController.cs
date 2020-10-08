@@ -30,26 +30,28 @@ namespace Rescues
             LoadLocation(_levelsData.GetGate);
         }
         
-        public void LoadLocation(Gate gate)
+        public void LoadLocation(IGate gate)
         {
             var bootLevel = _levels.Find(l =>
                 l.LevelName == gate.GoToLevelName);
-            if (bootLevel != null)
-                throw new Exception("Нет ни одной локации с совпадением levelName");
+            if (bootLevel == null)
+                throw new Exception("Нет ни одного уровня с совпадением " + gate.GoToLevelName);
             
             var bootLocation = bootLevel.Locations.Find(l => l.LocationName == gate.GoToLocationName);
             if (!bootLocation)
-                throw new Exception("Нет ни одной локации с совпадением locationName");
+                throw new Exception("Нет ни одной локации с совпадением " + gate.GoToLocationName);
             
             var enterGate = bootLocation.Gates.Find(g => g.ThisGateId == gate.GoToGateId);
             if (!enterGate)
                 throw new Exception("В " + gate.GoToLevelName + " - " + gate.GoToLocationName + " нет Gate c ID = " +
                                     gate.GoToGateId);
 
-            bootLocation.LocationInstance.SetActive(true);
+
+            _levelsData.SetLastLevelGate = gate;
+            bootLocation.LoadLocation();
             gate.Activated = false;
             enterGate.Activated = true;
-            // помещать ГГ на enterGate.transform
+            
         }
 
        
