@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 
 namespace Rescues
@@ -21,16 +23,25 @@ namespace Rescues
             var levelsData = Resources.LoadAll<LevelsData>(path);
             _levelsData = levelsData[0];
             
+            //Load bootscreen object
+            var bootScreenPath = AssetsPathGameObject.Object[GameObjectType.UI] + "/" + _levelsData.BootScreen.name;
+            var bootScreen = Resources.Load<BootScreen>(bootScreenPath);
+            var bootScreenInstance = Object.Instantiate(bootScreen);
+            var spriteRenderer = bootScreenInstance.gameObject.GetComponent<SpriteRenderer>();
+            _levelsData.BootScreen = spriteRenderer;
+            bootScreenInstance.gameObject.SetActive(false);
+            
+            
             foreach (var levelName in _levelsData.LevelsNames)
             {
                 var level = new LocationController(this, levelName);
                 _levels.Add(level);
             }
             
-            LoadLocation(_levelsData.GetGate);
+            LoadLevel(_levelsData.GetGate);
         }
         
-        public void LoadLocation(IGate gate)
+        public void LoadLevel(IGate gate)
         {
             var bootLevel = _levels.Find(l =>
                 l.LevelName == gate.GoToLevelName);
@@ -48,7 +59,12 @@ namespace Rescues
 
 
             _levelsData.SetLastLevelGate = gate;
+          
+            
+            
             bootLocation.LoadLocation();
+                
+               
             gate.Activated = false;
             enterGate.Activated = true;
             

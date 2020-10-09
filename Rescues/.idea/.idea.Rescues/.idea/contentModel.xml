@@ -146,6 +146,7 @@
                 <e p="IGate.cs" t="Include" />
               </e>
               <e p="Model" t="Include">
+                <e p="BootScreen.cs" t="Include" />
                 <e p="Gate.cs" t="Include" />
               </e>
             </e>

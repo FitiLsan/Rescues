@@ -47,7 +47,7 @@ namespace Rescues
             if (activeLocation)
                 activeLocation.LocationInstance.SetActive(false);
         
-            LevelController.LoadLocation(gate);
+            LevelController.LoadLevel(gate);
         }
         
             

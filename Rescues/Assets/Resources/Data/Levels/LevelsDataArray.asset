@@ -19,5 +19,7 @@ MonoBehaviour:
   _lastLevelName: Hotel
   _lastLocationName: Reception
   _lastGateId: 1
+  _bootScreen: {fileID: 3494010292301403548, guid: 350dbdcc61ef74de087b99c5df45793d,
+    type: 3}
   _levelsNames:
   - Hotel

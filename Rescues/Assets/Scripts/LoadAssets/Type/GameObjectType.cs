@@ -6,6 +6,7 @@
         Character = 1,
         Enemy     = 2,
         Canvas    = 3,
-        Levels    = 4
+        Levels    = 4,
+        UI = 5,
     }
 }
