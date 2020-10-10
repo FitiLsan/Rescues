@@ -8,11 +8,17 @@ namespace Rescues
 {
     public class LocationController
     {
+        
+        #region Properties
+
         private LevelController LevelController { get; }
         public List<LocationData> Locations { get; } = new List<LocationData>();
         public string LevelName { get; }
-       
 
+        #endregion
+
+        #region Private
+        
         public LocationController(LevelController levelController, string levelName, Transform levelParent)
         {
             LevelName = levelName;
@@ -41,6 +47,9 @@ namespace Rescues
 
         }
 
+        #endregion
+        
+        
         private void LoadLocation(Gate gate) => LevelController.LoadLevel(gate);
         
         

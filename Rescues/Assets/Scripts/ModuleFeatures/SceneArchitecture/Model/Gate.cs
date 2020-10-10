@@ -6,10 +6,12 @@ namespace Rescues
 {
     public class Gate : MonoBehaviour, IGate
     {
+        #region Fileds
+
         [NonSerialized] public Action<Gate> GoAction;
 
         [Header("This Gate")]
-         private string _thisLevelName;
+        private string _thisLevelName;
         private string _thisLocationName;
         [SerializeField] private int _thisGateId;
         
@@ -18,6 +20,24 @@ namespace Rescues
         [SerializeField] private string _goToLocationName;
         [SerializeField] private int _goToGateId;
         
+
+        #endregion
+
+        
+        #region Private
+
+        public Gate(string levelName, string locationName, int id)
+        {
+            _thisLevelName = levelName;
+            _thisLocationName = locationName;
+            _thisGateId = id;
+        }
+
+        #endregion
+        
+        
+        #region Properties
+
         public string ThisLevelName
         {
             get => _thisLevelName;
@@ -35,19 +55,19 @@ namespace Rescues
         public string GoToLocationName => _goToLocationName;
         public int GoToGateId => _goToGateId;
 
-        public Gate(string levelName, string locationName, int id)
-        {
-            _thisLevelName = levelName;
-            _thisLocationName = locationName;
-            _thisGateId = id;
-        }
+        #endregion
         
-        
+
+        #region Methods
+
         [ContextMenu("Go by gate way")]
         public void GoByGateWay()
         {
             GoAction?.Invoke(this);
         }
+
+        #endregion
+       
         
     }
 }

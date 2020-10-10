@@ -6,12 +6,21 @@ namespace Rescues
 {
     public class LevelController : IInitializeController
     {
+
+        #region Fileds
+        
         private LocationController _activeLevel;
         private LevelsData _levelsData;
         private BootScreen _defaultBootScreen;
         private GameContext _context;
         private Services _services;
         private GameObject _levelParent;
+        
+        #endregion
+
+        
+        #region Private
+        
         public LevelController(GameContext context, Services services)
         {
             _context = context;
@@ -30,6 +39,10 @@ namespace Rescues
             
             LoadLevel(_levelsData.GetGate);
         }
+        
+        #endregion
+
+        #region Methods
         
         public void LoadLevel(IGate gate, IBootScreen bootScreen = null)
         {
@@ -79,6 +92,8 @@ namespace Rescues
             
             _activeLevel = new LocationController(this, loadLevelName, _levelParent.transform);
         }
+        
+        #endregion
 
     }
 }

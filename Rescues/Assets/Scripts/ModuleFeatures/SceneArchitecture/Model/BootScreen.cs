@@ -6,15 +6,17 @@ namespace Rescues
 {
     public class BootScreen : MonoBehaviour, IBootScreen
     {
+
+        #region Fileds
         
         [SerializeField] private float _alphaTweenTime;
         private SpriteRenderer _spriteRenderer;
 
-        public void Awake()
-        {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-        }
+        #endregion
+
         
+        #region Properties
+
         private float SpriteAlpha
         {
             get => _spriteRenderer.color.a;
@@ -25,6 +27,21 @@ namespace Rescues
                 _spriteRenderer.color = color;
             }
         }
+
+        #endregion
+        
+        
+        #region UnityMethods
+        
+        public void Awake()
+        {
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+        
+        #endregion
+
+
+        #region Methods
         
         public void CreateFadeEffect(TweenCallback onComplete)
         {
@@ -35,5 +52,9 @@ namespace Rescues
             seq.Append(DOTween.To(() => SpriteAlpha, x => SpriteAlpha = x, 0, _alphaTweenTime));
             seq.Play();
         }
+        
+        #endregion
+        
+        
     }
 }
