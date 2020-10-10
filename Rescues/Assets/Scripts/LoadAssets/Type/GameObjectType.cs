@@ -7,6 +7,5 @@
         Enemy     = 2,
         Canvas    = 3,
         Levels    = 4,
-        UI = 5,
     }
 }

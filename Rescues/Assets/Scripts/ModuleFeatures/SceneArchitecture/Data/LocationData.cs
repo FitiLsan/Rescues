@@ -13,11 +13,14 @@ namespace Rescues
         [NonSerialized] public List<Gate> Gates;
         [NonSerialized] public string LevelName;
         [SerializeField] private string _locationName;
-        [SerializeField] private GameObject _locationPrefab;
+        [SerializeField] private Location _locationPrefab;
         [SerializeField] private Color _backgroundColor;
         [SerializeField] private CameraMode _cameraMode;
-        [SerializeField] private int _cameraSize;
-        private GameObject _locationInstance;
+        [SerializeField] private float _cameraSize;
+
+        public float CameraSize => _cameraSize;
+
+        private Location _locationInstance;
 
         #endregion
         
@@ -25,7 +28,10 @@ namespace Rescues
         #region Properties
         
         public string LocationName => _locationName;
-        public GameObject LocationInstance
+
+        public bool LocationActiveSelf => _locationInstance.gameObject.activeSelf;
+        
+        public Location LocationInstance
         {
             get => _locationInstance;
             set
@@ -34,7 +40,7 @@ namespace Rescues
                     _locationInstance = value;
             }
         }
-        public GameObject LocationPrefab => _locationPrefab;
+        public Location LocationPrefab => _locationPrefab;
         public Color BackgroundColor => _backgroundColor;
         public CameraMode CameraMode => _cameraMode;
         
@@ -45,8 +51,13 @@ namespace Rescues
         
         public void LoadLocation()
         {
-            LocationInstance.SetActive(true);
+            LocationInstance.gameObject.SetActive(true);
                 // помещать ГГ на enterGate.transform
+        }
+        
+        public void CloseLocation()
+        {
+            LocationInstance.gameObject.SetActive(false);
         }
         
         #endregion

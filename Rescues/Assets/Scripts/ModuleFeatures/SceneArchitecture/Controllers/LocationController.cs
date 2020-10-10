@@ -13,17 +13,16 @@ namespace Rescues
         public string LevelName { get; }
        
 
-        public LocationController(LevelController levelController, string levelName)
+        public LocationController(LevelController levelController, string levelName, Transform levelParent)
         {
             LevelName = levelName;
             LevelController = levelController;
-            var levelParent = new GameObject(levelName);
             var path = AssetsPathGameObject.Object[GameObjectType.Levels] + "/" + levelName;
             var locationsData = Resources.LoadAll<LocationData>(path);
 
             foreach (var location in locationsData)
             {
-                var locationInstance = Object.Instantiate(location.LocationPrefab, levelParent.transform);
+                var locationInstance = Object.Instantiate(location.LocationPrefab, levelParent);
                 locationInstance.name = location.LocationName;
                 location.Gates = locationInstance.transform.GetComponentsInChildren<Gate>().ToList();
                 location.LocationInstance = locationInstance;
@@ -35,20 +34,15 @@ namespace Rescues
                     gate.ThisLocationName = location.LocationName;
                     gate.ThisLevelName = levelName;
                 }
-                location.LocationInstance.SetActive(false);
+
+                location.CloseLocation();
                 Locations.Add(location);
             }
 
         }
+
+        private void LoadLocation(Gate gate) => LevelController.LoadLevel(gate);
         
-        public void LoadLocation(Gate gate)
-        {
-            var activeLocation = Locations.Find(l => l.LocationInstance.activeSelf);
-            if (activeLocation)
-                activeLocation.LocationInstance.SetActive(false);
-        
-            LevelController.LoadLevel(gate);
-        }
         
             
     }

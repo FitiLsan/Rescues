@@ -8,6 +8,5 @@ namespace Rescues
         string GoToLevelName { get; }
         string GoToLocationName { get; }
         int GoToGateId { get; }
-        bool Activated { set; get; }
     }
 }

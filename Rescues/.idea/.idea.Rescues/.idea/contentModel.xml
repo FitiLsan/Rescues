@@ -143,11 +143,13 @@
                 <e p="CameraMode.cs" t="Include" />
               </e>
               <e p="Interface" t="Include">
+                <e p="IBootScreen.cs" t="Include" />
                 <e p="IGate.cs" t="Include" />
               </e>
               <e p="Model" t="Include">
                 <e p="BootScreen.cs" t="Include" />
                 <e p="Gate.cs" t="Include" />
+                <e p="Location.cs" t="Include" />
               </e>
             </e>
           </e>

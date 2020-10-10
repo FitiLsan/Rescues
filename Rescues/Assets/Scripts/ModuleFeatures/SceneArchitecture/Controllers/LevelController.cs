@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -9,68 +6,79 @@ namespace Rescues
 {
     public class LevelController : IInitializeController
     {
-        private List<LocationController> _levels = new List<LocationController>();
+        private LocationController _activeLevel;
         private LevelsData _levelsData;
-        
+        private BootScreen _defaultBootScreen;
+        private GameContext _context;
+        private Services _services;
+        private GameObject _levelParent;
         public LevelController(GameContext context, Services services)
         {
-            
+            _context = context;
+            _services = services;
         }
-        
+
         public void Initialize()
         {
+            _levelParent = new GameObject("Locations");
             var path = AssetsPathGameObject.Object[GameObjectType.Levels];
             var levelsData = Resources.LoadAll<LevelsData>(path);
             _levelsData = levelsData[0];
             
-            //Load bootscreen object
-            var bootScreenPath = AssetsPathGameObject.Object[GameObjectType.UI] + "/" + _levelsData.BootScreen.name;
-            var bootScreen = Resources.Load<BootScreen>(bootScreenPath);
-            var bootScreenInstance = Object.Instantiate(bootScreen);
-            var spriteRenderer = bootScreenInstance.gameObject.GetComponent<SpriteRenderer>();
-            _levelsData.BootScreen = spriteRenderer;
-            bootScreenInstance.gameObject.SetActive(false);
-            
-            
-            foreach (var levelName in _levelsData.LevelsNames)
-            {
-                var level = new LocationController(this, levelName);
-                _levels.Add(level);
-            }
+            _defaultBootScreen = Object.Instantiate((BootScreen)_levelsData.BootScreen, _levelParent.transform);
+
             
             LoadLevel(_levelsData.GetGate);
         }
         
-        public void LoadLevel(IGate gate)
+        public void LoadLevel(IGate gate, IBootScreen bootScreen = null)
         {
-            var bootLevel = _levels.Find(l =>
-                l.LevelName == gate.GoToLevelName);
-            if (bootLevel == null)
-                throw new Exception("Нет ни одного уровня с совпадением " + gate.GoToLevelName);
-            
-            var bootLocation = bootLevel.Locations.Find(l => l.LocationName == gate.GoToLocationName);
-            if (!bootLocation)
-                throw new Exception("Нет ни одной локации с совпадением " + gate.GoToLocationName);
-            
-            var enterGate = bootLocation.Gates.Find(g => g.ThisGateId == gate.GoToGateId);
-            if (!enterGate)
-                throw new Exception("В " + gate.GoToLevelName + " - " + gate.GoToLocationName + " нет Gate c ID = " +
-                                    gate.GoToGateId);
+            if (_activeLevel == null || _activeLevel.LevelName != gate.GoToLevelName)
+            {
+                LoadAndUnloadPrefabs(gate.GoToLevelName);
+            }
 
+            if (gate.ThisLevelName != gate.GoToLevelName || gate.ThisLocationName != gate.GoToLocationName)
+            {
+                bootScreen = bootScreen ?? _defaultBootScreen;
+                bootScreen.CreateFadeEffect(LoadLevelPart);
+            }
+            else
+            {
+                LoadLevelPart();
+            }
 
-            _levelsData.SetLastLevelGate = gate;
-          
-            
-            
-            bootLocation.LoadLocation();
-                
-               
-            gate.Activated = false;
-            enterGate.Activated = true;
-            
+            void LoadLevelPart()
+            {
+                var activeLocation = _activeLevel.Locations.Find(l => l.LocationActiveSelf);
+                if (activeLocation)
+                    activeLocation.CloseLocation();
+
+                var bootLocation = _activeLevel.Locations.Find(l => l.LocationName == gate.GoToLocationName);
+                if (!bootLocation)
+                    Debug.LogError(activeLocation.LevelName + " не содержит локации с именем " + gate.GoToLocationName);
+
+                var enterGate = bootLocation.Gates.Find(g => g.ThisGateId == gate.GoToGateId);
+                if (!enterGate)
+                    Debug.LogError("В " + gate.GoToLevelName + " - " + gate.GoToLocationName +
+                                   " нет Gate c ID = " + gate.GoToGateId);
+
+                _levelsData.SetLastLevelGate = gate;
+                bootLocation.LoadLocation();
+                //_services.CameraServices.SetCamera(bootLocation);
+            }
         }
 
-       
-        
+        private void LoadAndUnloadPrefabs(string loadLevelName)
+        {
+            if (_activeLevel != null)
+            {
+                foreach (var location in _activeLevel.Locations)
+                    location.LocationInstance.Destroy();
+            }
+            
+            _activeLevel = new LocationController(this, loadLevelName, _levelParent.transform);
+        }
+
     }
 }

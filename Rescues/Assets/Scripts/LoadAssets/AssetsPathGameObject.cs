@@ -12,7 +12,6 @@ namespace Rescues
             { GameObjectType.Character, "Prefabs/Player/Prefabs_Player_Character" },
             { GameObjectType.Enemy, "Prefabs/Enemies/Prefabs_Enemies_Patrolling" },
             { GameObjectType.Canvas, "Prefabs/UI/Prefabs_UI_Canvas" },
-            { GameObjectType.UI, "Prefabs/UI" },
             { GameObjectType.Levels, "Data/Levels" },
         };
 

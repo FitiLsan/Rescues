@@ -6,7 +6,6 @@ namespace Rescues
 {
     public class Gate : MonoBehaviour, IGate
     {
-        [SerializeField]  private bool _activated;
         [NonSerialized] public Action<Gate> GoAction;
 
         [Header("This Gate")]
@@ -35,7 +34,6 @@ namespace Rescues
         public string GoToLevelName => _goToLevelName;
         public string GoToLocationName => _goToLocationName;
         public int GoToGateId => _goToGateId;
-        public bool Activated { get => _activated; set => _activated = value; }
 
         public Gate(string levelName, string locationName, int id)
         {

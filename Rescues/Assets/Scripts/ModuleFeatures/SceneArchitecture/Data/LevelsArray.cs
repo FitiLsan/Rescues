@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 
 
@@ -21,9 +20,9 @@ namespace Rescues
         [SerializeField] private string _lastLevelName;
         [SerializeField] private string _lastLocationName;
         [SerializeField] private int _lastGateId;
-        [Header("Boot screen")]
-        [SerializeField] private SpriteRenderer _bootScreen;
-        private SpriteRenderer _bootScreenInstance;
+        [Header("Default boot screen")]
+        [SerializeField] private BootScreen _bootScreen;
+        //private GameObject _bootScreenInstance;
         [Header("Levels array")]
         [SerializeField] private List<string> _levelsNames;
         
@@ -31,12 +30,8 @@ namespace Rescues
 
         #region Properties
 
-        public SpriteRenderer BootScreen
-        {
-            get => _bootScreenInstance == null ? _bootScreen : _bootScreenInstance;
-            set => _bootScreenInstance = value;
-        } 
-        
+        public IBootScreen BootScreen => _bootScreen;
+
         public List<string> LevelsNames => _levelsNames;
 
         private IGate DefualtLoadGate => new GateData(_defaultLevelName, _defaultLocationName, _defaultGateId);
@@ -63,11 +58,5 @@ namespace Rescues
         }
         
         #endregion
-
-        public void ShowBootscreen(Delegate doOnComplete)
-        {
-            var sequence = DOTween.Sequence();
-        //    sequence.Append(DOTween.To(a => { _levelsData.BootScreen.alpha = a; }, 1, 0, _fadeTime));
-        }
     }
 }
