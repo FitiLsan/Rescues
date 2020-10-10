@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -22,20 +21,14 @@ namespace Rescues
         [SerializeField] private int _lastGateId;
         [Header("Default boot screen")]
         [SerializeField] private BootScreen _bootScreen;
-        //private GameObject _bootScreenInstance;
-        [Header("Levels array")]
-        [SerializeField] private List<string> _levelsNames;
-        
+
         #endregion
 
+        
         #region Properties
 
         public IBootScreen BootScreen => _bootScreen;
-
-        public List<string> LevelsNames => _levelsNames;
-
         private IGate DefualtLoadGate => new GateData(_defaultLevelName, _defaultLocationName, _defaultGateId);
-        
         public IGate GetGate => _loadFromLastLevel ? LastLoadGate : DefualtLoadGate;
         private IGate LastLoadGate
         {
