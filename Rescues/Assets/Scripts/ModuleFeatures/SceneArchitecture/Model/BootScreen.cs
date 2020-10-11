@@ -10,6 +10,7 @@ namespace Rescues
         #region Fileds
         
         [SerializeField] private float _alphaTweenTime;
+        [SerializeField] private float _screenDelay;
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
         #endregion
@@ -37,12 +38,10 @@ namespace Rescues
         {
             gameObject.SetActive(true);
             SpriteAlpha = 0;
-            
             var seq = DOTween.Sequence();
-            seq.Append(DOTween.To(() => SpriteAlpha, x => SpriteAlpha = x, 1, _alphaTweenTime)
-                .OnComplete(onComplete));
-            seq.Append(DOTween.To(() => SpriteAlpha, x => SpriteAlpha = x, 0, _alphaTweenTime)
-                .OnComplete(() => gameObject.SetActive(false)));
+            seq.Append(_spriteRenderer.DOFade(1, _alphaTweenTime).OnComplete(onComplete));
+            seq.AppendInterval(_screenDelay);
+            seq.Append(_spriteRenderer.DOFade(0, _alphaTweenTime).OnComplete(() => gameObject.SetActive(false)));
             seq.Play();
         }
         
