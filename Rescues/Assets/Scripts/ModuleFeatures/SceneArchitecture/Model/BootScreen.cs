@@ -10,7 +10,7 @@ namespace Rescues
         #region Fileds
         
         [SerializeField] private float _alphaTweenTime;
-        private SpriteRenderer _spriteRenderer;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
 
         #endregion
 
@@ -31,25 +31,18 @@ namespace Rescues
         #endregion
         
         
-        #region UnityMethods
-        
-        public void Awake()
-        {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-        }
-        
-        #endregion
-
-
         #region Methods
         
         public void CreateFadeEffect(TweenCallback onComplete)
         {
+            gameObject.SetActive(true);
             SpriteAlpha = 0;
+            
             var seq = DOTween.Sequence();
             seq.Append(DOTween.To(() => SpriteAlpha, x => SpriteAlpha = x, 1, _alphaTweenTime)
                 .OnComplete(onComplete));
-            seq.Append(DOTween.To(() => SpriteAlpha, x => SpriteAlpha = x, 0, _alphaTweenTime));
+            seq.Append(DOTween.To(() => SpriteAlpha, x => SpriteAlpha = x, 0, _alphaTweenTime)
+                .OnComplete(() => gameObject.SetActive(false)));
             seq.Play();
         }
         

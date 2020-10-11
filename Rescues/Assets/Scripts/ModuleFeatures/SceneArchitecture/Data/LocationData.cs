@@ -17,17 +17,30 @@ namespace Rescues
         [SerializeField] private Color _backgroundColor;
         [SerializeField] private CameraMode _cameraMode;
         [SerializeField] private float _cameraSize;
+        [SerializeField, Tooltip("Будет использоватсья при загрузке этой локации. Необязательное поле")] 
+        private BootScreen _customBootScreen;
 
-        public float CameraSize => _cameraSize;
-
+        private BootScreen _customBootScreenInstance;
         private Location _locationInstance;
+      
+
+        
 
         #endregion
         
         
         #region Properties
         
+        public float CameraSize => _cameraSize;
         public string LocationName => _locationName;
+
+        public BootScreen CustomBootScreenInstance
+        {
+           get => _customBootScreenInstance;
+           set => _customBootScreenInstance = value;
+        }
+
+        public BootScreen CustomBootScreenPrefab => _customBootScreen;
 
         public bool LocationActiveSelf => _locationInstance.gameObject.activeSelf;
         
