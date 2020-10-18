@@ -871,6 +871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   ExitPoint: {fileID: 628307631}
+  TransferTime: 2
 --- !u!1 &491947569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   ExitPoint: {fileID: 464808231}
+  TransferTime: 2
 --- !u!1 &647787580
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ namespace Rescues
             { GameObjectType.Character, "Prefabs/Player/Prefabs_Player_Character" },
             { GameObjectType.Enemy, "Prefabs/Enemies/Prefabs_Enemies_Patrolling" },
             { GameObjectType.Canvas, "Prefabs/UI/Prefabs_UI_Canvas" },
+            { GameObjectType.Levels, "Data/Levels" },
         };
 
         public static readonly Dictionary<ScreenType, string> Screens = new Dictionary<ScreenType, string>()
