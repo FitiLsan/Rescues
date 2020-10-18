@@ -68,9 +68,16 @@ namespace Rescues
                 // помещать ГГ на enterGate.transform
         }
         
-        public void CloseLocation()
+        public void UnloadLocation()
         {
             LocationInstance.gameObject.SetActive(false);
+        }
+        
+        public void Destroy()
+        {
+            LocationInstance.Destroy();
+            if (CustomBootScreenInstance)
+                CustomBootScreenInstance.Destroy();
         }
         
         #endregion

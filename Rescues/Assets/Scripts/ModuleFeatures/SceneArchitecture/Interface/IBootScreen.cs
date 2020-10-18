@@ -1,10 +1,12 @@
 using DG.Tweening;
+using UnityEngine;
 
 
 namespace Rescues
 {
     public interface IBootScreen
     {
-        void CreateFadeEffect(TweenCallback onComplete);
+        void ShowBootScreen(Services services, TweenCallback onComplete);
+        void Destroy();
     }
 }

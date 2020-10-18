@@ -16,7 +16,7 @@ namespace Rescues
         private GameContext _context;
         private Services _services;
         private GameObject _levelParent;
-        
+
         #endregion
 
         
@@ -34,9 +34,9 @@ namespace Rescues
             var path = AssetsPathGameObject.Object[GameObjectType.Levels];
             var levelsData = Resources.LoadAll<LevelsData>(path);
             _levelsData = levelsData[0];
-            
             _defaultBootScreen = Object.Instantiate((BootScreen)_levelsData.BootScreen, _levelParent.transform);
-            
+            _defaultBootScreen.name = "DefaultBootScreen";
+            _defaultBootScreen.gameObject.SetActive(false);
             LoadLevel(_levelsData.GetGate);
         }
         
@@ -59,7 +59,7 @@ namespace Rescues
             if (gate.ThisLevelName != gate.GoToLevelName || gate.ThisLocationName != gate.GoToLocationName)
             {
                 var bootScreen = _customBootScreen == null ? _defaultBootScreen : _customBootScreen;
-                bootScreen.CreateFadeEffect(LoadLevelPart);
+                bootScreen.ShowBootScreen(_services, LoadLevelPart);
             }
             else
             {
@@ -70,7 +70,7 @@ namespace Rescues
             {
                 var activeLocation = _activeLevel.Locations.Find(l => l.LocationActiveSelf);
                 if (activeLocation)
-                    activeLocation.CloseLocation();
+                    activeLocation.UnloadLocation();
                 
                 var enterGate = bootLocation.Gates.Find(g => g.ThisGateId == gate.GoToGateId);
                 if (!enterGate)
@@ -88,7 +88,7 @@ namespace Rescues
             if (_activeLevel != null)
             {
                 foreach (var location in _activeLevel.Locations)
-                    location.LocationInstance.Destroy();
+                    location.Destroy();
             }
             
             _activeLevel = new LocationController(this, loadLevelName, _levelParent.transform);

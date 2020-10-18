@@ -38,6 +38,7 @@ namespace Rescues
                 if (location.CustomBootScreenPrefab != null)
                 {
                     location.CustomBootScreenInstance = Object.Instantiate(location.CustomBootScreenPrefab, levelParent);
+                    location.CustomBootScreenInstance.gameObject.name = "BootScreen" + location.LocationName;
                     location.CustomBootScreenInstance.gameObject.SetActive(false);
                 }
 
@@ -48,7 +49,7 @@ namespace Rescues
                     gate.ThisLevelName = levelName;
                 }
 
-                location.CloseLocation();
+                location.UnloadLocation();
                 Locations.Add(location);
             }
 
