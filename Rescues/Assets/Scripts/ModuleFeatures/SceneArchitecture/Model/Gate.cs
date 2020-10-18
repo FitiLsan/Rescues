@@ -1,4 +1,5 @@
 using System;
+using NaughtyAttributes;
 using UnityEngine;
 
 
@@ -59,8 +60,8 @@ namespace Rescues
         
 
         #region Methods
-
-        [ContextMenu("Go by gate way")]
+        
+        [Button("Go by gate way")]
         public void GoByGateWay()
         {
             GoAction?.Invoke(this);
