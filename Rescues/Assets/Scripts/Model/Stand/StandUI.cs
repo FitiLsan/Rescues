@@ -13,7 +13,9 @@ namespace Rescues
         [SerializeField] GameObject _standItemWindow;
         private bool _isItemOpened = false;
         private bool _isMouseIn = true;
+        private ItemData _item;
         private Image _standItemImage;
+        private int _slotNumber;
 
         #endregion
 
@@ -32,28 +34,49 @@ namespace Rescues
             get { return _standItemSlots; }
         }
 
+        public ItemData Item
+        {
+            get { return _item; }
+        }
+
+        public int SlotNumber
+        {
+            get { return _slotNumber; }
+        }
+
+
         public void Awake()
         {
             _standItemImage = _standItemWindow.GetComponent<Image>();
             if (_standItemSlots != null)
-            {               
+            {
                 for (int i = 0; i < _standItemSlots.Count; i++)
                 {
-                    _standItemSlots[i].OnPointerClickEvent += OpenStandItemWindow;
+                    _standItemSlots[i].OnPointerClickEvent += OpenStandItem;
+                    _standItemSlots[i].ItemSlotNumber = i;
                 }
             }
         }
 
-        private void OpenStandItemWindow(bool isOpened, Sprite standItemSprite)
+        private void OpenStandItem(int number, StandItemData standItem)
+        {            
+            if (standItem.CanBeTaken)
+            {
+                _item = standItem.Item;              
+            }
+            _slotNumber = number;
+            _standItemImage.sprite = standItem.Sprite;
+        }
+
+        public void OpenStandItemWindow()
         {
-            _isItemOpened = isOpened;
+            _isItemOpened = true;         
             _standItemWindow.SetActive(true);
-            _standItemImage.sprite = standItemSprite;
             for (int i = 0; i < _standItemSlots.Count; i++)
             {
                 _standItemSlots[i].gameObject.GetComponent<Image>().raycastTarget = false;
             }
-        }       
+        }
 
         public void CloseStandItemWindow()
         {
@@ -61,10 +84,11 @@ namespace Rescues
             {
                 _isItemOpened = false;
                 _standItemWindow.SetActive(false);
-                for (int i = 0; i < _standItemSlots.Count; i++)
+                for (int i = _standItemSlots.Count-1; i > 0; i--)
                 {
                     _standItemSlots[i].gameObject.GetComponent<Image>().raycastTarget = true;
                 }
+                _item = null;
             }
         }
 

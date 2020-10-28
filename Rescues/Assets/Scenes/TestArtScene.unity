@@ -8137,6 +8137,11 @@ PrefabInstance:
       propertyPath: StandWindow
       value: 
       objectReference: {fileID: 3813308913010116242}
+    - target: {fileID: 8204584519696873206, guid: 329d665178bc74b429ab0d359358f3a6,
+        type: 3}
+      propertyPath: _type
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8204584519696873207, guid: 329d665178bc74b429ab0d359358f3a6,
         type: 3}
       propertyPath: m_LocalPosition.x

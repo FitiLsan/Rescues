@@ -13,7 +13,7 @@ namespace Rescues
         private readonly GameContext _context;
         private readonly CameraServices _cameraServices;
         private GameObject _interfaceWindow;
-       
+
         #endregion
 
 
@@ -86,7 +86,7 @@ namespace Rescues
                 {
                     puzzleObject.Puzzle.Activate();
                 }
-                              
+
                 var hidingPlace = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
 
                 if (_context.Character.PlayerState == State.Hiding)
@@ -102,26 +102,58 @@ namespace Rescues
                 var stand = GetInteractableObject<StandBehaviour>(InteractableObjectType.Stand);
                 if (stand != null)
                 {
-                    _interfaceWindow = stand.StandWindow.gameObject;
-                    _interfaceWindow.SetActive(true);
-                    EventSystem.current.SetSelectedGameObject(_interfaceWindow.GetComponent<StandUI>().StandItemSlots[0].gameObject);
-                    Time.timeScale = 0f;
+                    OpenInterfaceWindow(stand.StandWindow.gameObject, stand.StandWindow.GetComponent<StandUI>().StandItemSlots[0].gameObject);
                 }
             }
 
-           
+
             if (Input.GetMouseButtonUp(0))
             {
                 if (_interfaceWindow != null)
                 {
                     var item = _interfaceWindow.GetComponent<StandUI>();
-                    if (item != null && !item.IsMouseIn && item.IsItemOpened)
+                    if (item != null)
                     {
-                        item.CloseStandItemWindow();
+                        if (!item.IsItemOpened)
+                        {
+                            item.OpenStandItemWindow();
+                        }
+                        else if (item.Item != null && !_context.Inventory.Contains(item.Item) && item.IsMouseIn)
+                        {
+                            _context.Inventory.AddItem(item.Item);
+                            item.StandItemSlots[item.SlotNumber].gameObject.SetActive(false);
+                            item.StandItemSlots.RemoveAt(item.SlotNumber);
+
+                        }
+                        if (!item.IsMouseIn && item.IsItemOpened)
+                        {
+                            item.CloseStandItemWindow();
+                        }
+                        else if (!item.IsMouseIn)
+                        {
+                            CloseInterfaceWindow();
+                        }
                     }
-                    else if (item != null && !item.IsMouseIn)
+                }
+            }
+
+            if (Input.GetButtonUp("Submit"))
+            {
+                if (_interfaceWindow != null)
+                {
+                    var item = _interfaceWindow.GetComponent<StandUI>();
+                    if (item != null)
                     {
-                        CloseInterfaceWindow();
+                        if (!item.IsItemOpened)
+                        {
+                            item.OpenStandItemWindow();
+                        }
+                        else if (item.Item != null && !_context.Inventory.Contains(item.Item))
+                        {
+                            _context.Inventory.AddItem(item.Item);
+                            item.StandItemSlots[item.SlotNumber].gameObject.SetActive(false);
+                            item.StandItemSlots.RemoveAt(item.SlotNumber);
+                        }
                     }
                 }
             }
@@ -134,6 +166,7 @@ namespace Rescues
                     if (item != null && item.IsItemOpened)
                     {
                         item.CloseStandItemWindow();
+                        EventSystem.current.SetSelectedGameObject(item.StandItemSlots[item.SlotNumber].gameObject);
                     }
                     else if (item != null)
                     {
@@ -224,6 +257,15 @@ namespace Rescues
             EventSystem.current.SetSelectedGameObject(null);
         }
 
+        private void OpenInterfaceWindow(GameObject interfaceWindow, GameObject selectedObject = null)
+        {
+            _interfaceWindow = interfaceWindow;
+            _interfaceWindow.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(selectedObject);
+            Time.timeScale = 0f;
+        }
+
         #endregion
     }
 }
+

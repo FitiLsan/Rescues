@@ -10,26 +10,34 @@ namespace Rescues
     {
         [SerializeField] StandItemData StandItemData;
 
-        public event Action<bool, Sprite> OnPointerClickEvent;
+        public event Action<int, StandItemData> OnPointerClickEvent;
        
         private Image _image;
 
-        
-        public void Awake()
+        private int _itemSlotNumber; 
+
+        public int ItemSlotNumber
         {
+            set { _itemSlotNumber = value; }
+        }
+
+        
+        protected override void Awake()
+        {
+            base.Awake();
             _image = gameObject.GetComponent<Image>();
         }
 
         public void OnPointerClick(PointerEventData eventData)
         {
             CustomDebug.Log("Click!");
-            OnPointerClickEvent?.Invoke(true, StandItemData.Sprite);
+            OnPointerClickEvent?.Invoke(_itemSlotNumber, StandItemData);
         }
 
         public void OnSubmit(BaseEventData eventData)
         {
             CustomDebug.Log("Click!");
-            OnPointerClickEvent?.Invoke(true, StandItemData.Sprite);
+            OnPointerClickEvent?.Invoke(_itemSlotNumber, StandItemData);
         }
     }
 }
