@@ -14,7 +14,6 @@ namespace Rescues
         public Inventory Inventory;
         //public Vector3[] WayPoints;
         public EnemyBehaviour Enemy;
-        public DialogBoxes DialogBoxes;
 
         public event Action<IInteractable> AddObjectHandler = delegate(IInteractable interactable) {  };
         private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
