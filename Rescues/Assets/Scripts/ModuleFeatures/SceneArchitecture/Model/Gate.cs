@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -60,7 +61,14 @@ namespace Rescues
         
 
         #region Methods
-        
+
+        private void OnValidate()
+        {
+            if (gameObject.activeInHierarchy)
+                name = _goToLevelName + "-" + _goToLocationName + "-" + _goToGateId;
+        }
+
+
         [Button("Go by gate way")]
         public void GoByGateWay()
         {

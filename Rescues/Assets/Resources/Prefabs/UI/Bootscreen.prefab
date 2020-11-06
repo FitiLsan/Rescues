@@ -95,3 +95,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _alphaTweenTime: 1
+  _screenDelay: 0
+  _spriteRenderer: {fileID: 3494010292301403548}
