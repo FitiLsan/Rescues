@@ -6,11 +6,16 @@ namespace Rescues
     public sealed class CameraServices : Service
     {
         #region Fields
+
+        private const int CAMERA_DEPTH = -45;
+        public Camera CameraMain;
+        public CameraMode CameraMode;
+        public bool IsCameraFree = false;
         
         private Vector3 _mouseOriginalClickPosition;
         private Vector3 _moveLimit;
         private float _cameraFreeMoveLimit;
-        private int _cameraDragSpeed;         
+        private int _cameraDragSpeed;
 
         #endregion
 
@@ -29,8 +34,7 @@ namespace Rescues
 
         #region Properties
 
-        public Camera CameraMain;
-        public bool IsCameraFree = false;
+        public int CameraDepthConst => CAMERA_DEPTH;
 
         #endregion
 
@@ -59,9 +63,13 @@ namespace Rescues
         public void LockCamera()
         {
             IsCameraFree = false;
-            return;
         }    
 
+        public void SetCamera(LocationData bootLocation)
+        {
+            CameraMode = bootLocation.CameraMode;
+        }
+        
         #endregion
     }
 }

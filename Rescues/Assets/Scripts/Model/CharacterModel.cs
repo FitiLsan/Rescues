@@ -39,13 +39,13 @@ namespace Rescues
         public CharacterModel(Transform transform, PlayerData playerData)
         {
             _speed = playerData.Speed;
-            _characterSprite = transform.GetComponent<SpriteRenderer>();
-            _playerCollider = transform.GetComponent<CapsuleCollider2D>();
-            _playerRigidbody2D = transform.GetComponent<Rigidbody2D>();
-            _animator = transform.GetComponent<Animator>();
+            _characterSprite = transform.GetComponentInChildren<SpriteRenderer>();
+            _playerCollider = transform.GetComponentInChildren<CapsuleCollider2D>();
+            _playerRigidbody2D = transform.GetComponentInChildren<Rigidbody2D>();
+            _animator = transform.GetComponentInChildren<Animator>();
             AnimationPlayTimer = new Timer();
             Transform = transform;
-            PlayerSound = Transform.GetComponent<AudioSource>();
+            PlayerSound = Transform.GetComponentInChildren<AudioSource>();
             PlayerBehaviour = Transform.GetComponent<PlayerBehaviour>();
 
         }

@@ -60,10 +60,7 @@ namespace Rescues
             {
                 var bootScreen = _customBootScreen == null ? _defaultBootScreen : _customBootScreen;
                 bootScreen.ShowBootScreen(_services, LoadLevelPart);
-            }
-            else
-            {
-                LoadLevelPart();
+                
             }
 
             void LoadLevelPart()
@@ -79,7 +76,8 @@ namespace Rescues
                 
                 _levelsData.SetLastLevelGate = gate;
                 bootLocation.LoadLocation();
-                //_services.CameraServices.SetCamera(bootLocation);
+                _context.ActiveLocation = bootLocation;
+                _services.CameraServices.SetCamera(bootLocation);
             }
         }
 

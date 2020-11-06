@@ -22,10 +22,7 @@ namespace Rescues
 
         private BootScreen _customBootScreenInstance;
         private Location _locationInstance;
-      
-
         
-
         #endregion
         
         
@@ -65,7 +62,7 @@ namespace Rescues
         public void LoadLocation()
         {
             LocationInstance.gameObject.SetActive(true);
-                // помещать ГГ на enterGate.transform
+                // TODO помещать ГГ на enterGate.transform
         }
         
         public void UnloadLocation()

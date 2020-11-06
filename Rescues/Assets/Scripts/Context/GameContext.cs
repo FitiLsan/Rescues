@@ -12,9 +12,9 @@ namespace Rescues
 
         public CharacterModel Character;
         public Inventory Inventory;
-        //public Vector3[] WayPoints;
         public EnemyBehaviour Enemy;
-
+        public LocationData ActiveLocation;
+        
         public event Action<IInteractable> AddObjectHandler = delegate(IInteractable interactable) {  };
         private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
         private readonly List<IInteractable> _interactables;
