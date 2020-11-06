@@ -6,6 +6,7 @@
         
         public MainControllers(GameContext context, Services services)
         {
+            Add(new LevelController(context, services));
             Add(new InitializeCharacterController(context, services));
             Add(new InitializeInteractableObjectController(context, services));          
             Add(new InitializeEnemyController(context, services));
