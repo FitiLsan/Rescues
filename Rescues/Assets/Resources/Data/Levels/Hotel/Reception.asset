@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd3b500a64940cb95a750703a11db0d, type: 3}
+  m_Name: Reception
+  m_EditorClassIdentifier: 
+  _locationName: Reception
+  _locationPrefab: {fileID: 6288360316359146511, guid: b7e4fa636b22a41d48808d74f0c720b3,
+    type: 3}
+  _backgroundColor: {r: 0.12941177, g: 0.1254902, b: 0.12941177, a: 0}
+  _cameraMode: 0
+  _cameraSize: 0
