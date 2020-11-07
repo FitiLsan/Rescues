@@ -3,11 +3,12 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public class DialogueTrigger : MonoBehaviour
+    public class DialogueTriggerController : MonoBehaviour
     {
         #region Fields
 
-        public DialogueData dialogue;
+        public DialogueData _dialogue;
+        private readonly GameContext _context;
 
         #endregion
 
@@ -23,7 +24,7 @@ namespace Rescues
 
         public void TriggerDialogue()
         {
-            FindObjectOfType<DialogueController>().StartDialogue(dialogue);
+            FindObjectOfType<DialogueController>().StartDialogue(_dialogue);
         }
 
         void OnTriggerEnter2D(Collider2D other)
