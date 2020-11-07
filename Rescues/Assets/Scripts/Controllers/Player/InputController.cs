@@ -139,6 +139,7 @@ namespace Rescues
             {
                 _cameraServices.LockCamera();
             }
+
         }
 
         #endregion
