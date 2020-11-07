@@ -80,15 +80,12 @@ namespace Rescues
 
                 for (float resolutionParts = 0; resolutionParts < 1; resolutionParts += _resolution)
                 {
-                    var p1 = Vector2.Lerp(_points[i].Position, _points[i].ExitPos, resolutionParts);
-                    var p2 = Vector2.Lerp(_points[i].ExitPos, _points[i + 1].EnterPos, resolutionParts);
-                    var p3 = Vector2.Lerp(_points[i + 1].EnterPos, _points[i + 1].Position, resolutionParts);
-
-                    var p12 = Vector2.Lerp(p1, p2, resolutionParts);
-                    var p23 = Vector2.Lerp(p2, p3, resolutionParts);
-
-                    var p4 = Vector2.Lerp(p12, p23, resolutionParts);
-                    drawingPoints.Add(p4);
+                    //Великая и ужаная формула кубической кривой Безье
+                    var point = Mathf.Pow(1 - resolutionParts, 3) * _points[i].Position +
+                                3 * resolutionParts * Mathf.Pow(1 - resolutionParts, 2) * _points[i].ExitPos +
+                                3 * Mathf.Pow(resolutionParts, 2) * (1 - resolutionParts) * _points[i + 1].EnterPos +
+                                Mathf.Pow(resolutionParts, 3) * _points[i + 1].Position;
+                    drawingPoints.Add(point);
                 }
             }
 
