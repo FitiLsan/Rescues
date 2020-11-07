@@ -32,8 +32,6 @@ namespace Rescues
 
         public void Execute()
         {
-            if (_context.ActiveLocation == null) return;
-            
             if ( _activeLocationHash != _context.ActiveLocation.GetHashCode())
                 SetCamera();
             
@@ -51,12 +49,13 @@ namespace Rescues
 
         private void SetCamera()
         {
-            _activeLocationHash = _context.ActiveLocation.GetHashCode();
             _iSMoveableCameraMode = false;
-            _cameraServices.CameraMain.backgroundColor = _context.ActiveLocation.BackgroundColor;
             
-            switch (_cameraServices.CameraMode)
+            switch (_context.ActiveLocation.CameraMode)
             {
+                case CameraMode.None:
+                    return;
+
                 case CameraMode.Moveable:
                     _iSMoveableCameraMode = true;
                     break; 
@@ -65,6 +64,9 @@ namespace Rescues
                     PlaceCameraOnLocation();
                     break;
             }
+            
+            _cameraServices.CameraMain.backgroundColor = _context.ActiveLocation.BackgroundColor;
+            _activeLocationHash = _context.ActiveLocation.GetHashCode();
         }
 
         private void PlaceCameraOnLocation()

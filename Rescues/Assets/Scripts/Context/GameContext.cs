@@ -28,6 +28,7 @@ namespace Rescues
         {
             _onTriggers = new SortedList<InteractableObjectType, List<IInteractable>>();
             _interactables = new List<IInteractable>();
+            ActiveLocation = new LocationData();
         }
         
         #endregion

@@ -77,7 +77,6 @@ namespace Rescues
                 _levelsData.SetLastLevelGate = gate;
                 bootLocation.LoadLocation();
                 _context.ActiveLocation = bootLocation;
-                _services.CameraServices.SetCamera(bootLocation);
             }
         }
 

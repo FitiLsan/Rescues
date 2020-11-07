@@ -9,9 +9,7 @@ namespace Rescues
 
         private const int CAMERA_DEPTH = -45;
         public Camera CameraMain;
-        public CameraMode CameraMode;
         public bool IsCameraFree = false;
-        
         private Vector3 _mouseOriginalClickPosition;
         private Vector3 _moveLimit;
         private float _cameraFreeMoveLimit;
@@ -64,11 +62,6 @@ namespace Rescues
         {
             IsCameraFree = false;
         }    
-
-        public void SetCamera(LocationData bootLocation)
-        {
-            CameraMode = bootLocation.CameraMode;
-        }
         
         #endregion
     }
