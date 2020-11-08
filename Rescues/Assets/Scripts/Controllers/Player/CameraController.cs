@@ -71,7 +71,7 @@ namespace Rescues
 
         private void PlaceCameraOnLocation()
         {
-            var position = _context.ActiveLocation.LocationInstance.transform.position;
+            var position = _context.ActiveLocation.LocationInstance.CameraPosition;
             _cameraServices.CameraMain.transform.position = new Vector3(position.x, position.y, _cameraServices.CameraDepthConst);
             _cameraServices.CameraMain.orthographicSize = _context.ActiveLocation.CameraSize;
         }

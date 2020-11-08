@@ -37,9 +37,15 @@ namespace Rescues
 
             _context.Character.AnimationPlayTimer.UpdateTimer();
 
+            //TODO сделать адекватное управление. Теперь перс просто перебирает точки Vector3 из своего пути, физики в движении нет
             if (inputAxis.x != 0 || inputAxis.y != 0)
             {
-                _context.Character.StateMoving(inputAxis);
+                var direction = inputAxis.x > 0 ? 1 : -1;
+                _context.Character.StateMoving(direction);
+            }
+            else
+            {
+                _context.Character.StateMoving(0); 
             }
 
             if (Input.GetButtonUp("Vertical"))

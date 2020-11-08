@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -65,7 +64,7 @@ namespace Rescues
         private void OnValidate()
         {
             if (gameObject.activeInHierarchy)
-                name = _goToLevelName + "-" + _goToLocationName + "-" + _goToGateId;
+                name = _thisGateId + " > " + _goToLevelName + "-" + _goToLocationName + "-" + _goToGateId;
         }
 
 

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
-using System.Linq;
-using ModuleFeatures.CurveWay;
+using NaughtyAttributes;
 using UnityEngine;
 
 
@@ -11,10 +10,13 @@ namespace Rescues
 		#region Fileds
 
 		[SerializeField] private WhoCanUseWayTypes _whoCanUseWay = WhoCanUseWayTypes.All;
-		[SerializeField] private List<WayPoint> _points;
-		[SerializeField, Range(0.01f, 0.5f)] private float _resolution = 0.0166f;
+		[SerializeField] private List<WayPoint> _wayPoints;
+		[SerializeField, Range(0.005f, 0.5f)] private float _resolution = 0.0166f;
+		
+		private List<Vector3> _allPoints;
 
-		private LineRenderer _lineRenderer;
+		[SerializeField, EnableIf("false")] 
+		private int _allPointsCount;
 
 		#endregion
 
@@ -22,17 +24,26 @@ namespace Rescues
 		#region Properties
 
 		public WhoCanUseWayTypes WhoCanUseWay => _whoCanUseWay;
+		public List<WayPoint> WayPoints =>  _wayPoints;
+		public List<Vector3> AllPoints => _allPoints;
 
 		#endregion
 
 
 		#region UnityMethods
 
+		private void Awake()
+		{
+			GetDrawingPoints();
+		}
+
 		private void OnDrawGizmos()
 		{
-			if (_points.Count > 0)
+			GetDrawingPoints();
+			
+			if (_wayPoints.Count > 0)
 			{
-				var drawPoints = GetDrawingPoints();
+				var drawPoints = _allPoints;
 				for (int i = 0; i < drawPoints.Count; i++)
 				{
 					if (i == drawPoints.Count - 1) continue;
@@ -41,54 +52,47 @@ namespace Rescues
 				}
 			}
 		}
-
-		private void Awake()
-		{
-			_lineRenderer = GetComponent<LineRenderer>();
-			var arrayPoints = GetDrawingPoints().ToArray();
-			_lineRenderer.positionCount = arrayPoints.Length;
-		}
-
+		
 		#endregion
 
 
 		#region Methods
 
-		private List<Vector3> GetDrawingPoints()
+		private void GetDrawingPoints()
 		{
-			List<Vector3> drawingPoints = new List<Vector3>();
-			float[] distances = new float[_points.Count];
-
-			for (int i = 0; i < _points.Count; i++)
+			float[] distances = new float[_wayPoints.Count];
+			_allPoints = new List<Vector3>();
+			
+			for (int i = 0; i < _wayPoints.Count; i++)
 			{
-				if (i == _points.Count - 1) continue;
+				if (i == _wayPoints.Count - 1) continue;
 
 				distances[i] =
-					Vector3.Distance(_points[i].ExitPos, _points[i].Position) +
-					Vector3.Distance(_points[i + 1].EnterPos, _points[i].ExitPos) +
-					Vector3.Distance(_points[i + 1].Position, _points[i + 1].EnterPos);
+					Vector3.Distance(_wayPoints[i].ExitPos, _wayPoints[i].Position) +
+					Vector3.Distance(_wayPoints[i + 1].EnterPos, _wayPoints[i].ExitPos) +
+					Vector3.Distance(_wayPoints[i + 1].Position, _wayPoints[i + 1].EnterPos);
 			}
 
-			for (int i = 0; i < _points.Count; i++)
+			for (int i = 0; i < _wayPoints.Count; i++)
 			{
-				if (i == _points.Count - 1) continue;
+				if (i == _wayPoints.Count - 1) continue;
 				
 				//Вычисляем количество сегментов в кривой
 				var resolution = _resolution * distances[0] / distances[i];
 				
 				for (float resolutionParts = 0; resolutionParts < 1; resolutionParts += resolution)
 				{
-					//Великая и ужаная формула кубической кривой Безье
-					var point = Mathf.Pow(1 - resolutionParts, 3) * _points[i].Position +
-					        3 * resolutionParts * Mathf.Pow(1 - resolutionParts, 2) * _points[i].ExitPos +
-					        3 * Mathf.Pow(resolutionParts, 2) * (1 - resolutionParts) * _points[i + 1].EnterPos +
-					        Mathf.Pow(resolutionParts, 3) * _points[i + 1].Position;
+					//Великая и ужаcная формула кубической кривой Безье
+					var point = Mathf.Pow(1 - resolutionParts, 3) * _wayPoints[i].Position +
+					        3 * resolutionParts * Mathf.Pow(1 - resolutionParts, 2) * _wayPoints[i].ExitPos +
+					        3 * Mathf.Pow(resolutionParts, 2) * (1 - resolutionParts) * _wayPoints[i + 1].EnterPos +
+					        Mathf.Pow(resolutionParts, 3) * _wayPoints[i + 1].Position;
 					
-					drawingPoints.Add(point);
+					_allPoints.Add(point);
 				}
 			}
 
-			return drawingPoints;
+			_allPointsCount = _allPoints.Count;
 		}
 
 		#endregion

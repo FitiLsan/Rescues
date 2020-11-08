@@ -8,22 +8,23 @@ namespace Rescues
     {
         #region Fields
 
-        private readonly float _speed;
+        private readonly int _speed;
         private SpriteRenderer _characterSprite;
         private CapsuleCollider2D _playerCollider;
         private Rigidbody2D _playerRigidbody2D;
         private State _state;
         public Timer AnimationPlayTimer;
-        private Vector2 _direction;
+        private int _direction;
         private Vector3 _teleportPosition;
         private HidingPlaceBehaviour _hidingPlaceBehaviour;
-        private Animator _animator;        
-
+        private Animator _animator;
+        private CurveWay _curveWay;
+        private int _currentCurveWayPoint;
+        
         #endregion
 
 
         #region Properties
-
         public Transform Transform { get; }
         private PlayerBehaviour PlayerBehaviour { get; }
         public AudioSource PlayerSound { get; }
@@ -38,7 +39,7 @@ namespace Rescues
 
         public CharacterModel(Transform transform, PlayerData playerData)
         {
-            _speed = playerData.Speed;
+            _speed = (int)playerData.Speed;
             _characterSprite = transform.GetComponentInChildren<SpriteRenderer>();
             _playerCollider = transform.GetComponentInChildren<CapsuleCollider2D>();
             _playerRigidbody2D = transform.GetComponentInChildren<Rigidbody2D>();
@@ -109,7 +110,7 @@ namespace Rescues
             AnimationPlayTimer.StartTimer(doorTeleporterBehaviour.TransferTime);
         }
 
-        public void StateMoving(Vector2 direction)
+        public void StateMoving(int direction)
         {
             switch (_state)
             {
@@ -201,22 +202,52 @@ namespace Rescues
             AnimationPlayTimer.StartTimer(AnimationTimer);
         }
 
+        public void SetCharacterPositionAndCurveWay(Vector3 gatePosition, CurveWay curveWay)
+        {
+            _curveWay = curveWay;
+            var nearestPoint = curveWay.AllPoints[0];
+            var minDistance = float.MaxValue;
+
+            //TODO требуется оптимизация, так как точек ооочень много в курве
+            for (var i =0; i < curveWay.AllPoints.Count; i++)
+            {
+                var newDistance = Vector3.Distance(curveWay.AllPoints[i], gatePosition);
+
+                if (newDistance < minDistance)
+                {
+                    minDistance = newDistance;
+                    nearestPoint = curveWay.AllPoints[i];
+                    _currentCurveWayPoint = i;
+                }
+            }
+
+            Transform.position = nearestPoint;
+        }
+        
         private void Move()
         {
-            _direction *= _speed * Time.deltaTime;
-
-            Transform.Translate(_direction);
-
-            if (_direction.x == 0)
+            if (_curveWay == null) return;
+            
+            int move = _direction * _speed;
+            
+            if (_currentCurveWayPoint + move < _curveWay.AllPoints.Count && _currentCurveWayPoint + move > 0)
+            {
+                _currentCurveWayPoint += move;
+                Transform.position = _curveWay.AllPoints[_currentCurveWayPoint];
+            }
+            
+            
+            
+            if (_direction == 0)
             {
                 StateIdle();               
             }
 
-            if (_direction.x > 0 && _characterSprite.flipX)
+            if (_direction > 0 && _characterSprite.flipX)
             {
                 Flip();               
             }
-            else if (_direction.x < 0 && !_characterSprite.flipX)
+            else if (_direction < 0 && !_characterSprite.flipX)
             {
                 Flip();            
             }

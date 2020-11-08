@@ -1,4 +1,4 @@
-namespace ModuleFeatures.CurveWay
+namespace  Rescues
 {
 	public enum WhoCanUseWayTypes
 	{
