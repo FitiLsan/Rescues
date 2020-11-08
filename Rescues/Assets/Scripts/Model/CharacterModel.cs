@@ -31,6 +31,7 @@ namespace Rescues
         public float AnimationTimer { get; set; }
         public State PlayerState { get { return _state; } }
         public InteractableObjectBehavior InteractableItem { get; set; }
+        public CurveWay CurveWay =>  _curveWay;
 
         #endregion
 
@@ -202,26 +203,11 @@ namespace Rescues
             AnimationPlayTimer.StartTimer(AnimationTimer);
         }
 
-        public void SetCharacterPositionAndCurveWay(Vector3 gatePosition, CurveWay curveWay)
+        public void SetPositionAndCurveWay(CurveWay curveWay)
         {
             _curveWay = curveWay;
-            var nearestPoint = curveWay.AllPoints[0];
-            var minDistance = float.MaxValue;
-
-            //TODO требуется оптимизация, так как точек ооочень много в курве
-            for (var i =0; i < curveWay.AllPoints.Count; i++)
-            {
-                var newDistance = Vector3.Distance(curveWay.AllPoints[i], gatePosition);
-
-                if (newDistance < minDistance)
-                {
-                    minDistance = newDistance;
-                    nearestPoint = curveWay.AllPoints[i];
-                    _currentCurveWayPoint = i;
-                }
-            }
-
-            Transform.position = nearestPoint;
+            Transform.position = curveWay.GetStartPointPosition;
+            _currentCurveWayPoint = curveWay.StartPointId;
         }
         
         private void Move()

@@ -1,6 +1,6 @@
 namespace  Rescues
 {
-	public enum WhoCanUseWayTypes
+	public enum WhoCanUseCurve
 	{
 		All,
 		Character

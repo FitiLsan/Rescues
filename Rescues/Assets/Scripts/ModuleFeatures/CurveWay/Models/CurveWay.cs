@@ -8,30 +8,33 @@ namespace Rescues
 	public class CurveWay : MonoBehaviour
 	{
 		#region Fileds
-
-		[SerializeField] private WhoCanUseWayTypes _whoCanUseWay = WhoCanUseWayTypes.All;
-		[SerializeField] private List<WayPoint> _wayPoints;
-		[SerializeField, Range(0.005f, 0.5f)] private float _resolution = 0.0166f;
 		
-		private List<Vector3> _allPoints;
-
+		[SerializeField] private ScalePoint _scaleLine;
+		[SerializeField] private WhoCanUseCurve _whoCanUseWay = WhoCanUseCurve.All;
+		[SerializeField] private List<WayPoint> _wayPoints;
+		[SerializeField, Range(0.005f, 0.5f)] private float _resolution = 0.007f;
 		[SerializeField, EnableIf("false")] 
 		private int _allPointsCount;
-
+		
+		private List<Vector3> _allPoints;
+		
 		#endregion
 
 
 		#region Properties
 
-		public WhoCanUseWayTypes WhoCanUseWay => _whoCanUseWay;
-		public List<WayPoint> WayPoints =>  _wayPoints;
+		public WhoCanUseCurve WhoCanUseWay => _whoCanUseWay;
 		public List<Vector3> AllPoints => _allPoints;
-
+		public ScalePoint ScalePoint => _scaleLine;
+		public int StartPointId { get; set; }
+		public Vector3 GetStartPointPosition => AllPoints[StartPointId];
+		
 		#endregion
 
 
 		#region UnityMethods
 
+		[Button("Draw curve")]
 		private void Awake()
 		{
 			GetDrawingPoints();
@@ -39,17 +42,14 @@ namespace Rescues
 
 		private void OnDrawGizmos()
 		{
-			GetDrawingPoints();
+			if (_allPoints == null) return;
 			
-			if (_wayPoints.Count > 0)
+			var drawPoints = _allPoints;
+			for (int i = 0; i < drawPoints.Count; i++)
 			{
-				var drawPoints = _allPoints;
-				for (int i = 0; i < drawPoints.Count; i++)
-				{
-					if (i == drawPoints.Count - 1) continue;
-					Gizmos.color = Color.red;
-					Gizmos.DrawLine(drawPoints[i], drawPoints[i + 1]);
-				}
+				if (i == drawPoints.Count - 1) continue;
+				Gizmos.color = Color.red;
+				Gizmos.DrawLine(drawPoints[i], drawPoints[i + 1]);
 			}
 		}
 		
@@ -77,7 +77,7 @@ namespace Rescues
 			{
 				if (i == _wayPoints.Count - 1) continue;
 				
-				//Вычисляем количество сегментов в кривой
+				//Вычисляем количество сегментов в кривой чтобы кучность отрезков между WayPoint была одинаковая
 				var resolution = _resolution * distances[0] / distances[i];
 				
 				for (float resolutionParts = 0; resolutionParts < 1; resolutionParts += resolution)

@@ -75,10 +75,11 @@ namespace Rescues
                     Debug.LogError("В " + gate.GoToLevelName + " - " + gate.GoToLocationName +
                                    " нет Gate c ID = " + gate.GoToGateId);
                 
-                _levelsData.SetLastLevelGate = gate;
                 bootLocation.LoadLocation();
+                _levelsData.SetLastLevelGate = gate;
                 _locationController.ActiveLocation = bootLocation;
-                _context.Character.SetCharacterPositionAndCurveWay(enterGate.transform.position, bootLocation.LocationInstance.GetCurve(WhoCanUseWayTypes.Character));
+                var activeCurveWay = _locationController.GetCurve(enterGate, WhoCanUseCurve.Character);
+                _context.Character.SetPositionAndCurveWay(activeCurveWay);
                 _isReadyToExecute = true;
             }
         }
