@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b20c1d33ef9274281db9c00ddfaeb5, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  Speed: 25
+  Speed: 1
   Position: {x: -25, y: 1, z: 0}

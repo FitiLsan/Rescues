@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: LevelsDataArray
   m_EditorClassIdentifier: Assembly-CSharp:Rescues:LevelsData
-  _defaultLevelName: 
-  _defaultLocationName: 
-  _defaultGateId: 0
+  _defaultLevelName: Hotel
+  _defaultLocationName: Reception
+  _defaultGateId: 1
   _loadFromLastLevel: 0
-  _lastLevelName: 
-  _lastLocationName: 
-  _lastGateId: 0
-  _bootScreen: {fileID: 0}
-  FadeEffectDelay: 0
-  _levelsNames: []
+  _lastLevelName: Hotel
+  _lastLocationName: Reception
+  _lastGateId: 1
+  _bootScreen: {fileID: 5293078557666880198, guid: 350dbdcc61ef74de087b99c5df45793d,
+    type: 3}
