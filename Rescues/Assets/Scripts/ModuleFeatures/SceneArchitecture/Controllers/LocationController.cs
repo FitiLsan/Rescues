@@ -7,12 +7,26 @@ using Object = UnityEngine.Object;
 
 namespace Rescues
 {
-    public class LocationController
+    public class LocationController : IExecuteController
     {
-        
+
+        private LocationData _activeLocation;
+
         #region Properties
         private LevelController LevelController { get; }
+        private GameContext Context { get; }
         public List<LocationData> Locations { get; } = new List<LocationData>();
+
+        public LocationData ActiveLocation
+        {
+            get => _activeLocation;
+            set
+            {
+                Context.ActiveLocation = value;
+                _activeLocation = value;
+            }
+        }
+        
         public string LevelName { get; }
 
         #endregion
@@ -20,8 +34,9 @@ namespace Rescues
         
         #region Private
         
-        public LocationController(LevelController levelController, string levelName, Transform levelParent)
+        public LocationController(LevelController levelController, GameContext context, string levelName, Transform levelParent)
         {
+            Context = context;
             LevelName = levelName;
             LevelController = levelController;
             var path = Path.Combine(AssetsPathGameObject.Object[GameObjectType.Levels], levelName);
@@ -58,9 +73,19 @@ namespace Rescues
         #endregion
         
         private void LoadLocation(Gate gate) => LevelController.LoadLevel(gate);
-        
+
+        public void SetCharacterScale()
+        {
+           //var scale = Context.Character.Transform.localScale;
+           var position = Context.Character.Transform.position;
+           var scale = Vector3.one * ActiveLocation.LocationInstance.ScalePoint.GetScale(position);
+           Context.Character.Transform.localScale = scale;
+        }
 
 
-
+        public void Execute()
+        {
+            SetCharacterScale();
+        }
     }
 }

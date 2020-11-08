@@ -4,19 +4,20 @@ using Object = UnityEngine.Object;
 
 namespace Rescues
 {
-    public class LevelController : IInitializeController
+    public class LevelController : IInitializeController, IExecuteController
     {
 
         #region Fileds
         
-        private LocationController _activeLevel;
+        private LocationController _locationController;
         private LevelsData _levelsData;
         private BootScreen _defaultBootScreen;
         private BootScreen _customBootScreen;
         private GameContext _context;
         private Services _services;
         private GameObject _levelParent;
-
+        private bool _isReadyToExecute = false;
+        
         #endregion
 
         
@@ -47,12 +48,12 @@ namespace Rescues
         
         public void LoadLevel(IGate gate)
         {
-            if (_activeLevel == null || _activeLevel.LevelName != gate.GoToLevelName)
+            if (_locationController == null || _locationController.LevelName != gate.GoToLevelName)
                 LoadAndUnloadPrefabs(gate.GoToLevelName);
 
-            var bootLocation = _activeLevel.Locations.Find(l => l.LocationName == gate.GoToLocationName);
+            var bootLocation = _locationController.Locations.Find(l => l.LocationName == gate.GoToLocationName);
             if (!bootLocation)
-                Debug.LogError(_activeLevel.LevelName + " не содержит локации с именем " + gate.GoToLocationName);
+                Debug.LogError(_locationController.LevelName + " не содержит локации с именем " + gate.GoToLocationName);
             
             _customBootScreen = bootLocation.CustomBootScreenInstance;
             
@@ -65,7 +66,7 @@ namespace Rescues
 
             void LoadLevelPart()
             {
-                var activeLocation = _activeLevel.Locations.Find(l => l.LocationActiveSelf);
+                var activeLocation = _locationController.Locations.Find(l => l.LocationActiveSelf);
                 if (activeLocation)
                     activeLocation.UnloadLocation();
                 
@@ -76,22 +77,29 @@ namespace Rescues
                 
                 _levelsData.SetLastLevelGate = gate;
                 bootLocation.LoadLocation();
-                _context.ActiveLocation = bootLocation;
+                _locationController.ActiveLocation = bootLocation;
+                _context.Character.SetCharacterPositionAndCurveWay(enterGate.transform.position, bootLocation.LocationInstance.GetCurve(WhoCanUseWayTypes.Character));
+                _isReadyToExecute = true;
             }
         }
 
         private void LoadAndUnloadPrefabs(string loadLevelName)
         {
-            if (_activeLevel != null)
+            if (_locationController != null)
             {
-                foreach (var location in _activeLevel.Locations)
+                foreach (var location in _locationController.Locations)
                     location.Destroy();
             }
             
-            _activeLevel = new LocationController(this, loadLevelName, _levelParent.transform);
+            _locationController = new LocationController(this, _context, loadLevelName, _levelParent.transform);
         }
         
         #endregion
 
+        public void Execute()
+        {
+            if (_isReadyToExecute)
+                _locationController.Execute();
+        }
     }
 }

@@ -62,7 +62,6 @@ namespace Rescues
         public void LoadLocation()
         {
             LocationInstance.gameObject.SetActive(true);
-                // TODO помещать ГГ на enterGate.transform
         }
         
         public void UnloadLocation()
@@ -76,7 +75,14 @@ namespace Rescues
             if (CustomBootScreenInstance)
                 CustomBootScreenInstance.Destroy();
         }
-        
+
+        private void OnDisable()
+        {
+            _locationInstance = null;
+            _customBootScreenInstance = null;
+            Gates = null;
+        }
+
         #endregion
         
     }
