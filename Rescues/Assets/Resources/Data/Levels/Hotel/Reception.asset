@@ -15,7 +15,7 @@ MonoBehaviour:
   _locationName: Reception
   _locationPrefab: {fileID: 8976130766894498941, guid: b7e4fa636b22a41d48808d74f0c720b3,
     type: 3}
-  _backgroundColor: {r: 0.12941177, g: 0.1254902, b: 0.12941177, a: 0}
+  _backgroundColor: {r: 0.098039225, g: 0.098039225, b: 0.098039225, a: 0}
   _cameraMode: 1
   _cameraSize: 11
   _customBootScreen: {fileID: 0}
