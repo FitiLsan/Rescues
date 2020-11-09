@@ -10258,6 +10258,12 @@ MonoBehaviour:
   _standItemSlots:
   - {fileID: 347318740}
   - {fileID: 1486388586}
+  _dontNeedItemPhrases:
+  - "\u041C\u043D\u0435 \u044D\u0442\u043E \u043D\u0435 \u043D\u0443\u0436\u043D\u043E"
+  - "\u041E\u0442\u0441\u0442\u0430\u043D\u044C"
+  - "\u041D\u0435\u0442"
+  - "\u041D\u0435 \u0445\u043E\u0447\u0443"
+  - "\u041D\u0435 \u0431\u0443\u0434\u0443"
   _standItemWindow: {fileID: 1577885210}
 --- !u!114 &1828596980
 MonoBehaviour:

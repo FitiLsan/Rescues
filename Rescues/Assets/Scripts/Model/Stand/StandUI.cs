@@ -10,14 +10,19 @@ namespace Rescues
         #region Fields
 
         [SerializeField] List<StandItem> _standItemSlots;
+        [SerializeField] List<string> _dontNeedItemPhrases;
         [SerializeField] GameObject _standItemWindow;
         private bool _isItemOpened = false;
         private bool _isMouseIn = true;
         private ItemData _item;
         private Image _standItemImage;
         private int _slotNumber;
+        private System.Random _random = new System.Random();
 
         #endregion
+
+
+        #region Properties
 
         public bool IsItemOpened
         {
@@ -44,6 +49,10 @@ namespace Rescues
             get { return _slotNumber; }
         }
 
+        #endregion
+
+
+        #region UnityMethods
 
         public void Awake()
         {
@@ -55,8 +64,13 @@ namespace Rescues
                     _standItemSlots[i].OnPointerClickEvent += OpenStandItem;
                     _standItemSlots[i].ItemSlotNumber = i;
                 }
-            }
+            }            
         }
+
+        #endregion
+
+
+        #region Methods
 
         private void OpenStandItem(int number, StandItemData standItem)
         {            
@@ -92,6 +106,12 @@ namespace Rescues
             }
         }
 
+        public void PlayDontNeedItem()
+        {
+            int temp = _random.Next(_dontNeedItemPhrases.Count-1);
+            CustomDebug.Log(_dontNeedItemPhrases[temp]);
+        }
+
         public void OnPointerExit(PointerEventData eventData)
         {
             _isMouseIn = false;
@@ -101,5 +121,7 @@ namespace Rescues
         {
             _isMouseIn = true;
         }
+
+        #endregion
     }
 }

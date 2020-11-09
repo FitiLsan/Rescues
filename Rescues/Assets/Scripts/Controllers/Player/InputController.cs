@@ -123,7 +123,10 @@ namespace Rescues
                             _context.Inventory.AddItem(item.Item);
                             item.StandItemSlots[item.SlotNumber].gameObject.SetActive(false);
                             item.StandItemSlots.RemoveAt(item.SlotNumber);
-
+                        }
+                        else if (item.Item == null)
+                        {
+                            item.PlayDontNeedItem();
                         }
                         if (!item.IsMouseIn && item.IsItemOpened)
                         {
@@ -153,6 +156,10 @@ namespace Rescues
                             _context.Inventory.AddItem(item.Item);
                             item.StandItemSlots[item.SlotNumber].gameObject.SetActive(false);
                             item.StandItemSlots.RemoveAt(item.SlotNumber);
+                        }
+                        else if (item.Item == null)
+                        {
+                            item.PlayDontNeedItem();
                         }
                     }
                 }

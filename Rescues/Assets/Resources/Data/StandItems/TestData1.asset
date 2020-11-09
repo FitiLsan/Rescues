@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1e0270b226e2c4796fd8eb33bb7a1d, type: 3}
   m_Name: TestData1
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: 490641638817ea54a89dfc596e780979, type: 3}
+  Sprite: {fileID: -2529410205585600842, guid: 3550fa31db6ef2348b2377595b6d805b, type: 3}
+  CanBeTaken: 1
+  Item: {fileID: 11400000, guid: 7594ee8e8ce903d4da98934f61cfe538, type: 2}
