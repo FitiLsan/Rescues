@@ -9,7 +9,8 @@ namespace Rescues
 	{
 		#region Fileds
 		
-		[SerializeField] private ScalePoint _scaleLine;
+		[SerializeField] private float _frontScale = 1f;
+		[SerializeField] private float _backScale = 0.8f;
 		[SerializeField] private WhoCanUseCurve _whoCanUseWay = WhoCanUseCurve.All;
 		[SerializeField] private List<WayPoint> _wayPoints;
 		[SerializeField, Range(0.005f, 0.5f)] private float _resolution = 0.007f;
@@ -17,6 +18,10 @@ namespace Rescues
 		private int _allPointsCount;
 		
 		private List<Vector3> _allPoints;
+		private float _kKoef;
+		private float _mKoef;
+		private Vector3 _backPoint;
+		private Vector3 _frontPoint;
 		
 		#endregion
 
@@ -25,7 +30,6 @@ namespace Rescues
 
 		public WhoCanUseCurve WhoCanUseWay => _whoCanUseWay;
 		public List<Vector3> AllPoints => _allPoints;
-		public ScalePoint ScalePoint => _scaleLine;
 		public int StartPointId { get; set; }
 		public Vector3 GetStartPointPosition => AllPoints[StartPointId];
 		
@@ -37,7 +41,7 @@ namespace Rescues
 		[Button("Draw curve")]
 		private void Awake()
 		{
-			GetDrawingPoints();
+			CalculateCurveData();
 		}
 
 		private void OnDrawGizmos()
@@ -57,11 +61,18 @@ namespace Rescues
 
 
 		#region Methods
+		
+		public float GetScale(Vector3 position)
+		{
+			return  _kKoef * position.y + _mKoef;
+		}
 
-		private void GetDrawingPoints()
+		private void CalculateCurveData()
 		{
 			float[] distances = new float[_wayPoints.Count];
 			_allPoints = new List<Vector3>();
+			_backPoint = new Vector3(0, float.MinValue, 0);
+			_frontPoint = new Vector3(0, float.MaxValue, 0);
 			
 			for (int i = 0; i < _wayPoints.Count; i++)
 			{
@@ -89,12 +100,25 @@ namespace Rescues
 					        Mathf.Pow(resolutionParts, 3) * _wayPoints[i + 1].Position;
 					
 					_allPoints.Add(point);
+
+					if (point.y > _backPoint.y)
+						_backPoint = point;
+
+					if (point.y < _frontPoint.y)
+						_frontPoint = point;
 				}
 			}
 
+			CalculateFunctionKoefs();
 			_allPointsCount = _allPoints.Count;
 		}
-
+		
+		private void CalculateFunctionKoefs()
+		{
+			_kKoef = (_backScale - _frontScale) / (_backPoint.y - _frontPoint.y);
+			_mKoef = _frontScale - _kKoef * _frontPoint.y;
+		}
+		
 		#endregion
 	}
 }

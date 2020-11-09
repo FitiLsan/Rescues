@@ -37,7 +37,7 @@ namespace Rescues
             get
             {
                 var position = Context.Character.Transform.position;
-                var scale = Vector3.one * Context.Character.CurveWay.ScalePoint.GetScale(position);
+                var scale = Vector3.one * Context.Character.CurveWay.GetScale(position);
                 return scale;
             }
         }
