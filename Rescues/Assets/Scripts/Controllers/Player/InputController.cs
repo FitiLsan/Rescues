@@ -38,7 +38,7 @@ namespace Rescues
             _context.Character.AnimationPlayTimer.UpdateTimer();
 
             //TODO сделать адекватное управление. Теперь перс просто перебирает точки Vector3 из своего пути, физики в движении нет
-            if (inputAxis.x != 0 || inputAxis.y != 0)
+            if (inputAxis.x != 0)
             {
                 var direction = inputAxis.x > 0 ? 1 : -1;
                 _context.Character.StateMoving(direction);
@@ -50,7 +50,7 @@ namespace Rescues
 
             if (Input.GetButtonUp("Vertical"))
             {
-                var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
+                var interactableObject = GetInteractableObject<Gate>(InteractableObjectType.Gate);
                 if (interactableObject != null)
                 {
                     _context.Character.StateTeleporting(interactableObject);
@@ -127,9 +127,9 @@ namespace Rescues
                             _context.Character.StateIdle();
                             break;
                         }
-                    case State.Teleporting:
+                    case State.GoByGateWay:
                         {
-                            _context.Character.Teleport();
+                            _context.Character.GoByGateWay();
                             _context.Character.StateIdle();
                             break;
                         }

@@ -28,7 +28,7 @@ namespace Rescues
         #region Properties
 
         public IBootScreen BootScreen => _bootScreen;
-        private IGate DefualtLoadGate => new GateData(_defaultLevelName, _defaultLocationName, _defaultGateId);
+        private IGate DefualtLoadGate => new GateDataMock(_defaultLevelName, _defaultLocationName, _defaultGateId);
         public IGate GetGate => _loadFromLastLevel ? LastLoadGate : DefualtLoadGate;
         private IGate LastLoadGate
         {
@@ -36,7 +36,7 @@ namespace Rescues
             {
                 if (_lastLevelName == String.Empty || _lastLocationName == String.Empty || _lastGateId == 0)
                     return DefualtLoadGate;
-                return new GateData(_lastLevelName, _lastLocationName, _lastGateId);
+                return new GateDataMock(_lastLevelName, _lastLocationName, _lastGateId);
             }
         }
 

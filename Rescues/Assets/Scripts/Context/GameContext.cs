@@ -54,8 +54,7 @@ namespace Rescues
                     trigger
                 });
             }
-
-            trigger.DestroyHandler = DestroyHandler;
+            
             AddObjectHandler.Invoke(trigger);
         }
 

@@ -64,7 +64,7 @@ namespace Rescues
             LocationInstance.gameObject.SetActive(true);
         }
         
-        public void UnloadLocation()
+        public void DisableOnScene()
         {
             LocationInstance.gameObject.SetActive(false);
         }

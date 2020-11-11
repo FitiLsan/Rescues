@@ -1,3 +1,5 @@
+using System;
+
 namespace Rescues
 {
     public interface IGate
@@ -8,5 +10,6 @@ namespace Rescues
         string GoToLevelName { get; }
         string GoToLocationName { get; }
         int GoToGateId { get; }
+        void LoadWithTransferTime(Action onLoadComplete);
     }
 }

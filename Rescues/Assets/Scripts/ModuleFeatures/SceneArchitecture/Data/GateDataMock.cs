@@ -1,6 +1,8 @@
+using System;
+
 namespace Rescues
 {
-    public class GateData : IGate
+    public class GateDataMock : IGate
     {
         public string ThisLevelName { get; set; }
         public string ThisLocationName { get; set; }
@@ -8,15 +10,20 @@ namespace Rescues
         public string GoToLevelName { get; }
         public string GoToLocationName { get; }
         public int GoToGateId { get; }
+
         public bool Activated { get; set; }
 
 
-        public GateData(string levelName, string locationName, int id)
+        public GateDataMock(string levelName, string locationName, int id)
         {
             GoToLevelName = levelName;
             GoToLocationName = locationName;
             GoToGateId = id;
         }
         
+        public void LoadWithTransferTime(Action onLoadComplete)
+        {
+            throw new NotImplementedException("Потому, что это Mock");
+        }
     }
 }

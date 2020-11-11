@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public sealed class DoorTeleporterController : IInitializeController, ITearDownController
+    public sealed class GateController : IInitializeController, ITearDownController
     {
         #region Fields
         
@@ -15,7 +15,7 @@ namespace Rescues
 
         #region ClassLifeCycles
         
-        public DoorTeleporterController(GameContext context, Services services)
+        public GateController(GameContext context, Services services)
         {
             _context = context;
         }
@@ -27,10 +27,10 @@ namespace Rescues
         
         public void Initialize()
         {
-            var doors = _context.GetTriggers(InteractableObjectType.Door);
+            var doors = _context.GetTriggers(InteractableObjectType.Gate);
             foreach (var trigger in doors)
             {
-                var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
+                var doorTeleporterBehaviour = trigger as InteractableObjectBehavior;
                 doorTeleporterBehaviour.OnFilterHandler += OnFilterHandler;
                 doorTeleporterBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
                 doorTeleporterBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
@@ -44,10 +44,10 @@ namespace Rescues
         
         public void TearDown()
         {
-            var doors = _context.GetTriggers(InteractableObjectType.Door);
+            var doors = _context.GetTriggers(InteractableObjectType.Gate);
             foreach (var trigger in doors)
             {
-                var doorTeleporterBehaviour = trigger as DoorTeleporterBehaviour;
+                var doorTeleporterBehaviour = trigger as InteractableObjectBehavior;
                 doorTeleporterBehaviour.OnFilterHandler -= OnFilterHandler;
                 doorTeleporterBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
                 doorTeleporterBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
@@ -67,17 +67,17 @@ namespace Rescues
         private void OnTriggerEnterHandler(ITrigger enteredObject)
         {
             enteredObject.IsInteractable = true;
-            var materialColor = enteredObject.GameObject.GetComponent<SpriteRenderer>().color;
-            enteredObject.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
-                materialColor.g, materialColor.b, 0.5f), 1.0f);
+            // var materialColor = enteredObject.GameObject.GetComponent<SpriteRenderer>().color;
+            // enteredObject.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
+            //     materialColor.g, materialColor.b, 0.5f), 1.0f);
         }
 
         private void OnTriggerExitHandler(ITrigger enteredObject)
         {
             enteredObject.IsInteractable = false;
-            var materialColor = enteredObject.GameObject.GetComponent<SpriteRenderer>().color;
-            enteredObject.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
-                materialColor.g, materialColor.b, 1.0f), 1.0f);
+            // var materialColor = enteredObject.GameObject.GetComponent<SpriteRenderer>().color;
+            // enteredObject.GameObject.GetComponent<SpriteRenderer>().DOColor(new Color(materialColor.r,
+            //     materialColor.g, materialColor.b, 1.0f), 1.0f);
         }
 
         #endregion

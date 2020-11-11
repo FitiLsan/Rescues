@@ -15,7 +15,8 @@ namespace Rescues
         private State _state;
         public Timer AnimationPlayTimer;
         private int _direction;
-        private Vector3 _teleportPosition;
+       // private Vector3 _teleportPosition;
+       private Gate _gate;
         private HidingPlaceBehaviour _hidingPlaceBehaviour;
         private Animator _animator;
         private CurveWay _curveWay;
@@ -49,7 +50,6 @@ namespace Rescues
             Transform = transform;
             PlayerSound = Transform.GetComponentInChildren<AudioSource>();
             PlayerBehaviour = Transform.GetComponent<PlayerBehaviour>();
-
         }
 
         #endregion
@@ -103,12 +103,12 @@ namespace Rescues
             AnimationPlayTimer.StartTimer(trapBehaviour.TrapInfo.BaseTrapData.CraftingTime);
         }
 
-        public void StateTeleporting(DoorTeleporterBehaviour doorTeleporterBehaviour)
+        public void StateTeleporting(Gate gate)
         {
-            SetState(State.Teleporting);
+            SetState(State.GoByGateWay);
+            _gate = gate;
             _animator.Play("Base Layer.Teleporting");
-            _teleportPosition = doorTeleporterBehaviour.ExitPoint.position;
-            AnimationPlayTimer.StartTimer(doorTeleporterBehaviour.TransferTime);
+            AnimationPlayTimer.StartTimer(gate.LocalTransferTime);
         }
 
         public void StateMoving(int direction)
@@ -131,7 +131,7 @@ namespace Rescues
                     {
                         return;
                     }
-                case State.Teleporting:
+                case State.GoByGateWay:
                     {
                         return;
                     }
@@ -148,25 +148,26 @@ namespace Rescues
 
         public void StateHandler()
         {
-            CustomDebug.Log(PlayerState);
             switch (_state)
-            {                              
+            {
                 case State.Moving:
-                    {
-                        Move();
-                        break;
-                    }                   
+                    Move();
+                    break;
+
+                case State.GoByGateWay:
+                    GoByGateWay();
+                    break;
             }
         }
 
         #endregion
 
 
-        #region Methods 
+        #region Methods
 
-        public void Teleport()
+        public void GoByGateWay()
         {
-            Transform.position = _teleportPosition;
+            _gate.GoByGateWay();
         }
 
         private void StartHiding()
@@ -221,9 +222,7 @@ namespace Rescues
                 _currentCurveWayPoint += move;
                 Transform.position = _curveWay.AllPoints[_currentCurveWayPoint];
             }
-            
-            
-            
+
             if (_direction == 0)
             {
                 StateIdle();               

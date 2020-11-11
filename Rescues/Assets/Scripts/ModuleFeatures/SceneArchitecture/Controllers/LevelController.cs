@@ -50,7 +50,7 @@ namespace Rescues
         {
             if (_locationController == null || _locationController.LevelName != gate.GoToLevelName)
                 LoadAndUnloadPrefabs(gate.GoToLevelName);
-
+            
             var bootLocation = _locationController.Locations.Find(l => l.LocationName == gate.GoToLocationName);
             if (!bootLocation)
                 Debug.LogError(_locationController.LevelName + " не содержит локации с именем " + gate.GoToLocationName);
@@ -61,14 +61,17 @@ namespace Rescues
             {
                 var bootScreen = _customBootScreen == null ? _defaultBootScreen : _customBootScreen;
                 bootScreen.ShowBootScreen(_services, LoadLevelPart);
-                
+            }
+            else
+            {
+               gate.LoadWithTransferTime(LoadLevelPart);
             }
 
             void LoadLevelPart()
             {
                 var activeLocation = _locationController.Locations.Find(l => l.LocationActiveSelf);
                 if (activeLocation)
-                    activeLocation.UnloadLocation();
+                    activeLocation.DisableOnScene();
                 
                 var enterGate = bootLocation.Gates.Find(g => g.ThisGateId == gate.GoToGateId);
                 if (!enterGate)

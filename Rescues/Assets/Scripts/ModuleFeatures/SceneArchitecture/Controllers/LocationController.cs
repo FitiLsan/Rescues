@@ -13,8 +13,7 @@ namespace Rescues
         #region Fileds
         
         private LocationData _activeLocation;
-        private const int BREAK_COUNTER = 10;
-        
+
         #endregion
         
         
@@ -78,7 +77,13 @@ namespace Rescues
                     gate.ThisLevelName = levelName;
                 }
 
-                location.UnloadLocation();
+                var triggers = location.LocationInstance.transform.GetComponentsInChildren<InteractableObjectBehavior>();
+                foreach (var trigger in triggers)
+                {
+                    Context.AddTriggers(trigger.Type, trigger);
+                }
+                
+                location.DisableOnScene();
                 Locations.Add(location);
             }
 
@@ -105,28 +110,33 @@ namespace Rescues
                 chosenCurves = curves.FindAll(x => x.WhoCanUseWay == WhoCanUseCurve.All);
             
             var result = chosenCurves[0];
-            var breakCounter = 0;
             
+            //Бинарный поиск ближейшей точки curve к enterGate
             foreach (var curve in chosenCurves)
             {
-                var minDistance = float.MaxValue;
+                var min = 0;
+                var max = curve.AllPoints.Count;
+                int i = max / 2;
+                var minDistance = Vector3.Distance(curve.AllPoints[min], enterGate.transform.position);
                 
-                for (var i = 0; i < curve.AllPoints.Count; i++)
+                do
                 {
                     var newDistance = Vector3.Distance(curve.AllPoints[i], enterGate.transform.position);
-
                     if (newDistance < minDistance)
                     {
+                        min = i;
                         minDistance = newDistance;
-                        curve.StartPointId = i;
                     }
                     else
-                    {
-                        breakCounter++;
+                    { 
+                        max = i;
                     }
+                    
+                    i = (max - min) / 2 + min;
+                    
+                } while (min + 1 != max);
 
-                    if (breakCounter > BREAK_COUNTER) break;
-                }
+                curve.StartPointId = i;
             }
 
             var distanceToStartPoint = float.MaxValue;

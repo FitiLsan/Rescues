@@ -37,8 +37,7 @@ namespace Rescues
 
 
 		#region UnityMethods
-
-		[Button("Draw curve")]
+		
 		private void Awake()
 		{
 			CalculateCurveData();
@@ -46,7 +45,7 @@ namespace Rescues
 
 		private void OnDrawGizmos()
 		{
-			if (_allPoints == null) return;
+			CalculateCurveData();
 			
 			var drawPoints = _allPoints;
 			for (int i = 0; i < drawPoints.Count; i++)
@@ -59,7 +58,7 @@ namespace Rescues
 		
 		#endregion
 
-
+		//TODO перенести все в специальный контроллер для курв
 		#region Methods
 		
 		public float GetScale(Vector3 position)
@@ -78,10 +77,11 @@ namespace Rescues
 			{
 				if (i == _wayPoints.Count - 1) continue;
 
-				distances[i] =
-					Vector3.Distance(_wayPoints[i].ExitPos, _wayPoints[i].Position) +
-					Vector3.Distance(_wayPoints[i + 1].EnterPos, _wayPoints[i].ExitPos) +
-					Vector3.Distance(_wayPoints[i + 1].Position, _wayPoints[i + 1].EnterPos);
+				distances[i] = Vector3.Distance(_wayPoints[i + 1].Position, _wayPoints[i].Position);
+					
+					// Vector3.Distance(_wayPoints[i].ExitPos, _wayPoints[i].Position) +
+					// Vector3.Distance(_wayPoints[i + 1].EnterPos, _wayPoints[i].ExitPos) +
+					// Vector3.Distance(_wayPoints[i + 1].Position, _wayPoints[i + 1].EnterPos);
 			}
 
 			for (int i = 0; i < _wayPoints.Count; i++)
