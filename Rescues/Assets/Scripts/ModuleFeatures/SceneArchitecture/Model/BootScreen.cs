@@ -29,6 +29,8 @@ namespace Rescues
             }
         }
 
+        public Sequence DOTsequnce { get; set; }
+        
         #endregion
         
         
@@ -42,17 +44,16 @@ namespace Rescues
             gameObject.SetActive(true);
             SpriteAlpha = 0;
             
-            var seq = DOTween.Sequence();
-            seq.Append(_spriteRenderer.DOFade(1, _alphaTweenTime).OnComplete(onComplete));
-            seq.AppendInterval(_screenDelay);
-            seq.Append(_spriteRenderer.DOFade(0, _alphaTweenTime).OnComplete(() => gameObject.SetActive(false)));
-            seq.SetAutoKill(true);
-            seq.Play();
+            DOTsequnce?.Kill();
+            DOTsequnce = DOTween.Sequence();
+            DOTsequnce.Append(_spriteRenderer.DOFade(1, _alphaTweenTime).OnComplete(onComplete));
+            DOTsequnce.AppendInterval(_screenDelay);
+            DOTsequnce.Append(_spriteRenderer.DOFade(0, _alphaTweenTime).OnComplete(() => gameObject.SetActive(false)));
+            DOTsequnce.Play();
         }
 
         public void Destroy()
         {
-            
             Destroy(gameObject);
         }
 

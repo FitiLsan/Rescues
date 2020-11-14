@@ -13,8 +13,12 @@ namespace Rescues
 
         public bool Activated { get; set; }
 
-
-        public GateDataMock(string levelName, string locationName, int id)
+        public static GateDataMock GetMock(string levelName, string locationName, int id)
+        {
+            return new GateDataMock(levelName, locationName, id);
+        }
+        
+        private GateDataMock(string levelName, string locationName, int id)
         {
             GoToLevelName = levelName;
             GoToLocationName = locationName;

@@ -32,7 +32,7 @@ namespace Rescues
         public float AnimationTimer { get; set; }
         public State PlayerState { get { return _state; } }
         public InteractableObjectBehavior InteractableItem { get; set; }
-        public CurveWay CurveWay =>  _curveWay;
+        public CurveWay CurentCurveWay => _curveWay;
 
         #endregion
 
@@ -213,8 +213,6 @@ namespace Rescues
         
         private void Move()
         {
-            if (_curveWay == null) return;
-            
             int move = _direction * _speed;
             
             if (_currentCurveWayPoint + move < _curveWay.AllPoints.Count && _currentCurveWayPoint + move > 0)
@@ -238,11 +236,18 @@ namespace Rescues
             }
         }
 
+        public void SetScale()
+        {
+            Transform.localScale =  _curveWay.GetScale(Transform.position);
+        }
+        
         private void Flip()
         {
             _characterSprite.flipX = !_characterSprite.flipX;
         }
 
         #endregion
+
+       
     }
 }

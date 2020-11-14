@@ -8,12 +8,19 @@ namespace Rescues
     public class Location : MonoBehaviour
     {
 
+        #region Filed
+
         [SerializeField] private Transform _cameraPosition;
 
-
+        #endregion
+        
+        
+        #region Properties
+        
         public Vector3 CameraPosition => _cameraPosition.position;
         public List<CurveWay> СurveWays { get; private set; }
 
+        #endregion
         
         
         #region UnityMethods

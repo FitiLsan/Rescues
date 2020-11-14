@@ -29,12 +29,15 @@ namespace Rescues
 
         public void Execute()
         {
+            //TODO не надо обрабатывать управление, пока локация не загружена, нужно что-то поулчше, чем проверка на НАЛЛ каждый вызов
+            if (!_context.Character.CurentCurveWay) return;
+            
             Vector2 inputAxis;
             inputAxis.x = Input.GetAxis("Horizontal");
             inputAxis.y = Input.GetAxis("Vertical");
 
+            _context.Character.SetScale();
             _context.Character.StateHandler();
-
             _context.Character.AnimationPlayTimer.UpdateTimer();
 
             //TODO сделать адекватное управление. Теперь перс просто перебирает точки Vector3 из своего пути, физики в движении нет

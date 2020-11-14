@@ -7,39 +7,14 @@ using Object = UnityEngine.Object;
 
 namespace Rescues
 {
-    public class LocationController : IExecuteController
+    public class LocationController
     {
 
-        #region Fileds
-        
-        private LocationData _activeLocation;
-
-        #endregion
-        
-        
         #region Properties
         
         private LevelController LevelController { get; }
         private GameContext Context { get; }
         public List<LocationData> Locations { get; } = new List<LocationData>();
-        public LocationData ActiveLocation
-        {
-            get => _activeLocation;
-            set
-            {
-                Context.ActiveLocation = value;
-                _activeLocation = value;
-            }
-        }
-        private Vector3 GetScale
-        {
-            get
-            {
-                var position = Context.Character.Transform.position;
-                var scale = Vector3.one * Context.Character.CurveWay.GetScale(position);
-                return scale;
-            }
-        }
         public string LevelName { get; }
 
         #endregion
@@ -66,7 +41,7 @@ namespace Rescues
                 if (location.CustomBootScreenPrefab != null)
                 {
                     location.CustomBootScreenInstance = Object.Instantiate(location.CustomBootScreenPrefab, levelParent);
-                    location.CustomBootScreenInstance.gameObject.name = "BootScreen" + location.LocationName;
+                    location.CustomBootScreenInstance.gameObject.name = "BootScreen - " + location.LocationName;
                     location.CustomBootScreenInstance.gameObject.SetActive(false);
                 }
 
@@ -82,7 +57,7 @@ namespace Rescues
                 {
                     Context.AddTriggers(trigger.Type, trigger);
                 }
-                
+
                 location.DisableOnScene();
                 Locations.Add(location);
             }
@@ -96,65 +71,12 @@ namespace Rescues
         
         private void LoadLocation(Gate gate) => LevelController.LoadLevel(gate);
 
-        public void Execute()
+        public void UnloadData()
         {
-            Context.Character.Transform.localScale = GetScale;
+            foreach (var location in Locations)
+                location.Destroy();
         }
-        
-        public CurveWay GetCurve(Gate enterGate, WhoCanUseCurve type)
-        {
-            var curves = _activeLocation.LocationInstance.СurveWays;
-            var chosenCurves = curves.FindAll(x => x.WhoCanUseWay == type);
-            
-            if (chosenCurves.Count == 0)
-                chosenCurves = curves.FindAll(x => x.WhoCanUseWay == WhoCanUseCurve.All);
-            
-            var result = chosenCurves[0];
-            
-            //Бинарный поиск ближейшей точки curve к enterGate
-            foreach (var curve in chosenCurves)
-            {
-                var min = 0;
-                var max = curve.AllPoints.Count;
-                int i = max / 2;
-                var minDistance = Vector3.Distance(curve.AllPoints[min], enterGate.transform.position);
-                
-                do
-                {
-                    var newDistance = Vector3.Distance(curve.AllPoints[i], enterGate.transform.position);
-                    if (newDistance < minDistance)
-                    {
-                        min = i;
-                        minDistance = newDistance;
-                    }
-                    else
-                    { 
-                        max = i;
-                    }
-                    
-                    i = (max - min) / 2 + min;
-                    
-                } while (min + 1 != max);
 
-                curve.StartPointId = i;
-            }
-
-            var distanceToStartPoint = float.MaxValue;
-            
-            foreach (var curve in chosenCurves)
-            {
-                var newDistanceToStartPoint = Vector3.Distance(curve.GetStartPointPosition, enterGate.transform.position);
-
-                if (newDistanceToStartPoint < distanceToStartPoint)
-                {
-                    distanceToStartPoint = newDistanceToStartPoint;
-                    result = curve;
-                }
-            }
-            
-            return result;
-        }
-        
         #endregion
     }
 }

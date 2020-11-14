@@ -1,23 +1,24 @@
+using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
 
 namespace Rescues
 {
-    public class LevelController : IInitializeController, IExecuteController
+    public class LevelController : IInitializeController
     {
 
         #region Fileds
         
         private LocationController _locationController;
+        private CurveWayController _curveWayController;
         private LevelsData _levelsData;
         private BootScreen _defaultBootScreen;
         private BootScreen _customBootScreen;
         private GameContext _context;
         private Services _services;
         private GameObject _levelParent;
-        private bool _isReadyToExecute = false;
-        
+
         #endregion
 
         
@@ -53,7 +54,7 @@ namespace Rescues
             
             var bootLocation = _locationController.Locations.Find(l => l.LocationName == gate.GoToLocationName);
             if (!bootLocation)
-                Debug.LogError(_locationController.LevelName + " не содержит локации с именем " + gate.GoToLocationName);
+                throw new Exception(_locationController.LevelName + " не содержит локации с именем " + gate.GoToLocationName);
             
             _customBootScreen = bootLocation.CustomBootScreenInstance;
             
@@ -75,35 +76,26 @@ namespace Rescues
                 
                 var enterGate = bootLocation.Gates.Find(g => g.ThisGateId == gate.GoToGateId);
                 if (!enterGate)
-                    Debug.LogError("В " + gate.GoToLevelName + " - " + gate.GoToLocationName +
+                    throw new Exception("В " + gate.GoToLevelName + " - " + gate.GoToLocationName +
                                    " нет Gate c ID = " + gate.GoToGateId);
                 
                 bootLocation.LoadLocation();
                 _levelsData.SetLastLevelGate = gate;
-                _locationController.ActiveLocation = bootLocation;
-                var activeCurveWay = _locationController.GetCurve(enterGate, WhoCanUseCurve.Character);
+
+                _context.ActiveLocation = bootLocation;
+                _curveWayController = new CurveWayController(bootLocation.LocationInstance.СurveWays);
+                var activeCurveWay = _curveWayController.GetCurve(enterGate, WhoCanUseCurve.Character);
                 _context.Character.SetPositionAndCurveWay(activeCurveWay);
-                _isReadyToExecute = true;
             }
         }
 
         private void LoadAndUnloadPrefabs(string loadLevelName)
         {
-            if (_locationController != null)
-            {
-                foreach (var location in _locationController.Locations)
-                    location.Destroy();
-            }
-            
+            _locationController?.UnloadData();
+            _curveWayController?.UnloadData();
             _locationController = new LocationController(this, _context, loadLevelName, _levelParent.transform);
         }
         
         #endregion
-
-        public void Execute()
-        {
-            if (_isReadyToExecute)
-                _locationController.Execute();
-        }
     }
 }

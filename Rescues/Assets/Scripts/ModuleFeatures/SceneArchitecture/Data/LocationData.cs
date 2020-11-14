@@ -64,16 +64,17 @@ namespace Rescues
             LocationInstance.gameObject.SetActive(true);
         }
         
-        public void DisableOnScene()
+        public void  DisableOnScene()
         {
             LocationInstance.gameObject.SetActive(false);
         }
         
         public void Destroy()
         {
-            LocationInstance.Destroy();
             if (CustomBootScreenInstance)
                 CustomBootScreenInstance.Destroy();
+            
+            LocationInstance.Destroy();
         }
 
         private void OnDisable()
