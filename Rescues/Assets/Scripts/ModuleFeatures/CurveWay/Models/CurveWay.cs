@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 
@@ -14,6 +15,11 @@ namespace Rescues
 		[SerializeField] private float _backScale = 0.8f;
 		[SerializeField] private WhoCanUseCurve _whoCanUseWay = WhoCanUseCurve.All;
 		[SerializeField] private List<WayPoint> _wayPoints;
+		[Range(0.0001f, 15f)]
+		public  float CURVES_RESOLUTION = 0.007f;
+		[ResizableTextArea,EnableIf("false")]
+		public string TestString = string.Empty;
+		
 		private List<Vector3> _allPoints;
 		
 #if UNITY_EDITOR
@@ -65,6 +71,7 @@ namespace Rescues
 			for (int i = 0; i < drawPoints.Count; i++)
 			{
 				if (i == drawPoints.Count - 1) continue;
+				Gizmos.DrawSphere(drawPoints[i], 0.15f);
 				Gizmos.DrawLine(drawPoints[i], drawPoints[i + 1]);
 			}
 		}
