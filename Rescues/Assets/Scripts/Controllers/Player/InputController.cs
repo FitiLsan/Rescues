@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 namespace Rescues
@@ -7,8 +8,11 @@ namespace Rescues
     {
         #region Fields
 
+        public EventSystem eventSystem;
+
         private readonly GameContext _context;
         private readonly CameraServices _cameraServices;
+        private GameObject _interfaceWindow;
 
         #endregion
 
@@ -75,23 +79,106 @@ namespace Rescues
                 _context.Inventory.gameObject.SetActive(!_context.Inventory.gameObject.activeSelf);
             }
 
-            if (Input.GetButtonDown("Use"))
+            if (Input.GetButtonUp("Use"))
             {
                 var puzzleObject = GetInteractableObject<PuzzleBehaviour>(InteractableObjectType.Puzzle);
                 if (puzzleObject != null)
                 {
                     puzzleObject.Puzzle.Activate();
                 }
-                
-                var interactableObject = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
+
+                var hidingPlace = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
+
                 if (_context.Character.PlayerState == State.Hiding)
                 {
-                    _context.Character.StateHideAnimation(interactableObject);
+                    _context.Character.StateHideAnimation(hidingPlace);
                 }
-                
-                if (interactableObject != null)
+
+                if (hidingPlace != null)
                 {
-                    _context.Character.StateHideAnimation(interactableObject);
+                    _context.Character.StateHideAnimation(hidingPlace);
+                }
+
+                var stand = GetInteractableObject<StandBehaviour>(InteractableObjectType.Stand);
+                if (stand != null)
+                {
+                    OpenInterfaceWindow(stand.StandWindow.gameObject, stand.StandWindow.GetComponent<StandUI>().StandItemSlots[0].gameObject);
+                }
+            }
+
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (_interfaceWindow != null)
+                {
+                    var item = _interfaceWindow.GetComponent<StandUI>();
+                    if (item != null)
+                    {
+                        if (!item.IsItemOpened)
+                        {
+                            item.OpenStandItemWindow();
+                        }
+                        else if (item.Item != null && !_context.Inventory.Contains(item.Item) && item.IsMouseIn)
+                        {
+                            _context.Inventory.AddItem(item.Item);
+                            item.StandItemSlots[item.SlotNumber].gameObject.SetActive(false);
+                            item.StandItemSlots.RemoveAt(item.SlotNumber);
+                        }
+                        else if (item.Item == null)
+                        {
+                            item.PlayDontNeedItem();
+                        }
+                        if (!item.IsMouseIn && item.IsItemOpened)
+                        {
+                            item.CloseStandItemWindow();
+                        }
+                        else if (!item.IsMouseIn)
+                        {
+                            CloseInterfaceWindow();
+                        }
+                    }
+                }
+            }
+
+            if (Input.GetButtonUp("Submit"))
+            {
+                if (_interfaceWindow != null)
+                {
+                    var item = _interfaceWindow.GetComponent<StandUI>();
+                    if (item != null)
+                    {
+                        if (!item.IsItemOpened)
+                        {
+                            item.OpenStandItemWindow();
+                        }
+                        else if (item.Item != null && !_context.Inventory.Contains(item.Item))
+                        {
+                            _context.Inventory.AddItem(item.Item);
+                            item.StandItemSlots[item.SlotNumber].gameObject.SetActive(false);
+                            item.StandItemSlots.RemoveAt(item.SlotNumber);
+                        }
+                        else if (item.Item == null)
+                        {
+                            item.PlayDontNeedItem();
+                        }
+                    }
+                }
+            }
+
+            if (Input.GetButtonUp("Cancel"))
+            {
+                if (_interfaceWindow != null)
+                {
+                    var item = _interfaceWindow.GetComponent<StandUI>();
+                    if (item != null && item.IsItemOpened)
+                    {
+                        item.CloseStandItemWindow();
+                        EventSystem.current.SetSelectedGameObject(item.StandItemSlots[item.SlotNumber].gameObject);
+                    }
+                    else if (item != null)
+                    {
+                        CloseInterfaceWindow();
+                    }
                 }
             }
 
@@ -169,6 +256,23 @@ namespace Rescues
             return behaviour;
         }
 
+        private void CloseInterfaceWindow()
+        {
+            _interfaceWindow.SetActive(false);
+            Time.timeScale = 1f;
+            _interfaceWindow = null;
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+
+        private void OpenInterfaceWindow(GameObject interfaceWindow, GameObject selectedObject = null)
+        {
+            _interfaceWindow = interfaceWindow;
+            _interfaceWindow.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(selectedObject);
+            Time.timeScale = 0f;
+        }
+
         #endregion
     }
 }
+
