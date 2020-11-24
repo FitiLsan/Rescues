@@ -79,7 +79,7 @@ namespace Rescues
             if (Hide())
             {
                 _animator.Play("Base Layer.Hiding");
-                SetState(State.Hiding);
+                SetState(State.Hiding);                             
             }
             else
             {
@@ -173,23 +173,33 @@ namespace Rescues
         private void StartHiding()
         {
             PlayerSound.clip = _hidingPlaceBehaviour.HidingPlaceData.HidingSound;
-            AnimationTimer = _hidingPlaceBehaviour.HidingPlaceData.AnimationDuration;
+            AnimationTimer = _hidingPlaceBehaviour.HidingPlaceData.AnimationDuration;         
             PlayAnimationWithTimer();
+            if (_playerRigidbody2D.bodyType == RigidbodyType2D.Dynamic)
+            {
+                _characterSprite.enabled = false; //чтобы спрайт выключался сразу, когда идет процесс пряток
+            }
+            else
+            {
+                _hidingPlaceBehaviour.HidedSprite.enabled = false; //чтобы спрайт хайдинг плейс бехевора выключался сразу, когда персонаж начинает вылезать
+            }
         }
 
         private bool Hide()
         {
             bool isHided;
-            _playerCollider.enabled = !_playerCollider.enabled;
+            _playerCollider.enabled = !_playerCollider.enabled;          
             if (_playerRigidbody2D.bodyType == RigidbodyType2D.Dynamic)
             {
                 _playerRigidbody2D.bodyType = RigidbodyType2D.Static;
                 isHided = true;
+                _hidingPlaceBehaviour.HidedSprite.enabled = true; //чтобы спрайт хайдинг плейс бехевора включался только тогда, когда персонаж спрятался
             }
             else
             {
                 _playerRigidbody2D.bodyType = RigidbodyType2D.Dynamic;
                 isHided = false;
+                _characterSprite.enabled = true; //чтобы спрайт выключался только тогда, когда персонаж уже вылез
             }
 
             return isHided;
