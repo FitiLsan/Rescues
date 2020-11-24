@@ -9,10 +9,11 @@ namespace Rescues
 
         public static readonly Dictionary<GameObjectType, string> Object = new Dictionary<GameObjectType, string>()
         {
-            {GameObjectType.Character, "Prefabs/Player/Prefabs_Player_Character"},
-            {GameObjectType.Enemy, "Prefabs/Enemies/Prefabs_Enemies_Patrolling"},
-            {GameObjectType.Canvas, "Prefabs/UI/Prefabs_UI_Canvas"},
-            {GameObjectType.PuzzlesFolder, "Prefabs/Puzzles/"},
+            { GameObjectType.Character, "Prefabs/Player/Prefabs_Player_Character" },
+            { GameObjectType.Enemy, "Prefabs/Enemies/Prefabs_Enemies_Patrolling" },
+            { GameObjectType.Canvas, "Prefabs/UI/Prefabs_UI_Canvas" },
+            { GameObjectType.Levels, "Data/Levels" },
+            {GameObjectType.PuzzlesFolder, "Prefabs/Puzzles/"}
         };
 
         public static readonly Dictionary<ScreenType, string> Screens = new Dictionary<ScreenType, string>()

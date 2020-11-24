@@ -12,9 +12,9 @@ namespace Rescues
 
         public CharacterModel Character;
         public Inventory Inventory;
-        //public Vector3[] WayPoints;
         public EnemyBehaviour Enemy;
-
+        public LocationData ActiveLocation;
+        
         public event Action<IInteractable> AddObjectHandler = delegate(IInteractable interactable) {  };
         private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
         private readonly List<IInteractable> _interactables;
@@ -28,6 +28,7 @@ namespace Rescues
         {
             _onTriggers = new SortedList<InteractableObjectType, List<IInteractable>>();
             _interactables = new List<IInteractable>();
+            ActiveLocation = ScriptableObject.CreateInstance<LocationData>();
         }
         
         #endregion
@@ -53,8 +54,7 @@ namespace Rescues
                     trigger
                 });
             }
-
-            trigger.DestroyHandler = DestroyHandler;
+            
             AddObjectHandler.Invoke(trigger);
         }
 

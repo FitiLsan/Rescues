@@ -8,28 +8,31 @@ namespace Rescues
     {
         #region Fields
 
-        private readonly float _speed;
+        private readonly int _speed;
         private SpriteRenderer _characterSprite;
         private CapsuleCollider2D _playerCollider;
         private Rigidbody2D _playerRigidbody2D;
         private State _state;
         public Timer AnimationPlayTimer;
-        private Vector2 _direction;
-        private Vector3 _teleportPosition;
+        private int _direction;
+       // private Vector3 _teleportPosition;
+       private Gate _gate;
         private HidingPlaceBehaviour _hidingPlaceBehaviour;
-        private Animator _animator;        
-
+        private Animator _animator;
+        private CurveWay _curveWay;
+        private int _currentCurveWayPoint;
+        
         #endregion
 
 
         #region Properties
-
         public Transform Transform { get; }
         private PlayerBehaviour PlayerBehaviour { get; }
         public AudioSource PlayerSound { get; }
         public float AnimationTimer { get; set; }
         public State PlayerState { get { return _state; } }
         public InteractableObjectBehavior InteractableItem { get; set; }
+        public CurveWay CurentCurveWay => _curveWay;
 
         #endregion
 
@@ -38,16 +41,15 @@ namespace Rescues
 
         public CharacterModel(Transform transform, PlayerData playerData)
         {
-            _speed = playerData.Speed;
-            _characterSprite = transform.GetComponent<SpriteRenderer>();
-            _playerCollider = transform.GetComponent<CapsuleCollider2D>();
-            _playerRigidbody2D = transform.GetComponent<Rigidbody2D>();
-            _animator = transform.GetComponent<Animator>();
+            _speed = (int)playerData.Speed;
+            _characterSprite = transform.GetComponentInChildren<SpriteRenderer>();
+            _playerCollider = transform.GetComponentInChildren<CapsuleCollider2D>();
+            _playerRigidbody2D = transform.GetComponentInChildren<Rigidbody2D>();
+            _animator = transform.GetComponentInChildren<Animator>();
             AnimationPlayTimer = new Timer();
             Transform = transform;
-            PlayerSound = Transform.GetComponent<AudioSource>();
+            PlayerSound = Transform.GetComponentInChildren<AudioSource>();
             PlayerBehaviour = Transform.GetComponent<PlayerBehaviour>();
-
         }
 
         #endregion
@@ -101,15 +103,15 @@ namespace Rescues
             AnimationPlayTimer.StartTimer(trapBehaviour.TrapInfo.BaseTrapData.CraftingTime);
         }
 
-        public void StateTeleporting(DoorTeleporterBehaviour doorTeleporterBehaviour)
+        public void StateTeleporting(Gate gate)
         {
-            SetState(State.Teleporting);
+            SetState(State.GoByGateWay);
+            _gate = gate;
             _animator.Play("Base Layer.Teleporting");
-            _teleportPosition = doorTeleporterBehaviour.ExitPoint.position;
-            AnimationPlayTimer.StartTimer(doorTeleporterBehaviour.TransferTime);
+            AnimationPlayTimer.StartTimer(gate.LocalTransferTime);
         }
 
-        public void StateMoving(Vector2 direction)
+        public void StateMoving(int direction)
         {
             switch (_state)
             {
@@ -129,7 +131,7 @@ namespace Rescues
                     {
                         return;
                     }
-                case State.Teleporting:
+                case State.GoByGateWay:
                     {
                         return;
                     }
@@ -146,25 +148,26 @@ namespace Rescues
 
         public void StateHandler()
         {
-            CustomDebug.Log(PlayerState);
             switch (_state)
-            {                              
+            {
                 case State.Moving:
-                    {
-                        Move();
-                        break;
-                    }                   
+                    Move();
+                    break;
+
+                case State.GoByGateWay:
+                    GoByGateWay();
+                    break;
             }
         }
 
         #endregion
 
 
-        #region Methods 
+        #region Methods
 
-        public void Teleport()
+        public void GoByGateWay()
         {
-            Transform.position = _teleportPosition;
+            _gate.GoByGateWay();
         }
 
         private void StartHiding()
@@ -211,32 +214,50 @@ namespace Rescues
             AnimationPlayTimer.StartTimer(AnimationTimer);
         }
 
+        public void SetPositionAndCurveWay(CurveWay curveWay)
+        {
+            _curveWay = curveWay;
+            Transform.position = curveWay.GetStartPointPosition;
+            _currentCurveWayPoint = curveWay.StartPointId;
+        }
+        
         private void Move()
         {
-            _direction *= _speed * Time.deltaTime;
+            int move = _direction * _speed;
+            
+            if (_currentCurveWayPoint + move < _curveWay.AllPoints.Count && _currentCurveWayPoint + move > 0)
+            {
+                _currentCurveWayPoint += move;
+                Transform.position = _curveWay.AllPoints[_currentCurveWayPoint];
+            }
 
-            Transform.Translate(_direction);
-
-            if (_direction.x == 0)
+            if (_direction == 0)
             {
                 StateIdle();               
             }
 
-            if (_direction.x > 0 && _characterSprite.flipX)
+            if (_direction > 0 && _characterSprite.flipX)
             {
                 Flip();               
             }
-            else if (_direction.x < 0 && !_characterSprite.flipX)
+            else if (_direction < 0 && !_characterSprite.flipX)
             {
                 Flip();            
             }
         }
 
+        public void SetScale()
+        {
+            Transform.localScale =  _curveWay.GetScale(Transform.position);
+        }
+        
         private void Flip()
         {
             _characterSprite.flipX = !_characterSprite.flipX;
         }
 
         #endregion
+
+       
     }
 }

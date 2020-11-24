@@ -33,22 +33,31 @@ namespace Rescues
 
         public void Execute()
         {
+            //TODO не надо обрабатывать управление, пока локация не загружена, нужно что-то поулчше, чем проверка на НАЛЛ каждый вызов
+            if (!_context.Character.CurentCurveWay) return;
+            
             Vector2 inputAxis;
             inputAxis.x = Input.GetAxis("Horizontal");
             inputAxis.y = Input.GetAxis("Vertical");
 
+            _context.Character.SetScale();
             _context.Character.StateHandler();
-
             _context.Character.AnimationPlayTimer.UpdateTimer();
 
-            if (inputAxis.x != 0 || inputAxis.y != 0)
+            //TODO сделать адекватное управление. Теперь перс просто перебирает точки Vector3 из своего пути, физики в движении нет
+            if (inputAxis.x != 0)
             {
-                _context.Character.StateMoving(inputAxis);
+                var direction = inputAxis.x > 0 ? 1 : -1;
+                _context.Character.StateMoving(direction);
+            }
+            else
+            {
+                _context.Character.StateMoving(0); 
             }
 
             if (Input.GetButtonUp("Vertical"))
             {
-                var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
+                var interactableObject = GetInteractableObject<Gate>(InteractableObjectType.Gate);
                 if (interactableObject != null)
                 {
                     _context.Character.StateTeleporting(interactableObject);
@@ -208,9 +217,9 @@ namespace Rescues
                             _context.Character.StateIdle();
                             break;
                         }
-                    case State.Teleporting:
+                    case State.GoByGateWay:
                         {
-                            _context.Character.Teleport();
+                            _context.Character.GoByGateWay();
                             _context.Character.StateIdle();
                             break;
                         }

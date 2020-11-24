@@ -4,8 +4,9 @@
     {
         None = 0,
         Character = 1,
-        Enemy = 2,
-        Canvas = 3,
-        PuzzlesFolder = 4
+        Enemy     = 2,
+        Canvas    = 3,
+        Levels    = 4,
+        PuzzlesFolder = 5
     }
 }
