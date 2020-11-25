@@ -27,12 +27,19 @@ namespace Rescues
         public void Initialize()
         {
             var triggers = Object.FindObjectsOfType<InteractableObjectBehavior>();
+            var buttons = Object.FindObjectsOfType<ButtonBehavior>();
 
             foreach (var trigger in triggers)
             {
-                _context.AddTriggers(trigger.Type, trigger);
+               _context.AddTriggers(trigger.Type, trigger);
+            }
+
+            foreach (var button in buttons)
+            {
+                _context.AddButtons(button.Type, button);
             }
         }
+
 
         #endregion
     }

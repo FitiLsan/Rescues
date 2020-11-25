@@ -42,6 +42,15 @@ namespace Rescues
                 _context.Character.StateMoving(inputAxis);
             }
 
+            if (Input.GetButtonUp("Fire1"))
+            {
+                var interactableObject = GetClickObject(InteractableObjectType.Button);
+                if (interactableObject != null)
+                {
+                    interactableObject.Click();
+                }
+            }
+
             if (Input.GetButtonUp("Vertical"))
             {
                 var interactableObject = GetInteractableObject<DoorTeleporterBehaviour>(InteractableObjectType.Door);
@@ -167,6 +176,22 @@ namespace Rescues
             }
 
             return behaviour;
+        }
+
+        private IButton GetClickObject(InteractableObjectType type)
+        {
+            var buttons = _context.GetButtons();
+            
+            foreach(var button in buttons)
+            {
+                if (Physics2D.OverlapCircle(Input.mousePosition,5) == button.Collider)
+                {
+                    button.Click();
+                }
+                
+            }
+
+            return null;
         }
 
         #endregion

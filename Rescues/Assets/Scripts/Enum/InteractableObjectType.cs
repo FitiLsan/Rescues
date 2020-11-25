@@ -8,5 +8,6 @@
         HidingPlace = 3,
         Trap = 4,
         Puzzle = 5,
+        Button = 6
     }
 }

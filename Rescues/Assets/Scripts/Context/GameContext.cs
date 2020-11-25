@@ -16,6 +16,7 @@ namespace Rescues
         public EnemyBehaviour Enemy;
 
         public event Action<IInteractable> AddObjectHandler = delegate(IInteractable interactable) {  };
+        private List<IButton> _buttons;
         private readonly SortedList<InteractableObjectType, List<IInteractable>> _onTriggers;
         private readonly List<IInteractable> _interactables;
         
@@ -28,12 +29,18 @@ namespace Rescues
         {
             _onTriggers = new SortedList<InteractableObjectType, List<IInteractable>>();
             _interactables = new List<IInteractable>();
+            _buttons = new List<IButton>();
         }
         
         #endregion
 
 
         #region Methods
+
+        public void AddButtons(InteractableObjectType type, IButton button)
+        {
+            _buttons.Add(button);
+        }
 
         public void AddTriggers(InteractableObjectType type, ITrigger trigger)
         {
@@ -77,6 +84,11 @@ namespace Rescues
         public List<IInteractable> GetListInteractable()
         {
             return _interactables;
+        }
+
+        public List<IButton> GetButtons()
+        {
+            return _buttons;
         }
 
         #endregion
