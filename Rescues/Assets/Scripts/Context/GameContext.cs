@@ -34,7 +34,6 @@ namespace Rescues
         
         #endregion
 
-
         #region Methods
 
         public void AddButtons(InteractableObjectType type, IButton button)

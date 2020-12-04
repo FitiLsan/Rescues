@@ -28,6 +28,7 @@ namespace Rescues
         {
             var triggers = Object.FindObjectsOfType<InteractableObjectBehavior>();
             var buttons = Object.FindObjectsOfType<ButtonBehavior>();
+            
 
             foreach (var trigger in triggers)
             {
@@ -36,8 +37,9 @@ namespace Rescues
 
             foreach (var button in buttons)
             {
-                _context.AddButtons(button.Type, button);
+               _context.AddButtons(button.Type, button);
             }
+
         }
 
 

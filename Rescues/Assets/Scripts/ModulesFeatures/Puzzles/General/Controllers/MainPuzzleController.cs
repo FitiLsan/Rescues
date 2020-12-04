@@ -29,7 +29,7 @@ namespace Rescues
             var puzzleInteracts = _context.GetTriggers(InteractableObjectType.Puzzle);
             var mainPuzzleParent = new GameObject("Puzzles");
             var puzzleControllers = new PuzzlesControllers();
-
+            
             foreach (var trigger in puzzleInteracts)
             {
                 var puzzleBehaviour = trigger as PuzzleBehaviour;

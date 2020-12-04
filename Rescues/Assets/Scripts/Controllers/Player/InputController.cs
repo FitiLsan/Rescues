@@ -184,7 +184,7 @@ namespace Rescues
             
             foreach(var button in buttons)
             {
-                if (Physics2D.OverlapCircle(Input.mousePosition,5) == button.Collider)
+                if (Physics2D.OverlapCircle(Input.mousePosition,1) == button.Collider)
                 {
                     button.Click();
                 }
