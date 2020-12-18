@@ -18,4 +18,5 @@ MonoBehaviour:
   _backgroundColor: {r: 0.09803922, g: 0.09803922, b: 0.09803922, a: 0}
   _cameraMode: 2
   _cameraSize: 11
-  _customBootScreen: {fileID: 0}
+  _customBootScreen: {fileID: 5293078557666880198, guid: 350dbdcc61ef74de087b99c5df45793d,
+    type: 3}

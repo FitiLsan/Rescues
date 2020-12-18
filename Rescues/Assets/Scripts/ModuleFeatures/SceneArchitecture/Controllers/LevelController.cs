@@ -36,9 +36,9 @@ namespace Rescues
             var path = AssetsPathGameObject.Object[GameObjectType.Levels];
             var levelsData = Resources.LoadAll<LevelsData>(path);
             _levelsData = levelsData[0];
-            //_defaultBootScreen = Object.Instantiate((BootScreen)_levelsData.BootScreen, _levelParent.transform);
-            //_defaultBootScreen.name = "DefaultBootScreen";
-            //_defaultBootScreen.gameObject.SetActive(false);
+            _defaultBootScreen = Object.Instantiate((BootScreen)_levelsData.BootScreen, _levelParent.transform);
+            _defaultBootScreen.name = "DefaultBootScreen";
+            _defaultBootScreen.gameObject.SetActive(false);
             LoadLevel(_levelsData.GetGate);
         }
         
