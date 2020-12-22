@@ -8,7 +8,7 @@ namespace Rescues
 	{
 		#region Fildes
 
-		private const float CURVES_RESOLUTION = 0.007f;
+		private const float CURVES_RESOLUTION = 0.01f;
 		private List<CurveWay> _curveWays;
 
 		#endregion
