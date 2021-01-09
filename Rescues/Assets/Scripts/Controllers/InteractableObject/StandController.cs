@@ -34,6 +34,8 @@ namespace Rescues
                 standsBehaviour.OnFilterHandler += OnFilterHandler;
                 standsBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
                 standsBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
+
+                standsBehaviour.StandWindow.gameObject.SetActive(false);
             }
         }
 

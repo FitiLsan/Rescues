@@ -111,7 +111,7 @@ namespace Rescues
                 var stand = GetInteractableObject<StandBehaviour>(InteractableObjectType.Stand);
                 if (stand != null)
                 {
-                    OpenInterfaceWindow(stand.StandWindow.gameObject, stand.StandWindow.GetComponent<StandUI>().StandItemSlots[0].gameObject);
+                    OpenInterfaceWindow(stand.StandWindow.gameObject, stand.StandWindow.StandItemSlots[0].gameObject);
                 }
             }
 

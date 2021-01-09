@@ -7,7 +7,7 @@ namespace Rescues
     {
         #region Fields
 
-        public GameObject StandWindow;
+        public StandUI StandWindow;
         
         #endregion
     }
