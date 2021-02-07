@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -39,54 +40,12 @@ namespace Rescues
 
 		private void CalculateCurveData(CurveWay curveWay)
 		{
-			var backPoint = new Vector3(0, float.MinValue, 0);
-			var frontPoint = new Vector3(0, float.MaxValue, 0);
-			var wayPoints = curveWay.WayPoints;
-			float[] distances = new float[wayPoints.Count];
-			var allPoints = new List<Vector3>();
-			
-			for (int i = 0; i < wayPoints.Count; i++)
-			{
-				if (i == wayPoints.Count - 1) continue;
-
-				distances[i] = Vector3.Distance(wayPoints[i + 1].Position, wayPoints[i].Position);
-					
-				// Vector3.Distance(_wayPoints[i].ExitPos, _wayPoints[i].Position) +
-				// Vector3.Distance(_wayPoints[i + 1].EnterPos, _wayPoints[i].ExitPos) +
-				// Vector3.Distance(_wayPoints[i + 1].Position, _wayPoints[i + 1].EnterPos);
-			}
-
-			for (int i = 0; i < wayPoints.Count; i++)
-			{
-				if (i == wayPoints.Count - 1) continue;
-				
-				//Вычисляем количество сегментов в кривой чтобы кучность отрезков между WayPoint была одинаковая
-				var resolution = CURVES_RESOLUTION * distances[0] / distances[i];
-				
-				for (float resolutionParts = 0; resolutionParts < 1; resolutionParts += resolution)
-				{
-					//Великая и ужаcная формула кубической кривой Безье
-					var point = Mathf.Pow(1 - resolutionParts, 3) * wayPoints[i].Position +
-					            3 * resolutionParts * Mathf.Pow(1 - resolutionParts, 2) * wayPoints[i].ExitPos +
-					            3 * Mathf.Pow(resolutionParts, 2) * (1 - resolutionParts) * wayPoints[i + 1].EnterPos +
-					            Mathf.Pow(resolutionParts, 3) * wayPoints[i + 1].Position;
-					
-					allPoints.Add(point);
-					
-					//Определение самой верхней и нижней точек по Y
-					if (point.y > backPoint.y)
-						backPoint = point;
-
-					if (point.y < frontPoint.y)
-						frontPoint = point;
-				}
-			}
-
-			curveWay.AllPoints = allPoints;
+			var backPoint = curveWay.PathCreator.transform.position.y + curveWay.PathCreator.bezierPath.PathBounds.extents.y;
+			var frontPoint = curveWay.PathCreator.transform.position.y - curveWay.PathCreator.bezierPath.PathBounds.extents.y;
 			
 			//Вычисление коэфицентов линейной функции для скейла персонажей на Curve
-			curveWay.KKoef = (curveWay.BackScale - curveWay.FrontScale) / (backPoint.y - frontPoint.y);
-			curveWay.MKoef = curveWay.FrontScale - curveWay.KKoef * frontPoint.y;
+			curveWay.KKoef = (curveWay.BackScale - curveWay.FrontScale) / (backPoint - frontPoint);
+			curveWay.MKoef = curveWay.FrontScale - curveWay.KKoef * frontPoint;
 		}
 		
 		public CurveWay GetCurve(Gate enterGate, WhoCanUseCurve type)
@@ -95,50 +54,26 @@ namespace Rescues
             
 			if (chosenCurves.Count == 0)
 				chosenCurves = _curveWays.FindAll(x => x.WhoCanUseWay == WhoCanUseCurve.All);
-            
-			var result = chosenCurves[0];
 
+			var result = chosenCurves.First();
+			
+			var closestPoints = new Dictionary<CurveWay, Vector3>();
 			foreach (var curve in chosenCurves)
-			{
-				//Бинарный поиск ближейшей точки curve к enterGate
-				var min = 0;
-				var max = curve.AllPoints.Count;
-				int i = max / 2;
-				var minDistance = Vector3.Distance(curve.AllPoints[min], enterGate.transform.position);
-                
-				do
-				{
-					var newDistance = Vector3.Distance(curve.AllPoints[i], enterGate.transform.position);
-					if (newDistance < minDistance)
-					{
-						min = i;
-						minDistance = newDistance;
-					}
-					else
-					{ 
-						max = i;
-					}
-                    
-					i = (max - min) / 2 + min;
-                    
-				} while (min + 1 != max);
-
-				curve.StartPointId = i;
-			}
+				closestPoints.Add(curve, curve.PathCreator.path.GetClosestPointOnPath(enterGate.transform.position));
 
 			//Поиск ближайшей Curve к точке enterGate
-			var distanceToStartPoint = float.MaxValue;
-			foreach (var curve in chosenCurves)
+			var startDistance = float.MaxValue;
+			foreach (var curve in closestPoints)
 			{
-				var newDistanceToStartPoint = Vector3.Distance(curve.GetStartPointPosition, enterGate.transform.position);
-
-				if (newDistanceToStartPoint < distanceToStartPoint)
+				var newDistance = Vector3.Distance(curve.Value, enterGate.transform.position);
+				if (newDistance < startDistance)
 				{
-					distanceToStartPoint = newDistanceToStartPoint;
-					result = curve;
+					startDistance = newDistance;
+					curve.Key.StartCharacterPosition = curve.Value;
+					result = curve.Key;
 				}
 			}
-			
+
 			return result;
 		}
 
@@ -149,10 +84,6 @@ namespace Rescues
 				curve.GetScaleAction = null;
 			}
 		}
-
-#if UNITY_EDITOR
-		public void CalculateCurveDataForEditor(CurveWay curveWay) => CalculateCurveData(curveWay);
-#endif
 
 		#endregion
 	}

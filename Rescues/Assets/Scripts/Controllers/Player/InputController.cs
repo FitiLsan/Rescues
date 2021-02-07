@@ -43,8 +43,7 @@ namespace Rescues
             _context.Character.SetScale();
             _context.Character.StateHandler();
             _context.Character.AnimationPlayTimer.UpdateTimer();
-
-            //TODO сделать адекватное управление. Теперь перс просто перебирает точки Vector3 из своего пути, физики в движении нет
+            
             if (inputAxis.x != 0)
             {
                 var direction = inputAxis.x > 0 ? 1 : -1;

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Admin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Admin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Rescues.-1402254308.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Admin\AppData\local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Admin\AppData\local\JetBrains\Rider2020.3\resharper-host\local\Transient\Rider\v203\SolutionCaches\_Rescues.-1402254308.00" t="ExcludeRecursive" />
     <e p="C:\Users\Admin\Rescues\Rescues" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CustomButton.cs" t="Include" />
@@ -155,6 +156,48 @@
             </e>
           </e>
         </e>
+        <e p="PathCreator" t="Include">
+          <e p="Core" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Helper" t="Include">
+                <e p="MouseUtility.cs" t="Include" />
+                <e p="PathHandle.cs" t="Include" />
+                <e p="ScreenSpacePolyLine.cs" t="Include" />
+              </e>
+              <e p="PathEditor.cs" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="Objects" t="Include">
+                <e p="BezierPath.cs" t="Include" />
+                <e p="EndOfPathInstruction.cs" t="Include" />
+                <e p="GlobalDisplaySettings.cs" t="Include" />
+                <e p="MinMax3D.cs" t="Include" />
+                <e p="PathCreator.cs" t="Include" />
+                <e p="PathCreatorData.cs" t="Include" />
+                <e p="PathSpace.cs" t="Include" />
+                <e p="VertexPath.cs" t="Include" />
+              </e>
+              <e p="Utility" t="Include">
+                <e p="CubicBezierUtility.cs" t="Include" />
+                <e p="MathUtility.cs" t="Include" />
+                <e p="VertexPathUtility.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Examples" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Editor" t="Include">
+                <e p="PathSceneToolEditor.cs" t="Include" />
+              </e>
+              <e p="GeneratePathExample.cs" t="Include" />
+              <e p="PathFollower.cs" t="Include" />
+              <e p="PathPlacer.cs" t="Include" />
+              <e p="PathSceneTool.cs" t="Include" />
+              <e p="PathSpawner.cs" t="Include" />
+              <e p="RoadMeshCreator.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Context" t="Include">
             <e p="Contexts.cs" t="Include" />
@@ -172,10 +215,10 @@
               <e p="MainLateControllers.cs" t="Include" />
               <e p="ReactiveController.cs" t="Include" />
             </e>
-            <e p="HidingPlaceController.cs" t="Include" />
             <e p="InteractableObject" t="Include">
-              <e p="DoorTeleporterController.cs" t="Include" />
-              <e p="InitializeInteractableObjectController.cs" t="Include" />
+              <e p="GateController.cs" t="Include" />
+              <e p="HidingPlaceController.cs" t="Include" />
+              <e p="StandController.cs" t="Include" />
             </e>
             <e p="NPC" t="Include">
               <e p="EnemyMoveController.cs" t="Include" />
@@ -210,6 +253,7 @@
             <e p="KillingTrapData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
             <e p="RouteData.cs" t="Include" />
+            <e p="StandItemData.cs" t="Include" />
             <e p="WayPointInfo.cs" t="Include" />
           </e>
           <e p="Enum" t="Include">
@@ -254,6 +298,7 @@
               <e p="ItemBehaviour.cs" t="Include" />
               <e p="PlayerBehaviour.cs" t="Include" />
               <e p="RaycastTestBehaviour.cs" t="Include" />
+              <e p="StandBehaviour.cs" t="Include" />
               <e p="TrapBehaviour.cs" t="Include" />
               <e p="TrapInfo.cs" t="Include" />
               <e p="WayPointBehaviour.cs" t="Include" />
@@ -264,33 +309,22 @@
               <e p="InventoryTooltip.cs" t="Include" />
               <e p="ItemSlot.cs" t="Include" />
             </e>
-          </e>
-          <e p="ModuleFeatures" t="Include">
-            <e p="SceneArchitecture" t="Include">
-              <e p="Controllers" t="Include">
-                <e p="LevelController.cs" t="Include" />
-                <e p="LocationController.cs" t="Include" />
-              </e>
-              <e p="Data" t="Include">
-                <e p="GateData.cs" t="Include" />
-                <e p="LevelsArray.cs" t="Include" />
-                <e p="LocationData.cs" t="Include" />
-              </e>
-              <e p="Enum" t="Include">
-                <e p="CameraMode.cs" t="Include" />
-              </e>
-              <e p="Interface" t="Include">
-                <e p="IBootScreen.cs" t="Include" />
-                <e p="IGate.cs" t="Include" />
-              </e>
-              <e p="Model" t="Include">
-                <e p="BootScreen.cs" t="Include" />
-                <e p="Gate.cs" t="Include" />
-                <e p="Location.cs" t="Include" />
-              </e>
+            <e p="Stand" t="Include">
+              <e p="StandItem.cs" t="Include" />
+              <e p="StandUI.cs" t="Include" />
             </e>
           </e>
-          <e p="ModulesFeatures" t="Include">
+          <e p="ModuleFeatures" t="Include">
+            <e p="CurveWay" t="Include">
+              <e p="Controllers" t="Include">
+                <e p="CurveWayController.cs" t="Include" />
+              </e>
+              <e p="Models" t="Include">
+                <e p="CurveWay.cs" t="Include" />
+                <e p="WayPoint.cs" t="Include" />
+              </e>
+              <e p="WhoCanUseCurve.cs" t="Include" />
+            </e>
             <e p="Puzzles" t="Include">
               <e p="General" t="Include">
                 <e p="Controllers" t="Include">
@@ -316,6 +350,29 @@
                   <e p="WirePoint.cs" t="Include" />
                   <e p="WiresPuzzle.cs" t="Include" />
                 </e>
+              </e>
+            </e>
+            <e p="SceneArchitecture" t="Include">
+              <e p="Controllers" t="Include">
+                <e p="LevelController.cs" t="Include" />
+                <e p="LocationController.cs" t="Include" />
+              </e>
+              <e p="Data" t="Include">
+                <e p="GateDataMock.cs" t="Include" />
+                <e p="LevelsData.cs" t="Include" />
+                <e p="LocationData.cs" t="Include" />
+              </e>
+              <e p="Enum" t="Include">
+                <e p="CameraMode.cs" t="Include" />
+              </e>
+              <e p="Interface" t="Include">
+                <e p="IBootScreen.cs" t="Include" />
+                <e p="IGate.cs" t="Include" />
+              </e>
+              <e p="Model" t="Include">
+                <e p="BootScreen.cs" t="Include" />
+                <e p="Gate.cs" t="Include" />
+                <e p="Location.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -370,6 +427,8 @@
       <e p="NaughtyAttributes.Test.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
+      <e p="PathCreator.csproj" t="IncludeRecursive" />
+      <e p="PathCreatorEditor.csproj" t="IncludeRecursive" />
       <e p="Rescues.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>

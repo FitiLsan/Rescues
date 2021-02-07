@@ -1,4 +1,5 @@
 ﻿using System;
+using PathCreation;
 using UnityEngine;
 
 
@@ -15,12 +16,12 @@ namespace Rescues
         private State _state;
         public Timer AnimationPlayTimer;
         private int _direction;
-       // private Vector3 _teleportPosition;
-       private Gate _gate;
+        private Gate _gate;
         private HidingPlaceBehaviour _hidingPlaceBehaviour;
         private Animator _animator;
         private CurveWay _curveWay;
         private int _currentCurveWayPoint;
+        private float move = 0f;
         
         #endregion
 
@@ -218,18 +219,12 @@ namespace Rescues
         {
             _curveWay = curveWay;
             Transform.position = curveWay.GetStartPointPosition;
-            _currentCurveWayPoint = curveWay.StartPointId;
         }
         
         private void Move()
         {
-            int move = _direction * _speed;
-            
-            if (_currentCurveWayPoint + move < _curveWay.AllPoints.Count && _currentCurveWayPoint + move > 0)
-            {
-                _currentCurveWayPoint += move;
-                Transform.position = _curveWay.AllPoints[_currentCurveWayPoint];
-            }
+            move += _direction * _speed * Time.deltaTime;
+            Transform.position = _curveWay.PathCreator.path.GetPointAtDistance(move, EndOfPathInstruction.Stop);
 
             if (_direction == 0)
             {

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Rescues:LevelsData
   _defaultLevelName: Hotel
   _defaultLocationName: Reception
-  _defaultGateId: 2
+  _defaultGateId: 1
   _loadFromLastLevel: 0
   _lastLevelName: Hotel
   _lastLocationName: Reception
-  _lastGateId: 3
+  _lastGateId: 1
   _bootScreen: {fileID: 5293078557666880198, guid: 350dbdcc61ef74de087b99c5df45793d,
     type: 3}
