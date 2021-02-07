@@ -63,13 +63,7 @@ namespace Rescues
             _enterPointPositionRemeber = _enterPoint.transform.localPosition;
             _exitPointPositionRemeber = _exitPoint.transform.localPosition;
         }
-
-        private void OnValidate()
-        {
-            if (!_enterPoint || !_exitPoint)
-                throw new NullReferenceException("Missing enter or exit point in WayPoint");
-        }
-
+        
         private void OnDrawGizmos()
         {
             if (_enterPoint && _exitPoint)

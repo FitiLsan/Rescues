@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10994cca7bf04bff8a07c130503c51d7, type: 3}
+  m_Script: {fileID: 0}
   m_Name: LevelsData
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp:Rescues:LevelsData
   _defaultLevelName: Hotel
   _defaultLocationName: Reception
   _defaultGateId: 1
   _loadFromLastLevel: 0
   _lastLevelName: Hotel
-  _lastLocationName: Corridor
-  _lastGateId: 2
+  _lastLocationName: Reception
+  _lastGateId: 1
   _bootScreen: {fileID: 5293078557666880198, guid: 350dbdcc61ef74de087b99c5df45793d,
     type: 3}
