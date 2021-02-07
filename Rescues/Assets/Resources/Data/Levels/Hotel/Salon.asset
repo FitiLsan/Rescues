@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Salon
   m_EditorClassIdentifier: 
   _locationName: Salon
-  _locationPrefab: {fileID: 8461104034127722214, guid: 09c36c7b4c86f4e45bda0a1bea3cb92b,
+  _locationPrefab: {fileID: 5907541622321360578, guid: 154857e0be2b35944a2b3de520ea663c,
     type: 3}
   _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   _cameraMode: 1
   _cameraSize: 24
-  _customBootScreen: {fileID: 0}
+  _customBootScreen: {fileID: 5293078557666880198, guid: 350dbdcc61ef74de087b99c5df45793d,
+    type: 3}

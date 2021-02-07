@@ -11,13 +11,13 @@ namespace NaughtyAttributes.Editor
 	{
 		public static IEnumerable<FieldInfo> GetAllFields(object target, Func<FieldInfo, bool> predicate)
 		{
-			if (target == null)
-			{
-				Debug.LogError("The target object is null. Check for missing scripts.");
-				yield break;
-			}
+            if (target == null)
+            {
+                Debug.LogError("The target object is null. Check for missing scripts.");
+                yield break;
+            }
 
-			List<Type> types = new List<Type>()
+            List<Type> types = new List<Type>()
 			{
 				target.GetType()
 			};
