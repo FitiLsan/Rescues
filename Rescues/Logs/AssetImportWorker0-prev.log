@@ -1,0 +1,2499 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'ru' Physical Memory: 16303 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/User/Documents/Rescues/Rescues
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+55880
+Successfully changed project path to: C:/Users/User/Documents/Rescues/Rescues
+C:/Users/User/Documents/Rescues/Rescues
+Using Asset Import Pipeline V2.
+Unable to join player connection multicast group.
+
+Refreshing native plugins compatible for Editor in 24.15 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/User/Documents/Rescues/Rescues/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2182)
+    Vendor:   
+    VRAM:     5991 MB
+    Driver:   27.21.14.6109
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56204
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001247 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 22.85 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.484 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001161 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.768 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1474 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.3 MB.
+System memory in use after: 68.4 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1926.
+Total: 1.363400 ms (FindLiveObjects: 0.173200 ms CreateObjectMapping: 0.063200 ms MarkObjects: 1.083500 ms  DeleteObjects: 0.042700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a25bd3464a60bcdda378d312e55cf1bb') in 0.279929 seconds
+  Import took 0.285948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.504916 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeb10d7270fc5aabdfdeedb97b090067') in 0.027930 seconds
+  Import took 0.031352 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.303362 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92092eb7a8ad15288b81dda2e4d36105') in 0.018047 seconds
+  Import took 0.021214 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.045404 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b09b127a75e852e13a4442336991ae') in 0.034092 seconds
+  Import took 0.037321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.791988 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '532c58ffbc7ee22e228008d045b3aea7') in 0.017730 seconds
+  Import took 0.021754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.005160 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c590776a9aedc44b8354b18e09b52da') in 0.024764 seconds
+  Import took 0.028104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.027802 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55f9264b62f42b5673fcd2ea0925203e') in 0.020540 seconds
+  Import took 0.023361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.609722 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '714f81b8a745ecceb8825ef0d493d32f') in 0.018772 seconds
+  Import took 0.022053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.006386 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a475e0ac620f5f332ba37ab31967a25') in 0.016401 seconds
+  Import took 0.019271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.015632 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50823af84f380e94bfde87fad0859785') in 0.018373 seconds
+  Import took 0.020776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.175247 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '900b629c4f3f1f50615820db224e9ffd') in 0.018256 seconds
+  Import took 0.020853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.427030 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d1deb676c1fe4ba5b5f8dc55178a419') in 0.023149 seconds
+  Import took 0.025694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.005121 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf1e8ca2b057c4a945c843e719eb86df') in 0.017753 seconds
+  Import took 0.020760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.193159 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489cbf0e81ef3710ab9f441fad1e5ed8') in 0.018839 seconds
+  Import took 0.021861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.676241 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '241fd1bad687819a8a00d75cce7e6bdf') in 0.022083 seconds
+  Import took 0.025052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.747676 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c722f41e5cc717a5ae282cce2d860505') in 0.031788 seconds
+  Import took 0.035573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.592066 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1f5d8310d727de5522772c5a016e313') in 0.023876 seconds
+  Import took 0.026524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.190247 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba63dd76093aa576e91efbbcbd0bf4e4') in 0.018483 seconds
+  Import took 0.021532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.204520 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8645971f63c3234bf3a3338f0c1888dc') in 0.018776 seconds
+  Import took 0.022045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.634359 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91e80d763c79f2dec1c4c759adadac4c') in 0.017158 seconds
+  Import took 0.019357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.796944 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd53987d33c9cb86691e4395ed94db4') in 0.019711 seconds
+  Import took 0.022442 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.755133 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04cd5b527e608cd26c10930038f3e2ef') in 0.036613 seconds
+  Import took 0.060624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.586562 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09f63d576fc77e7ee25a44fee711c726') in 0.021094 seconds
+  Import took 0.023868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.188252 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd1f4f128b78cfb3d1b05767ec15039') in 0.017941 seconds
+  Import took 0.020423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.394156 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '569fe3003d728018b0876d8d0b49832d') in 0.017878 seconds
+  Import took 0.020160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.801558 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80beb0e3165d29ba0086bcbd67e69ba4') in 0.020607 seconds
+  Import took 0.023684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.606463 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03f31181e2a6491b8553abf3fd2d6f4d') in 0.017546 seconds
+  Import took 0.020314 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.800096 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f6164c656c7eb1b6420c85e862e7d36') in 0.022436 seconds
+  Import took 0.026121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.181058 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fae0135ecc81fba635cac287eb8cadd') in 0.020810 seconds
+  Import took 0.023496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.384613 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a4550557405fd058d6e26e54d2448ed') in 0.023652 seconds
+  Import took 0.026439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.585878 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddf9bd257b08a23aba1e9d888f8c26e6') in 0.017805 seconds
+  Import took 0.020831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.808940 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbd1c231df2b8b7ce87754845a2012d') in 0.023435 seconds
+  Import took 0.025965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.256295 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2289490dce5fe648415383ed50df4396') in 0.017116 seconds
+  Import took 0.019948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.445072 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f9d19995e66091e9f3882fe6069e0e4') in 0.018190 seconds
+  Import took 0.020835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.209912 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd438b96862807e7a18a70123f37eb1b') in 0.017464 seconds
+  Import took 0.019961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.014500 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81a4c24b9619348973a867ee59c097ee') in 0.022698 seconds
+  Import took 0.025463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.953899 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b64f19faae341939810b95143f89bff6') in 0.036609 seconds
+  Import took 0.039625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.567473 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e0b9ca207bce4d6806366aaf23d60e5') in 0.016341 seconds
+  Import took 0.019167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.832396 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '233db8462077c05bcf3d0505b41f8ccb') in 0.025489 seconds
+  Import took 0.028316 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.942535 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08a80822e7d04ee38ba148a15a83fcda') in 0.024971 seconds
+  Import took 0.027826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.387555 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ff38e13f41a5fd3b8fba9c05e2ff068') in 0.023729 seconds
+  Import took 0.026406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.779105 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57844b34d3cc313fa3130ce0828bec83') in 0.027444 seconds
+  Import took 0.029996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.638977 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc499778bcf3cc16f15a9756b991e119') in 0.021581 seconds
+  Import took 0.024235 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.164130 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f39316fe188e22893fbb0f4b7d20b51b') in 0.022830 seconds
+  Import took 0.025549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.489866 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '424b2ba5aca9ed522474bd3fc3d44ce6') in 0.016641 seconds
+  Import took 0.019573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.642586 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6523442cde1b9ae6339b4f345cacdf5c') in 0.021324 seconds
+  Import took 0.024008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.660458 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ea9f646dc1321ebbf85617bc86b9b68') in 0.018295 seconds
+  Import took 0.021511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.201565 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e354d086b1d10af14c9c9ebcc8ea644e') in 0.019258 seconds
+  Import took 0.035322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.804196 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61d6d2caedc338bdf0927a267eadb097') in 0.024012 seconds
+  Import took 0.026698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.275797 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '968374492f1fbf614b5edbf723dbee68') in 0.016102 seconds
+  Import took 0.018719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.849477 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82a2202ed278a07681df9a6fa8535ff6') in 0.018153 seconds
+  Import took 0.020784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.629392 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f2d528820057f423f032544b817f917') in 0.018146 seconds
+  Import took 0.021063 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.602869 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3f1a53d081729a6da89aa57753358df') in 0.019961 seconds
+  Import took 0.022510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.789674 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fc62dce313c01183d4b7426849c8896') in 0.022877 seconds
+  Import took 0.025462 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.426811 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '286aa59aa01af0f9bf1392d54cf66115') in 0.018116 seconds
+  Import took 0.020751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.015377 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb6a85533f0d8ceda2fe3e724d9d4b3') in 0.016421 seconds
+  Import took 0.018680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.192229 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dff2ae944b9b99c879127beb98754992') in 0.020195 seconds
+  Import took 0.022686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.388745 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a29bb58aa8eb69acf545d423e0ebfa8') in 0.031726 seconds
+  Import took 0.033940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.190537 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b38a4718bc11cf5ade6aa0c7dea241') in 0.019142 seconds
+  Import took 0.021821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.793197 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4253c1441f7ed03d5816091d0606f32') in 0.019579 seconds
+  Import took 0.022147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.832730 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85f5367f0e4b77b2ef18601120e68b12') in 0.021231 seconds
+  Import took 0.023901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.061809 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ad0151b43d7df506ccb907ff85d441') in 0.022825 seconds
+  Import took 0.025434 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.413850 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44fb76e3637fd852661c6e0b605a560d') in 0.016215 seconds
+  Import took 0.018916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.679961 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b03fa9f6a989fefdeed42e8ac22e7f6') in 0.016845 seconds
+  Import took 0.019704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.604521 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95e8fdc0fedeeb0f4601ca7b17c8cb3b') in 0.024223 seconds
+  Import took 0.026523 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.431166 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de1bf6c72ba619937733c5c2d1148a3e') in 0.032332 seconds
+  Import took 0.034668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.186368 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4e06454fb42ce8e5a491972d65d7976') in 0.018102 seconds
+  Import took 0.020621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.990587 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bd4657bb6599fa5b0755d78ba877b65') in 0.020599 seconds
+  Import took 0.023124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.407999 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '075e8646ae807e6085eba2e8d542ce2b') in 0.019044 seconds
+  Import took 0.021628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.205580 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6059ebec1d8aeee71fe4d5d9a2dc64a') in 0.019691 seconds
+  Import took 0.022128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.796747 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde8202169e63f87d14be8a754086356') in 0.022386 seconds
+  Import took 0.024867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.385105 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82493a40a7998f674dde78c64d857321') in 0.019062 seconds
+  Import took 0.021655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.637686 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a48782055ecaf4b97079ed3ae84028f') in 0.027887 seconds
+  Import took 0.030692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.565540 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd40cd997b6b805e803036e0760236faa') in 0.020837 seconds
+  Import took 0.023650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.976315 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '657fca32623fbfeee0931982323c1043') in 0.022902 seconds
+  Import took 0.025229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.399168 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a898056970396ae1fb6a4b26855087') in 0.021041 seconds
+  Import took 0.023340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.802998 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ffe048295c2602c3ce268601eca607f') in 0.021437 seconds
+  Import took 0.023912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.597328 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba455b4fff7a90b52463aeb2351d55cf') in 0.020094 seconds
+  Import took 0.022317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.445920 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '000bb8754138ed99b1922e987fa64994') in 0.016702 seconds
+  Import took 0.019475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.254720 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f007eda416c57a8ef032b3c6d45aec76') in 0.022617 seconds
+  Import took 0.025664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.031947 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d26c102252902e00ccf6a4311481d0c') in 0.016903 seconds
+  Import took 0.019779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.402682 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '402bedd0021389d9e474705d5f53252f') in 0.018974 seconds
+  Import took 0.021394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.603478 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554eca58f04c91016b88f107deaea675') in 0.022937 seconds
+  Import took 0.025536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.438724 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0f64cbd6b95a281ca829c2a9b49554c') in 0.021130 seconds
+  Import took 0.023749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.394760 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb3fb71137aa8a950377ace38f2c892') in 0.019160 seconds
+  Import took 0.021983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.587734 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5735a5f4698a159efb539ea11df8382a') in 0.025389 seconds
+  Import took 0.028205 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.200728 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a96b0c5ae1ed0304ae36e87002078367') in 0.018828 seconds
+  Import took 0.021635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.607589 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc3cf73ec8d024764ee9d77e72e06195') in 0.021376 seconds
+  Import took 0.023887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.473968 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c3464450879e2f41265e41b6f899a71') in 0.026220 seconds
+  Import took 0.028415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.025855 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14caaca2b35c1f0965ce37724a2f4d0') in 0.014294 seconds
+  Import took 0.016722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.785561 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4679673cade878be5494eb115cd6e359') in 0.012083 seconds
+  Import took 0.014498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.022041 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f35cae9a293ec99a8fc8169756ea4a13') in 0.029066 seconds
+  Import took 0.031485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.401492 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83ef85f1c5aca4246b4e1665daf5d4f3') in 0.013796 seconds
+  Import took 0.016367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.167016 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35317a8f249e825bc0dc34069f555465') in 0.013234 seconds
+  Import took 0.016104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.606632 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3d848d313707a03aa60b5b8826b42c6') in 0.014308 seconds
+  Import took 0.016535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.634294 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3c84e856750abffc1cdf3aefcc68ca') in 0.033021 seconds
+  Import took 0.035506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.561846 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da2abfbdd87997727b172929a71d4ee9') in 0.012665 seconds
+  Import took 0.014852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.395205 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fd95b98465027f0234f96301f703976') in 0.013013 seconds
+  Import took 0.015761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.793690 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '928105bcc272779085db14c23ab4f0ed') in 0.014120 seconds
+  Import took 0.016281 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.004797 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60d5a21713748ae32e645d54b93dd9a1') in 0.013862 seconds
+  Import took 0.016044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.009023 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43971bfd0667624e001461d0bef848c6') in 0.014889 seconds
+  Import took 0.017365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.406557 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aefddf185bb0a9ef5022be3005be3e55') in 0.014019 seconds
+  Import took 0.016330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.031665 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb9a201c0e7dc7aa65a76a82923b27ab') in 0.014959 seconds
+  Import took 0.017384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.009648 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a57d7c49ca9b0be1d2578ca3b0a7a8c') in 0.012976 seconds
+  Import took 0.015228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.591064 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '718913de3846d43e584cef124acf64ce') in 0.015971 seconds
+  Import took 0.018560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.055894 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f1399315ec2c3b9be40318eecf4327') in 0.017152 seconds
+  Import took 0.019530 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.568000 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76cba1f77868147ec656d90f29d3434b') in 0.022192 seconds
+  Import took 0.024633 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.616770 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55d4da104245272318665bd4a4d1870b') in 0.017837 seconds
+  Import took 0.020305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.590083 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08b5091633818728529748d7d88dda76') in 0.022597 seconds
+  Import took 0.024719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.349217 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f99a858b695e2f73edffb7bfa6adef75') in 0.022654 seconds
+  Import took 0.024847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.398383 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72395885121f9077c5a58c4b9ecc4021') in 0.021072 seconds
+  Import took 0.023686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.988385 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e841588ba8a5b641cb575ba3ae697e5b') in 0.012567 seconds
+  Import took 0.014910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.772614 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '881a1b73b46c2c475d7b08b44f66d851') in 0.014028 seconds
+  Import took 0.017022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.402196 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97673fdc41e6b77f815b63cbd92fe3c3') in 0.019243 seconds
+  Import took 0.022149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.390177 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14caa9c74e52f72b5971fa01dacd583f') in 0.012907 seconds
+  Import took 0.015593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.201434 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a49ca923860dc20a563306ce25395931') in 0.014728 seconds
+  Import took 0.017166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.016529 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1670295950ba039b607cf5ebc52c2bab') in 0.016566 seconds
+  Import took 0.019873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.789417 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eeb9c4745e5ff8e0a1b430ae6099fe7') in 0.015475 seconds
+  Import took 0.017648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.993973 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5311032b852f08599ecceeca0f2cb35d') in 0.013226 seconds
+  Import took 0.015641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.614455 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c0ed82e76d63b7244c956278d584462') in 0.013265 seconds
+  Import took 0.015850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.807890 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4fd4a21f94bbddc889de2db1e14241c') in 0.016160 seconds
+  Import took 0.018295 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.626313 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5321d97f06999d8b9b03ea14affc3104') in 0.026399 seconds
+  Import took 0.028563 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.948375 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a574645e4e6635955c21e942897efaf') in 0.013276 seconds
+  Import took 0.016070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.997719 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23be874c82921a3373c21e05e2e637b9') in 0.016092 seconds
+  Import took 0.018401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.010900 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a553d514c1b5976486f782dd85a2c30a') in 0.014961 seconds
+  Import took 0.017265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.628964 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23e56df15860a3dbb55f6d892ce17fe0') in 0.014653 seconds
+  Import took 0.016925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.002162 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9097d1f5c408539902c5d4a2c3f92f57') in 0.013918 seconds
+  Import took 0.016408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.190398 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf289a4f86fa49a0f1c0cc93e5fc6b39') in 0.034043 seconds
+  Import took 0.036617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.974394 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '260556cc3afb9808384c8c7f689256e9') in 0.022093 seconds
+  Import took 0.024348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.983024 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '181a22efeba341ba38f11bb3c8f3a915') in 0.017843 seconds
+  Import took 0.020362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.812502 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b149523c830779b8f1dfa19d7b4e49e9') in 0.016322 seconds
+  Import took 0.019115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.596464 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f1cafb481adf406f68dfbd4f9944f5a') in 0.013855 seconds
+  Import took 0.016370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.016624 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc72b18684f5b0c2584a63c16e9d591b') in 0.013059 seconds
+  Import took 0.015199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.173514 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99551bd609986fb6feaaa43965c4a519') in 0.019353 seconds
+  Import took 0.021811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.842902 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfa68886caff679f562262023e67ace1') in 0.013578 seconds
+  Import took 0.015820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.783864 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aada78504b803e82b94bb68c3a0cf04b') in 0.018188 seconds
+  Import took 0.020489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.626056 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05768dfbcb3acd85ab079883e50caf55') in 0.018063 seconds
+  Import took 0.020982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.607281 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed68367bf7afc082e6eb14f8e5e5269') in 0.013211 seconds
+  Import took 0.015388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.395545 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab
+  artifactKey: Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Corridor.prefab using Guid(32089a453d3ae1544b5982a30ab32ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3688fff2e59f241428dbb1901a71f641') in 0.015200 seconds
+  Import took 0.017996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 271.222603 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6faaa602ea97c3b20ce416355b6d227') in 0.032211 seconds
+  Import took 0.035056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.870504 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a39dcef4e7e51eb2484c76d8beec3154') in 0.025671 seconds
+  Import took 0.028161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.441103 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc81409ff8bfd11d98db4c44d9db453b') in 0.024906 seconds
+  Import took 0.027388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.292578 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64f1571becfb936599fe50d72ec601d0') in 0.018198 seconds
+  Import took 0.021134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.243070 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c8897291cc70bb11fccfe78efe13e80') in 0.025498 seconds
+  Import took 0.028192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.556301 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30b72678765f243e8d9a5dd4e23be172') in 0.024875 seconds
+  Import took 0.027155 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.401114 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba43c94e7d91e90ad30aee474d87398d') in 0.025486 seconds
+  Import took 0.028002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.853410 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdfc1e5951fbf1c02bd435ed6481bec1') in 0.034109 seconds
+  Import took 0.037227 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.096747 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4436f9449bf8ebae12bb01d995d41aa8') in 0.034269 seconds
+  Import took 0.036763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.332081 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbcb24bbf32a28e191e8e01022f1c0d1') in 0.025822 seconds
+  Import took 0.028187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.913493 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e8a421bd5c19df4a6ec641c2d9a95e3') in 0.021113 seconds
+  Import took 0.037431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.791969 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7de4116fe61e87178ad07d872e8697b5') in 0.024979 seconds
+  Import took 0.027221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.160573 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '577bc7d2d502887fb2f0a767bd2255ca') in 0.019999 seconds
+  Import took 0.022861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.009952 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8671fdbc738ef64f023c32dd7537652e') in 0.023967 seconds
+  Import took 0.026348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.976292 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8fc1eba4326a8c9da1ed8ccb2f52e5e') in 0.028382 seconds
+  Import took 0.030692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.777372 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d9725c96e1380f522bf5f82a8557828') in 0.022615 seconds
+  Import took 0.025212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.234250 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7773145826f48b1b3c9236d7c8682eba') in 0.033779 seconds
+  Import took 0.039958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.467617 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3326c3a170803958f00cbf2c215b9aa6') in 0.029084 seconds
+  Import took 0.036542 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001190 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.743 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1467 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72.0 MB.
+System memory in use after: 72.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1941.
+Total: 1.500500 ms (FindLiveObjects: 0.175500 ms CreateObjectMapping: 0.048900 ms MarkObjects: 1.258900 ms  DeleteObjects: 0.015900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.339241 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7314c6b31a72cf671afd58e5c93a4ca') in 0.067924 seconds
+  Import took 0.070971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.437457 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97a7a6932a49fef259914e87bbf95b99') in 0.037477 seconds
+  Import took 0.040374 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.183760 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdc6b70df278f448048341e6877b4ca9') in 0.028403 seconds
+  Import took 0.049542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.753240 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd3ee7380676661bf3f1c84389ec8662') in 0.034932 seconds
+  Import took 0.037288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.245863 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '455d1f104fdcc981f8ec9b27e3e4a254') in 0.027879 seconds
+  Import took 0.030249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.952181 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '312635d13f3b01638dffdfd320f483c5') in 0.047273 seconds
+  Import took 0.049996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.148184 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b194d51add59f66be42b0569ddac8aa') in 0.030183 seconds
+  Import took 0.032923 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001027 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.650 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72.0 MB.
+System memory in use after: 72.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1944.
+Total: 1.287600 ms (FindLiveObjects: 0.148800 ms CreateObjectMapping: 0.043400 ms MarkObjects: 1.083600 ms  DeleteObjects: 0.011100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001055 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.647 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72.2 MB.
+System memory in use after: 72.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1946.
+Total: 1.420800 ms (FindLiveObjects: 0.159400 ms CreateObjectMapping: 0.048000 ms MarkObjects: 1.200100 ms  DeleteObjects: 0.012400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 130.129681 seconds.
+  path: Assets/Resources/Prefabs/Player/Prefabs_Player_Character.prefab
+  artifactKey: Guid(d9917e5f38c75634d8f99fcdfcd58a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Player/Prefabs_Player_Character.prefab using Guid(d9917e5f38c75634d8f99fcdfcd58a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b941cef37b3fa90762196ec5c854d3') in 0.043601 seconds
+  Import took 0.046738 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001205 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.815 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72.4 MB.
+System memory in use after: 72.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1949.
+Total: 1.682100 ms (FindLiveObjects: 0.212600 ms CreateObjectMapping: 0.080400 ms MarkObjects: 1.374500 ms  DeleteObjects: 0.013100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 402.667640 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3e3df18e26df1e86e847d50bd969c6') in 0.092886 seconds
+  Import took 0.095884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.171659 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48f4196cc393cfc99693b91452dbbbca') in 0.027280 seconds
+  Import took 0.029634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.288556 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e5bd4d0b1ff9f079a266fbb0621eacd') in 0.031429 seconds
+  Import took 0.034191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.575626 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb9fd27e68e7510576fcc6b678ff1228') in 0.024409 seconds
+  Import took 0.027230 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001099 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.674 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72.5 MB.
+System memory in use after: 72.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1952.
+Total: 1.317600 ms (FindLiveObjects: 0.141400 ms CreateObjectMapping: 0.044000 ms MarkObjects: 1.120100 ms  DeleteObjects: 0.011000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.380645 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4df363ebc4dcca4caf9807eefef4339b') in 0.079646 seconds
+  Import took 0.100948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.162942 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab
+  artifactKey: Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Salon.prefab using Guid(154857e0be2b35944a2b3de520ea663c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83de72b9c78457de4cfc46aafe49a9d1') in 0.028295 seconds
+  Import took 0.030578 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001162 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.653 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72.8 MB.
+System memory in use after: 72.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1955.
+Total: 2.810100 ms (FindLiveObjects: 0.327100 ms CreateObjectMapping: 0.144900 ms MarkObjects: 2.313300 ms  DeleteObjects: 0.022700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.509197 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4d39fba82acac5c47c41bdc2bc94696') in 0.158841 seconds
+  Import took 0.161633 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.738429 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4fbe84901bb79dffa2cf789338d3ec5') in 0.038445 seconds
+  Import took 0.041741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.573952 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe82d2fafa8beb3ddfb359acd98e028a') in 0.044597 seconds
+  Import took 0.071925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.749444 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df6fda82e79076c4a750c74bfb7c3d00') in 0.034736 seconds
+  Import took 0.062430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.537982 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '096834be31b76da2010201f1f1bededf') in 0.051703 seconds
+  Import took 0.055284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.191603 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d707e232e49452cb4d1aa490c773a4') in 0.027119 seconds
+  Import took 0.030125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.918274 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b60389dfdb8ccd7acc0cb08f43cb1f59') in 0.031449 seconds
+  Import took 0.034512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.689354 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb0e12e6d3b10d699e28073f8357c5cd') in 0.034530 seconds
+  Import took 0.037477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.599391 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c5e799f81cdb2fb8c0db8a52834e09') in 0.034677 seconds
+  Import took 0.037643 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.341924 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3633dcbbc96e4ab70e321a5b51bbbc4') in 0.049289 seconds
+  Import took 0.052312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.592598 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eccf970515fae3e8f646c348fda4b79') in 0.036279 seconds
+  Import took 0.065310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.612599 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db11574200c0e73fddce596828616eb7') in 0.045408 seconds
+  Import took 0.048864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.602884 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '586d4f5451f4209b0dd9e152d06eb5ce') in 0.043281 seconds
+  Import took 0.046661 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001124 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.778 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.0 MB.
+System memory in use after: 73.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1958.
+Total: 1.631600 ms (FindLiveObjects: 0.150900 ms CreateObjectMapping: 0.048300 ms MarkObjects: 1.418500 ms  DeleteObjects: 0.012700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.516529 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e998f3526d9764b4f4a5d8a957eac2') in 0.091585 seconds
+  Import took 0.095056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.351941 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f5ad18ef7ef2403635485f939dd9aa5') in 0.037152 seconds
+  Import took 0.040280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.851496 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1b77dac7f87b2522133af7a11b10c72') in 0.036375 seconds
+  Import took 0.039215 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001131 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.662 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.2 MB.
+System memory in use after: 73.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1961.
+Total: 1.236000 ms (FindLiveObjects: 0.135100 ms CreateObjectMapping: 0.042000 ms MarkObjects: 1.047700 ms  DeleteObjects: 0.010500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.123865 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53bcfc43b8dc71cfdb2c0f88ea4621a8') in 0.083562 seconds
+  Import took 0.087583 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001178 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.651 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.4 MB.
+System memory in use after: 73.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1964.
+Total: 1.367400 ms (FindLiveObjects: 0.169600 ms CreateObjectMapping: 0.048700 ms MarkObjects: 1.137100 ms  DeleteObjects: 0.011200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001144 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.776 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.6 MB.
+System memory in use after: 73.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1966.
+Total: 2.078600 ms (FindLiveObjects: 0.227700 ms CreateObjectMapping: 0.089200 ms MarkObjects: 1.748300 ms  DeleteObjects: 0.012200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.431763 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60a09577c73fbfc59545a7688038a0f0') in 0.102871 seconds
+  Import took 0.106592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.121152 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '359e3147d271e90722c1beb2af461913') in 0.050954 seconds
+  Import took 0.054170 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001124 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.633 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.8 MB.
+System memory in use after: 73.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1969.
+Total: 1.420600 ms (FindLiveObjects: 0.202400 ms CreateObjectMapping: 0.061500 ms MarkObjects: 1.144200 ms  DeleteObjects: 0.011200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 84.054094 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cc6072dbcfaf96074db5ecaefe0f8e5') in 0.075993 seconds
+  Import took 0.100314 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001117 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.734 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.0 MB.
+System memory in use after: 73.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1972.
+Total: 1.854800 ms (FindLiveObjects: 0.191400 ms CreateObjectMapping: 0.065600 ms MarkObjects: 1.582700 ms  DeleteObjects: 0.013900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.574319 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32bc476d054daafed918a6cc1df7b4a') in 0.096971 seconds
+  Import took 0.100105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.939422 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f618da2c278da119bfb8520a24e7337') in 0.028744 seconds
+  Import took 0.031722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.410372 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f90caaf5dc902552a296c9573ee0249') in 0.034882 seconds
+  Import took 0.038236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.533775 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a7fa82595afb27b80451f599be28c14') in 0.049827 seconds
+  Import took 0.052997 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001053 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.652 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.2 MB.
+System memory in use after: 73.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1975.
+Total: 1.744500 ms (FindLiveObjects: 0.270800 ms CreateObjectMapping: 0.119600 ms MarkObjects: 1.334400 ms  DeleteObjects: 0.018200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.555930 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77f3258892f278fd88b375062c669c94') in 0.083152 seconds
+  Import took 0.086242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.534964 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd15043716e5b942a2c009e5ea51d3eaf') in 0.038000 seconds
+  Import took 0.041115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 202.461286 seconds.
+  path: Assets/Resources/Data/Items/New item
+  artifactKey: Guid(36158f4c451d73a499da3ef46a7eab8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Data/Items/New item using Guid(36158f4c451d73a499da3ef46a7eab8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f05b42c7e45b310095ccec0eed62b5c') in 0.018046 seconds
+  Import took 0.020048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.753048 seconds.
+  path: Assets/Resources/Data/Items/New item/ToothBrush 1.asset
+  artifactKey: Guid(25ccef210b0df38488102806f85e0613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Data/Items/New item/ToothBrush 1.asset using Guid(25ccef210b0df38488102806f85e0613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6689f0910ac0f608286cf06492d67f3') in 0.007701 seconds
+  Import took 0.010820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003247 seconds.
+  path: Assets/Resources/Data/Items/New item/ToothBrush 1.asset
+  artifactKey: Guid(25ccef210b0df38488102806f85e0613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Data/Items/New item/ToothBrush 1.asset using Guid(25ccef210b0df38488102806f85e0613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6689f0910ac0f608286cf06492d67f3') in 0.002035 seconds
+  Import took 0.004911 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.731663 seconds.
+  path: Assets/Resources/Data/Items/New item/Key.asset
+  artifactKey: Guid(5dc6e7611ea6e40479dd6dcf8cbcc997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Data/Items/New item/Key.asset using Guid(5dc6e7611ea6e40479dd6dcf8cbcc997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb69fe87238b1f7eb45b73980dc7f415') in 0.002037 seconds
+  Import took 0.004063 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.247609 seconds.
+  path: Assets/Resources/Data/Items/New item/Key_Room.asset
+  artifactKey: Guid(5dc6e7611ea6e40479dd6dcf8cbcc997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Data/Items/New item/Key_Room.asset using Guid(5dc6e7611ea6e40479dd6dcf8cbcc997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6155afcb7e88688984ccbc1a2ef02b40') in 0.002569 seconds
+  Import took 0.005471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.804216 seconds.
+  path: Assets/Art/Props/items/Key.png
+  artifactKey: Guid(8bdc6fce09fe2214688b21688a01477d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Props/items/Key.png using Guid(8bdc6fce09fe2214688b21688a01477d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45978d0d0afc503e7f0c5e9bd5cee8f7') in 0.044069 seconds
+  Import took 0.046163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 90.744050 seconds.
+  path: Assets/Art/Props/items/Key_Room.png
+  artifactKey: Guid(f25fd5a080d1df04396a6eb713b1fcff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Props/items/Key_Room.png using Guid(f25fd5a080d1df04396a6eb713b1fcff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0698f12f33c41a8d29156f1ff79afc6f') in 0.012776 seconds
+  Import took 0.015199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.954236 seconds.
+  path: Assets/Art/Props/items/Key_Room.png
+  artifactKey: Guid(f25fd5a080d1df04396a6eb713b1fcff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Props/items/Key_Room.png using Guid(f25fd5a080d1df04396a6eb713b1fcff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd168afc80c9704228c884d71d3c7e8ce') in 0.022329 seconds
+  Import took 0.024507 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000997 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.709 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.4 MB.
+System memory in use after: 73.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1985.
+Total: 1.598400 ms (FindLiveObjects: 0.246400 ms CreateObjectMapping: 0.105000 ms MarkObjects: 1.231200 ms  DeleteObjects: 0.014700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001158 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.661 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.6 MB.
+System memory in use after: 73.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1987.
+Total: 1.427000 ms (FindLiveObjects: 0.153000 ms CreateObjectMapping: 0.057900 ms MarkObjects: 1.203700 ms  DeleteObjects: 0.011600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001111 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.655 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.7 MB.
+System memory in use after: 73.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1989.
+Total: 1.325000 ms (FindLiveObjects: 0.153300 ms CreateObjectMapping: 0.046400 ms MarkObjects: 1.112300 ms  DeleteObjects: 0.011800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001162 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.677 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.0 MB.
+System memory in use after: 73.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1991.
+Total: 1.552400 ms (FindLiveObjects: 0.192800 ms CreateObjectMapping: 0.067900 ms MarkObjects: 1.278900 ms  DeleteObjects: 0.011500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001087 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.647 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.2 MB.
+System memory in use after: 73.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1993.
+Total: 1.311800 ms (FindLiveObjects: 0.142300 ms CreateObjectMapping: 0.043700 ms MarkObjects: 1.113900 ms  DeleteObjects: 0.011100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001339 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.782 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.4 MB.
+System memory in use after: 73.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1995.
+Total: 1.638900 ms (FindLiveObjects: 0.207100 ms CreateObjectMapping: 0.058400 ms MarkObjects: 1.357000 ms  DeleteObjects: 0.015500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001451 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.829 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.5 MB.
+System memory in use after: 73.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1997.
+Total: 1.739800 ms (FindLiveObjects: 0.232200 ms CreateObjectMapping: 0.116300 ms MarkObjects: 1.377500 ms  DeleteObjects: 0.012400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001130 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.681 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.7 MB.
+System memory in use after: 73.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1999.
+Total: 1.406700 ms (FindLiveObjects: 0.188400 ms CreateObjectMapping: 0.061500 ms MarkObjects: 1.143100 ms  DeleteObjects: 0.012400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001083 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.659 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.7 MB.
+System memory in use after: 73.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2001.
+Total: 1.437300 ms (FindLiveObjects: 0.159300 ms CreateObjectMapping: 0.050900 ms MarkObjects: 1.213700 ms  DeleteObjects: 0.012500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001086 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.685 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.1 MB.
+System memory in use after: 73.2 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2003.
+Total: 1.364400 ms (FindLiveObjects: 0.168500 ms CreateObjectMapping: 0.046900 ms MarkObjects: 1.136100 ms  DeleteObjects: 0.011700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001544 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.673 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.3 MB.
+System memory in use after: 73.4 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2005.
+Total: 1.618600 ms (FindLiveObjects: 0.198800 ms CreateObjectMapping: 0.052000 ms MarkObjects: 1.354600 ms  DeleteObjects: 0.011900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001141 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.644 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.5 MB.
+System memory in use after: 73.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2007.
+Total: 1.299400 ms (FindLiveObjects: 0.140800 ms CreateObjectMapping: 0.043100 ms MarkObjects: 1.103200 ms  DeleteObjects: 0.011400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001142 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.669 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.7 MB.
+System memory in use after: 73.8 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2009.
+Total: 1.490200 ms (FindLiveObjects: 0.173700 ms CreateObjectMapping: 0.053500 ms MarkObjects: 1.248800 ms  DeleteObjects: 0.012600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001111 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.655 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.8 MB.
+System memory in use after: 73.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2011.
+Total: 1.385900 ms (FindLiveObjects: 0.153300 ms CreateObjectMapping: 0.044900 ms MarkObjects: 1.175400 ms  DeleteObjects: 0.010900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001074 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.650 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.0 MB.
+System memory in use after: 73.1 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2013.
+Total: 1.612700 ms (FindLiveObjects: 0.259300 ms CreateObjectMapping: 0.104100 ms MarkObjects: 1.235400 ms  DeleteObjects: 0.012700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001187 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.659 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.2 MB.
+System memory in use after: 73.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2015.
+Total: 1.645300 ms (FindLiveObjects: 0.268800 ms CreateObjectMapping: 0.106700 ms MarkObjects: 1.255200 ms  DeleteObjects: 0.013800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.778 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.4 MB.
+System memory in use after: 73.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2017.
+Total: 1.533500 ms (FindLiveObjects: 0.182200 ms CreateObjectMapping: 0.065100 ms MarkObjects: 1.269900 ms  DeleteObjects: 0.014800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001730 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.799 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.6 MB.
+System memory in use after: 73.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2019.
+Total: 1.672800 ms (FindLiveObjects: 0.192500 ms CreateObjectMapping: 0.072300 ms MarkObjects: 1.391000 ms  DeleteObjects: 0.015900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1510.270868 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4668ea8d273cc0a71a3363d9bbd21f7e') in 0.210753 seconds
+  Import took 0.214038 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001119 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.656 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.8 MB.
+System memory in use after: 73.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2022.
+Total: 1.462000 ms (FindLiveObjects: 0.159000 ms CreateObjectMapping: 0.048600 ms MarkObjects: 1.241700 ms  DeleteObjects: 0.011500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.226698 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ca7679730ad4b60f921fec944b0284a') in 0.116639 seconds
+  Import took 0.119819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.531397 seconds.
+  path: Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab
+  artifactKey: Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Locations/Hotel/Current version/Reception.prefab using Guid(e393a2398a0ac4e4da2abf65c1bf6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37abc1889cb8a49ecdc81d65492ee43f') in 0.061382 seconds
+  Import took 0.064870 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006099 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.765 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1463 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 73.8 MB.
+System memory in use after: 73.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2025.
+Total: 1.560600 ms (FindLiveObjects: 0.201400 ms CreateObjectMapping: 0.066600 ms MarkObjects: 1.279000 ms  DeleteObjects: 0.012200 ms)
+
