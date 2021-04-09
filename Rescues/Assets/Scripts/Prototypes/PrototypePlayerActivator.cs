@@ -9,7 +9,7 @@ public class PrototypePlayerActivator : MonoBehaviour {
             CheckIsAlreadyInCollision();
             var curEvent = collision.GetComponent<PrototypeOntriggerEvent>();
             CurrentPrototypeTrigger = curEvent;
-            curEvent.ActivateTriggerEnterEvent(); //
+            curEvent.ActivateTriggerEnterEvent(); 
         }
     }
 
