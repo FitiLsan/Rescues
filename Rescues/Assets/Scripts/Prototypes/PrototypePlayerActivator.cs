@@ -23,8 +23,7 @@ public class PrototypePlayerActivator : MonoBehaviour {
     private void Update() {
         if (Input.GetButtonDown("Use")) {
             if (CurrentPrototypeTrigger != null) {
-                PrototypeOntriggerEvent prototypeTrigger = CurrentPrototypeTrigger.GetComponent<PrototypeOntriggerEvent>();
-                prototypeTrigger.ActivateButtonInTriggerEvent();
+                CurrentPrototypeTrigger.ActivateButtonInTriggerEvent();
             }
         }
     }
