@@ -16,7 +16,7 @@ public class PrototypePlayerActivator : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision) {
         var exitedObject = collision.GetComponent<PrototypeOntriggerEvent>();
         if (CurrentPrototypeTrigger == exitedObject) {
-            Deactivation();
+            CheckIsAlreadyInCollision();
         }
     }
 
