@@ -1,13 +1,12 @@
 using UnityEngine;
 
 
-public class PrototypePlayerActivator : MonoBehaviour
-{
+public class PrototypePlayerActivator : MonoBehaviour {
     [SerializeField] private PrototypeOntriggerEvent CurrentPrototypeTrigger;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("EditorOnly")) {
-
+            CheckIsAlreadyInCollision();
             var curEvent = collision.GetComponent<PrototypeOntriggerEvent>();
             CurrentPrototypeTrigger = curEvent;
             curEvent.ActivateTriggerEnterEvent();
@@ -15,19 +14,29 @@ public class PrototypePlayerActivator : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("EditorOnly")) {
-            CurrentPrototypeTrigger.ActivateTriggerExitEvent();
-            CurrentPrototypeTrigger = null;
+        var exitedObject = collision.GetComponent<PrototypeOntriggerEvent>();
+        if (CurrentPrototypeTrigger == exitedObject) {
+            Deactivation();
         }
     }
 
-    private void Update()
-    {
-        if(Input.GetButtonDown("Use")) {
+    private void Update() {
+        if (Input.GetButtonDown("Use")) {
             if (CurrentPrototypeTrigger != null) {
                 PrototypeOntriggerEvent prototypeTrigger = CurrentPrototypeTrigger.GetComponent<PrototypeOntriggerEvent>();
                 prototypeTrigger.ActivateButtonInTriggerEvent();
             }
         }
+    }
+
+    private void CheckIsAlreadyInCollision() {
+        if (CurrentPrototypeTrigger != null) {
+            Deactivation();
+        }
+    }
+
+    private void Deactivation() {
+        CurrentPrototypeTrigger.ActivateTriggerExitEvent();
+        CurrentPrototypeTrigger = null;
     }
 }
