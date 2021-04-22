@@ -3311,22 +3311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f825bb5ce93d6ab429dfa508444119b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unityData: {fileID: 11400000, guid: e30fa6d3e5a05074bb11e8fd4f4eb4da, type: 2}
-  armatureName: Armature
-  isUGUI: 0
-  addNormal: 0
-  bonesRoot: {fileID: 0}
-  unityBones: []
-  boneHierarchy: 0
-  animationName: animtion0
-  _playTimes: 0
-  _timeScale: 1
-  _sortingMode: 1
-  _sortingLayerName: Default
-  _sortingOrder: 22
-  _zSpace: 0
-  _flipX: 0
-  _flipY: 0
 --- !u!4 &1717685272
 Transform:
   m_ObjectHideFlags: 0
