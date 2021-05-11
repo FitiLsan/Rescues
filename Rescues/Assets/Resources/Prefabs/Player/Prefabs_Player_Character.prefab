@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7119444138002703917}
   - component: {fileID: 4171277273785054890}
+  - component: {fileID: 1481427803053060480}
   m_Layer: 0
   m_Name: Prefabs_Player_Character
   m_TagString: Untagged
@@ -44,6 +45,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f77036f26349e6bf2409fab974fd02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1481427803053060480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5348524068464821517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b26e4923fb5c04bb1be5dae9fbdf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5375958292436128399
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,6 +71,7 @@ GameObject:
   - component: {fileID: 8271848281990840548}
   - component: {fileID: 760701669390493041}
   - component: {fileID: 292074939042924578}
+  - component: {fileID: 4435886597204810270}
   m_Layer: 10
   m_Name: Model
   m_TagString: Player
@@ -94,6 +108,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -281,3 +296,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3.13, y: 9.47}
   m_Direction: 0
+--- !u!114 &4435886597204810270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5375958292436128399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b26e4923fb5c04bb1be5dae9fbdf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
