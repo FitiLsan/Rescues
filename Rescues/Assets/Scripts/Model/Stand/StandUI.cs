@@ -12,7 +12,7 @@ namespace Rescues
         [SerializeField] List<StandItem> _standItemSlots;
         [SerializeField] List<string> _dontNeedItemPhrases;
         [SerializeField] GameObject _standItemWindow;
-        private bool _isItemOpened = false;
+        [SerializeField]private bool _isItemOpened = false;
         private bool _isMouseIn = true;
         private ItemData _item;
         private Image _standItemImage;
@@ -57,6 +57,7 @@ namespace Rescues
         public void Awake()
         {
             _standItemImage = _standItemWindow.GetComponent<Image>();
+
             if (_standItemSlots != null)
             {
                 for (int i = 0; i < _standItemSlots.Count; i++)
@@ -64,7 +65,7 @@ namespace Rescues
                     _standItemSlots[i].OnPointerClickEvent += OpenStandItem;
                     _standItemSlots[i].ItemSlotNumber = i;
                 }
-            }            
+            }
         }
 
         #endregion
@@ -76,15 +77,21 @@ namespace Rescues
         {            
             if (standItem.CanBeTaken)
             {
-                _item = standItem.Item;              
+                _item = standItem.Item;
+            }
+            else
+            {
+                PlayDontNeedItem();
             }
             _slotNumber = number;
             _standItemImage.sprite = standItem.Sprite;
+            _standItemWindow.SetActive(true);
         }
 
         public void OpenStandItemWindow()
         {
-            _isItemOpened = true;         
+            _isItemOpened = true;
+            Debug.Log("опен итем");
             _standItemWindow.SetActive(true);
             for (int i = 0; i < _standItemSlots.Count; i++)
             {
@@ -97,6 +104,7 @@ namespace Rescues
             if (_isItemOpened)
             {
                 _isItemOpened = false;
+                Debug.Log("в ui");
                 _standItemWindow.SetActive(false);
                 for (int i = _standItemSlots.Count-1; i > 0; i--)
                 {
@@ -108,7 +116,7 @@ namespace Rescues
 
         public void PlayDontNeedItem()
         {
-            int temp = _random.Next(_dontNeedItemPhrases.Count-1);
+            int temp = _random.Next(_dontNeedItemPhrases.Count);
             CustomDebug.Log(_dontNeedItemPhrases[temp]);
         }
 

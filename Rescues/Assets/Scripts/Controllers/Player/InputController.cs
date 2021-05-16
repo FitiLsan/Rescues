@@ -136,8 +136,9 @@ namespace Rescues
                         {
                             item.PlayDontNeedItem();
                         }
-                        if (!item.IsMouseIn && item.IsItemOpened)
+                        if (item.IsItemOpened) //!item.IsMouseIn && 
                         {
+                            Debug.Log("в инпуте");
                             item.CloseStandItemWindow();
                         }
                         else if (!item.IsMouseIn)
