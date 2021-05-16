@@ -11,9 +11,9 @@ namespace Rescues
         #region Fields
 
         [SerializeField] StandItemData StandItemData;
-        public event Action<int, StandItemData> OnPointerClickEvent;    
+        public event Action<int, StandItemData> OnPointerClickEvent;
         private Image _image;
-        private int _itemSlotNumber;
+        [SerializeField] private int _itemSlotNumber;
 
         #endregion
 
