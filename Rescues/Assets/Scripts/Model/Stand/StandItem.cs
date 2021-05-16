@@ -13,7 +13,7 @@ namespace Rescues
         [SerializeField] StandItemData StandItemData;
         public event Action<int, StandItemData> OnPointerClickEvent;    
         private Image _image;
-        [SerializeField]private int _itemSlotNumber;
+        private int _itemSlotNumber;
 
         #endregion
 
