@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dialogue>
+  <node id="0" text="" leftImage="" rightImage="">
+    <answer quest="RingQuest" send="3" equal="1" toNode="1">Возможно его выкинули в мусор</answer>
+  </node>
+  <node id="1" text="" leftImage="" rightImage="">
+    <answer quest="RingQuest" equal="1" exit="True">А вот и язычок. Отлично, теперь можно починить звонок. </answer>
+  </node>
+</dialogue>
