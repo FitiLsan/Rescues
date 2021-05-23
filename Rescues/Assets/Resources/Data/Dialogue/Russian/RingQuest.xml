@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dialogue>
+  <node id="0" text="" leftImage="" rightImage="">
+    <answer quest="RingQuest" send="1" equal="0" toNode="1">Кажется звонок сломан.</answer>
+  </node>
+  <node id="1" text="" leftImage="" rightImage="">
+    <answer quest="RingQuest" less="2" exit="True">Думаю его можно починить, надо только найти язычок.</answer>
+  </node>
+  <node id="2" text="" leftImage="" rightImage="">
+    <answer quest="RingQuest" equal="3" toNode="3">Ура, починил!</answer>
+  </node>
+  <node id="3" text="" leftImage="" rightImage="">
+    <answer quest="RingQuest" send="4" exit="True">Динь-Динь, мазафка!</answer>
+  </node>
+</dialogue>
