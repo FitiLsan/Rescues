@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dialogue>
+  <node id="0" text="" leftImage="GGtestFaceShadow" rightImage="Hoz otelFace">
+    <answer toNode="1">Добрый вечер! Вы что-то хотели? </answer>
+  </node>
+  <node id="1" text="" leftImage="GGtestFace" rightImage="Hoz otelFaceShadow">
+    <answer toNode="2">Добрый вечер! Мы оказались проездом в вашем городе, и хотели бы снять комнату на ночь.</answer>
+    <answer toNode="3">Че-каво мужик?</answer>
+  </node>
+  <node id="2" text="" leftImage="GGtestFaceShadow" rightImage="Hoz otelFace">
+    <answer toNode="4">Да, конечно, в это время года у нас не так много гостей, так что свободные комнаты есть. </answer>
+  </node>
+  <node id="3" text="" leftImage="GGtestFaceShadow" rightImage="Hoz otelFace">
+    <answer toNode="5">На мужике волки в лес срать уехали, а я метрдотель. </answer>
+  </node>
+  <node id="4" text="" leftImage="GGtestFace" rightImage="Hoz otelFaceShadow">
+    <answer toNode="7">Отлично. Со мной жена и сын, они в машине, так что нам хватит одного двухместного номера. </answer>
+  </node>
+  <node id="5" text="" leftImage="GGtestFace" rightImage="Hoz otelFaceShadow">
+    <answer toNode="6">Метрпердель, вот ты кто! Пожалуй поищем другой отель.</answer>
+  </node>
+  <node id="6" text="" leftImage="GGtestFaceShadow" rightImage="Hoz otelFace">
+    <answer quest="1stHozDial" toNode="0">Мне кажется разговор зашел в тупик! Может начнем сначала?</answer>
+  </node>
+</dialogue>

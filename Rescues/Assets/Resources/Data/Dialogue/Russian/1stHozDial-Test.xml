@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dialogue>
+  <node id="0" text="" leftImage="" rightImage="">
+    <answer quest="1stHozDial-Test" send="1" equal="0" toNode="1">Велкам!</answer>
+  </node>
+  <node id="1" text="" leftImage="" rightImage="">
+    <answer quest="1stHozDial-Test" send="2" equal="1" toNode="2">Ты таскальщик?</answer>
+  </node>
+  <node id="2" text="" leftImage="" rightImage="">
+    <answer quest="1stHozDial-Test" send="3" equal="2" toNode="3">Нет, я носильщик</answer>
+  </node>
+  <node id="3" text="" leftImage="" rightImage="">
+    <answer quest="1stHozDial-Test" exit="True">Тогда изнасилуй мои чемоданы</answer>
+  </node>
+</dialogue>

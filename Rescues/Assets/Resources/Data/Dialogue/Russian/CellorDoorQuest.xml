@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dialogue>
+  <node id="0" text="" leftImage="GGtestFace" rightImage="">
+    <answer quest="CellorDoorQuest" send="1" equal="0" toNode="1">Похоже дверь заклинило.</answer>
+  </node>
+  <node id="1" text="" leftImage="GGtestFace" rightImage="">
+    <answer quest="CellorDoorQuest" less="2" exit="True">Надо бы её чем-то подцепить</answer>
+  </node>
+  <node id="2" text="" leftImage="GGtestFace" rightImage="">
+    <answer quest="CellorDoorQuest" equal="3" toNode="3">Трость подошла, подцепить. Теперь нужно потянуть! </answer>
+  </node>
+  <node id="3" text="" leftImage="GGtestFace" rightImage="">
+    <answer quest="CellorDoorQuest" send="4" exit="True">Уффф!</answer>
+  </node>
+</dialogue>

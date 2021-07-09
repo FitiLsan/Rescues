@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dialogue>
+  <node id="0" text="" leftImage="GGtestFace" rightImage="">
+    <answer quest="TestQuest" send="3" equal="1" toNode="1">Похоже эта трость может подойти</answer>
+  </node>
+  <node id="1" text="" leftImage="GGtestFace" rightImage="">
+    <answer quest="TestQuest" equal="1" exit="True">Надеюсь владелец трости не будет против, если я её одолжу.</answer>
+  </node>
+</dialogue>
