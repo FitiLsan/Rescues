@@ -28,6 +28,7 @@ namespace Rescues
         public PuzzlesControllers()
         {
             _controllersList.Add(new WiresController(), typeof(WiresPuzzle));
+            _controllersList.Add(new PianoController(), typeof(PianoPuzzle));
         }
 
         #endregion

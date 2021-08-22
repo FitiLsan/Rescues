@@ -31,7 +31,7 @@ namespace Rescues
             var obj = Object.Instantiate(resources, playerData.Position, Quaternion.identity).transform;
             
             CharacterModel character = new CharacterModel(obj, playerData);
-           
+
             _context.Character = character;
         }
 

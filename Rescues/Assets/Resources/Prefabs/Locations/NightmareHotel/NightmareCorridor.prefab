@@ -776,22 +776,22 @@ PrefabInstance:
     - target: {fileID: 9007248820626605526, guid: 0499ba983373972449f210a507f57ad7,
         type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[35].x
-      value: 45.57224
+      value: 46.206356
       objectReference: {fileID: 0}
     - target: {fileID: 9007248820626605526, guid: 0499ba983373972449f210a507f57ad7,
         type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[35].y
-      value: -0.20613986
+      value: 0.6688647
       objectReference: {fileID: 0}
     - target: {fileID: 9007248820626605526, guid: 0499ba983373972449f210a507f57ad7,
         type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[36].x
-      value: 46.810234
+      value: 47.557453
       objectReference: {fileID: 0}
     - target: {fileID: 9007248820626605526, guid: 0499ba983373972449f210a507f57ad7,
         type: 3}
       propertyPath: editorData._bezierPath.points.Array.data[36].y
-      value: 0.7261596
+      value: 0.6045265
       objectReference: {fileID: 0}
     - target: {fileID: 9007248820626605526, guid: 0499ba983373972449f210a507f57ad7,
         type: 3}

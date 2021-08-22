@@ -3,11 +3,12 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public sealed class MainPuzzleController : IInitializeController, ITearDownController
+    public sealed class MainPuzzleController : IInitializeController, ITearDownController, IExecuteController
     {
         #region Fields
 
         private readonly GameContext _context;
+        private PuzzlesControllers _puzzleControllers;
 
         #endregion
 
@@ -17,7 +18,8 @@ namespace Rescues
         public MainPuzzleController(GameContext context, Services services)
         {
             _context = context;
-        }
+            _puzzleControllers = new PuzzlesControllers();
+        }      
 
         #endregion
 
@@ -27,8 +29,7 @@ namespace Rescues
         public void Initialize()
         {
             var puzzleInteracts = _context.GetTriggers(InteractableObjectType.Puzzle);
-            var mainPuzzleParent = new GameObject("Puzzles");
-            var puzzleControllers = new PuzzlesControllers();
+            var mainPuzzleParent = new GameObject("Puzzles");            
 
             foreach (var trigger in puzzleInteracts)
             {
@@ -37,7 +38,7 @@ namespace Rescues
                 puzzleBehaviour.OnTriggerEnterHandler += OnTriggerEnterHandler;
                 puzzleBehaviour.OnTriggerExitHandler += OnTriggerExitHandler;
 
-                foreach (var somePuzzleController in puzzleControllers.ControllersList)
+                foreach (var somePuzzleController in _puzzleControllers.ControllersList)
                 {
                     if (somePuzzleController.Value == puzzleBehaviour.Puzzle.GetType())
                     {
@@ -64,6 +65,20 @@ namespace Rescues
                 puzzleBehaviour.OnFilterHandler -= OnFilterHandler;
                 puzzleBehaviour.OnTriggerEnterHandler -= OnTriggerEnterHandler;
                 puzzleBehaviour.OnTriggerExitHandler -= OnTriggerExitHandler;
+            }
+        }
+
+        #endregion
+
+
+        #region IExecuteController
+
+        public void Execute()
+        {
+            foreach (var controller in _puzzleControllers.ControllersList)
+            {
+                var temp = controller.Key as IExecuteController;
+                temp?.Execute();
             }
         }
 

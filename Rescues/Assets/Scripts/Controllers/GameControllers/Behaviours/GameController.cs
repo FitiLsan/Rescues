@@ -17,11 +17,6 @@ namespace Rescues
 
         #region UnityMethods
 
-        private void Awake()
-        {
-        
-        }
-
         private void Start()
         {
             GameContext context = new GameContext();

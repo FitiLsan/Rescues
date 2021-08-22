@@ -39,7 +39,7 @@ namespace Rescues
             Vector2 inputAxis;
             inputAxis.x = Input.GetAxis("Horizontal");
             inputAxis.y = Input.GetAxis("Vertical");
-
+           
             _context.Character.SetScale();
             _context.Character.StateHandler();
             _context.Character.AnimationPlayTimer.UpdateTimer();
@@ -187,6 +187,12 @@ namespace Rescues
                     {
                         CloseInterfaceWindow();
                     }
+                }
+
+                var puzzleObject = GetInteractableObject<PuzzleBehaviour>(InteractableObjectType.Puzzle);
+                if (puzzleObject != null)
+                {
+                    puzzleObject.Puzzle.Close();
                 }
             }
 
