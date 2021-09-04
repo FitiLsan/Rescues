@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine.Events;
 
 
 namespace Rescues
@@ -44,7 +45,12 @@ namespace Rescues
             }
             _timeRemainings.Remove(value);
         }
-        
+
+        public static void InvokeAfterTime(this UnityEvent unityEvent, float time)
+        {
+            AddTimeRemaining(new TimeRemaining(() => unityEvent.Invoke(), time));
+        }
+
         #endregion
     }
 }

@@ -1,30 +1,54 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PrototypeOntriggerEvent : MonoBehaviour
+
+namespace Rescues
 {
-    [SerializeField] private UnityEvent OnTriggerEntetEvent;
-    [SerializeField] private UnityEvent OnTriggerExitEvent;
-    [SerializeField] private UnityEvent OnButtonInTriggerEvent;
-
-    private void Start()
+    public class PrototypeOntriggerEvent : MonoBehaviour
     {
-        if (OnTriggerEntetEvent == null) OnTriggerEntetEvent = new UnityEvent();
-        if (OnTriggerExitEvent == null) OnTriggerExitEvent = new UnityEvent();
-        if (OnButtonInTriggerEvent == null) OnButtonInTriggerEvent = new UnityEvent();
-    }
+        #region Fields
 
-    public void ActivateTriggerEnterEvent() 
-    {
-        OnTriggerEntetEvent.Invoke();
-    }
+        [SerializeField] private List<UnityEvent> _onTriggerEnterEvents;
+        [SerializeField] private List<float> _enterTimers;
+        [SerializeField] private List<UnityEvent> _onTriggerExitEvents;
+        [SerializeField] private List<float> _exitTimers;
+        [SerializeField] private List<UnityEvent> _onButtonInTriggerEvents;
+        [SerializeField] private List<float> _buttonTimers;
 
-    public void ActivateTriggerExitEvent() {
-        OnTriggerExitEvent.Invoke();
-    }
+        #endregion
 
-    public void ActivateButtonInTriggerEvent() 
-    {
-        OnButtonInTriggerEvent.Invoke();
-    }
+
+        #region Methods
+
+        public void ActivateTriggerEnterEvent()
+        {          
+            ActivateEvent(_onTriggerEnterEvents, _enterTimers);            
+        }
+
+        public void ActivateTriggerExitEvent()
+        {
+            ActivateEvent(_onTriggerExitEvents, _exitTimers);
+        }
+
+        public void ActivateButtonInTriggerEvent()
+        {
+            ActivateEvent(_onButtonInTriggerEvents, _buttonTimers);
+        }     
+
+        public void ActivateEvent(List<UnityEvent> events, List<float> timers)
+        {
+            for (int i = 0; i < events.Count; i++)
+            {
+                var time = 0f;
+                if (i < timers.Count)
+                {
+                    time = timers[i];
+                }
+                events[i].InvokeAfterTime(time);
+            }
+        }
+
+        #endregion
+    } 
 }

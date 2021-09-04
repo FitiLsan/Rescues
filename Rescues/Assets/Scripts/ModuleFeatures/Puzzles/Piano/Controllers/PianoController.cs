@@ -79,7 +79,7 @@ namespace Rescues
 
         public void Execute()
         {
-            if (_pianoExecuteControllers.Count > 0)
+            if (_pianoExecuteControllers != null && _pianoExecuteControllers.Count > 0)
             {
                 foreach (var controller in _pianoExecuteControllers)
                 {
