@@ -3,16 +3,23 @@ using UnityEngine;
 
 namespace Rescues
 {
-    public class PrototypePlayerActivator : MonoBehaviour
+    public class PlayerActivator : MonoBehaviour
     {
-        public PrototypeOntriggerEvent CurrentTrigger { get; private set; }
+        #region Properties
+
+        public OntriggerEvent CurrentTrigger { get; private set; }
+
+        #endregion
+
+
+        #region UnityMethods
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag("EditorOnly"))
             {
                 CheckIsAlreadyInCollision();
-                var curEvent = collision.GetComponent<PrototypeOntriggerEvent>();
+                var curEvent = collision.GetComponent<OntriggerEvent>();
                 CurrentTrigger = curEvent;
                 curEvent.ActivateTriggerEnterEvent();
             }
@@ -20,12 +27,17 @@ namespace Rescues
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            var exitedObject = collision.GetComponent<PrototypeOntriggerEvent>();
+            var exitedObject = collision.GetComponent<OntriggerEvent>();
             if (CurrentTrigger == exitedObject)
             {
                 CheckIsAlreadyInCollision();
             }
         }
+
+        #endregion
+
+
+        #region Methods
 
         private void CheckIsAlreadyInCollision()
         {
@@ -39,6 +51,8 @@ namespace Rescues
         {
             CurrentTrigger.ActivateTriggerExitEvent();
             CurrentTrigger = null;
-        }
+        } 
+
+        #endregion
     } 
 }

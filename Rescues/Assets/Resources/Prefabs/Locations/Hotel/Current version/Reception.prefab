@@ -223,56 +223,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
-  _onTriggerExitEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8027965070901141121}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _exitTimers:
-  - 0
+  _onTriggerExitEvents: []
   _onButtonInTriggerEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 888150360434452948}
-        m_TargetAssemblyTypeName: Rescues.PrototypeOntriggerEvent, Assembly-CSharp
-        m_MethodName: ActivateButtonInTriggerEvent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: message
-          m_BoolArgument: 1
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6168885976161313263}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: message
-          m_BoolArgument: 0
-        m_CallState: 2
-  _buttonTimers:
-  - 0
-  - 3
+  - IsRepeating: 1
+    Time: 2
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8027965070901141121}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - IsRepeating: 0
+    Time: 3
+    Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8027965070901141121}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!61 &8046546384543181364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -476,11 +462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &6529071733760039619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -604,11 +587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &8918592438976660401
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -733,11 +713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &2440225473477278548
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1070,11 +1047,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &6305094770879282870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1281,11 +1255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &1467776828884738306
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1410,11 +1381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &1048805686216841508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1634,11 +1602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &7892043182576342189
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1736,11 +1701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!1 &2404215891201947790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,11 +1885,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &820631205039520125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2094,11 +2053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &6070180465078884702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2428,11 +2384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &821294668991617562
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2636,11 +2589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &1224304984071564311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3824,11 +3774,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &6769813673647280600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4159,11 +4106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &3210517264776849044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4370,26 +4314,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3920162249289549574}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  _buttonTimers:
-  - 0
+  - IsRepeating: 0
+    Time: 0
+    Event:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!61 &5581237485430043769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4783,11 +4714,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &3890620553974208480
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4885,11 +4813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!1 &7112509066959186245
 GameObject:
   m_ObjectHideFlags: 0
@@ -5070,11 +4995,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &439780042325917573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5521,11 +5443,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &3542663243935467301
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5731,11 +5650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &6228622642101368073
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6050,11 +5966,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &6581811759253200241
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6178,11 +6091,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnterEvents: []
-  _enterTimers: []
   _onTriggerExitEvents: []
-  _exitTimers: []
   _onButtonInTriggerEvents: []
-  _buttonTimers: []
 --- !u!61 &7801702366542782293
 BoxCollider2D:
   m_ObjectHideFlags: 0
