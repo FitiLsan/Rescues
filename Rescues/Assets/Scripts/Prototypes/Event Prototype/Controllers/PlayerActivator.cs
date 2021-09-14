@@ -18,7 +18,6 @@ namespace Rescues
         {
             if (collision.gameObject.CompareTag("EditorOnly"))
             {
-                CheckIsAlreadyInCollision();
                 var curEvent = collision.GetComponent<OntriggerEvent>();
                 CurrentTrigger = curEvent;
                 curEvent.ActivateTriggerEnterEvent();
@@ -28,30 +27,12 @@ namespace Rescues
         private void OnTriggerExit2D(Collider2D collision)
         {
             var exitedObject = collision.GetComponent<OntriggerEvent>();
-            if (CurrentTrigger == exitedObject)
+            if (CurrentTrigger == exitedObject && CurrentTrigger != null)
             {
-                CheckIsAlreadyInCollision();
+                CurrentTrigger.ActivateTriggerExitEvent();
+                CurrentTrigger = null;
             }
         }
-
-        #endregion
-
-
-        #region Methods
-
-        private void CheckIsAlreadyInCollision()
-        {
-            if (CurrentTrigger != null)
-            {
-                Deactivation();
-            }
-        }
-
-        private void Deactivation()
-        {
-            CurrentTrigger.ActivateTriggerExitEvent();
-            CurrentTrigger = null;
-        } 
 
         #endregion
     } 
