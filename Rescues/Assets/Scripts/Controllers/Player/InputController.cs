@@ -90,9 +90,10 @@ namespace Rescues
             if (Input.GetButtonUp("Use"))
             {
                 var puzzleObject = GetInteractableObject<PuzzleBehaviour>(InteractableObjectType.Puzzle);
-                if (puzzleObject != null)
+                if (puzzleObject != null && !puzzleObject.Puzzle.IsFinished)
                 {
                     puzzleObject.Puzzle.Activate();
+                    Time.timeScale = 0;
                 }
 
                 var hidingPlace = GetInteractableObject<HidingPlaceBehaviour>(InteractableObjectType.HidingPlace);
@@ -192,7 +193,7 @@ namespace Rescues
                 var puzzleObject = GetInteractableObject<PuzzleBehaviour>(InteractableObjectType.Puzzle);
                 if (puzzleObject != null)
                 {
-                    puzzleObject.Puzzle.Close();
+                    puzzleObject.Puzzle.Close();                   
                 }
             }
 

@@ -36,11 +36,12 @@ namespace Rescues
 
         public void Activate(Puzzle puzzle)
         {
-            if (puzzle.IsFinished) return;
+            if (puzzle.IsFinished || puzzle.IsActive) return;
 
             _pianoExecuteControllers.Add(_navigation);
             _pianoExecuteControllers.Add(_useController);
-            puzzle.gameObject.SetActive(true);         
+            puzzle.gameObject.SetActive(true);
+            puzzle.IsActive = true;         
         }
 
         public void Close(Puzzle puzzle)
@@ -48,6 +49,7 @@ namespace Rescues
             puzzle.gameObject.SetActive(false);
             _pianoExecuteControllers.Clear();
             puzzle.ResetValues();
+            puzzle.IsActive = false;
         }
 
         public void Finish(Puzzle puzzle)
