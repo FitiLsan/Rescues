@@ -15,4 +15,4 @@ MonoBehaviour:
   _writeStep: 1
   _writeSpeed: 10
   _timeToFadeout: 1
-  _timeBeforeFadeoutStarts: 2
+  _timeBeforeFadeoutStarts: 0.7
