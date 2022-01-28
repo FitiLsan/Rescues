@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _writeStep: 1
   _writeSpeed: 10
-  _timeToFadeout: 1
-  _timeBeforeFadeoutStarts: 0.7
+  _timeToFadeout: 2
+  _timeBeforeFadeoutStarts: 0
+  _maxAlpha: 1

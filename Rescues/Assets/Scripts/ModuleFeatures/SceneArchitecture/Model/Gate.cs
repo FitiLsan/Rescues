@@ -41,7 +41,11 @@ namespace Rescues
 
         #region Properties
 
-        public int GoToGateId => _goToGateId;
+        public int GoToGateId
+        {
+            get => _goToGateId;
+            set => _goToGateId = value;
+        }
 
         public int ThisGateId => _thisGateId;
 

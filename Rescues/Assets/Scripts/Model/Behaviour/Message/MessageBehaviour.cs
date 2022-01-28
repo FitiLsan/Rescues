@@ -46,7 +46,6 @@ namespace Rescues
         {
             if (IsLocked == false)
             {
-                writePattern.ClearText(outputTextContainer);
                 writePattern.DrawText(inputText, outputTextContainer);
             }
         }

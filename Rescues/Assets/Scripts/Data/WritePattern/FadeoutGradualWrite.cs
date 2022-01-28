@@ -14,12 +14,19 @@ namespace Rescues
         public const int WRITE_SPEED_MAX_RANGE = 10;
         public const int WRITE_STEP_MAX_RANGE = 10;
 
+        [Header("Gradual settings")]
         [Range(1, WRITE_STEP_MAX_RANGE)]
         [SerializeField] private int _writeStep;
         [Range(1, WRITE_SPEED_MAX_RANGE)]
         [SerializeField] private int _writeSpeed;
+        [Header("Fade settings")]
         [SerializeField] private float _timeToFadeout;
         [SerializeField] private float _timeBeforeFadeoutStarts;
+        [Header("Optional settings")]
+        [Range(0, 1)]
+        [SerializeField] private float _maxAlpha = 1;
+        [Range(0, 1)]
+        [SerializeField] private float _minAlpha = 0;
 
         private readonly List<ITimeRemaining> _sequence = new List<ITimeRemaining>();
 
@@ -30,10 +37,10 @@ namespace Rescues
 
         public override void DrawText(string inputText, TextMeshProUGUI outputTextContainer)
         {
-            _sequence.Clear();
-            DOTween.Clear();
-            outputTextContainer.DOFade(1, 0);
+            ClearText(outputTextContainer);
+            RestoreAlpha(outputTextContainer);
 
+            _sequence.Clear();
             float _timeForWriteChar = Time.deltaTime * WRITE_SPEED_MAX_RANGE / _writeSpeed;
             int start = 0;
             int tempStep = _writeStep;
@@ -63,7 +70,7 @@ namespace Rescues
 
         public override void ClearText(TextMeshProUGUI textContainer)
         {
-            _sequence.RemoveSequentialTimeRemaining();
+            _sequence.RemoveSequentialTimeRemaining();            
             textContainer.text = string.Empty;
         }
 
@@ -71,10 +78,20 @@ namespace Rescues
         {
             _sequence.Add(new TimeRemaining(() =>
             {
-                outputTextContainer.DOFade(0, _timeToFadeout).
-                OnComplete(() => outputTextContainer.text = string.Empty);
+                outputTextContainer.DOFade(_minAlpha, _timeToFadeout).
+                OnComplete(() =>
+                {
+                    outputTextContainer.text = string.Empty;
+                    RestoreAlpha(outputTextContainer);
+                });
             },
             _timeBeforeFadeoutStarts));
+        }
+
+        private void RestoreAlpha(TextMeshProUGUI textContainer)
+        {
+            DOTween.Kill(textContainer);
+            textContainer.DOFade(_maxAlpha, 0);
         }
 
         #endregion

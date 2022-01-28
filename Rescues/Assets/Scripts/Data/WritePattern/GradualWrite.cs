@@ -13,6 +13,7 @@ namespace Rescues
         public const int WRITE_SPEED_MAX_RANGE = 10;
         public const int WRITE_STEP_MAX_RANGE = 10;
 
+        [Header("Gradual settings")]
         [Range(1, WRITE_STEP_MAX_RANGE)]
         [SerializeField] private int _writeStep;
         [Range(1, WRITE_SPEED_MAX_RANGE)]
@@ -27,8 +28,10 @@ namespace Rescues
 
         public override void DrawText(string inputText, TextMeshProUGUI outputTextContainer)
         {
-            float _timeForWriteChar = Time.deltaTime * WRITE_SPEED_MAX_RANGE / _writeSpeed;
+            ClearText(outputTextContainer);
+
             _sequence.Clear();
+            float _timeForWriteChar = Time.deltaTime * WRITE_SPEED_MAX_RANGE / _writeSpeed;
             int start = 0;
             int tempStep = _writeStep;
             while (start < inputText.Length)

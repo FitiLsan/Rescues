@@ -460,7 +460,7 @@ SpriteRenderer:
   m_Size: {x: 94.490005, y: 118.14135}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7231358226699767967
@@ -588,7 +588,7 @@ SpriteRenderer:
   m_Size: {x: 94.490005, y: 118.14135}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5002886406524909020
@@ -1156,7 +1156,7 @@ SpriteRenderer:
   m_Size: {x: 94.490005, y: 118.14135}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4862902559128016476
@@ -1381,7 +1381,7 @@ SpriteRenderer:
   m_Size: {x: 94.490005, y: 118.14135}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7482295416393134819
@@ -2088,8 +2088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f8ed03ee41eb44b9e90315af654bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputText: "\u0417\u0430\u043F\u0435\u0440\u0442\u043E. \u0413\u0434\u0435-\u0442\u043E
-    \u0436\u0435 \u0434\u043E\u043B\u0436\u0435\u043D \u0431\u044B\u0442\u044C \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B? "
+  inputText: "\u0417\u0430\u043F"
   writePattern: {fileID: 11400000, guid: 886d0a2ca6b539744a1fc19a06da05fb, type: 2}
   outputTextContainer: {fileID: 1178322764993610996}
   <IsLocked>k__BackingField: 0
@@ -2696,7 +2695,7 @@ SpriteRenderer:
   m_Size: {x: 94.490005, y: 118.14135}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1901682252367278003
@@ -3357,7 +3356,7 @@ MonoBehaviour:
   inputText: "\u0421\u0442\u0435\u043D\u0434 \u0441 \u0431\u0443\u043A\u043B\u0435\u0442\u0430\u043C\u0438.
     \u0418\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E, \u043A\u0430\u043A \u0442\u0443\u0442
     \u043C\u0435\u0441\u0442\u043D\u044B\u0435 \u0440\u0430\u0437\u0432\u043B\u0435\u043A\u0430\u044E\u0442\u0441\u044F?"
-  writePattern: {fileID: 11400000, guid: 886d0a2ca6b539744a1fc19a06da05fb, type: 2}
+  writePattern: {fileID: 11400000, guid: 651a754bbf75f0f4689629dd9d3f6c04, type: 2}
   outputTextContainer: {fileID: 1178322764993610996}
   <IsLocked>k__BackingField: 0
 --- !u!1 &5268019815865968080
@@ -4151,7 +4150,7 @@ SpriteRenderer:
   m_Size: {x: 94.490005, y: 118.14135}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6477879234474096456
@@ -5294,7 +5293,7 @@ SpriteRenderer:
   m_Size: {x: 94.490005, y: 118.14135}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8228631413351027160
@@ -5809,7 +5808,7 @@ SpriteRenderer:
   m_Size: {x: 94.490005, y: 118.14135}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &733465612346240984

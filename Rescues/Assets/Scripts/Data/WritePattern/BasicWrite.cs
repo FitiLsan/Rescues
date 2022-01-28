@@ -11,6 +11,8 @@ namespace Rescues
 
         public override void DrawText(string inputText, TextMeshProUGUI outputTextContainer)
         {
+            ClearText(outputTextContainer);
+
             outputTextContainer.text += inputText;
         }
 
