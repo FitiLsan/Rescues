@@ -15,5 +15,6 @@ MonoBehaviour:
   _writeStep: 1
   _writeSpeed: 10
   _timeToFadeout: 2
-  _timeBeforeFadeoutStarts: 0
+  _timeBeforeFadeoutStarts: 0.8
   _maxAlpha: 1
+  _minAlpha: 0

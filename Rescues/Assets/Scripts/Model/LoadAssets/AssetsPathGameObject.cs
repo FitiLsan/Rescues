@@ -29,7 +29,7 @@ namespace Rescues
         {
             {AudioDataType.AudioMixer, "Data/Audio/AudioMixer"},
             {AudioDataType.AudioControllerContext, "Data/Audio/AudioControllerContext"},
-            {AudioDataType.HotelMusicTheme, "Prefabs/Locations/Hotel/Current version/HotelMusicTheme"},
+            {AudioDataType.HotelMusicTheme, "Prefabs/Locations/Hotel/HotelMusicTheme"},
         };
 
         public static readonly Dictionary<InputDataType, string> InputData = new Dictionary<InputDataType, string>()
