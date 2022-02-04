@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace Rescues
 {
-    [RequireComponent(typeof(BoxCollider2D))]
     public class MamaConnector : MonoBehaviour
     {
         #region Fileds
@@ -14,10 +14,13 @@ namespace Rescues
         [SerializeField] private int _applyNumber;
         [SerializeField] private Sprite _connected;
         [SerializeField] private Sprite _disconnected;
+        private Image _spriteRenderer;
         private int _connectedPapaConnectorHash;
-        private SpriteRenderer _spriteRenderer;
         private PapaConnector _papaConnector;
-
+        
+        [NonSerialized]
+        public float Radius = 0.5f;
+        
         #endregion
 
 
@@ -35,28 +38,26 @@ namespace Rescues
 
         #region UnityMethods
 
-        private void Awake()
+        private void Start()
         {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer = gameObject.transform.GetComponent<Image>();
             _spriteRenderer.sprite = _disconnected;
-            GetComponent<BoxCollider2D>().isTrigger = true;
         }
 
-        private void OnTriggerStay2D(Collider2D other)
+        public void LockAndUnLockPapaConnector(PapaConnector papaConnector)
         {
-            var newPapaConnector = other.GetComponent<PapaConnector>();
-            if (newPapaConnector == null) return;
+            if (papaConnector == null) return;
 
-            if (!IsBusy && !newPapaConnector.IsMoving)
+            if (!IsBusy && !papaConnector.IsMoving)
             {
-                _papaConnector = newPapaConnector;
+                _papaConnector = papaConnector;
                 _connectedPapaConnectorHash = _papaConnector.GetHashCode();
                 _spriteRenderer.sprite = _connected;
                 Connect(_papaConnector.Number);
             }
             else
             {
-                if (newPapaConnector.GetHashCode() == _connectedPapaConnectorHash)
+                if (papaConnector.GetHashCode() == _connectedPapaConnectorHash)
                 {
                     if (IsBusy && _papaConnector.IsMoving)
                     {
@@ -75,7 +76,8 @@ namespace Rescues
         {
             if (IsBusy) return;
             _papaConnector.MoveWire(transform.position);
-            _papaConnector.SetSpriteConnector(false);
+            //тут нужно будет отдельный image с оголенными проводами
+            //_papaConnector.SetSpriteConnector(false);
             IsCorrectWire = _applyNumber == wireNumber ? true : false;
             IsBusy = true;
             Connected.Invoke();
@@ -84,7 +86,8 @@ namespace Rescues
         public void Disconnect()
         {
             if (!IsBusy) return;
-            _papaConnector.SetSpriteConnector(true);
+            //тут нужно будет отдельный image с оголенными проводами
+            //_papaConnector.SetSpriteConnector(true);
             _papaConnector = null;
             _spriteRenderer.sprite = _disconnected;
             _connectedPapaConnectorHash = 0;

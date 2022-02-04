@@ -16,6 +16,7 @@ namespace Rescues
         private readonly GameContext _context;
         private readonly CameraServices _cameraServices;
         private readonly PhysicalServices _physicsService;
+        private readonly InputServices _inputService;
         private PlayerStates _lastState;
         private Action _cancelState = () => { };
         private Vector2 _inputAxis;
@@ -31,6 +32,7 @@ namespace Rescues
             _context = context;
             _cameraServices = services.CameraServices;
             _physicsService = services.PhysicalServices;
+            _inputService = services.InputServices;
         }
 
         #endregion
@@ -40,7 +42,7 @@ namespace Rescues
 
         public void Execute()
         {
-            if (Input.GetButtonUp("Cancel"))
+            if (_inputService.CancelButton.IsUp)
             {
                 if (_lastState != PlayerStates.Idle && _lastState != PlayerStates.Moving)
                 {
@@ -53,8 +55,8 @@ namespace Rescues
                 }
             }
 
-            _inputAxis.x = Input.GetAxis("Horizontal");
-            _inputAxis.y = Input.GetAxis("Vertical");
+            _inputAxis.x = _inputService.HorizontalAxis.Value;
+            _inputAxis.y = _inputService.VerticalAxis.Value;
 
             if (_physicsService.IsPaused == false && _isStateLocked == false)
             {
@@ -68,42 +70,43 @@ namespace Rescues
                 else
                 {
                     _context.character.SetIdle();
-                    if (Input.GetButtonUp("Vertical"))
+                    if (_inputService.VerticalAxis.IsReleased)
                     {
                         SwitchState(PlayerStates.GoByGateWay);
                     }
 
-                    if (Input.GetButtonUp("PickUp"))
+
+                    if (_inputService.PickUpButton.IsUp)
                     {
                         SwitchState(PlayerStates.PickUp);
                     }
 
-                    if (Input.GetButtonUp("Inventory"))
+                    if (_inputService.InventoryButton.IsUp)
                     {
                         SwitchState(PlayerStates.Inventory);
                     }
 
-                    if (Input.GetButtonUp("Notepad"))
+                    if (_inputService.NotepadButton.IsUp)
                     {
                         SwitchState(PlayerStates.Notepad);
                     }
 
-                    if (Input.GetButtonUp("Use"))
+                    if (_inputService.UseButton.IsUp)
                     {
                         SwitchState(PlayerStates.Use);
                     }
 
-                    if (Input.GetButtonDown("Mouse ScrollPressed"))
+                    if (_inputService.MouseScrollButton.IsDown)
                     {
                         _cameraServices.FreeCamera();
                     }
 
-                    if (Input.GetButton("Mouse ScrollPressed"))
+                    if (_inputService.MouseScrollButton.IsHeld)
                     {
                         _cameraServices.FreeCameraMovement();
                     }
 
-                    if (Input.GetButtonUp("Mouse ScrollPressed"))
+                    if (_inputService.MouseScrollButton.IsUp)
                     {
                         _cameraServices.LockCamera();
                     }

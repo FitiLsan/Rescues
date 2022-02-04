@@ -32,6 +32,12 @@ namespace Rescues
             {AudioDataType.HotelMusicTheme, "Prefabs/Locations/Hotel/HotelMusicTheme"},
         };
 
+        public static readonly Dictionary<InputDataType, string> InputData = new Dictionary<InputDataType, string>()
+        {
+            {InputDataType.DefaultInputsData, "Data/Input/DefaultInputsData"},
+            {InputDataType.InputPromptsPrefabData, "Data/Input/InputPromptsPrefabData"}
+        };
+
         #endregion
     }
 }

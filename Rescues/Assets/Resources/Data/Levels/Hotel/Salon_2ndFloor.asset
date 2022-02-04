@@ -24,7 +24,7 @@ MonoBehaviour:
     Position_Y_Offset: 8
     Position_X_Offset: 0
     MoveLeftXLimit: -15
-    MoveRightXLimit: 15
+    MoveRightXLimit: 14.5
     MoveUpYLimit: 11.5
     MoveDownYLimit: -12.5
     CameraAccelerateStep: 20

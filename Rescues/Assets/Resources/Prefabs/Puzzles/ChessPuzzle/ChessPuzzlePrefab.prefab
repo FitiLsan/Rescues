@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6772912465001608804}
   - component: {fileID: 8261164999375926210}
   m_Layer: 0
-  m_Name: ChessPuzzlePref
+  m_Name: ChessPuzzlePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,5 +71,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 5
-  Puzzle: {fileID: 4245532040982583555, guid: 95bcb8419cd7bb64b9e2a7f7561cf979, type: 3}
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
+  <IsInteractionLocked>k__BackingField: 0
+  <Id>k__BackingField: -1
+  Puzzle: {fileID: 120000110204577172, guid: ebc63b40f1fdbba4db694ea6744acf0e, type: 3}
   ItemData: {fileID: 11400000, guid: 1a1b66383686f9846827652daf6a3acb, type: 2}
+  finishEvents: []

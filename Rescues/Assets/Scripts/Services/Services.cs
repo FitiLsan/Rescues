@@ -14,6 +14,7 @@
         public PhysicalServices PhysicalServices { get; private set; }
         public UnityTimeServices UnityTimeServices { get; private set; }
         public CameraServices CameraServices { get; private set; }
+        public InputServices InputServices { get; private set; }
         
         #endregion
         
@@ -25,6 +26,7 @@
             PhysicalServices = new PhysicalServices(contexts);
             UnityTimeServices = new UnityTimeServices(contexts);
             CameraServices = new CameraServices(contexts);
+            InputServices = new InputServices(contexts);
         }
         
         #endregion

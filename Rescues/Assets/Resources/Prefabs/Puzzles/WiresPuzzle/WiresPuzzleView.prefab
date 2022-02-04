@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &921668239045108401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8283271689530560907}
+  - component: {fileID: 4589913221407563298}
+  - component: {fileID: 1501864608473241464}
+  m_Layer: 0
+  m_Name: WiresPuzzleView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8283271689530560907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921668239045108401}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.23, y: 1.97, z: 0}
+  m_LocalScale: {x: 0.43853998, y: 0.43853998, z: 0.43853998}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4589913221407563298
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921668239045108401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.48, y: 6.5}
+    newSize: {x: 0.93029463, y: 2.1399999}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.48, y: 6.5}
+  m_EdgeRadius: 0
+--- !u!114 &1501864608473241464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921668239045108401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d450f2de19a94691a48156e7210b7dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 5
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
+  <IsInteractionLocked>k__BackingField: 0
+  <Id>k__BackingField: -1
+  Puzzle: {fileID: 3920347424464122509, guid: cbca14f8c82a7074093b5b61c8c8314b, type: 3}
+  ItemData: {fileID: 11400000, guid: 94bbec4b67b144a889865f5e8a89cd34, type: 2}
+  finishEvents: []

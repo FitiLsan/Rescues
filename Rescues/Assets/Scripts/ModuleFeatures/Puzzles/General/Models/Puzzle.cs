@@ -39,7 +39,7 @@ namespace Rescues
         {        
             if (_delayAfterFinish > 0)
             {
-                StartCoroutine(CloseWithDelay());
+                TimeRemainingExtensions.AddTimeRemaining(new TimeRemaining(CloseWithDelay, _delayAfterFinish));
             }
             else
             {
@@ -73,9 +73,8 @@ namespace Rescues
             IsActive = false;
         }
 
-        private IEnumerator CloseWithDelay()
+        private void CloseWithDelay()
         {
-            yield return new WaitForSeconds(_delayAfterFinish);
             gameObject.SetActive(false);
         }
         
