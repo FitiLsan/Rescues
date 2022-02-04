@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4124236382233250945
 Transform:
   m_ObjectHideFlags: 0
@@ -2155,7 +2155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5974701463350372875
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4307,7 +4307,7 @@ MonoBehaviour:
   _type: 9
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
-  TargetPoint: {x: -1.9065297, y: 4.504524}
+  TargetPoint: {x: 0.08686638, y: 3.773612}
   IsReturningOnTimer: 0
   FocusTime: 0
 --- !u!1 &4698289775453276191
@@ -5049,7 +5049,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7624,7 +7624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 534, y: -231}
+  m_AnchoredPosition: {x: 474, y: -231}
   m_SizeDelta: {x: 513.81, y: 136.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5924954274476229550
@@ -7685,7 +7685,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
