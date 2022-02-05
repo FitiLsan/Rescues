@@ -22,7 +22,7 @@ MonoBehaviour:
     CameraFreeMoveLimit: 50
     CameraDragSpeed: 50
     Position_Y_Offset: 8
-    Position_X_Offset: 11
+    Position_X_Offset: 0
     MoveLeftXLimit: -15
     MoveRightXLimit: 14.5
     MoveUpYLimit: 11.5

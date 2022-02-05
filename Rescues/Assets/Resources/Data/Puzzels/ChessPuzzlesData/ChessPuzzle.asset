@@ -16,9 +16,9 @@ MonoBehaviour:
   ElemntsOnBoard:
   - UnicSequenceID: -1
     IndexOfFigure: 2
-    CurrentPositionX: 3
-    CurrentPositionY: 5
-    EndPositionX: 3
+    CurrentPositionX: 4
+    CurrentPositionY: 8
+    EndPositionX: 1
     EndPositionY: 5
   - UnicSequenceID: 2
     IndexOfFigure: 3
