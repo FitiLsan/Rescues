@@ -529,6 +529,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: 
   OnTriggerEnterEvents: []
@@ -1185,6 +1187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -1484,6 +1488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -2302,6 +2308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: 
   OnTriggerEnterEvents: []
@@ -3144,6 +3152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -5198,6 +5208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: 
   ItemData: {fileID: 11400000, guid: ed13e98ed621db241b8d45b2b83dc0d8, type: 2}
@@ -5215,6 +5227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -5697,6 +5711,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 6
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: 
   StandWindow: {fileID: 4512934652594739860}
@@ -7146,6 +7162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 6
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: 
   StandWindow: {fileID: 5744476930202147897}
@@ -7790,6 +7808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: 
   ItemData: {fileID: 11400000, guid: ed13e98ed621db241b8d45b2b83dc0d8, type: 2}
@@ -7807,6 +7827,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -7910,6 +7932,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -8071,6 +8095,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -8457,6 +8483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 6
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: 
   StandWindow: {fileID: 1271464431589895794}
@@ -9016,6 +9044,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -10030,6 +10060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _localTransferTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
+        type: 3}
+      propertyPath: <Id>k__BackingField
+      value: S5B1
       objectReference: {fileID: 0}
     - target: {fileID: 7149498112034572307, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}

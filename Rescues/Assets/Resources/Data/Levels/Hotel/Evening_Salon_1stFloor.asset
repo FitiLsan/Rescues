@@ -10,13 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdd3b500a64940cb95a750703a11db0d, type: 3}
-  m_Name: SrartCorridor 1
+  m_Name: Evening_Salon_1stFloor
   m_EditorClassIdentifier: 
-  _locationName: SrartCorridor
-  _locationPrefab: {fileID: 1836330889997717941, guid: cbc9be61b10b18c458bcc50fa51753c1,
+  _locationName: Evening_Salon_1stFloor
+  _locationPrefab: {fileID: 5907541622321360578, guid: cda51a0ca42e1654b87853f89d818ff8,
     type: 3}
   _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
-  _cameraMode: 1
-  _cameraSize: 14
+  _cameraData:
+    CameraMode: 2
+    CameraSize: 10
+    CameraFreeMoveLimit: 50
+    CameraDragSpeed: 50
+    Position_Y_Offset: -13
+    Position_X_Offset: 0
+    MoveLeftXLimit: -21
+    MoveRightXLimit: 23
+    MoveUpYLimit: 11.5
+    MoveDownYLimit: -12.5
+    CameraAccelerateStep: 20
+    DeadZone: 2
   _customBootScreen: {fileID: 5293078557666880198, guid: 350dbdcc61ef74de087b99c5df45793d,
     type: 3}

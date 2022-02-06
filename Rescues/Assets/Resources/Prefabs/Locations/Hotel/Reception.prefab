@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
-  _interactionPrompt: 0
+  _interactionPrompt: 1
   _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: Trash1
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
-  _interactionPrompt: 0
+  _interactionPrompt: 1
   _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: Trash1
@@ -2772,7 +2772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
-  _interactionPrompt: 0
+  _interactionPrompt: 1
   _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: ReedDI
@@ -3524,7 +3524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
-  _interactionPrompt: 0
+  _interactionPrompt: 1
   _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: RustKnife
@@ -7787,7 +7787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
-  _interactionPrompt: 0
+  _interactionPrompt: 1
   _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: Stand
@@ -8482,6 +8482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _goToLocationName
       value: Salon_1stFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
+        type: 3}
+      propertyPath: _interactionPrompt
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
