@@ -264,7 +264,7 @@ namespace Rescues
                         if (gate != null && !gate.IsInteractionLocked)
                         {
                             LockState();
-                            gate.GoByGateWay(() => _isStateLocked = false);
+                            gate.Transfer(() => _isStateLocked = false);
                         }
 
                         _cancelState = () => { };

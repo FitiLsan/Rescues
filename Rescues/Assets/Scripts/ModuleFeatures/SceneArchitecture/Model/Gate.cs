@@ -1,4 +1,5 @@
 using DG.Tweening;
+using NaughtyAttributes;
 using System;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ namespace Rescues
     {
         #region Fileds
 
-        [NonSerialized] public Action<Gate, TweenCallback> GoAction;
+        [NonSerialized] public Action<Gate, TweenCallback> OnTransfer;
 
         [Header("This Gate")]
         private string _thisLevelName;
@@ -80,9 +81,15 @@ namespace Rescues
 
         #region Methods
 
-        public void GoByGateWay(TweenCallback AfterTransfer)
+        public void Transfer(TweenCallback AfterTransfer)
         {
-            GoAction?.Invoke(this, AfterTransfer);
+            OnTransfer?.Invoke(this, AfterTransfer);
+        }
+
+        [Button]
+        public void Transfer()
+        {
+            OnTransfer?.Invoke(this, (() => { }));
         }
 
         #endregion

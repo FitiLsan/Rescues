@@ -46,14 +46,14 @@ namespace Rescues
             _defaultBootScreen.name = "DefaultBootScreen";
             _defaultBootScreen.gameObject.SetActive(false);
             _audioController.LoadMainMusicTheme(_levelParent.transform);
-            LoadLevel(_levelsData.GetGate);
+            LoadLevel(_levelsData.GetGate, (() => { }));
         }
 
         #endregion
 
         #region Methods
 
-        public void LoadLevel(IGate gate, TweenCallback AfterTransfer = null)
+        public void LoadLevel(IGate gate, TweenCallback AfterTransfer)
         {
             if (_locationController == null || _locationController.LevelName != gate.GoToLevelName)
             {
