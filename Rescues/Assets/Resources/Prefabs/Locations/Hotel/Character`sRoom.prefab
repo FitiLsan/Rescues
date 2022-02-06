@@ -458,6 +458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: TVON
   OnTriggerEnterEvents: []
@@ -1224,6 +1226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   ItemData: {fileID: 11400000, guid: c2fac2768336791408cb9ebe05c39015, type: 2}
@@ -2248,6 +2252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -2758,6 +2764,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -2886,6 +2894,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: RoomLightOff
   OnTriggerEnterEvents: []
@@ -3103,89 +3113,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: Bed
   OnTriggerEnterEvents:
-  - _isInteractionLocked: 1
+  - _isInteractionLocked: 0
     IsRepeating: 0
     TimeBeforeInvoke: 0
-    _id: bed1
+    _id: 
     Event:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7522158705876833627}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3599631375444579387}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2224514545695753006}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 723836307873179543}
-          m_TargetAssemblyTypeName: Rescues.Gate, Assembly-CSharp
-          m_MethodName: set_GoToLocationName
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Night_Corridor
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 723836307873179543}
-          m_TargetAssemblyTypeName: Rescues.Gate, Assembly-CSharp
-          m_MethodName: set_GoToGateId
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
     objectManipulations:
       keys: 
       values: []
-  OnTriggerExitEvents:
-  - _isInteractionLocked: 0
-    IsRepeating: 0
-    TimeBeforeInvoke: 0
-    _id: 
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
-    objectManipulations:
-      keys: 
-      values: []
-  OnButtonInTriggerEvents:
-  - _isInteractionLocked: 0
-    IsRepeating: 0
-    TimeBeforeInvoke: 0
-    _id: 
-    Event:
-      m_PersistentCalls:
-        m_Calls: []
-    objectManipulations:
-      keys: 
-      values: []
+  OnTriggerExitEvents: []
+  OnButtonInTriggerEvents: []
 --- !u!61 &5529140650320471993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3229,6 +3185,8 @@ MonoBehaviour:
   - 1stDialHoz
   - 1stDialHoz 1
   - 2ndDoorDiA
+  - BedDia
+  - CellorDoorQuest
   - Charlie
   - CrazyCap
   - DEMO_Condition
@@ -3240,16 +3198,19 @@ MonoBehaviour:
   - MrCube
   - MyTestDialogue
   - NPCOnly
+  - PotDia
   - QuestChartDemo
   - ReedDi
+  - ReedDi 1
   - RingQuest
+  - RingQuest 1
   - RustKnife
   - Test_1
   - Witch
   - WorkRing
-  assignedIndex: 10
-  assignedID: 90056
-  assignedDialogue: LightQuest_bed
+  assignedIndex: 4
+  assignedID: 94437
+  assignedDialogue: BedDia
   interactionCount: 0
   alias: 
   overrideStartNode: -1
@@ -3277,6 +3238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 7
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: BedDialogue
   assignDialog: {fileID: 1315161062068063912}
@@ -3535,6 +3498,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: RoomLightOn
   OnTriggerEnterEvents: []
@@ -4164,6 +4129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   ItemData: {fileID: 0}
@@ -4433,6 +4400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -6435,6 +6404,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   ItemData: {fileID: 11400000, guid: b72bd5f33bf0c0b4d80347a3a090b77a, type: 2}
@@ -6765,6 +6736,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -7005,6 +6978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: TVOFF
   OnTriggerEnterEvents: []
@@ -7192,6 +7167,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a92e6ec87f5ad4c038229934453c278f, type: 3}
+--- !u!1 &3599631375444579387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2745420174002926604, guid: a92e6ec87f5ad4c038229934453c278f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1724250493504135223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8418874870812551204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7149498112034572307, guid: a92e6ec87f5ad4c038229934453c278f,
@@ -7953,15 +7934,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6581142677225542728}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &723836307873179543 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
-    type: 3}
-  m_PrefabInstance: {fileID: 6581142677225542728}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12671e5468464ffb931aedbf36e82e97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

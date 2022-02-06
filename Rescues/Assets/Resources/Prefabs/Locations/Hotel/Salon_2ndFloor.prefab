@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: 
   ItemData: {fileID: 11400000, guid: ed13e98ed621db241b8d45b2b83dc0d8, type: 2}
@@ -141,6 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents:
@@ -613,7 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputText: "\u041F\u043E \u044D\u0442\u043E\u043C\u0443 \u0442\u0435\u0431\u0435
-    \u043B\u0443\u0447\u044C\u0448\u0435 \u043D\u0430 \u0441\u043E\u0432\u0435\u0442\u0435
+    \u043B\u0443\u0447\u0448\u0435 \u043D\u0430 \u0441\u043E\u0432\u0435\u0442\u0435
     \u043F\u0440\u0438\u043D\u044F\u0442\u044C \u043C\u043E\u044E \u0441\u0442\u043E\u0440\u043E\u043D\u0443!
     \u0422\u0432\u043E\u0435 \u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u0435
     \u0438 \u0442\u0430\u043A \u0448\u0430\u0442\u043A\u043E. "
@@ -1484,6 +1488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -1656,7 +1662,7 @@ MonoBehaviour:
   inputText: "\u0418 \u043D\u0435 \u0441\u043E\u0432\u0435\u0442\u0443 \u0440\u0435\u0448\u0430\u0442\u044C,
     \u0438\u0441\u043A\u043B\u044E\u0447\u0430\u0442\u044C \u043C\u0435\u043D\u044F
     \u0438\u043B\u0438 \u043D\u0435\u0442! \u0410 \u0435\u0433\u043E \u0432\u043E\u043B\u044E
-    \u044F \u0447\u0442\u0443 \u043D\u0435 \u0445\u0443\u0448\u0435 \u0432\u0430\u0448\u0435\u0433\u043E!"
+    \u044F \u0447\u0442\u0443 \u043D\u0435 \u0445\u0443\u0436\u0435 \u0432\u0430\u0448\u0435\u0433\u043E!"
   writePattern: {fileID: 11400000, guid: 886d0a2ca6b539744a1fc19a06da05fb, type: 2}
   outputTextContainer: {fileID: 8122510601063182373}
   <IsLocked>k__BackingField: 0
@@ -3415,6 +3421,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 1
   <Id>k__BackingField: LowDI
   OnTriggerEnterEvents:
@@ -4066,6 +4074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 7
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   assignDialog: {fileID: 9185757047692042436}
@@ -4239,7 +4249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputText: "\u041E\u043D \u0437\u0430\u0449\u0438\u0442\u0438\u0442 \u043D\u0430\u0441
-    \u043E\u0442 \u043B\u044E\u044B\u0445 \u043F\u043E\u0441\u043B\u0435\u0434\u0441\u0442\u0432\u0438\u0439,
+    \u043E\u0442 \u043B\u044E\u0431\u044B\u0445 \u043F\u043E\u0441\u043B\u0435\u0434\u0441\u0442\u0432\u0438\u0439,
     \u043A\u0430\u043A \u0434\u0435\u043B\u0430\u043B \u044D\u0442\u043E \u0432\u0441\u0435\u0433\u0434\u0430. "
   writePattern: {fileID: 11400000, guid: 886d0a2ca6b539744a1fc19a06da05fb, type: 2}
   outputTextContainer: {fileID: 2314306674533370010}
@@ -4305,6 +4315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 9
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   TargetPoint: {x: 0.08686638, y: 3.773612}
@@ -5225,6 +5237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: HozDoor
   OnTriggerEnterEvents: []
@@ -6651,6 +6665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: HozDoor
   OnTriggerEnterEvents:
@@ -7876,8 +7892,7 @@ MonoBehaviour:
   inputText: "\u041C\u044B \u043A\u043E\u043D\u0435\u0447\u043D\u043E \u0434\u0440\u0443\u0437\u044C\u044F,
     \u043D\u043E \u0435\u0441\u043B\u0438 \u0441\u043E\u0432\u0435\u0442 \u0440\u0435\u0448\u0438\u0442
     \u0442\u0435\u0431\u044F \u0438\u0441\u043A\u043B\u044E\u0447\u0438\u0442\u044C,
-    \u044F \u043D\u0435 \u0441\u0442\u0430\u043D\u0443 \u0437\u0430 \u0442\u0435\u0431\u044F
-    \u0432\u0441\u0442\u0443\u043F\u0430\u0442\u044C\u0441\u044F. "
+    \u044F \u043D\u0435 \u0441\u0442\u0430\u043D\u0443 \u0432\u0441\u0442\u0443\u043F\u0430\u0442\u044C\u0441\u044F. "
   writePattern: {fileID: 11400000, guid: 886d0a2ca6b539744a1fc19a06da05fb, type: 2}
   outputTextContainer: {fileID: 2314306674533370010}
   <IsLocked>k__BackingField: 0
@@ -8053,6 +8068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
@@ -8812,6 +8829,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
+  _interactionPrompt: 0
+  _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
   OnTriggerEnterEvents: []
