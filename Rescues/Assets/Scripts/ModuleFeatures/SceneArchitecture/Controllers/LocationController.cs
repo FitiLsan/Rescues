@@ -48,7 +48,7 @@ namespace Rescues
 
                 foreach (Gate gate in location.Gates)
                 {
-                    gate.GoAction += LoadLocation;
+                    gate.OnTransfer += LoadLocation;
                     gate.ThisLocationName = location.LocationName;
                     gate.ThisLevelName = levelName;
                 }
