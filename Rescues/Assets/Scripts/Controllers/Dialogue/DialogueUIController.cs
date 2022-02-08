@@ -139,7 +139,8 @@ namespace Rescues
             VD.OnNodeChange += GivePlayerItem;
             VD.OnNodeChange += RemovePlayerItem;
             VD.OnNodeChange += SetBackground;
-            VD.OnNodeChange += SwitchNpcContainerState;
+            VD.OnNodeChange += OffNpcContainer;
+            VD.OnNodeChange += OnNpcContainer;
             VD.OnNodeChange += SwitchInteractionLock;
             VD.OnNodeChange += SwitchEventLock;
             VD.OnNodeChange += UpdateUI;
@@ -158,7 +159,8 @@ namespace Rescues
             VD.OnNodeChange -= GivePlayerItem;
             VD.OnNodeChange -= RemovePlayerItem;
             VD.OnNodeChange -= SetBackground;
-            VD.OnNodeChange -= SwitchNpcContainerState;
+            VD.OnNodeChange -= OffNpcContainer;
+            VD.OnNodeChange -= OnNpcContainer;
             VD.OnNodeChange -= SwitchInteractionLock;
             VD.OnNodeChange -= SwitchEventLock;
             VD.OnNodeChange -= UpdateUI;
@@ -480,11 +482,20 @@ namespace Rescues
             }
         }
 
-        private void SwitchNpcContainerState(VD.NodeData data)
+        private void OffNpcContainer(VD.NodeData data)
         {
-            if (data.extraVars.ContainsKey(DialogueCommandValue.Command[DialogueCommands.SwitchNpcContainerState]))
+            if (data.extraVars.ContainsKey(DialogueCommandValue.Command[DialogueCommands.OffNpcContainer]))
             {
-                _dialogueUI.npcContainer.SetActive(!_dialogueUI.npcContainer.activeSelf);
+                _dialogueUI.npcContainer.SetActive(false);
+                SwitchBackgroundMode();
+            }
+        }
+
+        private void OnNpcContainer(VD.NodeData data)
+        {
+            if (data.extraVars.ContainsKey(DialogueCommandValue.Command[DialogueCommands.OnNpcContainer]))
+            {
+                _dialogueUI.npcContainer.SetActive(true);
                 SwitchBackgroundMode();
             }
         }

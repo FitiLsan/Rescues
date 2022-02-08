@@ -12,9 +12,10 @@
         GiveItem = 7,
         PlayMusic = 8,
         SetStartNode = 9,
-        SwitchNpcContainerState = 10,
-        ActivateObject = 11,
-        ActivateEvent = 12,
-        RemoveItem = 13,
+        OffNpcContainer = 10,
+        OnNpcContainer = 11,
+        ActivateObject = 12,
+        ActivateEvent = 13,
+        RemoveItem = 14,
     }
 }
