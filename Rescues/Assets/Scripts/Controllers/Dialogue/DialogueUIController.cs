@@ -455,9 +455,9 @@ namespace Rescues
             }
         }
 
-        private void SwitchBackgroundMode()
+        private void SwitchBackgroundMode(bool flag)
         {
-            if (_dialogueUI.background.enabled)
+            if (flag)
             {
                 _dialogueUI.playerBackground.enabled = true;
                 _dialogueUI.playerBackground.sprite = _dialogueUI.background.sprite;
@@ -487,7 +487,7 @@ namespace Rescues
             if (data.extraVars.ContainsKey(DialogueCommandValue.Command[DialogueCommands.OffNpcContainer]))
             {
                 _dialogueUI.npcContainer.SetActive(false);
-                SwitchBackgroundMode();
+                SwitchBackgroundMode(false);
             }
         }
 
@@ -496,7 +496,7 @@ namespace Rescues
             if (data.extraVars.ContainsKey(DialogueCommandValue.Command[DialogueCommands.OnNpcContainer]))
             {
                 _dialogueUI.npcContainer.SetActive(true);
-                SwitchBackgroundMode();
+                SwitchBackgroundMode(true);
             }
         }
 
