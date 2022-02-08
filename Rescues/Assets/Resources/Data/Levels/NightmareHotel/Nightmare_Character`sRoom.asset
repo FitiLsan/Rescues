@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdd3b500a64940cb95a750703a11db0d, type: 3}
-  m_Name: Nightmare_Corridor
+  m_Name: Nightmare_Character`sRoom
   m_EditorClassIdentifier: 
-  _locationName: Nightmare_Corridor
-  _locationPrefab: {fileID: 1836330889997717941, guid: cbc9be61b10b18c458bcc50fa51753c1,
+  _locationName: Nightmare_Character`sRoom
+  _locationPrefab: {fileID: 2861045581699026727, guid: 19b6220d6822b1441953260ea7863de7,
     type: 3}
   _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   _cameraData:
     CameraMode: 0
-    CameraSize: 0
+    CameraSize: 14
     CameraFreeMoveLimit: 0
     CameraDragSpeed: 0
     Position_Y_Offset: 0

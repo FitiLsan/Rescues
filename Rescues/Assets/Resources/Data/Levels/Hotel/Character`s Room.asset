@@ -13,17 +13,21 @@ MonoBehaviour:
   m_Name: Character`s Room
   m_EditorClassIdentifier: 
   _locationName: Character`sRoom
-  _locationPrefab: {fileID: 2861045581699026727, guid: 67af055439f7cee45be062534bae2087,
+  _locationPrefab: {fileID: 2861045581699026727, guid: 16556f76e6dd477499eefc78bbae647d,
     type: 3}
   _backgroundColor: {r: 0.09803922, g: 0.09803922, b: 0.09803922, a: 0}
   _cameraData:
     CameraMode: 2
     CameraSize: 14
+    CameraFreeMoveLimit: 0
+    CameraDragSpeed: 0
     Position_Y_Offset: 0
     Position_X_Offset: 0
     MoveLeftXLimit: 0
     MoveRightXLimit: 0
-    CameraFreeMoveLimit: 0
-    CameraDragSpeed: 0
+    MoveUpYLimit: 0
+    MoveDownYLimit: 0
+    CameraAccelerateStep: 0
+    DeadZone: 0
   _customBootScreen: {fileID: 5293078557666880198, guid: 350dbdcc61ef74de087b99c5df45793d,
     type: 3}
