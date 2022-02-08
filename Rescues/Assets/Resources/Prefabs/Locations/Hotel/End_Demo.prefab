@@ -2002,7 +2002,7 @@ PrefabInstance:
     - target: {fileID: 7680569595454145723, guid: 0499ba983373972449f210a507f57ad7,
         type: 3}
       propertyPath: _backScale
-      value: 1
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 9007248820626605526, guid: 0499ba983373972449f210a507f57ad7,
         type: 3}
