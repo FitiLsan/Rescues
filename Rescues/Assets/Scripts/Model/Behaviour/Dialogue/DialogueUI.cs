@@ -18,7 +18,7 @@ namespace Rescues
         public Image npcImage;
         public Color npcImageNormalColor;
         public float timeBeforeNextNode;
-        public Image npcBackGround;
+        public Image npcBackground;
 
         [Space(10)]
         [Header("Player")]

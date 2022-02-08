@@ -212,7 +212,7 @@ namespace Rescues
             _dialogueUI.playerContainer.SetActive(true);
             _dialogueUI.npcContainer.SetActive(true);
             _dialogueUI.background.enabled = true;
-            _dialogueUI.npcBackGround.enabled = false;
+            _dialogueUI.npcBackground.enabled = false;
             _dialogueUI.playerBackground.enabled = false;
         }
 
@@ -455,24 +455,6 @@ namespace Rescues
             }
         }
 
-        private void SwitchBackgroundMode(bool flag)
-        {
-            if (flag)
-            {
-                _dialogueUI.playerBackground.enabled = true;
-                _dialogueUI.playerBackground.sprite = _dialogueUI.background.sprite;
-                _dialogueUI.playerBackground.color = _dialogueUI.background.color;
-                _dialogueUI.background.enabled = false;
-            }
-            else
-            {
-                _dialogueUI.background.enabled = true;
-                _dialogueUI.background.sprite = _dialogueUI.playerBackground.sprite;
-                _dialogueUI.background.color = _dialogueUI.playerBackground.color;
-                _dialogueUI.playerBackground.enabled = false;
-            }
-        }
-
         private void SetPlayerChoice(int choice)
         {
             if (choice < VD.nodeData.comments.Length && choice >= 0)
@@ -487,7 +469,10 @@ namespace Rescues
             if (data.extraVars.ContainsKey(DialogueCommandValue.Command[DialogueCommands.OffNpcContainer]))
             {
                 _dialogueUI.npcContainer.SetActive(false);
-                SwitchBackgroundMode(false);
+                _dialogueUI.playerBackground.enabled = true;
+                _dialogueUI.playerBackground.sprite = _dialogueUI.background.sprite;
+                _dialogueUI.playerBackground.color = _dialogueUI.background.color;
+                _dialogueUI.background.enabled = false;
             }
         }
 
@@ -496,7 +481,10 @@ namespace Rescues
             if (data.extraVars.ContainsKey(DialogueCommandValue.Command[DialogueCommands.OnNpcContainer]))
             {
                 _dialogueUI.npcContainer.SetActive(true);
-                SwitchBackgroundMode(true);
+                _dialogueUI.background.enabled = true;
+                _dialogueUI.background.sprite = _dialogueUI.playerBackground.sprite;
+                _dialogueUI.background.color = _dialogueUI.playerBackground.color;
+                _dialogueUI.playerBackground.enabled = false;
             }
         }
 
