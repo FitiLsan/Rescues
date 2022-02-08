@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Evening_Character`sRoom
   m_EditorClassIdentifier: 
   _locationName: Evening_Character`sRoom
-  _locationPrefab: {fileID: 2861045581699026727, guid: 16556f76e6dd477499eefc78bbae647d,
+  _locationPrefab: {fileID: 2861045581699026727, guid: 67af055439f7cee45be062534bae2087,
     type: 3}
   _backgroundColor: {r: 0.09803922, g: 0.09803922, b: 0.09803922, a: 0}
   _cameraData:

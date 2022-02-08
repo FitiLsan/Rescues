@@ -610,7 +610,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 8
-  _interactionPrompt: 0
+  _interactionPrompt: 1
   _promptOffset: {x: 0, y: 0}
   <IsInteractionLocked>k__BackingField: 0
   <Id>k__BackingField: -1
@@ -1291,6 +1291,7 @@ MonoBehaviour:
   - 1stDialHoz
   - 1stDialHoz 1
   - 2ndDoorDiA
+  - BedDia
   - CellorDoorQuest
   - Charlie
   - CrazyCap
@@ -1303,6 +1304,7 @@ MonoBehaviour:
   - MrCube
   - MyTestDialogue
   - NPCOnly
+  - PotDia
   - QuestChartDemo
   - ReedDi
   - ReedDi 1
@@ -1312,14 +1314,15 @@ MonoBehaviour:
   - Test_1
   - Witch
   - WorkRing
-  assignedIndex: 4
+  assignedIndex: 5
   assignedID: 41522
   assignedDialogue: CellorDoorQuest
   interactionCount: 0
   alias: 
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 21300000, guid: 267b3798ce610bc449478556cda80e82, type: 3}
-  defaultPlayerSprite: {fileID: 0}
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 21300000, guid: 267b3798ce610bc449478556cda80e82,
+    type: 3}
   targetManager: {fileID: 0}
   preload: 0
   notuptodate: 0
@@ -4967,7 +4970,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6296,7 +6299,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6563,7 +6566,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 21
   m_TargetDisplay: 0
@@ -7837,7 +7840,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8748,6 +8751,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
+      propertyPath: _interactionPrompt
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
+        type: 3}
       propertyPath: _localTransferTime
       value: 0
       objectReference: {fileID: 0}
@@ -8764,7 +8772,7 @@ PrefabInstance:
     - target: {fileID: 7149498112034572307, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.59
+      value: -14.81
       objectReference: {fileID: 0}
     - target: {fileID: 7149498112034572307, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
@@ -8853,6 +8861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
+      propertyPath: _interactionPrompt
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
+        type: 3}
       propertyPath: _localTransferTime
       value: 0
       objectReference: {fileID: 0}
@@ -8869,7 +8882,7 @@ PrefabInstance:
     - target: {fileID: 7149498112034572307, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.59
+      value: -15.59
       objectReference: {fileID: 0}
     - target: {fileID: 7149498112034572307, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
@@ -9861,6 +9874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
+      propertyPath: _interactionPrompt
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863545070883353567, guid: a92e6ec87f5ad4c038229934453c278f,
+        type: 3}
       propertyPath: _localTransferTime
       value: 0
       objectReference: {fileID: 0}
@@ -9877,7 +9895,7 @@ PrefabInstance:
     - target: {fileID: 7149498112034572307, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.83
+      value: -13.66
       objectReference: {fileID: 0}
     - target: {fileID: 7149498112034572307, guid: a92e6ec87f5ad4c038229934453c278f,
         type: 3}
