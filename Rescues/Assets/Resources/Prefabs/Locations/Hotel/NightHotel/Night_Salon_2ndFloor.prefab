@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 455980153684685414}
   - component: {fileID: 8447945610503835300}
   - component: {fileID: 1337736108672930833}
-  - component: {fileID: 2596028126344026137}
   m_Layer: 0
   m_Name: Stick
   m_TagString: EditorOnly
@@ -53,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,60 +129,6 @@ MonoBehaviour:
   <Id>k__BackingField: Stick
   ItemData: {fileID: 11400000, guid: ed13e98ed621db241b8d45b2b83dc0d8, type: 2}
   PickUpTime: 0.5
---- !u!114 &2596028126344026137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 94142127337256409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f5b25dccd8ac546be22b5e20bfdd87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _type: 8
-  _interactionPrompt: 0
-  _promptOffset: {x: 0, y: 0}
-  <IsInteractionLocked>k__BackingField: 0
-  <Id>k__BackingField: -1
-  OnTriggerEnterEvents: []
-  OnTriggerExitEvents:
-  - _isInteractionLocked: 0
-    IsRepeating: 0
-    TimeBeforeInvoke: 0
-    _id: 
-    Event:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    objectManipulations:
-      keys: 
-      values: []
-  OnButtonInTriggerEvents: []
 --- !u!1 &406972324968793555
 GameObject:
   m_ObjectHideFlags: 0
