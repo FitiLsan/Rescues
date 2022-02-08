@@ -1271,6 +1271,8 @@ MonoBehaviour:
   - 1stDialHoz
   - 1stDialHoz 1
   - 2ndDoorDiA
+  - BedDia
+  - CellorDoorQuest
   - Charlie
   - CrazyCap
   - DEMO_Condition
@@ -1282,16 +1284,19 @@ MonoBehaviour:
   - MrCube
   - MyTestDialogue
   - NPCOnly
+  - PotDia
   - QuestChartDemo
   - ReedDi
+  - ReedDi 1
   - RingQuest
+  - RingQuest 1
   - RustKnife
   - Test_1
   - Witch
   - WorkRing
-  assignedIndex: 1
-  assignedID: 79672
-  assignedDialogue: 1stDialHoz
+  assignedIndex: 0
+  assignedID: 48781
+  assignedDialogue: 123
   interactionCount: 0
   alias: 
   overrideStartNode: -1
@@ -2168,7 +2173,7 @@ MonoBehaviour:
   _cameraPosition: {fileID: 1825434204502899449}
   _levelNPC: []
   _items: {fileID: 750451049117727287}
-  _puzzles: {fileID: 0}
+  _puzzles: {fileID: 1354148058011591277}
 --- !u!1 &4773672457513666626
 GameObject:
   m_ObjectHideFlags: 0
