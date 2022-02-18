@@ -18,6 +18,7 @@
             Add(new InventoryController(context));
             Add(new NotepadController(context));
             Add(new InteractionPromptController(context, services));
+            Add(new StandController(context));
         }
 
         #endregion

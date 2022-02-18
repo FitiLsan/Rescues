@@ -64,11 +64,6 @@ namespace Rescues
 
         #region Methods
 
-        public virtual bool CanReceiveItem(ItemData item)
-        {
-            return true;
-        }
-
         public void OnBeginDrag(PointerEventData eventData)
         {
             if (Item != null) _image.color = _dragColor;
@@ -100,13 +95,6 @@ namespace Rescues
         {
             OnPointerExitEvent?.Invoke(this);
         }
-
-        //public void OnPointerClick(PointerEventData eventData)
-        //{
-        //    
-        //   OnRightClickEvent?.Invoke(this);
-        //    
-        //}
 
         #endregion
     }

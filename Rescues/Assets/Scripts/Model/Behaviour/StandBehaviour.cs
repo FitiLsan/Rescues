@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace Rescues
@@ -8,6 +10,17 @@ namespace Rescues
         #region Fields
 
         public GameObject StandWindow;
+
+        [SerializeField] private List<StandItem> _standItemSlots;
+        [SerializeField] private Image _standItemImage;
+
+        #endregion
+
+
+        #region Properties
+
+        public List<StandItem> StandItemSlots => _standItemSlots;
+        public Image StandItemImage => _standItemImage;
 
         #endregion
 
