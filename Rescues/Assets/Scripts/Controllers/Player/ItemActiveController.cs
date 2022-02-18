@@ -61,7 +61,7 @@ namespace Rescues
 
 
         #region Methods
-        
+
         private List<IInteractable> CollectItems()
         {
             var items = _context.GetTriggers(InteractableObjectType.Item).ToList();

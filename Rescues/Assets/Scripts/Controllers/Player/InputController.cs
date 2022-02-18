@@ -162,6 +162,8 @@ namespace Rescues
         {
             _cancelState.Invoke();
 
+            #region NotCloseOnSecondClick
+
             switch (playerState)
             {
                 case PlayerStates.Use:
@@ -205,16 +207,6 @@ namespace Rescues
                                 _isStateLocked = false;
                             },
                             item.PickUpTime));
-                        }
-
-                        PuzzleBehaviour puzzleObject = GetInteractableObject<PuzzleBehaviour>(InteractableObjectType.Puzzle);
-                        if (puzzleObject != null && !puzzleObject.Puzzle.IsFinished && !puzzleObject.IsInteractionLocked)
-                        {
-                            puzzleObject.Puzzle.Activate();
-                            LockState();
-                            _cancelState += puzzleObject.Puzzle.Close;
-                            _cancelState += () => _isStateLocked = false;
-                            puzzleObject.Puzzle.Finished += (Puzzle) => _cancelState.Invoke();
                         }
 
                         CameraTrigger cameraTrigger = GetInteractableObject<CameraTrigger>(InteractableObjectType.CameraTrigger);
@@ -270,7 +262,10 @@ namespace Rescues
                         _cancelState = () => { };
                     }
                     break;
-            }
+            } 
+
+            #endregion
+
 
             #region CloseOnSecondClick
 
@@ -288,13 +283,23 @@ namespace Rescues
                                 _context.character.StartHiding(hidingPlace);
                             }
 
-                            //TODO not working yet
+                            PuzzleBehaviour puzzleObject = GetInteractableObject<PuzzleBehaviour>(InteractableObjectType.Puzzle);
+                            if (puzzleObject != null && !puzzleObject.Puzzle.IsFinished && !puzzleObject.IsInteractionLocked)
+                            {
+                                puzzleObject.Puzzle.Activate();
+                                LockState();
+                                _cancelState += puzzleObject.Puzzle.Close;
+                                _cancelState += () => _isStateLocked = false;
+                                puzzleObject.Puzzle.Finished += (Puzzle) => _cancelState.Invoke();
+                            }
+
                             StandBehaviour stand = GetInteractableObject<StandBehaviour>(InteractableObjectType.Stand);
                             if (stand != null && !stand.IsInteractionLocked)
                             {
                                 stand.StandWindow.SetActive(true);
                                 _cancelState += () =>
                                 {
+                                    stand.StandItemImage.gameObject.SetActive(false);
                                     stand.StandWindow.SetActive(false);
                                 };
                             }

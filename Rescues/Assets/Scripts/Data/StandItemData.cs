@@ -9,7 +9,6 @@ namespace Rescues
         #region Fields
 
         public Sprite Sprite;
-        public bool CanBeTaken;
         public ItemData Item;
 
         #endregion    
